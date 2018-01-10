@@ -1,0 +1,97 @@
+@import '../../../../static/common/style/common';
+
+.cmn-header {
+	.cmn-nav {
+		height: 30px;
+		color: #9B9B9B;
+		line-height: 30px;
+		border-bottom: 1px solid #F8F9FA;
+		.phone {
+			float: left;
+		}
+
+		.app {
+			float: right;
+			margin-left: 20px;
+
+			.down {
+				font-size: 13px;
+			}
+
+			&:hover {
+				color: #E1C078;
+
+				a {
+					color: #E1C078;
+				}
+			}
+		}
+
+		.username {
+			display: none; 
+			cursor:pointer;
+			margin-right: 10px;
+			
+			&:hover {
+				color: #E1B555;
+			}
+		}
+
+		.logout {
+			display: none; 
+			cursor: pointer;
+
+			&:hover {
+				color: #3F3F3F;
+			}
+		}
+	}
+
+	.cmn-header {
+		height: 60px;
+		border-bottom: 1px solid #F8F9FA;
+
+		.header-logo {
+			float: left;
+			height: 50px;
+			width: 232px;
+			background: url('./resource/images/logo.png') no-repeat;
+
+			a {
+				width: 232px;
+				height: 100%;
+				cursor: pointer;
+				display: inline-block;
+			}
+		}
+
+		.header-slogan {
+			float: left;
+			color: #9B9B9B;
+			font-size: 16px;
+			margin-top: 25px;
+			margin-left: 10px;
+			padding-left: 10px;
+			font-weight: normal;
+			border-left: 1px solid #EBEEF1;
+		}
+
+		.header-usercenter {
+			float: right;
+			font-size: 14px;
+			line-height: 60px;
+
+			.btn-usercenter {
+				height: 34px;
+				font-size: 14px;
+				line-height: 34px;
+				display: none;
+
+				i {
+					font-size: 14px;
+				}
+			}
+		}
+	}
+
+}

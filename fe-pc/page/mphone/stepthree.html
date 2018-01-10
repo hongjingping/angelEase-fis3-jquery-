@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/mphone/mphone.less">
+
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="修改手机号">
+
+    <div class="modify-phone layout modify-phone-last" id="last">
+        <div class="modify-phone-header last-header"></div>
+
+        <div class="modify-last-content">
+
+            <p class="modify-last-icon">
+                <i class="ae-icon ae-icon-success suc-icon"></i>
+            </p>
+
+            <p class="modify-last-txt">恭喜您，修改手机号码成功！</p>
+
+            <p class="form-line">
+                <span class="val-item">
+                    <a href="../../page/login/login.html" class="val-item-btn modify-last-next" >重新登录</a>
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/mphone/mphone.js"></script>
+</body>
+</html>

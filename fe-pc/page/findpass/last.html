@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+	<link rel="stylesheet" type="text/css" href="../../static/findpass/findpass.less">
+	<!--
+	    @require ../../static/common/lib/jquery/jquery.js
+	    @require ../../static/common/lib/storage.js
+	    @require ../../static/common/base/base.js
+	-->
+</head>
+<body>
+
+	<link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="找回密码">
+
+	<div class="find-pass layout find-pass-last" id="last">
+		<div class="find-pass-header last-header"></div>
+
+		<div class="find-last-content">
+
+			<p class="find-last-icon">
+				<i class="ae-icon ae-icon-success suc-icon"></i>
+			</p>
+
+			<p class="find-last-txt">恭喜您，找回密码成功！</p>
+
+			<p class="form-line">
+				<span class="val-item">
+					<a href="/page/login/login.html" class="val-item-btn find-last-next">重新登录</a>
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+</body>
+</html>
+<script type="text/javascript">
+$('#cmn-header').text('找回密码');
+</script>

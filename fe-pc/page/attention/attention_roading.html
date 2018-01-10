@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/attention/attention_total.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/template/template.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+</head>
+<body>
+<link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline">
+
+<div class="my-attention">
+    <div class="layout my-attention-wrap">
+        <div class="my-attention-menu">
+            <link rel="import" href="../../widget/component/usercenter/menu/menu.tpl?__inline">
+        </div>
+        <div class="my-attention-total">
+            <link rel="import" href="../../widget/attention/my_attention/my_attention.tpl?__inline">
+            <link rel="import" href="../../widget/attention/attention_roading/roading.tpl?__inline">
+            <link rel="import" href="../../widget/attention/attention_nomsg/nomsg.tpl?__inline">
+        </div>
+    </div>
+</div>
+<!-- common footer -->
+<link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+<script src="../../static/attention/attention_roading.js"></script>
+</body>
+</html>

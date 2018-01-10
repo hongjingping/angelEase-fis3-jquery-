@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/add-bank-card/add-bank-card.less">
+
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="添加银行卡">
+
+    <div class="modify-pass layout modify-pass-last" id="last">
+        <div class="modify-pass-header last-header"></div>
+
+        <div class="modify-last-content">
+
+            <p class="modify-last-icon">
+                <i class="ae-icon ae-icon-success suc-icon"></i>
+            </p>
+
+            <p class="modify-last-txt">恭喜您，银行卡绑定成功，赶紧火热加入新项目！</p>
+
+            <p class="form-line">
+                <span class="val-item">
+                    <!--<a href="../../home/home.html" class="val-item-btn modify-last-next">去看看项目</a>-->
+                    <a href="../../page/home/home.html" class="val-item-btn modify-last-next">去看看项目</a>
+                </span>
+            </p>
+            <!--二维码-->
+            <div class="qrCode">
+                <!--二维码图片-->
+                <div class="qrImg">
+                    <img src="../../static/add-bank-card/resource/images/qrCode.png" alt="宜信公众平台">
+                </div>
+                <!--二维码内容-->
+                <p>关注宜信公众平台<br/>随时随地了解众筹新动态</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+    <script type="text/javascript">
+        $('#cmn-header').text('添加银行卡');
+        //去到个人中心的页面
+//        var addFrom = storage.get('addBankFrom');
+//        if (addFrom == 'bankcenter') {
+//            //个人中心页面添加银行卡
+//            window.setInterval(function () {
+//                //window.location.href = '/page/bankcardcenter/card-list.html'
+//            }, 3000)
+//        }else {
+//            window.setInterval(function () {
+//                //订单支付页面添加银行卡
+//                //window.location.href = '/page/bankcardcenter/card-list.html'
+//            }, 3000)
+//        }
+    </script>
+</body>
+</html>

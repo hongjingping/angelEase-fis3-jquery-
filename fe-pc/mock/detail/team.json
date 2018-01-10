@@ -1,0 +1,24 @@
+{
+	"code": "0000",
+	"desc": null,
+	"data": [
+		{
+			"position": "团队经理xxxx",
+			"presentation": "现代冬季两项——雪上运动项目之一。它是越野滑雪和射击相结合的运动。要求运动员身背专用小口径步枪，每滑行一段距离进行一次射击。",
+			"imgPath": "http://ixsh.yixin.com/statics/201606/1467283080402.jpg",
+			"name": "李四"
+		},
+		{
+			"position": "团队经理yyyy",
+			"presentation": "现代冬季两项——雪上运动项目之一。它是越野滑雪和射击相结合的运动。要求运动员身背专用小口径步枪，每滑行一段距离进行一次射击。",
+			"imgPath": "http://ixsh.yixin.com/statics/201606/1467283080402.jpg",
+			"name": "李四"
+		},
+		{
+			"position": "团队经理zzzz",
+			"presentation": "现代冬季两项——雪上运动项目之一。它是越野滑雪和射击相结合的运动。要求运动员身背专用小口径步枪，每滑行一段距离进行一次射击。",
+			"imgPath": "http://ixsh.yixin.com/statics/201606/1467283080402.jpg",
+			"name": "李四"
+		}
+	]
+}

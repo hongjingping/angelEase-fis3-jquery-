@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/modifypass/modifypass.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/base64.js
+        @require ../../static/login/sms.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="修改密码">
+
+    <div class="modify-pass layout modify-pass-first" id="first">
+        <div class="modify-pass-header first-header"></div>
+        <div class="modify-pass-content">
+            <div class="form-control cmn-clearfix" style="display:none" id="error0">
+                <div class="error-notice">
+                    <i class="ae-icon ae-icon-attention error-icon"></i><em id="error1"></em>
+                </div>
+            </div>
+            <div class="form-control cmn-clearfix" style="display:none;" id="success">
+                <div class="success-notice">
+                    <i class="ae-icon ae-icon-success success-icon"></i><em id="successMsg"></em>
+                </div>
+               <!--  <div class="form-key"></div>
+                <div class="pull-right success-notice">
+                    <i class="ae-icon ae-icon-success success-icon"></i><em id="successMsg"></em>
+                </div> -->
+            </div>
+            <div class="form-control cmn-clearfix">
+                <div class="form-key">手机号码</div>
+                <div class="form-value from-value-text" id="mobile"></div>
+                <input type="hidden" id="for_login_userphone" maxlength="11" name="for_login_userphone" value=""/>
+            </div>
+            <!-- <div class="form-control cmn-clearfix">
+                <div class="form-key">图形验证码</div>
+                <input type="text" class="form-value form-value-oneline cmn-input">
+                <div class="img-code"></div>
+            </div> -->
+            <div class="form-control cmn-clearfix">
+                <div class="form-key">手机验证码</div>
+                <input type="text" class="form-value form-value-oneline cmn-input" placeholder="请输入短信验证码" name="for_login_code"  value="" maxlength="6">
+                <div class="img-code cmn-btn-white-w12" id="sendCode3">获取验证码</div>
+            </div>
+            <div class="form-control cmn-clearfix">
+               <div class="pull-right btn-next cmn-btn-gold-w12">
+                   <a href="javascript:;" id="nextBtn8">下一步</a>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/modifypass/modifypass.js"></script>
+
+</body>
+</html>

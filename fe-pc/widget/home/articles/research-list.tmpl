@@ -1,0 +1,9 @@
+<% data.forEach(function(item, i) { %>
+    <div class="angel-research-item cmn-clearfix">
+        <a class="title-wrapper new-text" href="/page/angel_detail/angel_detail.html?id=<%= item.id %>" target="_blank">
+            <span class="label"><%= item.focusCategoryStr %></span>
+            <span class="title "><%= item.focusTitle %></span>
+        </a>
+        <div class="date"><%= item.createTimeStr %></div>
+    </div>
+<% }) %>

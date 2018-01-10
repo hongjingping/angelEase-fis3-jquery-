@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+	<!--
+	    @require ../../static/common/lib/jquery/jquery.js
+	    @require ../../static/common/lib/jquery.nav.js
+	    @require ../../static/common/lib/template/template.js
+		@require ../../static/common/lib/storage.js
+		@require ../../static/common/base/base.js
+		@require ../../static/detail/detail.js
+		@require ../../static/common/lib/qrcode/qrcode.js
+	-->
+	<link rel="stylesheet" type="text/css" href="../../static/detail/detail.less">
+
+</head>
+<body>
+
+	<link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline">
+
+	<link rel="import" href="../../widget/detail/banner/banner.tpl?__inline">
+
+	<div class="detail-content">
+		<div class="content-container layout">
+
+			<link rel="import" href="../../widget/detail/project/project.tpl?__inline">
+
+			<link rel="import" href="../../widget/detail/team/team.tpl?__inline">
+
+			<link rel="import" href="../../widget/detail/list/list.tpl?__inline">
+
+			<link rel="import" href="../../widget/detail/question/question.tpl?__inline">
+		</div>
+	</div>
+	<div class="consult-secretary-wrapper cmn-clearfix">
+		<div class="icon-consult-wrapper">
+			<img src="../../static/detail/resource/images/icon-consult.png" class="icon-consult" style="width:19px;height: 18px;">
+			<div class="consult-text">咨询</div>
+		</div>
+		<div class="qrcode-secretary-wrapper">
+			<div class="qrcode-text">打开微信扫一扫下方二维码，AngelEase小秘书竭诚为您服务</div>
+			<img src="./../static/detail/resource/images/qrcode-secretary.png" class="qrcode-img" style="width:175px;height:175px;">
+		</div>
+	</div>
+	<div class="share-wrapper cmn-clearfix">
+		<div class="icon-share-wrapper">
+			<i class="ae-icon ae-icon-share-new"></i>
+			<div class="share-text">分享</div>
+		</div>
+		<div class="share-qrcode-wrapper">
+			<div class="share-content">微信扫一扫分享给朋友</div>
+			<img class="share-img" src="" alt="">
+		</div>
+	</div>
+
+	<!-- common footer -->
+	<link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+</body>
+</html>

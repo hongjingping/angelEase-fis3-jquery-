@@ -1,0 +1,5 @@
+(function () {
+
+	$('.address-line').show();
+
+})();

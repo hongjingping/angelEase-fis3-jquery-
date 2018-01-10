@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/add-bank-card/add-bank-card.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/base64.js
+        @require ../../static/login/sms.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="添加银行卡">
+
+    <div class="modify-pass layout modify-pass-first" id="first">
+        <div class="modify-pass-header first-header"></div>
+        <div class="modify-pass-content">
+
+            <div class="form-control cmn-clearfix" style="display:none" id="error0">
+                <div class="error-notice cmn-clearfix">
+                    <i class="ae-icon ae-icon-attention error-icon"></i>
+                    <span id="error1" class="error-text"></span>
+                </div>
+            </div>
+            <div class="form-control cmn-clearfix" style="display:none;" id="success">
+                <div class="success-notice">
+                    <i class="ae-icon ae-icon-success success-icon"></i><em id="successMsg"></em>
+                </div>
+            </div>
+            <div class="add-bank-form-wrapper">
+                <!--持卡人-->
+                <div class="form-control cmn-clearfix">
+                    <div class="form-key">持卡人</div>
+                    <div class="form-value from-value-text"  >
+                        <span id="name"></span>
+                    </div>
+                    <input type="hidden" value="" />
+                </div>
+
+                <!--银行卡号-->
+                <div class="form-control cmn-clearfix margin-btoom-0" id="main">
+                    <div class="form-key">银行卡号</div>
+                    <input type="text"  id="card-num" maxlength="24"  class="form-value form-value-oneline cmn-input i-text" placeholder="请输入您的银行卡号" >
+                    <!--扩大显示银行卡号-->
+
+                </div>
+                <div class="form-control cmn-clearfix bigNum" id="textMag">
+                    <div  id="mag-text"  class="form-value form-value-oneline cmn-input cmn-left " ></div>
+                </div>
+                <!--卡类型-->
+                <div class="form-control cmn-clearfix">
+                    <div class="form-key font-c" id="font-c">卡类型</div>
+                    <div class="form-value from-value-text  " id="cardType">
+                        <div class="cardType" id="loadingImg">
+                            <span type="text" class="font-gray  font-text " >
+                                <i class="loading-image"></i>
+                                <span class="loading-icon">验证中</span>
+                            </span>
+                        </div>
+                    </div>
+                    <input type="hidden" value="0" id="card-type-check"/>
+                    <input type="hidden" id="card-type"/>
+                </div>
+
+                <!--手机号码-->
+                <div class="form-control form-control-phone cmn-clearfix">
+                    <div class="form-key">手机号码</div>
+                    <div class="form-value">
+                        <input type="tel" onkeyup="this.value=this.value.replace(/\D/g,'')" id='phoneNum' class="form-value-oneline cmn-input" placeholder="请输入银行预留手机号" name="for_login_code" maxlength="13"  value="">
+                    </div>
+                     <!--银行预留手机号-->
+                    <div class="phone-num-wrapper">
+                        <i class="symbols-attention" id="cardNum"></i>
+                        <div class="bankCardNum" id="bankCardNum">
+                            <div class="bankCardNumInfo">
+                                <h5>银行预留手机号</h5>
+                                <p>1.银行预留的手机号是办理该银行卡时所填写的手机号码</p>
+                                <p class="cmn-tip-top">2.没有预留、手机号忘记或已停用，请联系该行银行客服更新处理</p>
+                                <p class="cmn-tip-top">3.仅支持大陆11位数字手机号</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--图形验证码-->
+                <div class="form-control cmn-clearfix cmn-mb">
+                    <div class="form-key">图形验证码</div>
+                    <input type="text" id="imgCode" class="form-value form-value-oneline2 cmn-input" placeholder="请输入右图验证码">
+                    <div class="img-code" >
+                        <img class="imgCode" id="img-code">
+                    </div>
+                </div>
+
+                <!--协议-->
+
+                <div class="cmn-clearfix cmn-mt">
+                    <div class="form-value form-value-oneline protocal">
+                        <i class="check-icon check-icon1" id="check-icon"></i>
+                        <span class="cmn-l">本人承诺已了解并同意</span>
+                        <span class="font-c"><span class="protocal-col"><<</span> <a  href="/page/protocol/shortCut.html" target="_blank"  class=" protocal-col">借记卡快捷支付服务协议</a><span class="protocal-col">>></span></span>
+                    </div>
+                </div>
+
+                <!--提交按钮-->
+                <div class="form-control cmn-clearfix">
+                   <div class="pull-right btn-next cmn-btn-gold-w12" >
+                       <a href="javascript:;" class="check" id="sub-check">提交</a>
+                   </div>
+                </div>
+
+                <!--持卡人姓名-->
+                <div class="card-name-wrapper">
+                    <i class="symbols-attention" id="cardName"></i>
+                    <div class="cardName" id="card-name">
+                        <p class="cardNameInfo">为保证您的资金安全，持卡人只能绑定本人的银行卡</p>
+                    </div>
+                </div>
+
+                <div class="support-bank-wrapper">
+                    <div class="support-bank from-value-text" id="support-bank">支持银行卡</div>
+                    <div class="bank-list cmn-left" id="bank-list">
+                        <div class="bank-list-head">
+                            <table class="banklist">
+                                <thead>
+                                <tr>
+                                    <th class="bank-w">银行</th>
+                                    <th class="quota-w">单笔限额</th>
+                                    <th class="quota-w">每日限额</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <div class="bank-list-body">
+                            <table class="banklist">
+                                <tbody id="banklist-Data">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/add-bank-card/add-bank-card.js"></script>
+
+</body>
+</html>

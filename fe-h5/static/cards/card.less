@@ -1,0 +1,39 @@
+@import '../common/style/variables';
+
+.my-card {
+	width: 80%;
+	height: 118px;
+	background-color: @GOLD1;
+	margin: 0 auto;
+	margin-top: 20px;
+	-webkit-border-radius:10px 10px 0px 0px;
+	-moz-border-radius:10px 10px 0px 0px;
+	border-radius: 10px 10px 0px 0px;
+	padding-top: 20px;
+	padding-bottom: -20px;
+	.card-name{
+		line-height: 25px;
+		height: 25px;
+		i {
+			font-size: 22px;
+			margin-right: 8px;
+			color: red;
+			margin-left: 22px;
+		}
+		span {
+			font-family: @FontFamily;
+			font-size: 18px;
+			color: #FFFFFF;
+		}
+	}
+	.card-num {
+		text-align: center;
+		background-color: @GOLD2;
+		font-family: @FontFamily;
+		font-size: 20px;
+		color: #FFFFFF;
+		margin-top: 24px;
+		height: 36px;
+		line-height: 36px;
+	}
+}

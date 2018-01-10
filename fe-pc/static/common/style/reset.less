@@ -1,0 +1,229 @@
+/**
+ * Copyright (c) 2016 Creditease, All rights reseved.
+ * @fileoverview 公共基础-样式重置
+ * @author WangHongjun | hongjunwang1@creditease.cn
+ * @version 1.0 | 2016-7-19 | WangHongjun    // Initial version.
+ */
+
+// HTML5 display definitions
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary, dialog {
+    display: block;
+}
+
+audio, canvas, video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+[hidden] {
+    display: none;
+}
+
+// Removing clear and reveal password icons from IE10
+input::-ms-clear, input::-ms-reveal {
+    display: none;
+}
+
+// Base
+html {
+    font-size: 12px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, button, input, select, textarea {
+    // font-family: arial, tahoma, 'Microsoft Yahei', '\5b8b\4f53', sans-serif;
+    // font-family: 'Hiragino Sans GB', 'Microsoft Yahei','simsun','\5b8b\4f53', 'sans-serif';
+    font-family: 'PingFang SC','Lantinghei SC','Helvetica Neue','Helvetica,Arial','Microsoft YaHei','\5FAE\8F6F\96C5\9ED1','STHeitiSC-Light,simsun','\5B8B\4F53,WenQuanYi Zen Hei','WenQuanYi Micro Hei','sans-serif';
+}
+
+button, input, select, textarea {
+    font-size: 100%;
+}
+
+// Default backround color and color.
+body {
+    color: #474747;
+    line-height: 1.5;
+    background-color: #FFF;
+}
+
+// Remove margins & paddings.
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote,
+dl, dt, dd, ul, ol, li,
+pre, figure,
+form, fieldset, legend, button, input, textarea, select
+th, td {
+    margin : 0;
+    padding: 0;
+}
+
+// Reset all italic element to normal.
+address, cite, dfn, em, var, i {
+    font-style: normal;
+}
+
+a {
+    color: #9B9B9B;
+    text-decoration: none;
+    &:focus {
+        // outline: thin dotted;
+        outline: none;
+    }
+    &:active, &:hover {
+        outline: none;
+    }
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+// Typography
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.5em;
+}
+h3 {
+    font-size: 1.17em;
+}
+h4 {
+    font-size: 1em;
+}
+h5 {
+    font-size: 0.83em;
+}
+h6 {
+    font-size: 0.75em;
+}
+
+b, strong {
+    font-weight: bold;
+}
+
+code, kbd, pre, samp {
+    font-family: monospace, serif;
+    font-size: 1em;
+}
+
+// Improves readability of pre-formatted text in all browsers.
+pre {
+    white-space: pre;
+    white-space: pre-wrap;    // ie
+    word-wrap: break-word;
+}
+
+small {
+    font-size: 75%;
+}
+
+// Prevents 'sub' and 'sup' affecting 'line-height' in all browsers(except firefox).
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+sup {
+    top: -0.5em;
+}
+sub {
+    bottom: -0.25em;
+}
+
+// Lists
+ul, ol, li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+button, input, select {
+  vertical-align: middle;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+
+button, input {
+    line-height: normal;
+}
+
+input {
+    outline: none;
+}
+
+button, html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+    *overflow: visible;
+}
+
+// reset default cursor for disabled elements.
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+// Removes border in FF3+.
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    *height: 13px;
+    *width: 13px;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+table {
+    border-spacing: 0;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #C9C9C9;
+}
+
+::-moz-placeholder { /* Firefox 19+ */
+    color: #C9C9C9;
+}
+
+:-ms-input-placeholder { /* IE 10+ */
+    color: #C9C9C9;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #C9C9C9;
+}

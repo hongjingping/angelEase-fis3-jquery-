@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+	<link rel="stylesheet" type="text/css" href="../../static/pay/pay.less">
+
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+</head>
+<body>
+
+	<link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline">
+
+	<div class="pay-container">
+		<div class="pay-logo"></div>
+
+		<p class="item-title">
+			<span>支付信息</span>
+		</p>
+        <div class="sign-notice">
+            <i class="ae-icon ae-icon-attention"></i>风险提示：股权投资属于高风险投资，请谨慎决策。
+        </div>
+        <!-- 支付详情 -->
+		<div class="pay-detail">
+            <table class="cmn-table cmn-table-bordered">
+                <colgroup>
+                    <col width="100px"></col>
+                    <col></col>
+                </colgroup>
+                <tbody class="pay-detail-item">
+                    <tr>
+                        <td>订单号</td>
+                        <td id="orderNo"></td>
+                    </tr>
+                    <tr>
+                        <td>支付类别</td>
+                        <td>投资款</td>
+                    </tr>
+                    <tr>
+                        <td>投资项目</td>
+                        <td id="proName"></td>
+                    </tr>
+                    <tr>
+                        <td>投资金额</td>
+                        <td id="proInveseAmount">元</td>
+                    </tr>
+                    <tr>
+                        <td>姓名</td>
+                        <td id="userName"></td>
+                    </tr>
+                    <tr>
+                        <td>地址</td>
+                        <td id="userAddress"></td>
+                    </tr>
+                    <tr>
+                        <td>联系方式</td>
+                        <td id="mobile"></td>
+                    </tr>
+                    <tr>
+                        <td>邮政编码</td>
+                        <td id="zipCode"></td>
+                    </tr>
+                    <tr>
+                        <td>支付金额</td>
+                        <td id="pay-quota"></td>
+                    </tr>
+                </tbody>
+            </table>
+		</div>
+
+        <!-- 切换tab -->
+        <div class="pay-tab">
+            <div class="pay-header">
+                <h2 class="pay-method">支付方式</h2>
+            </div>
+
+            <div class="pay-tab-title">
+                <span class="shortcut select" data-id="fastPay">快捷支付</span>
+                <!-- <span class="ebank " data-id="onlinePay">网银支付</span> -->
+                <span class="offlinePay" id="line" data-id="offlinePay">线下支付</span>
+            </div>
+
+            <div class="pay-content">
+                <!-- 快捷支付 -->
+                <div class="content-item  show">
+                    <table class="cmn-table cmn-table-bordered bank-table" id="bank-table">
+                        <colgroup>
+                            <col width="50px"></col>
+                            <col width="80px"></col>
+                            <col width="180px"></col>
+                            <col width="180px"></col>
+                            <col></col>
+                        </colgroup>
+                        <tbody id="get-bank-list" class="selected-list"></tbody>
+                    </table>
+                </div>
+
+                <!-- 网银支付 -->
+                <!-- <div  class="content-item " id="pay-notice">
+                    <p class="item-notice pay-notice" >
+                        <i class="ae-icon ae-icon-attention"></i>请您务必使用绑定银行卡进行支付，并在支付过程中截图保留打款凭证。如您未使用绑定银行卡支付，有可能导致退款。
+                    </p>
+
+                    <div class="pay-bank">
+                        <ul class="bank-list"></ul>
+
+                        <div class="tips">温馨提示：大额支付需使用U盾，K宝等。</div>
+                    </div>
+                </div> -->
+
+                <!-- 线下支付 -->
+                <div  class="content-item "></div>
+            </div>
+        </div>
+
+		<div class="bank-cols">
+			<div class="pay-bill">
+				<div class="pay-info">
+					<div class="pay-txt">应付金额</div>
+					<span class="pay-num" id="proInveseAmountSpan"></span>
+                    <span>元</span>
+				</div>
+
+				<a href="javascript:;" class="cmn-btn-gold-w12 goto-pay" id="next-btn">去支付</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="signaqrCode"></div>
+    <input id="payType" type="hidden" value="fastPay">
+    <input id="payId" type="hidden">
+    <form method="post" name="form0" id = "form0" action="" target="_blank">
+        <input name = "acqId" id = "acqId" value="" type="hidden">
+        <input name = "amount" id = "amount" value="" type="hidden">
+        <input name = "bankId" id = "bankId" value="" type="hidden">
+        <input name = "bizId" id = "bizId" value="" type="hidden">
+        <input name = "bizTp" id = "bizTp" value="" type="hidden">
+        <input name = "channelId" id = "channelId" value="" type="hidden">
+        <input name = "customerName" id = "customerName" value="" type="hidden">
+        <input name = "identNo" id = "identNo" value="" type="hidden">
+        <input name = "merchId" id = "merchId" value="" type="hidden">
+        <input name = "notifyUrl" id = "notifyUrl" value="" type="hidden">
+        <input name = "paymentTp" id = "paymentTp" value="" type="hidden">
+        <input name = "returnUrl" id = "returnUrl" value="" type="hidden">
+        <input name = "sendTime" id = "sendTime" value="" type="hidden">
+        <input name = "userIP" id = "userIP" value="" type="hidden">
+        <input name = "versionNo" id = "versionNo" value="" type="hidden">
+        <input name = "signInfo" id = "signInfo" value="" type="hidden">
+    </form>
+	<div class="mask"></div>
+
+    <div class="wgt-pay-confirm">
+        <div class="confirm-title">
+            <span class="title">登录网上银行支付</span>
+            <span class="close"><i class="ae-icon ae-icon-close"></i></span>
+        </div>
+
+        <div class="confirm-content">
+            <p class="para">请您在新打开的网上银行页面进行支付，支付完成前请不要关闭本窗口</p>
+
+            <p class="some-btns">
+                <a id="payFinish" href="javascript:;" class="cmn-btn-gold-w12">已完成支付</a><a id="payWarn" target="_blank" href="../../page/help/help.html" class="cmn-btn-white-w12 problem-btn">支付遇到问题</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="wgt-pay-account">
+        <div class="account-title">
+            <span class="title">打款账号</span>
+            <span class="close"><i class="ae-icon ae-icon-close"></i></span>
+        </div>
+
+        <div class="account-content">
+            <div class="content-title">
+                <!-- <span class="title-icon"><i class="ae-icon ae-icon-attention"></i></span> -->
+                <i class="ae-icon ae-icon-attention"></i>
+                <span class="para">请您打款时仔细核对账号，并保留打款凭证</span>
+            </div>
+
+            <div class="addr cmn-clearfix">
+                <div class="menu">
+                    <div class="item">账户名</div>
+                    <div class="item">开户行</div>
+                    <div class="item">银行帐号</div>
+                </div>
+                <div class="txt">
+                    <div id="accountName" class="block"></div>
+                    <div id="accountBank" class="block"></div>
+                    <div id="accountNum" class="block"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="notice-wrap">
+	    	<div class="notice-title">温馨提示</div>
+			<p class="notice-txt">尊敬的客户您好，线下支付订单状态更新按以下时间完成，请知悉：</p>
+
+			<table class="notice-table">
+				<tr>
+					<td rowspan="2" class="workday">工作日</td>
+					<td>每日16:00前完成支付</td>
+					<td>订单状态将于当日更新</td>
+				</tr>
+
+				<tr>
+					<td>每日16:00后完成支付</td>
+					<td>订单状态将于次日更新（遇节假日顺延）</td>
+				</tr>
+
+				<tr>
+					<td class="workday">非工作日</td>
+					<td colspan="2">订单状态将顺延至工作日更新</td>
+				</tr>
+			</table>
+		</div>
+    </div>
+
+    <div class="wgt-pay-validate">
+        <div class="validate-title">
+            <span class="title">短信验证码</span>
+            <span class="close"><i class="ae-icon ae-icon-close"></i></span>
+        </div>
+
+        <div class="validate-content">
+            <div class="content-title error-notice" id="error" style="display: none;">
+                <span class="title-icon"><i class="ae-icon ae-icon-attention"></i></span>
+                <span id="errorMsg" class="para"></span>
+            </div>
+            <div class="content-title success-notice" id="success" style="display: none;">
+                <span class="title-icon"><i class="ae-icon ae-icon-success"></i></span>
+                <span id="successMsg" class="para"></span>
+            </div>
+
+            <div class="phone">
+                <span class="txt txt-phone">您绑定的手机号</span>
+                <span id="phone" class="phone-num"></span>
+            </div>
+
+            <div class="mobile">
+                <input type="input" id="dxInput" maxlength="6" class="code" name="mobile" placeholder="短信验证码">
+                <span id="sendCode" class="get-sms-code"></span>
+            </div>
+            <a href="javascript:;" id="account" class="validate-btn">获取打款账号</a>
+            <a href="javascript:;" id="confirmPay" class="validate-btn">确认</a>
+
+            <div class="pay-sms-tips">
+                <span class="sms-tips-txt">收不到验证码？</span>
+
+                <!-- 收不到验证码 -->
+                <div class="no-mag-wrapper">
+                    <div class="noMsgTips">
+                        <div class="noMsgTips-info">
+                            <p>1.请确认当前是否使用银行预留的手机号码</p>
+                            <p>2.请检查短信是否被拦截</p>
+                            <p>3.预留的手机号码已停用，请联系该银行客服修改</p>
+                            <p>还有其他疑问，请联系400-818-0060</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/pay/pay.js"></script>
+</body>
+</html>

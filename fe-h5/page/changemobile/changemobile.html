@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/changemobile/changemobile.less">
+</head>
+<body class="gray_bg">
+    <link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+    <div class="weui_cells weui_cells_form change-mobile-container">
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label change-mobile-label">当前手机</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input change-mobile-input" type="tel" id="phone"  name="phone" readonly="readonly" placeholder="请输入您绑定的手机号码">
+            </div>
+                <input type="hidden" id="mobile" name="mobile" value=""/>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label change-mobile-label">登录密码</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input change-mobile-input" type="password"  id="userPassword" name ="userPassword" value="" onblur="checkPwd();" placeholder="请输入您的密码">
+            </div>
+        </div>    
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label change-mobile-label">手机验证码</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input change-mobile-input" name="code" value="" maxlength="6" type="text" placeholder="请输入验证码"></div>
+            <span class="tiny-vertical-line">|</span>
+            <div class="weui_cell_bd val-code" id="sendSmsCode" >发送验证码</div>
+        </div>
+        <div class="white_bg alert-wrapper">
+            <div class="alert-left"><i class="ae-mobile ae-mobile-attention2"></i>
+            </div>
+            <div class="alert-right">
+                若您收不到短信或手机号码已停止使用，请联系在线客服或拨打客服热线
+                <span class="alter-middle">400-818-0060</span>，申请人工更换绑定手机号码
+            </div>
+        </div>
+    </div>
+
+    <div class="change-mobile-next-button">
+        <span class="next-button-normal">
+            <a id="nextBtn" class="ae-mobile ae-mobile-arrow-right"></a>
+        </span>
+    </div>
+
+    <script type="text/javascript" src="../../static/common/lib/base64.js"></script>
+    <script type="text/javascript" src="../../static/changemobile/changemobile.js"></script>
+</body>
+</html>

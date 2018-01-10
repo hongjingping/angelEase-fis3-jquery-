@@ -1,0 +1,50 @@
+@import '../common/style/variables';
+
+body {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.usercenter-header {
+	position: relative;
+	text-align: center;
+	line-height: 3em;
+
+	&.header-with-border {
+		box-shadow: 0 2px 4px 0 #eee;
+
+		.arrow-wrapper {
+			left: 5%;
+		}
+	}
+
+	.arrow-wrapper {
+		position: absolute;
+		left: 5%;
+		top: 50%;
+		transform: translateY(-50%);
+
+		.ae-mobile-arrow-left {
+			color: #4a4a4a;
+			font-size: 1em;
+		}
+	}
+
+	.cmn-header-title {
+		font-size: 17px;
+		color: #4a4a4a;
+	}
+
+	.cmn-right-trigger {
+		position: absolute;
+		right: 5%;
+		top: 50%;
+		transform: translateY(-50%);
+		color: @GOLD1;
+
+		.ae-mobile-plus {
+			color: @GOLD1;
+			font-size: 1em;
+			font-weight: bold;
+		}
+	}
+}

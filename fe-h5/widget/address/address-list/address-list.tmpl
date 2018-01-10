@@ -1,0 +1,31 @@
+<% for (var i = 0; i < data.length; i++) { %>
+	<% var address = data[i];%>
+	<div class="col-auto-height  white_bg">
+		<div class="info-list-wrapper" data-adr-id="<%=address.adrId%>">
+		    <div class="info-list">
+				<span class="col_info_label cover-color"><%=address.consignee%></span>
+				<span class="col-info-input-normal cover-color"><%=address.mobile%></span>
+			<%if (address.default == 1) {%>
+				<span class="check-mark"><i class="ae-mobile ae-mobile-tick"></i></span>
+				<div class="clear-both"></div>
+			<%}%>
+			</div>
+			<%if (address.default == 1) {%>
+				<div class="address-info">
+				    <span class="default-mark">[默认]</span><%=address.addressDetail%>/<%=address.zipCode%>
+				</div>
+			<%}%>
+			<%if (address.default != 1) {%>
+				<div class="address-info">
+				    <%=address.addressDetail%><span>/</span><%=address.zipCode%>
+				</div>
+			<%}%>
+		</div>
+
+		<div class="toperation-btn-lis">
+		    <a href="javascript:;" onclick="editAddress('invest_address/edit-address.html?id=<%=address.adrId%>&defaultFlag=<%=address.default%>&addOrUpdateFlag=1');" ><i class="ae-mobile ae-mobile-edit"></i><span>编辑</span></a>
+		    <span>|</span>
+		    <a href="javascript:;" id="delBtn" data-adr-id="<%=address.adrId%>"><i class="ae-mobile ae-mobile-delete"></i><span>删除</span></a>
+		</div>
+	</div>
+<% } %>

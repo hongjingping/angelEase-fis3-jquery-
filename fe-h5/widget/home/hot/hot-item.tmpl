@@ -1,0 +1,76 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var item = data[i];%>
+    <li>
+        <a href="/page/detail/detail.html?proId=<%=item.id%>">
+            <div class="banner">
+                <img src="<%=item.proImgSmallUrl%>">
+                <!-- 募集中有活动就显示为路演中 -->
+                <% if (item.proStatus == 4) { %>
+                    <span class="status status-on"><%=item.statusName%></span>
+                <% } else if(item.proStatus == 9) { %>
+                    <span class="status status-other"><%=item.statusName%></span>
+                <%} else {%>
+                    <span class="status status-other"><%=item.statusName%></span>
+                <% } %>
+                <div class="bar">
+                    <div class="goal">
+                        <% var fund = formatMoney(item.proFinancieAmount) %>
+                        <p class="num"><%=fund%></p>
+                        <p class="txt">融资目标(万)</p>
+                    </div>
+                <% if (item.proStatus == 2 || item.proStatus == 3) { %>
+                    <div class="person">
+                        <p class="num">--</p>
+                        <p class="txt">参与人数</p>
+                    </div>
+                    <div class="days">
+                        <p class="num">--</p>
+                        <p class="txt">剩余天数</p>
+                    </div>
+                <% } else { %>
+                    <div class="person">
+                        <p class="num"><%=item.prePayNum%></p>
+                        <p class="txt">参与人数</p>
+                    </div>
+                    <div class="days">
+                        <p class="num"><%=item.remainDays%></p>
+                        <p class="txt">剩余天数</p>
+                    </div>
+                <% } %>
+
+                </div>
+            </div>
+            <div class="poster">
+                <h2 class="caption"><%=item.proName%></h2>
+                <p class="subtitle"><%=item.proSlogan%></p>
+                
+                <div class="ui-progress">
+                    <div class="progress-wrap">
+                        <% if (item.proStatus == 2 || item.proStatus == 3) { %>
+                            <div class="scene">
+                                <span class="step" style="width: 0%"></span>
+                            </div>
+                        <% } else { %>
+                            <div class="scene">
+                                <span class="step" style="width: <%=item.proRaiseSpeed%>%"></span>
+                            </div>
+                            
+                            <% if (item.proRaiseSpeed == 0) {%>
+                                <span class="dot" style="display:none;left: <%=item.proRaiseSpeed%>%"></span>
+                            <% } else { %>
+                                <span class="dot" style="left: <%=item.proRaiseSpeed%>%"></span>
+                            <% } %>
+                            
+                        <% } %>
+                    </div>
+
+                    <% if (item.proStatus == 2 || item.proStatus == 3) { %>
+                        <span class="percentage">0%</span>
+                    <% } else { %>
+                        <span class="percentage"><%=item.proRaiseSpeed%>%</span>
+                    <% } %>
+                </div>
+            </div>
+        </a>
+    </li>
+<% } %>

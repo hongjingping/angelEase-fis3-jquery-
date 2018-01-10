@@ -1,0 +1,52 @@
+<% for (var i = 0; i < data.length; i++) {%>
+     <%var totalItem = data[i];%>
+        <div class="info-msg clearfloat">
+        <div class="info-msg-left">
+         <a class="img-href" href="/page/detail/detail.html?proId=<%=totalItem.id%>">
+            <img src="<%=totalItem.proImgSmall%>" class="msg"/>
+            </a>
+        </div>
+        <a class="info-img-href" href="/page/detail/detail.html?proId=<%=totalItem.id%>">
+        <div class="info-msg-right">
+            <div class="info-title"><%=totalItem.proName%></div>
+             <!-- 路演中 -->
+                <div class="info-label gold1"><%=totalItem.statusName%></div>
+
+            <!-- 进度 -->
+            <div class="ui-progress">
+                <div class="progress-wrap">
+                    <div class="scene">
+                    <span class="step" style="width:0%"></span>
+
+                    </div>
+                </div>
+                <div class="percentage ratio-gray">0%</div>
+
+            </div>
+
+
+            <div class="range-txt">已有--人参与</div>
+            <div class="info-exl">
+                <div class="exl-top">
+                    <div class="exl-width ">募集金额(万)</div>
+                    <div class="exl-width ">已募金额(万)</div>
+                    <div class="exl-width3 ">剩余天数</div>
+                </div>
+                <div class="exl-bottom">
+                    <!-- 募集金额 -->
+                    <div class="exl-width2 exl-font exl-col"><%=totalItem.proFinancieAmount%></div>
+                    <!-- 已募金额 -->
+                    <!-- 情页面数据为0或者没有内容的时候颜色为gray2 -->
+                    <div class="exl-width2 exl-margin font-gray exl-font">--</div>
+
+                   <!--剩余天数  -->
+                      <!-- 详情页面数据为0或者没有内容的时候颜色为gray3 -->
+                      <div class="exl-width3 font-gray exl-font">--</div>
+
+                </div>
+            </div>
+        </div>
+        </a>
+    </div>
+    <div class="info-img2"></div>
+<%}%>

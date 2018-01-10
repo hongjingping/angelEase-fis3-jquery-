@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/add-bank-card/add-bank-card.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/base64.js
+        @require ../../static/common/lib/jquery/checkbox.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="添加银行卡">
+
+    <div class="modify-pass layout modify-pass-second" id="first">
+        <div class="modify-pass-header second-header"></div>
+        <div class="modify-pass-content tips-info">
+            <div class="form-control cmn-clearfix error-bottom" id="error0" style="display:none">
+                <div class="form-key"></div>
+                <div class="pull-right error-notice">
+                    <i class="ae-icon ae-icon-attention error-icon"></i><em id="error1"></em>
+                </div>
+            </div>
+            <div class="form-control cmn-clearfix">
+                <div class="form-key"></div>
+                <div class="pull-right success-notice"  style="display:none;">
+                    <i class="ae-icon ae-icon-success success-icon"></i><em id=""></em>
+                </div>
+            </div>
+            <div class="comtent-stepTwo">
+                <!--提示语-->
+                <div class="form-control cmn-clearfix">
+                    <p class="tip">绑定银行卡需要短信确认，验证码已发送至 <span id="phoneNum"></span></p>
+                </div>
+                <!--短信验证码-->
+                <div class="form-control cmn-clearfix">
+                    <div class="form-key">验证码</div>
+                    <input type="text" maxlength="6" class="form-value cmn-input form-width" id="code"  placeholder="请输入验证码">
+                    <div>
+                        <input class="timeout" type="button" id="settime-btn" value="重新获取">
+                        <input type="hidden" id="msg-code" value="">
+                    </div>
+                </div>
+                <div class="form-control cmn-clearfix">
+                    <div class="pull-left btn-next cmn-btn-gold-w12">
+                        <a href="javascript:;" class="nextBtn"  id="nextBtn-two">下一步</a>
+                    </div>
+                </div>
+                <!--收不到验证码-->
+                <div class="no-mag-wrapper">
+                    <div class="noMsg">
+                        <a href="#" class="no-Msg" id="no-Msg">收不到验证码</a>
+                    </div>
+                    <div class="noMsgTips">
+                        <div class="noMsgTips-info">
+                            <p>1.请确认当前是否使用银行预留的手机号码</p>
+                            <p>2.请检查短信是否被拦截</p>
+                            <p>3.预留的手机号码已停用，请联系该银行客服修改</p>
+                            <p>还有其他疑问，请联系400-818-0060</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/add-bank-card/add-bank-cardtwo.js"></script>
+
+</body>
+</html>

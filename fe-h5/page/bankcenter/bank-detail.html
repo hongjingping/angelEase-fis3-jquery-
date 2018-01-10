@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" href="../../static/bankcenter/bankcenter.less">
+    <link rel="stylesheet" href="../../static/bankcenter/bank-detail.less">
+
+</head>
+<body>
+    <div class="usercenter-header header-without-border clearfloat">
+        <a href="/page/bankcenter/mybank.html" class="arrow-wrapper">
+            <i class="ae-mobile ae-mobile-arrow-left cmn-arrow-back"></i>
+        </a>
+        <span class="cmn-header-title">银行卡详情</span>
+        <span class="cmn-right-trigger" id="unbind-card">解绑</span>
+    </div>
+
+    <div id="unbind-model" style="display:none">
+        <div class="gray-mask"></div>
+        <div class="dialog-pass">
+            <div class="dialog-content">
+                <div class="dialog-content-icon">
+                    <i class="ae-mobile ae-mobile-about2"></i>
+                </div>
+                <div class="unbind-text">确认解除绑定尾号为的银行卡</div>
+                <div class="if-unbind-wrapper">
+                    <span class="unbind-yes">确认</span>
+                </div>
+            </div>
+            <div class="dialog-close">
+                <i class="ae-mobile ae-mobile-close"></i>
+            </div>
+        </div>
+    </div>
+    <link rel="import" href="../../widget/bankcenter/detail/bank-detail.tpl?__inline">
+</body>
+</html>

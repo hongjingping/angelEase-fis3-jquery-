@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/invest/invest.less">
+    <link rel="stylesheet" href="../../static/myfinancing/myfinancing.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/template/template.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/template/handlebars.js
+        @require ../../static/common/lib/apopup.js
+    -->
+  </head>
+  <body>
+    <link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline" hitIndex="">
+
+    <div class="user-invest-list">
+      <div class="layout invest-list-wrap">
+        <div class="invest-menu">
+          <link rel="import" href="../../widget/component/usercenter/menu/menu.tpl?__inline">
+        </div>
+        <div class="invest-main">
+          <div class="myfinancing-title">
+            <img src="../../static/myfinancing/resource/title.png" alt="">
+          </div>
+          <div class="myfinancing-main">
+            <div class="tab">
+              <ul>
+                <li><a href="javascript:void(0);">融资中项目</a></li>
+                <li><a href="javascript:void(0);">待融资项目</a></li>
+                <li><a href="javascript:void(0);">融资成功项目</a></li>
+              </ul>
+              <a href="/page/apply_for_funding/apply_for_funding.html" class="fr add-project" style="display:none;">
+                <i class="ae-icon ae-icon-plus"></i>
+                提交新项目
+              </a>
+            </div>
+            <div class="content-wrapper">
+              <div class="content">
+              </div>
+              <!--<div class="content table-content">
+                <table class="finance-table">
+                  <thead>
+                    <tr>
+                      <th class="tl">项目名称</th>
+                      <th class="tl">融资轮次</th>
+                      <th>融资金额</th>
+                      <th>您的身份</th>
+                      <th>审核状态</th>
+                      <th class="tl">操作</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="tl"><a href="#">音乐之声中文版邀请您音乐之声</a></td>
+                      <td class="tl">A</td>
+                      <td class="finance-amount">1,000万元</td>
+                      <td>领头人</td>
+                      <td>已提交</td>
+                      <td class="tl"><a href="#" class="view-detail">查看详情</a><a href="javascript:void(0);" class="del"><i class="ae-icon-delete ae-icon"></i></a></td>
+                    </tr>
+                    <tr>
+                      <td class="tl"><a href="#">音乐之声中文版邀请您音乐之声</a></td>
+                      <td class="tl">A</td>
+                      <td class="finance-amount">1,000万元</td>
+                      <td>领头人</td>
+                      <td class="status1">已提交</td>
+                      <td class="tl"><a href="#" class="view-detail">查看详情</a><a href="javascript:void(0);" class="del"><i class="ae-icon-delete ae-icon"></i></a></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+    <script id="finance-template" type="text/x-handlebars-template">
+      {{#each data}}
+      <div class="finance-item">
+        <div class="item-img">
+          <a href="/page/detail/detail.html?proId={{proId}}">
+            <img src="{{imgUrl}}" alt="">
+          </a>
+        </div>
+        <div class="item-title">
+          <div class="title">
+            <a href="/page/detail/detail.html?proId={{proId}}">{{proName}}</a>
+          </div>
+          <div class="nums">
+            已有{{orderCount}}人参与
+          </div>
+        </div>
+        <div class="item-details">
+          <div class="progress-bar">
+            <div class="bar">
+              <span class="all"></span>
+              <span class="cur" style="width:{{proRaiseSpeed}}%;"></span>
+            </div>
+            {{#if_eq proRaiseSpeed '0'}}
+            <span class="score unstart">{{proRaiseSpeed}}%</span>
+            {{else}}
+            <span class="score">{{proRaiseSpeed}}%</span>
+            {{/if_eq}}
+          </div>
+          <div class="detail-list">
+            <ul>
+              <li>
+                <div class="raise">
+                  <div class="lbl">
+                    募集金额（万）
+                  </div>
+                  <div class="val">
+                    {{proFinancieAmount}}
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="raised">
+                  <div class="lbl">
+                    已募金额（万）
+                  </div>
+                  <div class="val">
+                    {{payAmount}}
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="remain-days">
+                  <div class="lbl">
+                    剩余天数
+                  </div>
+                  <div class="val">
+                    {{remainDays}}
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="item-tag">
+          <span class="color{{status}}">{{statusName}}</span>
+        </div>
+      </div>
+      {{/each}}
+    </script>
+    <script id="financing-template" type="text/x-handlebars-template">
+      <table class="finance-table">
+        <thead>
+          <tr>
+            <th class="tl" style="width:36.5%;">项目名称</th>
+            <th class="tl" style="width:9%;">融资轮次</th>
+            <th class="tr" style="width:9.5%;">融资金额</th>
+            <th style="width:18%;">您的身份</th>
+            <th style="width:12%; padding-right:5%;">审核状态</th>
+            <th class="tl" style="width:15%;">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+        {{#each data}}
+        <tr data-pid="{{id}}">
+          <td class="tl">{{projectName}}<!--<a href="javascript:void(0);">{{projectName}}</a>--></td>
+          <td class="tl">{{financRound}}</td>
+          <td class="finance-amount">{{investAmount}}万元</td>
+          <td>{{financierType}}</td>
+          <td class="status{{status}}" style="width:12%; padding-right:5%;">{{statusStr}}</td>
+          <td class="tl">
+            <a href="/page/myfinancing/prefinance.html?id={{id}}" class="view-detail">查看详情</a>
+            {{#if_neq status '0'}}
+            <a href="javascript:void(0);" class="del"><i class="ae-icon-delete ae-icon"></i></a>
+            {{/if_neq}}
+          </td>
+        </tr>
+        {{/each}}
+        </tbody>
+      </table>
+    </script>
+    <script id="finance-nodata-template" type="text/x-handlebars-template">
+      <div class="list-no-data">
+          <p class="no-data-icon"></p>
+          <p class="no-data-txt">目前没有{{tab}}的项目</p>
+          <a href="/page/home/home.html" class="button">去看看项目</a>
+      </div>
+    </script>
+    <script src="../../static/myfinancing/myfinancing.js"></script>
+  </body>
+</html>

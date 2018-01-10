@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--  公共头引入  -->
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" href="../../static/myfinancing/myfinancing.less">
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="/page/personal_center/personal-center.html" class="back-nav"><i class="ae-mobile ae-mobile-arrow-left cmn-arrow-back"></i></a>
+    <span class="nav-text">我的融资</span>
+  </nav>
+  <nav class="finance-nav">
+      <a href="javascript:void(0);">融资中</a>
+      <a href="javascript:void(0);">待融资</a>
+      <a href="javascript:void(0);">融资成功</a>
+  </nav>
+  <div class="main">
+    <div class="finance-list">
+    </div>
+  </div>
+  <script id="finance-template" type="text/x-handlebars-template">
+      {{#each data}}
+      <a href="/page/detail/detail.html?proId={{proId}}">
+      <div class="finance-item">
+        <div class="wrapper">
+          <div class="item-img">
+            <img src="{{imgUrl}}" alt="">
+          </div>
+          <div class="item-content">
+            <div class="name">
+                {{proName}}
+            </div>
+            <div class="progress-bar">
+              <div class="bar">
+                <span class="all"></span>
+                <span class="cur" style="width:{{proRaiseSpeed}}%;"></span>
+              </div>
+              {{#if_eq proRaiseSpeed '0'}}
+              <span class="score unstart">{{proRaiseSpeed}}%</span>
+              {{else}}
+              <span class="score">{{proRaiseSpeed}}%</span>
+              {{/if_eq}}
+            </div>
+            <div class="nums">
+                已有{{orderCount}}人参与
+            </div>
+            <div class="detail-list">
+              <ul>
+                <li>
+                  <div class="raise">
+                    <div class="lbl">
+                      募集金额（万）
+                    </div>
+                    <div class="val">
+                      {{formatAmount proFinancieAmount}}
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="raised">
+                    <div class="lbl">
+                      已募金额（万）
+                    </div>
+                    <div class="val">
+                      {{payAmount}}
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="remain-days">
+                    <div class="lbl">
+                      剩余天数
+                    </div>
+                    <div class="val">
+                      {{remainDays}}
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="item-tag color{{status}}">
+              {{statusName}}
+            </div>
+          </div>
+        </div>
+      </div>
+      </a>
+      {{/each}}
+  </script>
+  <script id="financing-template" type="text/x-handlebars-template">
+    {{#each data}}
+    <a href="/page/myfinancing/prefinance.html?id={{id}}&status={{status}}">
+    <div class="financing-item">
+      <div class="wrapper">
+        <div class="item-main">
+          <div class="name">
+              {{projectName}}
+          </div>
+          <div class="item-desc">
+            <label for="">融资金额</label>
+            <span class="val">{{investAmount}}万元</span>
+          </div>
+          <div class="item-desc">
+            <label for="">您的身份</label>
+            <span class="val">{{financierType}}</span>
+          </div>
+        </div>
+        <div class="item-side">
+          <div class="status color{{status}}">
+            {{statusStr}}
+          </div>
+          <div class="financ-round">
+            <div class="financ-round-val">
+              {{financRound}}
+            </div>
+            <div class="financ-round-desc">
+              融资轮次
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </a>
+    {{/each}}
+  </script>
+  <script id="finance-nodata-template" type="text/x-handlebars-template">
+    <div class="list-no-data">
+      <p class="no-data-icon"></p>
+      <p class="no-data-txt">目前没有{{tab}}的项目</p>
+    </div>
+  </script>
+  <script type="text/javascript" src="../../static/common/lib/handlebars.js"></script>
+  <script type="text/javascript" src="../../static/common/lib/apopup.js"></script>
+  <script type="text/javascript" src="../../static/myfinancing/myfinancing.js"></script>
+</body>
+</html>

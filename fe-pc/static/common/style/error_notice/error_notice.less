@@ -1,0 +1,37 @@
+/*
+* 通用报错样式，适用于单行、多行文字
+* icon向左浮动，报错文字也向左浮动
+*/
+
+@import "../variables";
+
+.cmn-notice-wrapper {
+	box-sizing: border-box;
+    font-size: 12px;
+
+	.cmn-notice-error {
+		background: @cmn-color-ae-pink;
+	}
+
+	.cmn-notice-success {
+		background: @cmn-color-ae-gray6;
+	}
+
+	.cmn-notice-icon {
+		float: left;
+		line-height: 23px;
+
+		.ae-icon-success {
+			color: @cmn-color-ae-green;
+		}
+
+		.ae-icon-attention {
+			color: @cmn-color-ae-red;
+		}
+    }
+
+    .cmn-notice-text {
+    	float: left;
+    	line-height: 22px; //为了和icon对齐
+    }
+}

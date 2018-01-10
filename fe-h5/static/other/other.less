@@ -1,0 +1,53 @@
+.help-container {
+    padding: 15px 0 15px 20px;
+
+    li {
+        list-style: none;
+        margin-bottom: 30px;
+    }
+
+    .help-item {
+        position: relative;
+        color: #3F3F3F;
+        
+        .item-content {
+            padding-right: 20px;
+            margin-left: 35px;
+        }
+        
+        .title {
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        .desc {
+            margin-top: 8px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+
+        &:before {
+            width: 18px;
+            height: 18px;
+            content: '　　';
+            float: left;
+            margin-top: 2px;
+            background: url('./resource/images/avatar.png') no-repeat;
+            background-size: 18px 18px;
+        }
+
+        &:after {
+            content: '';
+            width: 90%;
+            height: 1px;
+            right: 0;
+            bottom: -15px;
+            background: #DFDFDF;
+            position: absolute;
+            -webkit-transform: scaleY(0.5);
+                    transform: scaleY(0.5);
+            -webkit-transform-origin: 0 0;
+                    transform-origin: 0 0;
+        }
+    }
+}

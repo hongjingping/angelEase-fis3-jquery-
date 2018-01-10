@@ -1,0 +1,159 @@
+@import "../../../static/common/style/variables.less";
+.bank-list-wrapper {
+    margin-top: 20px;
+    margin-left: 30px;
+    height: 580px;
+
+    .last-order {
+        color: @cmn-color-ae-gray2;
+        margin-bottom: 8px;
+        height: 18px;
+    }
+}
+
+.no-bank-wrapper {
+    margin-top: 20px;
+    margin-left: 30px;
+    height: 580px;
+
+}
+
+.bank-item-wrapper {
+    width: 270px;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 20px;
+
+}
+
+.bank-item {
+    width: 270px;
+    padding: 10px 0;
+    border-radius: 4px;
+    border: 1px solid @cmn-color-ae-gray5;
+
+    &:hover {
+        border-color: @cmn-color-ae-gold;
+
+        .phone-number-wrapper {
+            .unbind {
+                display: block;
+            }
+        }
+    }
+
+    .bank-type-wrapper {
+        padding: 0 10px;
+
+        .bank-logo-wrapper {
+            float: left;
+            width: 106px;
+            height: 30px;
+            padding-left: 5px;
+        }
+
+        .bank-type {
+            float: right;
+            color: @cmn-color-ae-gray2;
+            line-height: 30px;
+        }
+    }
+
+    .bank-limit-wrapper {
+        margin-top: 5px;
+        margin-bottom: 10px;
+        line-height: .95;
+        padding: 0 20px;
+        color: @cmn-color-ae-gray2;
+
+        .single-limit-wrapper {
+            float: left;
+        }
+        .daily-limit-wrapper {
+            float: left;
+            margin-left: 10px;
+            padding-left: 10px;
+            border-left: 2px solid #eceff2;
+        }
+    }
+
+    .bank-number-wrapper {
+        line-height: 36px;
+        background-color: @cmn-color-ae-gray6;
+        color: @cmn-color-ae-gray1;
+        font-size: 18px;
+        text-align: center;
+
+        span + span {
+            margin-left: 12px;
+        }
+    }
+
+
+    .wrap-key {
+        display: inline-block;
+        width: 80px;
+        color: @cmn-color-ae-gray2;
+    }
+
+    .wrap-value {
+        color: @cmn-color-ae-gray1;
+    }
+
+    .bank-user-wrapper {
+        margin-top: 15px;
+        margin-bottom: 3px;
+        padding: 0 20px;
+    }
+
+    .phone-number-wrapper {
+        padding: 0 20px;
+
+        .unbind {
+            display: none;
+            float: right;
+            color: @cmn-color-ae-dark-gold;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.bank-item-add {
+
+    &:hover {
+        .add-bank-wrapper {
+            .add-bank-icon {
+
+                .ae-icon-plus {
+                    color: @cmn-color-ae-gold;
+                }
+            }
+
+            .add-bank-text {
+                color: @cmn-color-ae-dark-gold;
+            }
+        }
+    }
+
+    padding: 0;
+    .add-bank-wrapper {
+
+        .add-bank-icon {
+            width: 40px;
+            margin-top: 45px;
+            margin-left: 116px;
+
+            .ae-icon-plus {
+                color: @cmn-color-ae-gray4;
+                font-size: 36px;
+            }
+        }
+
+        .add-bank-text {
+            text-align: center;
+            margin-bottom: 50px;
+            color: #ababab;
+        }
+    }
+}

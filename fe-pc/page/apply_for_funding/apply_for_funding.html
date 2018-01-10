@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/apply_for_funding/apply_for_funding.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/template/handlebars.js
+        @require ../../static/common/lib/apopup.js
+    -->
+    <script>
+      $('title').html('融资');
+    </script>
+</head>
+<body id="apply-for-funding">
+    <link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline" hitIndex="4">
+
+    <div class="apply-funding-wrapper">
+        <div class="banner-wrapper">
+            <div class="banner"></div>
+        </div>
+        <div class="apply-part-wrapper">
+            <div class="steps-wrapper">
+                <div class="triangle-wrapper"></div>
+                <div class="title-img"></div>
+                <!-- <img class="title-img" src="../../static/apply_for_funding/resource/images/title_img.png" alt="" width="262" height="40"> -->
+                <div class="steps cmn-clearfix">
+                    <div class="step-img first-img"></div>
+                    <div class="step-text first">填写、提交项目信息或商业计划书</div>
+                    <div class="step-img second-img"></div>
+                    <!-- <img class="step-img" src="../../static/apply_for_funding/resource/images/step_2.png" alt=""  width="59" height="90"> -->
+                    <div class="step-text second">等待审核</div>
+                    <div class="step-img third-img"></div>
+                    <!-- <img class="step-img" src="../../static/apply_for_funding/resource/images/step_3.png" alt="" width="55" height="94"> -->
+                    <div class="step-text third">3个工作日内，告知审核结果</div>
+                </div>
+                <div class="fund-btn">我要融资</div>
+            </div>
+        </div>
+
+        <!-- 申请表单 -->
+        <div class="apply-part-wrapper apply-part-form border-top">
+            <div class="apply-funding cmn-clearfix">
+                <div class="apply-funding-form">
+                    <div class="form-control cmn-clearfix">
+                        <div class="form-key">项目名称</div>
+                        <div class="form-value">
+                            <input type="text" name="projectName" maxlength="32" class="input-text" placeholder="请输入项目名称">
+                        </div>
+                    </div>
+                    <div class="form-control cmn-clearfix">
+                        <div class="form-key">创始人姓名</div>
+                        <div class="form-value">
+                            <input type="text" name="financierName" maxlength="8" class="input-text" placeholder="请输入创始人姓名">
+                        </div>
+                    </div>
+                    <div class="form-control cmn-clearfix">
+                        <div class="form-key">创始人电话</div>
+                        <div class="form-value">
+                            <input type="text" name="financierMobile" maxlength="11" class="input-text" onkeyup="this.value=this.value.replace(/\D/g,'')"  placeholder="请输入创始人电话">
+                        </div>
+                    </div>
+                    <div class="form-control cmn-clearfix" id="financ-round-wrapper">
+                        <div class="form-key">融资轮次</div>
+                        <div class="form-value cmn-clearfix">
+                            <div class="radio-item">
+                                <input type="radio" checked name="financRound" class="round-input-radio" id="funding-round-1" value="1" style="display: none">
+                                <label for="funding-round-1" class="radio-label">
+                                    <i class="ae-icon ae-icon-checkbox-off"></i>
+                                    <i class="ae-icon ae-icon-checkbox-on"></i>
+                                    <span>Pre-A</span>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="financRound" class="round-input-radio" id="funding-round-2" value="2" style="display: none">
+                                <label for="funding-round-2" class="radio-label">
+                                    <i class="ae-icon ae-icon-checkbox-off"></i>
+                                    <i class="ae-icon ae-icon-checkbox-on"></i>
+                                    <span>A</span>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="financRound" class="round-input-radio" id="funding-round-3" value="3" style="display: none">
+                                <label for="funding-round-3" class="radio-label">
+                                    <i class="ae-icon ae-icon-checkbox-off"></i>
+                                    <i class="ae-icon ae-icon-checkbox-on"></i>
+                                    <span>A+</span>
+                                </label>
+                            </div>
+                           <div class="radio-item">
+                                <input type="radio" name="financRound" class="round-input-radio" id="funding-round-4" value="4" style="display: none">
+                                <label for="funding-round-4" class="radio-label">
+                                    <i class="ae-icon ae-icon-checkbox-off"></i>
+                                    <i class="ae-icon ae-icon-checkbox-on"></i>
+                                    <span>其他</span>
+                                </label>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="form-control cmn-clearfix" id="lastFinancing">
+                        <div class="form-key">上轮融资</div>
+                        <div class="form-value">
+                            <input type="text" name="lastInvestAmount" maxlength="8" class="input-text" onkeyup="this.value=this.value.replace(/\D/g,'')" placeholder="请填写上轮融资金额">
+                        </div>
+                        <div class="form-text">万元</div>
+                    </div>
+                    <div class="form-control cmn-clearfix">
+                        <div class="form-key">融资金额</div>
+                        <div class="form-value">
+                            <input type="text" name="investAmount" maxlength="8" class="input-text" onkeyup="this.value=this.value.replace(/\D/g,'')" placeholder="请您填写期望融资金额">
+                        </div>
+                        <div class="form-text">万元</div>
+                    </div>
+                    <div class="form-control cmn-clearfix">
+                        <div class="form-key">您的身份</div>
+                        <div class="form-value cmn-clearfix">
+                            <div class="radio-item">
+                                <input type="radio" checked name="financierType" class="user-identity-radio" id="useridentity-1" value="1" style="display: none">
+                                <label for="useridentity-1" class="radio-label">
+                                    <i class="ae-icon ae-icon-radio-off"></i>
+                                    <i class="ae-icon ae-icon-radio-on"></i>
+                                    <span>我是创始人</span>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="financierType" class="user-identity-radio" id="useridentity-2" value="2" style="display: none">
+                                <label for="useridentity-2" class="radio-label">
+                                    <i class="ae-icon ae-icon-radio-off"></i>
+                                    <i class="ae-icon ae-icon-radio-on"></i>
+                                    <span>我愿领投本项目</span>
+                                </label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" name="financierType" class="user-identity-radio" id="useridentity-3" value="3" style="display: none">
+                                <label for="useridentity-3" class="radio-label">
+                                    <i class="ae-icon ae-icon-radio-off"></i>
+                                    <i class="ae-icon ae-icon-radio-on"></i>
+                                    <span>其他</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-control special cmn-clearfix">
+                        <div class="form-key">上传商业计划书</div>
+                        <div class="form-value">
+                            <div class="gray-reminder">完整商业计划书应当包括项目简介、市场情况、团队介绍、财务情况、未来发展、融资需求等。手机端仅支持单个小于2M的JPG&PNG文件，本平台主营股权融资业务。</div>
+                            <div class="orange-reminder">仅支持小于10M的PPT&PDF文件或单个文件小于2M的JPG或PNG格式图片（最多上传6张图片）</div>
+                            <div class="bp-sample">
+                                <a href="" download>下载范例</a>
+                            </div>
+                            <div class="upload-wrapper cmn-clearfix">
+                                <div class="upload-item upload-item-border uploader-box cmn-clearfix">
+                                    <input type="file" name="uploader" id="uploader" style="display: none">
+                                    <label for="uploader" class="upload-label">
+                                        <i class="ae-icon ae-icon-plus new-upload-btn"></i>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-validate-notice cmn-clearfix">
+                                <i class="ae-icon ae-icon-attention icon-error"></i>
+                                <div class="error-text"></div>
+                            </div>
+                            <div class="submit-btn">提交项目</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="apply-funding-others">
+                    <img class="email-img" src="../../static/apply_for_funding/resource/images/email.png" alt="" width="49" height="47">
+                    <div class="gray-text">您也可以直接将商业计划书发送至</div>
+                    <div class="email-address"><a href="mailto:angelease@creditease.cn">AngelEase@CREDITEASE.CN</a></div>
+                    <img class="app-qrcode-img" src="../../static/apply_for_funding/resource/images/qrcode_app.png" alt="" width="160" height="160">
+                    <div class="download-reminder">下载宜天使APP，实时掌控项目审核进度</div>
+                </div>
+            </div>
+       </div>
+    </div>
+
+   <!--  <form id= "uploadForm">
+        <p >xuanze <input type="file" name="file"/></p>
+        <input class="test" type="button" value="shangchuan" />
+    </form> -->
+
+    <script id="upload-item" type="text/x-handlebars-template">
+        <div class="upload-item {{status}} file {{type}} cmn-clearfix" id="upload-item-{{id}}">
+            {{#ifequal status 'uploading'}}
+                <div class="uploading-wrapper">
+                    <div class="uploading-text">上传中...</div>
+                    <div class="cancel-upload-wrapper">
+                        <i class="ae-icon ae-icon-close cancel-upload"></i>
+                    </div>
+                    <div class="progress">
+                        <div class="cover"></div>
+                    </div>
+                    <div class="percent"></div>
+                </div>
+            {{/ifequal}}
+            {{#ifequal status 'success'}}
+                <div class="upload-success-wrapper">
+                    <!-- <div>上传成功</div> -->
+                    {{#ifequal type 'image'}}
+                        <div class="hover-mask">
+                            <div class="edit-wrapper">
+                                <i class="ae-icon ae-icon-magnifier preview"></i>
+                                <i class="ae-icon ae-icon-delete delete"></i>
+                            </div>
+                        </div>
+                        <img class="final-img" src="{{previewUrl}}">
+                        <div class="preview-popup-{{id}} preview-popup" style="display:none">
+                            <img class="preview-img" id="preview-img" src="{{previewUrl}}">
+                        </div>
+                    {{/ifequal}}
+                    {{#ifequal type 'ppt'}}
+                        <div class="ppt-pdf-wrapper">
+                            <div class="ppt-icon"></div>
+                            <div class="delete-icon-wrapper">
+                                <i class="ae-icon ae-icon-close delete"></i>
+                            </div>
+                        </div>
+                        <div class="ppt-pdf-name">{{name}}</div>
+                    {{/ifequal}}
+                    {{#ifequal type 'pdf'}}
+                        <div class="ppt-pdf-wrapper">
+                            <div class="pdf-icon"></div>
+                            <div class="delete-icon-wrapper">
+                                <i class="ae-icon ae-icon-close delete"></i>
+                            </div>
+                        </div>
+                        <div class="ppt-pdf-name">{{name}}</div>
+                    {{/ifequal}}
+                    <input name="financierBook" type="hidden" value="{{url}}">
+                </div>
+            {{/ifequal}}
+            {{#ifequal status 'error'}}
+                <div class="upload-fail-wrapper cmn-clearfix">
+                    <div class="fail-img"></div>
+                    <div class="fail-tip">上传失败</div>
+                </div>
+            {{/ifequal}}
+        </div>
+    </script>
+
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script src="../../static/apply_for_funding/apply_for_funding.js"></script>
+</body>
+</html>

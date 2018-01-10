@@ -1,0 +1,166 @@
+@import '../common/style/variables';
+
+@BOTTOM_BAR_HEIGHT: 47px;
+
+.gray_col { 
+	height: 40px; 
+	color: @GRAY1; 
+	font-size: 14px; 
+    line-height: 40px; 
+	padding-left: 14px; 
+	font-family: @FontFamily;
+}
+
+.step-bar-wrapper { 
+    height: 40px;
+    line-height: 40px;
+}
+
+.notice {
+    overflow: hidden;
+    width: 100%;
+    padding: 6px 0;
+    background: #FFF;
+
+    .notice-icon {
+        width: 14%;
+        float: left;
+        text-align: center;
+
+        i {
+            color: #FF6493;
+            font-size: 18px;
+        }
+    }
+
+    .notice-txt {
+        width: 80%;
+        float: right;
+        color: #9B9B9B;
+        margin-top: 5px;
+        font-size: 13px;
+        padding-right: 6%;
+    }
+}
+
+.weui_label { 
+	color: @GRAY2;
+	font-size: 13px; 
+	font-family: @FontFamily; 
+}
+
+.weui_cell {
+	font-size: 13px;
+    padding: 7px 15px;
+	font-family: @FontFamily; 
+}
+
+.weui_cell:before {
+	content: none;
+}
+
+.bottom-bar {  
+    left:0; 
+    bottom: 0; 
+    width: 100%;
+    color:#c9c9c9; 
+    position: fixed; 
+    background: @WHITE; 
+    display: inline-block;  
+    height:@BOTTOM_BAR_HEIGHT;
+    font-family: @FontFamily;
+    line-height: @BOTTOM_BAR_HEIGHT;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+    
+    span {
+    	display: inline-block;
+    	width: 10rem;
+        color: #9B9B9B;
+    	line-height: 24px; 
+    	margin-left: 10px; 
+    	font-size: 14px;
+    }
+
+   .go-to-sign-amount {
+     width: 13rem;
+   }
+    em {
+    	color: #FFA655; 
+    	font-size: 24px;
+    	font-style:normal;
+    }
+
+    a {
+    	width: 6em;
+    	color: #fff;
+    	float: right;
+    	font-size: @Font5; 
+    	background: @GOLD1; 
+    	text-align: center;
+    	display: inline-block; 
+    	line-height: @BOTTOM_BAR_HEIGHT;  
+    }
+}
+
+.go-to-sign-btn {
+	width: 200px;
+    font-size: 16px;
+	display: inline-block;
+}
+.tail-num {
+    color: #9b9b9b;
+}
+
+.full-border {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+}
+
+.full-padding {
+  padding: 8px 0;
+}
+
+.weui_cell_padding {
+  padding: 0 15px;
+}
+

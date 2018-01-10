@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--  公共头引入  -->
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" href="../../static/myfinancing/prefinance.less">
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="javascript:void(0);" onclick="window.history.go(-1); return false;" class="back-nav"><i class="ae-mobile ae-mobile-arrow-left-thin"></i></a>
+    <span class="nav-text">提交项目详情页</span>
+    <a href="javascript:void(0);" class="del"><i class="ae-mobile ae-mobile-delete"></i></a>
+  </nav>
+  <div class="main">
+  </div>
+  <div id="del-popup" style="display:none">
+	    <div class="gray-mask"></div>
+	    <div class="dialog-pass">
+	        <div class="dialog-content">
+	            <div class="dialog-content-icon">
+	            	<i class="ae-mobile ae-mobile-attention2"></i>
+	            </div>
+	            <div class="dialog-content-text text-align-left">请您确认是否要删除项目</div>
+	            <div class="i-know" id="closeGAT">确认</div>
+	        </div>
+	        <div class="dialog-close"> <i class="ae-mobile ae-mobile-close p-close"></i>
+	        </div>
+	    </div>
+	</div>
+  <script id="prefinance-template" type="text/x-handlebars-template">
+    <input type="hidden" id="del-id" value="{{id}}">
+    <div class="project-name">
+      {{projectName}}
+    </div>
+    <div class="project-main">
+      <ul>
+        <li>
+          <div class="lbl">
+            创始人姓名
+          </div>
+          <div class="val">
+            {{financierName}}
+          </div>
+        </li>
+        <li>
+          <div class="lbl">
+            创始人电话
+          </div>
+          <div class="val">
+            {{financierMobile}}
+          </div>
+        </li>
+        <li>
+          <div class="lbl">
+            融资轮次
+          </div>
+          <div class="val">
+            {{financRound}}
+          </div>
+        </li>
+        {{#if lastInvestAmount}}
+        <li>
+          <div class="lbl">
+            上轮注资
+          </div>
+          <div class="val">
+            {{lastInvestAmount}}万元
+          </div>
+        </li>
+        {{/if}}
+        <li>
+          <div class="lbl">
+            融资金额
+          </div>
+          <div class="val">
+            {{investAmount}}万元
+          </div>
+        </li>
+        <li>
+          <div class="lbl">
+            您的身份
+          </div>
+          <div class="val">
+            我是{{financierType}}
+          </div>
+        </li>
+        <li>
+          <div class="lbl">
+            商业计划书
+          </div>
+          <div class="val">
+            {{#if fileList.length}}
+              {{fileList.[0].fileName}}
+            {{/if}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="project-imgs">
+      {{#each imgList}}
+      <img src="{{this}}" alt="">
+      {{/each}}
+    </div>
+  </script>
+  <script type="text/javascript" src="../../static/common/lib/handlebars.js"></script>
+  <script type="text/javascript" src="../../static/common/lib/apopup.js"></script>
+  <script type="text/javascript" src="../../static/myfinancing/prefinance.js"></script>
+</body>
+</html>

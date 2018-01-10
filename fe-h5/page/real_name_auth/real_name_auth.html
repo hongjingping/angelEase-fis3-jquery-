@@ -1,0 +1,160 @@
+﻿﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/real_name_auth/real_name_auth.less">
+
+	<!--
+		@require ../../static/common/lib/base64.js
+		@require ../../static/common/lib/send_sms.js
+		@require ../../static/common/lib/newbase64.js
+	-->
+</head>
+<body class="gray_bg clear_body">
+
+	<input type="hidden" name="for_login_userphone" id="for_login_userphone" value="">
+	<input type="hidden" name="userName" id="userName" value="">
+
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<div class="user_info">
+		<ul>
+
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="user_att_icon"> <i class="ae-mobile ae-mobile-attention2 icon-item"></i>
+					</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<span class="weui_label_ex6">您的身份证和银行卡将用于签约，请填写真实身份信息和真实有效的银行卡。</span>
+				</div>
+			</div>
+		</ul>
+
+		<ul class="box-border">
+			<div class="form-control clearfloat">
+			    <span class="form-txt">证件类型</span>
+			    <div class="select-wrapper">
+			        <select name="idcardtype" id="idcardtype"  data-role="none" class="select-with-arrow">
+			            <option value="1">大陆居民身份证</option>
+    					<option value="3">港澳回乡证</option>
+    					<option value="4">台胞证</option>
+    					<option value="5">外籍护照</option>
+			        </select>
+			    </div>
+			</div>
+		</ul>
+
+		<ul class="box-border">
+			<li class="user_info_li">
+				<em>真实姓名</em>
+				<input placeholder="请填写本人真实姓名" name="realName" maxlength="50"></li>
+			<li class="user_info_li_bottom">
+				<em>证件号码</em>
+				<input placeholder="请填写真实证件号码，认证后不可修改" id="document-num" name="idCardNo"
+					 maxlength="18"></li>
+		</ul>
+
+		<ul class="gat">
+			<li class="user_info_li_bottom">
+				<em>上传证件照片</em>
+			</li>
+ 			<div class="img-show">
+ 				<div class="img-show-left">
+					<div class="img-pic-mask img-pic-mask_frontImg">+</div>
+					<img   src="../../static/real_name_auth/resource/images/cert.png" alt='' id='frontImg'>
+					<em>证件正面照</em>
+					<input type='file' id='uploadFrontImg' value='' class="fileupload" />
+				</div>
+				&nbsp;&nbsp;
+				<div class="img-show-right">
+					<div class="img-pic-mask img-pic-mask_backImg">+</div>
+					<img   src="../../static/real_name_auth/resource/images/id.png" alt='' id='backImg'>
+					<em>手持免冠正面证件照</em>
+					<input type='file' id='uploadBackImg' value='' class="fileupload" />
+				</div>
+			</div>
+		</ul>
+
+		<ul class="box-border gat">
+			<div class="form-control clearfloat bd-line">
+			    <span class="form-txt">选择银行</span>
+			    <div class="select-wrapper">
+			        <select id="cardType" name="cardType" class="select-with-arrow">
+			            <option value="0102">工商银行</option>
+						<option value="0308">招商银行</option>
+						<option value="0105">建设银行</option>
+						<option value="0103">农业银行</option>
+						<option value="0303">光大银行</option>
+						<option value="0100">中国邮政储蓄银行</option>
+			        </select>
+			    </div>
+			</div>
+
+			<li class="user_info_li_bottom">
+				<em>银行卡号</em>
+				<input placeholder="请填写银行卡号" id="cardNo" name="cardNo" maxlength="22"></li>
+			</li>
+
+		</ul>
+
+		<ul class="gat">
+			<li class="user_info_li_bottom">
+				<em>银行照片扫描</em>
+			</li>
+			<div class="img-show">
+ 				<div class="img-show-bank">
+					<div class="img-pic-mask img-pic-mask_frontCardImg">+</div>
+					<img   src="../../static/real_name_auth/resource/images/cert.png" alt='' id='bankImg'>
+					<em>银行卡扫描照</em>
+					<input type='file' id='uploadFrontCardImg' value='' class="fileupload" />
+				</div>
+			</div>
+		</ul>
+
+		<ul class="box-border">
+			<li class="user_info_li">
+				<em>当前手机</em>
+				<em class="common" id="phone"></em>
+			</li>
+			<li class="user_info_li_bottom">
+				<em>验证码</em>
+				<input class="input" type="text" placeholder="请输入手机验证码" name="code">
+				<em class="line">|</em>
+				<em class="send_code" id="sendCode" onclick="send();">发送验证码</em>
+			</li>
+		</ul>
+	</div>
+	<div class="feedback-button">
+		<span class="key-operation-button-normal" id="nextBtn4">提交</span>
+	</div>
+    <div class="toast" id="toastBox">
+        <div>
+            <i class="ae-mobile ae-mobile-right modify-suc"></i>
+        </div>
+        <div class="modify-suc-text"></div>
+    </div>
+
+	<!-- age check msg -->
+    <div id="age-model" style="display: none;">
+        <div class="gray-mask-age"></div>
+        <div class="dialog-pass-age">
+            <div class="dialog-content-age">
+                <div class="dialog-content-icon">
+                    <i class="ae-mobile ae-mobile-attention"></i>
+                </div>
+                <div class="suc-text"></div>
+                <div class="confirm-wrapper" id="age-iknow">
+                    <span class="confirm-yes">知道了</span>
+                </div>
+            </div>
+            <div class="dialog-close" id="age-close">
+                <i class="ae-mobile ae-mobile-close"></i>
+            </div>
+        </div>
+    </div>
+
+	<script type="text/javascript" src="../../static/real_name_auth/real_name_auth.js"></script>
+	<script type="text/javascript" src="../../static/common/lib/uploadfile.js"></script>
+</body>
+</html>

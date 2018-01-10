@@ -1,0 +1,117 @@
+@import "../common/style/variables";
+
+.project-logo {
+	width: 800px;
+	height: 36px;
+	margin: 40px auto;
+	background: url('./resource/images/img-order-step-one.png') no-repeat;
+}
+
+.pay-announcement {
+    display: none;
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px 15px;
+    background: rgba(255,149,68, 0.05);
+    box-sizing: border-box;
+    border-top: 1px solid #FF9544;
+    overflow: hidden;
+
+    .announcement-content {
+        // width: 800px;
+        margin: 0 auto;
+        color: @cmn-color-ae-gray;
+        line-height: 22px;
+
+
+        .icon-announcement {
+            float: left;
+            color: #e7ba59;
+            width: 19px;
+            height: 14px;
+            margin-top: 3px;
+            background-image: url("./resource/images/icon_announcement.png");
+        }
+
+        .announcement-text-wrapper {
+            float: left;
+            width: 705px;
+            margin-left: 15px;
+            font-size: 13px;
+        }
+
+        .icon-close {
+            float: left;
+            margin-left: 15px;
+            margin-top: 0px;
+            font-size: 14px;
+            color: @cmn-color-ae-gray2;
+            cursor: pointer;
+        }
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: .8s;
+    animation-delay: .5s;
+}
+
+@-webkit-keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+    animation-duration: .8s;
+}

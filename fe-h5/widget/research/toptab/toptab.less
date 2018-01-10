@@ -1,0 +1,67 @@
+.topbar-container {
+    height: 44px;
+    width: 100%;
+    background: #FFF;
+    position: relative;
+    text-align: center;
+    position: relative;
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+
+    a {
+        position: absolute;
+        display: block;
+        height: 100%;
+    }
+
+    .bar-back {
+        //display: block;
+        //font-size: 16px;
+        //color: #4A4A4A;
+        //margin-top: 10px;
+        //padding-left: 10px;
+
+        position: absolute;
+        font-size: 1em;
+        top: 10px;
+        left: 10px;
+    }
+
+    span {
+        height: 44px;
+        line-height: 44px;
+        font-size: 15px;
+        color: #4A4A4A;
+        display: inline-block;
+    }
+
+    .school {
+        padding-right: 22px;
+        position: relative;
+    }
+
+    .focus {
+        padding-left: 22px;
+    }
+
+    .line {
+        position: absolute;
+        background: #E1C078;
+        width: 40px;
+        height: 3px;
+        top: 40px;
+        left: 118px;
+    }
+}

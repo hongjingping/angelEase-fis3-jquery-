@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>融资人认证</title>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+    
+    <link href="../../static/usercenter/financier.css" rel="stylesheet">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/city.js
+        @require ../../static/usercenter/financier-detail.js
+    -->
+  </head>
+</head>
+<body>
+<header class="header">
+    <p class="title">融资人认证</p>
+    <!--融资人认证状态-->
+</header>
+
+<div class="content">
+    <!--顶部状态-->
+    <section class="status">
+        <!--认证信息提交成功!请耐心等待审核!-->
+        <section class="success" style="display: none">
+            <label class="success-and-wait">认证信息提交成功!请耐心等待审核!</label>
+            <div class="btn-reauthen"><a class="btn" href="../../home/home.html">去看看项目</a></div>
+        </section>
+        <section class="status-code"><span class="text-danger"></span></section>
+        <!--资料信息不全-->
+        <section class="err-data" style="display: none">
+            <div class="reason">原因:  <span class="err-text"></span></div>
+            <label class="connect-service">若对审核结果有疑问,请联系客服</label>
+            <div class="btn-reauthen"><a id="toFinancier" class="" href="#">重新认证</a></div>
+        </section>
+        <!--领投人认证失败-->
+        <section class="investor-unautherized" style="display: none">
+            <h2>合格投资人认证成功,领头人认证失败。</h2>
+            <h3>若对审核结果有疑问,请联系客服。</h3>
+        </section>
+
+        <section class="all-msg">
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    真实姓名：
+                </div>
+                <div class="col-xs-8" id="real-name">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    手机号码：
+                </div>
+                <div class="col-xs-8" id="mobile">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    认证类型：
+                </div>
+                <div class="col-xs-8" id="type">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    机构名称：
+                </div>
+                <div class="col-xs-8" id="company">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    公司电话：
+                </div>
+                <div class="col-xs-8" id="contact">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    公司邮箱：
+                </div>
+                <div class="col-xs-8" id="email">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    所在地：
+                </div>
+                <div class="col-xs-8" id="provinceaddr">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    详细地址：
+                </div>
+                <div class="col-xs-8" id="contactAddress">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    法人姓名：
+                </div>
+                <div class="col-xs-8" id="realname">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    法人证件类型：
+                </div>
+                <div class="col-xs-8" id="legalNumberType">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    法人证件号码：
+                </div>
+                <div class="col-xs-8" id="licenseNumber">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    营业执照注册号：
+                </div>
+                <div class="col-xs-8" id="busLic">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                    组织机构代码：
+                </div>
+                <div class="col-xs-8" id="orgcode">
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-xs-4">
+                   营业执照扫描照：
+                </div><br>
+                <div class="col-xs-8">
+                    <img src="" alt="" id="certPhoto1">
+                </div>
+                <div class="col-xs-4">
+                   组织机构代码扫描照：
+                </div>
+                <div class="col-xs-8">
+                    <img src="" alt="" id="certPhoto2">
+                </div>
+            </div>
+        </section>
+
+    </section>
+</div>
+
+</body>
+</html>

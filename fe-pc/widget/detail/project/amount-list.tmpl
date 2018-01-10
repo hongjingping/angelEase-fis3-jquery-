@@ -1,0 +1,50 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var amount = data[i];%>
+
+	<div class="pro-stage-item">
+		<div class="stage-item-icon">
+			<% if (amount.isCustomed === 1) { %>
+				<i class="ae-icon ae-icon-dingzhi"></i>
+			<% } else if (amount.imgPath) { %>
+				<img src=<%=amount.imgPath%>>
+			<% } else { %>
+				<i class="ae-icon ae-icon-crown"></i>
+			<% } %>
+		</div>
+
+		<div class="stage-item-txt" >
+			<%=amount.backInfo%>
+		</div>
+
+		<!-- 游客没有登录模糊效果 -->
+		<div class="stage-blur" style="display: none;"></div>
+
+		<% if (amount.isCustomed === 1) { %>
+			<% if (amount.isOver === true) { %>
+				<div class="stage-item-content">
+					<span amountId="<%=amount.id%>" class="customed-btn un-use">已售罄</span>
+				</div>
+			<% } else if (amount.isOver === false) { %>
+				<div class="stage-item-content">
+					<a href="javascript:;" amountId="<%=amount.id%>" class="invest-btn customed-btn">定制化档位</a>
+				</div>
+			<% } %>
+		<% } else if (amount.isCustomed === 0) { %>
+			<% if (amount.isOver === true) { %>
+				<div class="stage-item-content">
+					<p class="invest-num">投资金额</p>
+					<p class="invest-fund"><%=amount.amount%><span class="yuan">元</span></p>
+					<span amountId="<%=amount.id%>" class="uncustomed-btn">已售罄</a>
+				</div>
+			<% } else if (amount.isOver === false) { %>
+				<div class="stage-item-content">
+					<p class="invest-num">投资金额</p>
+					<p class="invest-fund"><%=amount.amount%><span class="yuan">元</span></p>
+					<a href="javascript:;" amountId="<%=amount.id%>" class="invest-btn">我要投资</a>
+				</div>
+			<% } %>
+		<% } %>
+	</div>
+
+<% } %>
+

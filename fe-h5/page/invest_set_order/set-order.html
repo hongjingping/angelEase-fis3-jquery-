@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/invest_set_order/set-order.less">
+</head>
+
+<body class="gray_bg" style="position: relative;">
+	<!-- header -->
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<!-- tittle -->
+	<div class="step-bar-wrapper white_bg">
+		<ul class="step-bar clearfloat">
+			<li>
+				<span class="dot"></span>
+				<a  href="#">填写订单</a>
+			</li>
+			<li class="not-go">
+				<span class="arrows">
+					<i class="ae-mobile ae-mobile-step"></i></span>
+				<span class="dot"></span>
+				<a href="#">签约</a>
+			</li>
+			<li class="not-go">
+				<span class="arrows">
+					<i class="ae-mobile ae-mobile-step"></i></span>
+				<span class="dot"></span>
+				<a href="#">支付</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="gray_col">投资意向</div>
+
+	<div class="white_bg">
+        <div class="alert-bar reminder top-border top-border-special">
+			<div class="weui_cell">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label">
+		            	<i class="ae-mobile ae-mobile-attention2"></i>
+		            </label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary order-reminder">
+		            风险提示:股权投资属于高风险投资,请谨慎决策!
+		        </div>
+		    </div>
+        </div>
+
+        <div class="invest-info top-border bottom-border top-border-special">
+        	<div class="weui_cell">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label">
+		            	投资人
+		            </label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary" id="investorName">
+
+		        </div>
+		    </div>
+		    <div class="weui_cell">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label">
+		            	投资项目
+		            </label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary" id="proName">
+
+		        </div>
+		    </div>
+		    <div class="weui_cell invest-amount right-border right-border-special">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label">
+		            	投资金额
+		            </label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary left-border">
+		        	<div class="weui_cell amount-input">
+  						<div class="weui_cell_hd sub-amount-btn unable"></div>
+				        <div class="weui_cell_bd amount-show-label left-border">
+				        	<div class="amount-show-content" id="sel_intentionspayment">
+				            </div>
+				        </div>
+				        <div class="weui_cell_bd add-amount-btn left-border"></div>
+              </div>
+	        </div>
+		    </div>
+		    <div class="weui_cell cell-higher">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label">
+		            	投资回报
+		            </label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary" id="backInfo">
+
+		        </div>
+		    </div>
+        </div>
+	</div>
+
+	<div class="gray_col">投资人地址信息</div>
+
+	<div class="white_bg top-border bottom-border">
+        <div class="alert-bar reminder">
+			<div class="weui_cell bottom-border">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label-address">
+		            	<i class="ae-mobile ae-mobile-attention2"></i>
+		            </label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary order-reminder">
+		            协议及投后信息等私密材料将寄送到您选择的地址；请您选择真实有效的个人地址。
+		        </div>
+		    </div>
+        </div>
+        <div class="invest-info" id="investAddress">
+        	<div class="weui_cell address-panel">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label">收件地址</label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary">
+		        	<div class="weui_cell default-address">
+		        		<div class="weui_cell_hd cell-key">
+		            		<label class="weui_label detail-address-label">
+			            	</label>
+			            </div>
+			            <div class="weui_cell_bd weui_cell_primary detail-address-more">
+			            	<span><i class="ae-mobile ae-mobile-arrow-right"></i></span>
+			            </div>
+			        </div>
+		        </div>
+		    </div>
+
+			<div class="add-card address-add" id="addDiv">
+				<i class="ae-mobile ae-mobile-plus"></i>
+				<span>新增地址</span>
+			</div>
+		</div>
+	</div>
+
+	<div class="gray_col">
+		<span>支付银行卡</span>
+		<span class="side-icon bankcard-notice">
+			<i class="ae-mobile ae-mobile-about"></i>
+		</span>
+	</div>
+
+	<div class="bank-item">
+	    <div class="logo">
+	        <img class="bank-logo" alt="银行标志">
+	    </div>
+	    <div class="list">
+	        <div class="list-title">
+	            <span class="bank-title"></span>
+	            <span class="bank-num"></span>
+	        </div>
+	        <p class="quota"></p>
+	    </div>
+
+	    <i class="ae-mobile ae-mobile-arrow-right reach-detail"></i>
+	</div>
+
+	<div class="add-card bankcard-add">
+		<i class="ae-mobile ae-mobile-plus"></i>
+		<span>添加银行卡</span>
+	</div>
+
+	<div class="gray_col_empty"></div>
+
+	<div class="white_bg top-border bottom-border">
+		<div class="alert-bar reminder" >
+			<div class="weui_cell bottom-border">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label-address">
+		            	<i class="ae-mobile ae-mobile-attention2"></i>
+		            </label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary order-reminder">
+		            参与投资的合格投资人必须满足资产一百万元，或年收入三十万元的要求。同时了解并能承受股权融资的高风险。
+		        </div>
+		    </div>
+        </div>
+        <div class="alert-bar reminder" >
+			<div class="weui_cell">
+		        <div class="weui_cell_hd cell-key">
+		            <label class="weui_label mark-label">
+		            	<div id="i-check-btn" class="i-check-unchecked"></div>
+		            </label>
+		        </div>
+		        <div class="weui_cell_bd weui_cell_primary order-reminder">
+		              本人承诺已了解并同意<a id="protocolOrder" href="javascript:;">《预约意向书》</a><a id="protocolFund" href="javascript:;">《投资风险声明书》</a>。
+		        </div>
+		    </div>
+        </div>
+	</div>
+
+	<a class="next-btn" id="toConfirm">
+		<i class="ae-mobile ae-mobile-arrow-right"></i>
+	</a>
+
+	<div class="gray-mask" style="display:none"></div>
+
+	<div class="dialog-pass over-fund-dialog" style="display:none">
+        <div class="dialog-content">
+        	<div class="dialog-content-icon">
+        		<i class="ae-mobile ae-mobile-attention2"></i>
+            </div>
+
+            <div class="dialog-content-text">
+        		项目当前已超募，下单后您将进入后补投资人序列， 请确认愿意排队后继续操作。
+        	</div>
+
+        	<div class="i-know">知道了</div>
+        </div>
+
+        <div class="dialog-close over-fund-close">
+            <i class="ae-mobile ae-mobile-close"></i>
+        </div>
+	</div>
+
+	<div class="dialog-pass bankcard-dialog" style="display:none">
+        <div class="dialog-content">
+        	<div class="dialog-content-icon">
+        		<i class="ae-mobile ae-mobile-attention2"></i>
+            </div>
+
+            <div class="dialog-content-text">
+				银行卡将用于签约及支付，变更银行卡将导致重新签约，请您谨慎选择
+        	</div>
+
+        	<div class="i-know bankcard-know">知道了</div>
+        </div>
+	</div>
+
+	<input type="hidden" id="addrId" />
+	<input type="hidden" id="proId" />
+	<input type="hidden" id="amountId" />
+	<input type="hidden" id="proInvAmount" />
+
+
+	<div class="notice-container">
+		<link rel="import" href="../../widget/component/notice/notice.tpl?__inline">
+	</div>
+
+	<script type="text/javascript" src="../../static/invest_set_order/set-order.js"></script>
+</body>
+</html>

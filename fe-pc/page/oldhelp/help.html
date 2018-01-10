@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+  <!-- common header -->
+ 	<link rel="import" href="../../static/common/view/main.tpl?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/help/help.less">
+
+	<!--
+	    @require ../../static/common/lib/jquery/jquery.js
+	    @require ../../static/common/lib/storage.js
+	    @require ../../static/common/base/base.js
+	-->
+</head>
+<body>
+
+	<link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline">
+
+	<div class="help-center">
+		<div class="help-center-container layout">
+			<ul class="center-menu">
+				<li class="center-item" data-item="help-about">关于AngelEase</li>
+				<li class="center-item" data-item="help-default">互联网非公开股权融资</li>
+				<li class="center-item" data-item="help-mode">领投+跟投模式</li>
+				<li class="center-item" data-item="help-statement" >投资人规则&声明</li>
+				<li class="center-item" data-item="help-risk">投资风险申明书</li>
+				<li class="center-item" data-item="help-guide">新手指南</li>
+			</ul>
+			<div class="center-content">
+				<div class="help-about">
+					<div class="about-nav">
+						<img src="../../static/help/resource/images/help-about.png">
+					</div>
+					<h2 class="help-title">AngelEase平台简介</h2>
+					<p>AngelEase是宜信®推出的创新天使投资人服务平台，依托宜信在互联网金融行业的优势资源，为知名天使投资人与创投机构提供营销推广、项目运营、投后管理、退出管理等多方面全方位服务，致力于打造中国天使投资和创业融资生态圈。</p>
+					<h2 class="help-title">AngelEase如何服务天使</h2>
+					<ul>
+						<li>
+						  <h3 class="help-sub-title">营销服务</h3>
+							<p class="font-gray">多渠道活动推广，品牌推广，宜信高净值客户群推广，投资人圈层营销</p>
+						</li>
+						<li>
+							<h3 class="help-sub-title">项目运营</h3>
+							<p class="font-gray">快速募集资金，帮助企业招募人才，重点合作客户推荐，投资顾问咨询服务</p>
+						</li>
+						<li>
+							<h3 class="help-sub-title">投后管理</h3>
+							<p class="font-gray">募集资金快速到账，项目信息及时披露；提供协议签署、变更合同管理服务</p>
+						</li>
+						<li>
+							<h3 class="help-sub-title">退出管理</h3>
+							<p class="font-gray">最优退出路径匹配，并提供历史年报查询等服务。</p>
+						</li>
+					</ul>
+					<h2 class="help-title">联系我们</h2>
+					<ul class="contact">
+						<li class="cmn-clearfix">
+							<p class="pull-left pull-left-80">客服电话</p>
+							<p class="pull-right">400-818-0060</p>
+						</li>
+						<li class="cmn-clearfix">
+							<p class="pull-left pull-left-80">客服邮箱</p>
+							<p class="pull-right">
+								<a class="bp-email" href="mailto:angelease@creditease.cn" target="_blank">AngelEase@creditease.cn</a>
+							</p>
+						</li>
+						<li class="cmn-clearfix">
+							<p class="pull-left pull-left-80">北京地址</p>
+							<p class="pull-right">北京市朝阳区西大望路1号温特莱中心B座7楼709室</p>
+						</li>
+						<li class="cmn-clearfix">
+							<p class="pull-left pull-left-80">上海地址</p>
+							<p class="pull-right">上海市浦东新区花木街道 樱花路868号 建工大唐国际广场23楼</p>
+						</li>
+					</ul>
+					<div class="qr-code">
+						<div class="img-wrapper qr-xiaomishu">
+							<img src="../../static/help/resource/images/img-qrcode-xiaomishu.png" alt="">
+						</div>
+						<div class="img-wrapper qr-gongzhonghao">
+							<img src="../../static/help/resource/images/img-qrcode-gongzhonghao.png" alt="">
+						</div>
+						<div class="qr-txt txt-xiaomishu">AngelEase小秘书</div>
+						<div class="qr-txt txt-gongzhonghao">AngelEase公众号</div>
+					</div>
+					<div class="contact-detail">
+						<p>任何疑问欢迎与我们联系，我们会在第一时间为您服务~</p>
+						<p>
+							<span>若您有优质早期股权项目的募资需求，欢迎将商业计划书发送至</span>
+							<a class="bp-email" href="mailto:angelease@creditease.cn" target="_blank">AngelEase@creditease.cn</a>
+							<span>，我们的创投团队将尽快与您联系</span>
+						</p>
+
+					</div>
+				</div>
+				<div class="help-default active">
+					<div class="about-nav">
+						<img src="../../static/help/resource/images/help-center-nav.png">
+					</div>
+					<ul class="sub-nav cmn-clearfix">
+						<li data-item="help-default-what" class="sub-nav-item active-sub-nav">什么是股权投资</li>
+						<li data-item="help-default-case" class="sub-nav-item">成功案例</li>
+						<li data-item="help-default-risk" class="sub-nav-item">风险提示</li>
+						<li data-item="help-default-why" class="sub-nav-item">为什么要股权投资</li>
+						<li data-item="help-default-how" class="sub-nav-item">如何成为合格投资人</li>
+					</ul>
+					<div class="sub-nav-content">
+						<div class="help-default-what active">
+							<p>创业企业发展迅速，而创业的创始人常常缺少运营资金，</p>
+							<p>通过股权投资，企业创始人可以募集到资金，而投资人可以获得公司的股权，以期分享公司成长带来的收益</p>
+						</div>
+						<div class="help-default-case">
+							<p>如果所支持企业创业成功，投资人可以获得巨大的收益</p>
+							<p>以下企业的投资人均获得了巨大回报：</p>
+							<ul class="case-company">
+								<li class="cmn-clearfix">
+									<div class="pull-left pull-left-small">谷歌</div>
+									<div class="pull-right pull-right-orange">1000倍回报</div>
+								</li>
+								<li class="cmn-clearfix">
+									<div class="pull-left pull-left-small">小米</div>
+									<div class="pull-right pull-right-orange">160倍回报</div>
+								</li>
+								<li class="cmn-clearfix">
+									<div class="pull-left pull-left-small">滴滴</div>
+									<div class="pull-right pull-right-orange">5000倍回报</div>
+								</li>
+							</ul>
+							<p>注：上述投资成功企业并非通过本平台进行的投资。</p>
+						</div>
+						<div class="help-default-risk">
+							<p>但是股权投资的风险也是巨大的，并且需要巨大的耐心。</p>
+							<p>在美国，获得风险投资的创业企业在五年内的失败率平均达到60%～80%</p>
+							<p>如何降低风险？</p>
+							<ul>
+								<li>
+								  <h3 class="help-sub-title">1 利用投资组合 </h3>
+								  <p class="font-gray">建议用于投资股权的资金不超过个人可投资金额的50%</p>
+								</li>
+								<li>
+								  <h3 class="help-sub-title">2 充分了解项目 </h3>
+								  <p class="font-gray">多渠道、多方面地了解项目，同时我们提供交流的平台</p>
+								</li>
+								<li>
+								  <h3 class="help-sub-title">3 分散投资原则 </h3>
+								  <p class="font-gray">投资多个项目，不要把可投资金赌押在个别项目上</p>
+								</li>
+							</ul>
+						</div>
+						<div class="help-default-why">
+							<p class="para-large">投资创业公司股权 就是投资中国的未来</p>
+							<div class="detail">
+								<p>1 超高预期收益，万元投资早期股权</p>
+								<p>2 增加个人资产配置选择</p>
+								<p>3 扩展行业人脉</p>
+							</div>
+						</div>
+						<div class="help-default-how">
+							<ul>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">1</p>
+									<p class="pull-right pull-right-900">符合如下全部条件的自然人：</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">1.1</p>
+									<p class="pull-right pull-right-900">年龄在18至69岁中国大陆公民；</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">1.2</p>
+									<p class="pull-right pull-right-900">非现役军人，非公务员；</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">1.3</p>
+									<p class="pull-right pull-right-900">符合下列财产/收入条件之一：</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">1.31</p>
+									<p class="pull-right pull-right-900">最近三年个人年均收入不低于30万元人民币或者家庭最近三年家庭年收入不低于60万元人民币；</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">1.32</p>
+									<p class="pull-right pull-right-900">金融资产不低于100 万元人民币；本条所指的金融资产包括银行存款、股票、债券、基金份额、资产管理计划、银行理财产品、信托计划、保险产品、 期货权益等。</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">2</p>
+									<p class="pull-right pull-right-900">符合以下条件之一的机构：</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">2.1</p>
+									<p class="pull-right pull-right-900">公司、企业等机构注册资本超过1000万元人民币；</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">2.2</p>
+									<p class="pull-right pull-right-900">公司、企业等机构总资产/管理资产超过3000万元人民币，且能提供相关财产证明；</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">3</p>
+									<p class="pull-right pull-right-900">合格投资人应该符合相关法律法规中关于合格投资人的规定。投资人有义务向AngelEase提交真实、合法、有效的证明材料，证明其符合合格投资人的法律要求。</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">4</p>
+									<p class="pull-right pull-right-900">申请合格投资人认证的投资者应当承担下列责任：</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">4.1</p>
+									<p class="pull-right pull-right-900">按照麒运科技及AngelEase的要求提供真实、准确和完整的身份信息、财产、收入证明等信息；</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">4.2</p>
+									<p class="pull-right pull-right-900">保证投资资金来源合法；</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">4.3</p>
+									<p class="pull-right pull-right-900">主动了解互联网非公开股权融资项目投资风险，并确认其具有相应的风险认知和承受能力；</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">4.4</p>
+									<p class="pull-right pull-right-900">相关法律规定、AngelEase平台规则、《合伙协议》、《投资协议》约定的其他义务。</p>
+								</li>
+								<li class="cmn-clearfix">
+									<p class="pull-left font-gray pull-left-30">5</p>
+									<p class="pull-right pull-right-900">只有通过AngelEase合格投资人身份认证的投资人，才能对AngelEase上的融资项目进行投资。</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="help-mode">
+					<div class="about-nav">
+						<img src="../../static/help/resource/images/help-mode.png">
+					</div>
+					<h2 class="help-title">“领投+跟投” 模式模式简介</h2>
+					<p>AngelEase平台采取“领投-跟投”模式，即由一位经验丰富的专业投资人作为“领投人”，众多跟投人选择跟投。普通投资人作为跟投人，选择跟随某个领投人并组成联合投资体，共同向领投人发掘出来的投资项目投资。领投人负责找项目，平台进行投后管理，并在投资收益中获得一部分提成，作为其回报。</p>
+					<h2 class="help-title">“领投+跟投” 联合投资模式的优势</h2>
+					<p>对于跟投人来说，采取 “领投+跟投”模式，可以让跟投人参与领投人组织的联合投资体。跟投人在每个投资项目中只需要投资一小笔资金，就可以借助联合投资体，充分利用领投人在挑选投资项目和投资后管理上的丰富经验进行股权投资。</p>
+					<p>对于领投人来说，则可以通过这种方式撬动众多跟投人的资金，还能额外获得投资收益的分成。通常情况下，领投人通过联合投资模式可以撬动的资金，是他自己投入资金的5到10倍。这使领投人得以参与投资和领投更多的项目，包括参与那些投资金额门槛较高的项目。</p>
+					<p>“领投+跟投”模式对创业企业也有好处。创业企业不需要一一面对每个跟投人，不会陷入投资人众多的纠缠和麻烦中去。它只需要应对一个领投的投资人，就可以获得超出领投人投资金额五到十倍的投资额，还能获得跟投人在社会关系上对企业的帮助</p>
+				</div>
+				<div class="help-statement">
+					<div class="about-nav">
+						<img src="../../static/help/resource/images/help-statement.png">
+					</div>
+					<ul class="sub-nav cmn-clearfix">
+						<li data-item="help-statement-rule" class="sub-nav-item active-sub-nav">投资人规则</li>
+						<li data-item="help-statement-statements" class="sub-nav-item">投资人声明</li>
+					</ul>
+					<div class="sub-nav-content">
+						<div class="help-statement-rule active">
+							<p>麒运科技发展（北京）有限公司（下称“麒运科技”）及AngelEase平台（以下简称“AngelEase”）为更好的勤勉尽责，督促投融资双方合法合规开展互联网非公开股权投融资活动、履行约定义务， 特制定并公示《投资人规则》（以下简称“投资人规则”或“本规则”），本投资人规则为麒运科技及AngelEase《用户服务协议》（以下简称“用户协议”）的补充，根据用户协议的约定，本规则一经在AngelEase上公示即对AngelEase用户具有法律约束力。本投资人规则的内容与用户协议之约定不一致的，以本规则为准。</p>
+							<p>第一条 实名认证</p>
+							<p>1.1投资人应按照AngelEase的实名认证流程，向麒运科技提交真实有效的身份信息，并承担相应法律责任。</p>
+							<p>1.2麒运科技有权委托第三方对投资人进行符合法律法规要求的实名认证。</p>
+							<p>1.3向麒运科技申请实名认证的投资人必须阅读并接受AngelEase《用户服务协议》及《投资风险申明书》。</p>
+							<p>1.4未通过AngelEase实名认证的投资人，不得在AngelEase上浏览融资项目的融资信息。</p>
+							<p>第二条 合格投资人条件与认证</p>
+							<p>2.1 符合如下全部条件的自然人：</p>
+							<p>2.1.1年龄在18至69岁中国大陆公民；</p>
+							<p>2.1.2非现役军人，非公务员；</p>
+							<p>2.1.3符合下列财产/收入条件之一：</p>
+							<p>2.1.3.1最近三年个人年均收入不低于30万元人民币或者家庭最近三年家庭年收入不低于60万元人民币；</p>
+							<p>2.1.3.2金融资产不低于100 万元人民币；本条所指的金融资产包括银行存款、股票、债券、基金份额、资产管理计划、银行理财产品、信托计划、保险产品、期货权益等。</p>
+							<p>2.2 符合以下条件之一的机构：</p>
+							<p>2.2.1公司、企业等机构注册资本超过1000万元人民币；</p>
+							<p>2.2.2公司、企业等机构总资产/管理资产超过3000万元人民币，且能提供相关财产证明；</p>
+							<p>2.3 合格投资人应该符合相关法律法规中关于合格投资人的规定。投资人有义务向AngelEase提交真实、合法、有效的证明材料，证明其符合合格投资人的法律要求。</p>
+							<p>2.4 申请合格投资人认证的投资者应当承担下列责任：</p>
+							<p>2.4.1按照麒运科技及AngelEase的要求提供真实、准确和完整的身份信息、财产、收入证明等信息；</p>
+							<p>2.4.2保证投资资金来源合法；</p>
+							<p>2.4.3主动了解互联网非公开股权融资项目投资风险，并确认其具有相应的风险认知和承受能力；</p>
+							<p>2.4.4相关法律规定、AngelEase平台规则、《合伙协议》、《投资协议》约定的其他义务。</p>
+							<p>2.5 只有通过AngelEase合格投资人身份认证的投资人，才能对AngelEase上的融资项目进行投资。在预约期投资成功的合格投资人称为跟投人。</p>
+						</div>
+						<div class="help-statement-statements">
+							<p>尊敬的投资人：</p>
+							<p>互联网非公开股权融资项目属于高风险投资品种，与一般债权类理财产品有很大区别。需要您满足相关法律法规规定和AngelEase平台合格投资人条件，同时要求您具备较高的风险承受能力以及丰富的投资经验。只有通过AngelEase平台合格投资人身份认证的投资人，才能对AngelEase平台上的融资项目进行投资。为此麒运科技发展（北京）有限公司（下称“麒运科技”）及AngelEase平台特此要求投资人声明并承诺如下内容并承担相应法律责任。</p>
+							<p>1、投资人声明并确认满足《投资人规则》第二条中2.1或者2.2条合格投资人的条件并承担相关责任。即符合如下全部条件的自然人：</p>
+							<p>1) 年龄在18至69岁中国大陆公民；</p>
+							<p>2) 非现役军人，非公务员；</p>
+							<p>3) 符合下列财产/收入条件之一：</p>
+							<p>（1）最近三年个人年均收入不低于30万元人民币或者家庭最近三年家庭年收入不低于60万元人民币；（2）金融资产不低于100万元人民币；本条所指的金融资产包括银行存款、股票、债券、基金份额、资产管理计划、银行理财产品、信托计划、保险产品、期货权益等。</p>
+							<p>4) 符合以下条件之一的机构：</p>
+							<p>（1）公司/企业等机构注册资本超过1000万元人民币；</p>
+							<p>（2）公司/企业等机构总资产/管理资产超过3000万元人民币，且能提供相关财产证明；</p>
+							<p>2、投资人承诺并保证其提供的所有资料或发布的所有信息是真实、准确、完整的，符合中国各项法律、法规及规范性文件以及本规则，不存在虚假、误导性陈述或重大遗漏，并承诺及时对已提供的资料或发布的信息进行更新、维护和管理。</p>
+							<p>3、投资人承诺并保证依据自身判断对融资项目做出独立的投资决定、审慎发出投资意向。投资人承诺其所发出的投资意向为其真实的、不可撤销的意思表示，保证依据其发出的投资意向履行合同义务。投资人保证依法、依约完成其通过使用AngelEase平台提供的服务而达成的各项交易。</p>
+							<p>4、投资人承诺并保证其已充分了解并知晓投资项目的风险（具体风险参见《投资风险申明书》），其将合理评估自身的投资认知能力与风险承受能力，理性选择合适的投资方式和投资项目，且自行承担该投资行为造成的后果和风险。</p>
+							<p>投资人承诺并保证：若其违反上述承诺和保证而给麒运科技或AngelEase平台造成损失的，投资人同意对麒运科技及AngelEase平台因此而遭受的损失承担相应的赔偿责任。</p>
+							<p>AngelEase平台保留请投资人提供关于个人年收入、家庭净资产或家庭年收入符合上述要求的证明文件和其他条件的权利。</p>
+						</div>
+					</div>
+				</div>
+				<div class="help-risk">
+					<div class="about-nav">
+						<img src="../../static/help/resource/images/help-risk.png">
+					</div>
+					<h2 class="help-title">投资风险申明书</h2>
+					<p>尊敬的投资人：</p>
+					<p>为了使您更好地了解AngelEase平台投资项目的风险，麒运科技及AngelEase平台根据相关法律法规、管理办法，以及AngelEase平台各项规则，特为您提供此份投资风险申明书。 如您接受AngelEase平台各项协议规则和本投资风险申明书，即表明您确保自己符合相关法律法规规定的合格投资人标准， 并在参与投资前完全明白该项投资的性质和所涉及的风险，详细了解和审慎评估融资项目的资金投资计划、风险评估及预期收益等基本情况， 在审慎考虑后自主决定投资与自身风险承受能力和资产管理需求匹配的项目。在投资项目后，投资者应随时关注该项目的信息披露情况，及时获取相关信息。</p>
+					<p>投资互联网非公开股权融资项目具有较高的风险，与债权类理财项目具有明显区别。 在投资过程中可能会面临多种风险因素。AngelEase平台及项目发起方或领投人等，均无法保证您的本金及收益。因此， 根据有关法律法规规定的要求，在您选择参与到互联网非公开股权融资项目前，请仔细阅读以下重要内容。</p>
+					<p class="main-title">一、相关的风险揭示</p>
+					<p>参与互联网非公开股权融资项目的投资人应自行承担下述类型的风险：</p>
+					<p>1.宏观经济风险：由于我国及周边国家、地区宏观经济环境和周边市场的变化，使任何市场主体的经营均处于剧烈波动中，从而导致项目的价值受到不同程度的贬损。</p>
+					<p>2.市场风险：在大众创业、万众创新的经济转型期，市场具有较大的不确定性，从而导致项目的价值受到不同程度的贬损。</p>
+					<p>3.公司经营风险：受融资方管理人经验、技能、判断力、执行力等方面的限制，可能对项目的运作及管理造成一定影响，并因此影响投资人收益，甚至造成本金损失。</p>
+					<p>4.流动性风险：每一个互联网非公开股权融资项目的具体退出方式均需视项目发展情况和相关协议约定确定。可能导致投资者需要资金时不能随时变现，并可能使投资者丧失其他投资机会导致实际收益率为负的风险。</p>
+					<p>5.信用风险：不排除在被投项目的经营过程中，被投项目的经营管理人存在信用风险或道德风险的可能性，或所投资的其它资产未达到预期收益，则投资人可能面临收益损失、本金部分损失、甚至本金全部损失的风险。</p>
+					<p>6.信息传递风险：被投项目的经营管理人应按照《披露规则》中有关“信息披露”的约定，履行信息披露的义务。投资人应根据“信息披露”的约定及时进行查询。如果投资人未及时查询，或者投资人预留在AngelEase平台有效联系方式发生变更，未及时通知AngelEase平台，导致被投项目管理人无法及时联系到投资人，并可能会由此影响投资人的投资决策，由此而产生的责任和风险由投资人自行承担。</p>
+					<p>7.预约风险：如出现市场剧烈波动、相关法规政策变化或其他可能影响项目正常运作的情况，项目发起人有权终止项目并退回预约款，投资人将无法在约定募集期内预约该项目股权。如出现在约定募集期内超募情况，融资方根据AngelEase平台规则有权提前终止预约、并退还超募部分款项，因此提醒投资人合理安排预约时间，因超募造成的预约完成但未能投资成功造成的任何损失由投资人自行承担。</p>
+					<p>8、政策风险：互联网非公开股权融资项目是依照当前的法律法规、相关监管规定和政策设计的。如国家宏观政策以及市场法律法规、相关监管规定发生变化，可能影响被投项目的受理、投资运作、清算等业务的正常进行，并导致项目收益降低甚至本金损失，也可能导致项目违反国家法律、法规或者其他合同的有关规定，进而导致项目被宣告无效、撤销、解除或提前终止等。</p>
+					<p>9.不可抗力及意外事件风险：包括但不限于自然灾害、金融市场危机、战争或国家政策变化等不能预见、不能避免、不能克服的不可抗力事件及系统故障、通讯故障、等意外事件。对于由于不可抗力及意外事件风险导致的任何损失，投资人须自行承担，AngelEase平台对此不承担任何责任。</p>
+					<p>10.技术风险：由于AngelEase平台是通过电子通讯技术和电脑技术来实现的，这些技术存在被网络黑客和计算机病毒攻击的可能，麒运科技将尽力保障AngelEase平台正常运行，但您将承担由您的个人电脑终端故障或AngelEase平台以外因素导致系统故障而造成的损失。</p>
+					<p>11、其他AngelEase平台无法预见、无法避免或无法控制的风险。</p>
+					<p class="main-title">二、重要提示</p>
+					<p>1、互联网非公开股权融资项目具有高投机性和高风险性，不适合利用养老基金、债务资金（如银行贷款）等进行投资的用户。</p>
+					<p>2、投资互联网非公开股权融资项目的金额建议在投资人资产配置中占比不超过20%，并分散投资于若干项目。请您合理安排互联网非公开股权投资在整体资产配置中的占比及单个项目的投资金额。</p>
+					<p>3、互联网非公开股权融资项目适合即使投资失误造成账户资金部分或全部损失、仍不会改变其正常的生活方式或影响其正常生产经营状况的投资人。</p>
+					<p>本《投资风险申明书》自其在AngelEase平台官网公布之日起对所有投资人有效，并作为投资人投资过程中签署相关协议的附件，成为相关协议的重要组成部分，与其他部分具有同等法律效力。本申明书并不保证揭示您参与AngelEase平台互联网非公开股权融资项目所面临的全部风险。您签署了本申明书即表明您已认真阅读并理解股权投资相关法律法规、AngelEase平台互联网非公开股权融资模式，阅读并完全理解AngelEase平台的平台协议与规则，愿意依法承担相应的投资风险。</p>
+				</div>
+				<div class="help-guide">
+					<div class="about-nav">
+						<img src="../../static/help/resource/images/help-guide.png">
+					</div>
+					<h2 class="help-title">来AngelEase我能得到什么？</h2>
+					<p>AngelEase互联网非公开股权融资平台为天使投资人提供专业的投资信息服务，通过严格合规风控审查和内部投决委机制，精选优质项目上线，并利用平台资源支持项目提高成功机率，提高投资者收益。</p>
+					<p>AngelEase互联网非公开股权融资平台致力于为创业者提供优质的金融服务，品牌宣传推广，合伙人推荐，战略指导，创业培训等服务，同时还为创业项目带来强大的资源支持，在融资、客户、资源、经验、人才、资金、人脉、场地等方面，尽可能的支持创业成功。</p>
+					<h2 class="help-title">如何在AngelEase进行股权投资？</h2>
+					<div class="time-line">
+						<img class="time-line-img" src="../../static/help/resource/images/help-guide-timeline.png" >
+						<ul class="cmn-clearfix">
+							<li class="timeline-content timeline-1">合格投资人认证</li>
+							<li class="timeline-content timeline-2">浏览项目</li>
+							<li class="timeline-content timeline-3">预约项目路演</li>
+							<li class="timeline-content timeline-4">支付投资款项</li>
+							<li class="timeline-content timeline-5">募集完成</li>
+							<li class="timeline-content timeline-6">收集材料</li>
+							<li class="timeline-content timeline-7">成立有限合伙</li>
+							<li class="timeline-content timeline-8">入资成功</li>
+						</ul>
+					</div>
+					<h2 class="help-title">支付遇到问题？</h2>
+					<p>1、请确认您的银行卡是否已开通网上银行支付功能；</p>
+					<p>2、银行卡已过期、作废、挂失或者余额不足等，可咨询发卡行；</p>
+					<p>3、输入的银行卡号、密码或证件号等与预置的不符，建议您重新输入正确的卡密码或证件号等，如果您忘记了密码，请您及时与发卡行联系办理密码重置；</p>
+					<p>4、部分银行设置有支付金额限制，如限制支付金额不能操作30,000，超过30,000的订单则无法支付成功，您可以联系发卡行详细了解。</p>
+					<p>5、如遇业务高峰期导致付款不成功，您可以进入个人中心重新进行支付。</p>
+					<p>6、如果还有问题，请您拨打AngelEase客服电话400-818-0060咨询。</p>
+				</div>
+				<!-- help-guide ----end -->
+			</div>
+			<!-- center-content结束 -->
+		</div>
+		<!-- help-center-container结束 -->
+	</div>
+
+	<link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/help/help.js"></script>
+</body>
+</html>

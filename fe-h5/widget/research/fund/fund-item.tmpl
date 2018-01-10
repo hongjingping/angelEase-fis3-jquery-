@@ -1,0 +1,18 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<% var item = data[i]; %>
+    <a class="focus-item" href="/page/focus_detail/focus_detail.html?id=<%=item.id%>">
+        <div class="paint">
+            <img src="<%=staticUrl+item.focusImg%>">
+        </div>
+        <div class="panel">
+            <h2 class="head-title"><%=item.focusTitle%></h2>
+            <% if (item.authorName)  {%>
+                <span class="author">文 | <%=item.authorName%></span>
+            <% } %>
+            
+            <% if (item.focusSource)  {%>
+                <span class="source">来源：<%=item.focusSource%></span>
+            <% } %>
+        </div>
+    </a>
+<% } %>

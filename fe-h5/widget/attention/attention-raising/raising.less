@@ -1,0 +1,214 @@
+@import '../../../static/common/style/variables';
+//列表 start
+.content-info {
+  padding-top: 44px;
+  .info-msg {
+    margin-top: 10px;
+    padding: 20px 20px 10px 20px;
+    //height: 128px;
+    background: @WHITE;
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: @GRAY4;
+      width: 100%;
+      height: 1px;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+    }
+    .info-msg-left {
+      position: absolute;
+      //padding-bottom: 98px;
+      .img-href {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+      }
+      .msg {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        //background: pink;
+      }
+    }
+    .info-msg-right {
+
+
+      margin-left: 65px;
+      position: relative;
+      .info-title {
+        line-height: 20px;
+        font-size: 14px;
+        color: #3F3F3F;
+        padding-right: 60px;
+      }
+      .info-label {
+        position: absolute;
+        right: 0;
+        top: 0;
+        line-height: 12px;
+        padding: 3px 4px;
+        font-size: 12px;
+        text-align: center;
+        color: @WHITE;
+      }
+      .orange {
+        background: @ORANGE;
+      }
+      .ui-progress {
+        height: 16px;
+        margin-top: 20px;
+
+        .progress-wrap {
+          float: left;
+          width: 83%;
+          overflow: hidden;
+          padding-bottom: 6px;
+          position: relative;
+
+          .scene {
+            height: 2px;
+            margin-top: 6px;
+            background: #F8F9FA;
+
+            .step {
+              position: absolute;
+              background: #E1C078;
+              height: 2px;
+              top: 6px;
+              left: 0;
+            }
+          }
+
+          //.dot {
+          //  position: absolute;
+          //  width: 6px;
+          //  height: 6px;
+          //  top: 4px;
+          //  background: #E1C078;
+          //  border-radius: 50%;
+          //}
+        }
+
+        .percentage {
+          width: 15%;
+          margin-left: 2%;
+          float: left;
+          text-align: center;
+          font-size: 13px;
+          color: #E1B555;
+          margin-top: -3px;
+          &.ratio-gray {
+            color: #e0e0e0;
+          }
+        }
+      }
+      .range-txt {
+        margin-top: 1px;
+        font-size: 12px;
+        color: @GRAY2;
+      }
+      .info-exl {
+        padding-top: 16px;
+        .exl-top {
+          //height: 16px;
+          line-height: 16px;
+          font-size: 11px;
+          color: @GRAY2;
+
+        }
+        .exl-width {
+          width: 33%;
+          display: inline-block;
+          text-align: left;
+        }
+        .exl-width2 {
+          width: 32%;
+          display: inline-block;
+          text-align: left;
+          &.font-gray {
+            color: @GRAY2;
+          }
+        }
+        .exl-width3 {
+          width: 29%;
+          display: inline-block;
+          text-align: left;
+          &.font-gray {
+            color: @GRAY2;
+          }
+          &.ratio-gold2 {
+            color:@GOLD2;
+          }
+        }
+        .exl-font {
+          font-size: 18px;
+        }
+        .exl-col {
+          color: @GRAY1;
+        }
+        .exl-margin {
+          margin: 0 1%;
+        }
+      }
+    }
+  }
+}
+//列表 end
+.info-img2 {
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: @GRAY4;
+    width: 100%;
+    height: 1px;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+  }
+}
+
+//无关注内容 start
+.roading-info {
+  //display: none;
+  width: 160px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  margin-top: -50px;
+  left: 50%;
+  margin-left: -80px;
+  .info-img {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: @WHITE;
+    margin: 0 auto;
+    position: relative;
+    .img-info {
+      width: 33px;
+      height: 29px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      margin-left: -16px;
+      margin-top: -15px;
+
+      background: url('./resource/iconfont-chanpincanshu.png');
+      -webkit-background-size: 100%;
+      background-size: 100%;
+    }
+  }
+  .info-txt {
+    margin-top: 17px;
+    font-size: 16px;
+    color: @GRAY4;
+    text-align: center;
+  }
+}
+//无关注内容 end

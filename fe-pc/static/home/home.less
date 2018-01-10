@@ -1,0 +1,134 @@
+@import "../common/style/variables";
+.home-txt {
+	color: #3F3F3F;
+}
+
+.yxcf-htmlclass{
+	overflow: scroll;
+}
+
+.title-bold-22 {
+	font-size: 22px;
+	font-weight: bold;
+	color: @cmn-color-ae-gray;
+}
+
+.home-announcement {
+    display: none;
+    background: @cmn-color-ae-gray;
+    height: 40px;
+    overflow: hidden;
+
+    .announcement-content {
+        width: 1180px;
+        margin: 0 auto;
+        color: #fff;
+        line-height: 40px;
+
+
+        .icon-announcement {
+            float: left;
+            color: #e7ba59;
+            width: 19px;
+            height: 14px;
+            margin-top: 13px;
+            background-image: url("./resource/images/icon_announcement.png");
+        }
+
+        .announcement-text-wrapper {
+            float: left;
+            width: 1120px;
+            margin-left: 15px;
+            font-size: 13px;
+        }
+
+        .icon-close {
+            float: right;
+            cursor: pointer;
+        }
+    }
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+.fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+    animation-duration: .8s;
+}
+
+@-webkit-keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+@keyframes fadeOutUp {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+}
+
+.fadeOutUp {
+    -webkit-animation-name: fadeOutUp;
+    animation-name: fadeOutUp;
+    animation-duration: .8s;
+}
+
+.yixincaifu-popup{
+		width: 100%;
+		img{
+			width: 100%;
+		}
+		.p-close{
+			border: none;
+			position: absolute;
+			top:80%;
+			left:38%;
+			width: 24%;
+			height: 46px;
+			line-height: 46px;
+			font-size: 16px;
+			text-align: center;
+			background-color: #e7ba59;
+			color: #fff;
+		}
+}

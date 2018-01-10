@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" href="../../static/bankcard/bankcard.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline">
+
+    <div class="bankcard-container">
+        <div class="logo next-logo"></div>
+
+        <div class="form-group">
+            <div class="pull-right down-margin error-notice error0" style="display: none;">
+                <i class="ae-icon ae-icon-attention"></i>报错文案
+            </div>
+            <div class="pull-right down-margin success-notice error0" style="display: none;">
+                <i class="ae-icon ae-icon-success"></i>
+                <span class="error1"></span>
+            </div>
+
+            <div class="line-item down-margin">
+                <span class="item-key">真实姓名</span>
+                <span class="item-val">入云龙</span>
+            </div>
+
+            <div class="line-item down-margin">
+                <span class="item-key">证件类型</span>
+                <span class="item-val">身份证</span>
+            </div>
+
+            <div class="line-item down-margin">
+                <span class="item-key">证件号码</span>
+                <span class="item-val">349222196909199197</span>
+            </div>
+
+            <div class="line-item down-margin">
+                <span class="item-key">开户银行</span>
+                <span class="item-val">
+                    <select name="bankcard-type" class="cmn-input bank-type">
+                        <option value="">农业银行</option>
+                        <option value="">招商银行</option>
+                        <option value="">浦发银行</option>
+                    </select>
+                </span>
+            </div>
+
+            <div class="line-item down-margin">
+                <span class="item-key">银行卡号</span>
+                <span class="item-val">
+                    <input type="text" class="cmn-input" placeholder="请填写可支付的银行卡号">
+                </span>
+            </div>
+
+            <div class="pull-right">
+                <a href="javascript:;" class="cmn-btn-gold-w12">提交</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/bankcard/bankcard.js"></script>
+</body>
+</html>

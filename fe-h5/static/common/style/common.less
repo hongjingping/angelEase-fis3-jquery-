@@ -1,0 +1,82 @@
+// 公共样式统一入口
+@import "./iconfont.less";
+@import "./standard.less";
+@import "./reset.less";
+@import "./smart_alert/index.less";
+@import "./smart_toast/smart_toast.less";
+
+.main-layout {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    min-width: 300px;
+    max-width: 640px;
+}
+
+.full-border {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+}
+
+.upper-border {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+}
+
+.base-border {
+    position: relative;
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+}

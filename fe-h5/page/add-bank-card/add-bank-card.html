@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/add-bank-card/add-bank-card.less">
+    <!--
+        @require ../../static/common/lib/base64.js
+    -->
+</head>
+<body class="gray_bg" style="position: relative;">
+    <div class="content-box">
+        <!-- header -->
+        <link rel="import" href="../../widget/component/header/header.tpl?__inline">
+        <!--绑定持卡人本人的银行卡-->
+        <div class="gray_col">请绑定持卡人本人的银行卡</div>
+        <form action="" method="post" id="formAdr" enctype="multipart/form-data">
+        <div class="white_bg">
+            <div class="invest-info top-border bottom-border top-border-special invest-info-top">
+                <div class="weui_cell">
+                    <div class="weui_cell_hd cell-key">
+                        <label class="weui_label mark-label">
+                            持卡人
+                        </label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <span type="text" class="font-gray" id="name"></span>
+                    </div>
+                    <!--提示-->
+                    <div class="tips" id="person-tip">
+                        <i class="ae-mobile  font-cl"></i>
+                    </div>
+                </div>
+                <div class="weui_cell">
+                    <div class="weui_cell_hd cell-key">
+                        <label class="weui_label mark-label">
+                            银行卡号
+                        </label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input maxlength="24" type="text" placeholder="请输入您的银行卡号" class="font-gray" id="account" name="bankCardNo" onkeyup="formatBankNo(this)" onkeydown="formatBankNo(this)">
+                    </div>
+                </div>
+                <!--卡类型-->
+                <div class="weui_cell clearfloat" id="bankCardType">
+                    <div class="weui_cell_hd cell-key f-l ">
+                        <label class="weui_label mark-label ">
+                            卡类型
+                        </label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary f-l bind-card-special">
+                        <span  class="font-gray  font-text" id='check-text'>
+                            <i class="loading-image"></i>
+                            <span class="loading-icon">验证中</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="gray_col_empty"></div>
+        <div class="white_bg phone-top-border">
+            <div class="invest-info top-border bottom-border top-border-special">
+                <div class="weui_cell ">
+                    <div class="weui_cell_hd cell-key">
+                        <label class="weui_label mark-label">
+                            手机号码
+                        </label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary">
+                        <input maxlength="13" name="mobile" type="tel" placeholder="请输入银行预留手机号" class="font-gray" id="mobile" onkeyup="Mobile(this)" >
+                    </div>
+                    <!--提示-->
+                    <div class="tips" id="mobile-tips">
+                        <i class="ae-mobile  font-cl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--图形验证码-->
+        <div class="white_bg">
+                <div class="invest-info top-border bottom-border top-border-special">
+                    <div class="weui_cell">
+                        <div class="weui_cell_hd cell-key ">
+                            <label class="weui_label mark-label">
+                                图形验证码
+                            </label>
+                        </div>
+                        <div class="weui_cell_bd weui_cell_primary ">
+                            <input class="weui_input highlight-input picCode" type="text" placeholder="请输入右图验证码"
+                                   id='picCode' value="" maxlength="4">
+                        </div>
+                        <div class="weui_cell_bd snd-msg-button1 w100">
+                            <img id="picImg" class="img"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <div class="white_bg top-border bottom-border">
+            <div class="alert-bar reminder" ></div>
+            <div class="alert-bar reminder" >
+                <div class="weui_cell protocol-padding">
+                    <div class="weui_cell_hd cell-key">
+                        <label class="weui_label mark-label">
+                            <div id="i-check-btn" class="i-check-unchecked"></div>
+                        </label>
+                    </div>
+                    <div class="weui_cell_bd weui_cell_primary order-reminder">
+                        本人承诺已了解并同意<a id="paymentAgree" href="javascript:window.location.href='/page/protocol/bind_bank_card.html'">《借记卡快捷支付服务协议》</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="next-btn" id="toConfirm">
+            <i class="ae-mobile ae-mobile-arrow-right"></i>
+        </div>
+    </div>
+
+    <!--持卡人模态框-->
+    <div class="person-model" id="person-model">
+        <div class="person-model-box">
+            <div class="personal-tips">
+                <div class="tips-content">
+                    <div class="tips-icon">
+                        <i class="ae-mobile ae-mobile-attention2 font-sz"></i>
+                    </div>
+                    <div class="tips-text">
+                        <p class="tips-color">为保证您的资金安全,持卡人只能绑定本人的银行卡</p>
+                    </div>
+                </div>
+                <div class="tips-words" id="tips-words">
+                    <p>知道了</p>
+                </div>
+            </div>
+            <div class="del-tips" id="del-person-model">
+                <i class="ae-mobile ae-mobile-close font-s"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--手机号模态框-->
+    <div class="phone-model" id="phone-model">
+        <div class="phone-model-box">
+            <div class="phone-tips">
+                <div class="tips-content">
+                    <div class="tips-icon">
+                        <i class="ae-mobile ae-mobile-about2 font-cl"></i>
+                    </div>
+                    <div class="tips-text">
+                        <p class="tips-color">银行预留的手机号是办理该银行卡时所填写的手机号码。</p>
+                        <p class="tips-color">没有预留、手机号忘记或已停用,请联系该行银行客服更新处理。</p>
+                        <p class="tips-color">仅支持大陆11位数字手机号。</p>
+                    </div>
+                </div>
+                <div class="tips-words" id="tipsWord">
+                    <p>知道了</p>
+                </div>
+            </div>
+            <div class="del-tips" id="del-phone">
+                <i class="ae-mobile ae-mobile-close font-s"></i>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../static/add-bank-card/add-bank-card.js"></script>
+</body>
+</html>

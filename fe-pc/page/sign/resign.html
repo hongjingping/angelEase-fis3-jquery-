@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+	<link rel="stylesheet" type="text/css" href="../../static/sign/sign.less">
+
+	<!--
+	    @require ../../static/common/lib/jquery/jquery.js
+	    @require ../../static/common/lib/smart_alert.js
+	    @require ../../static/common/lib/storage.js
+	    @require ../../static/common/base/base.js
+	-->
+</head>
+<body>
+
+	<link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline">
+
+	<div class="sign-container">
+		<!-- 重签部分 -->
+		<div class="resign-notice">
+			<h1 class="article-title">重签信息</h1>
+			<p class="notice-txt">请您重新提交以下信息后再次签约</p>
+		</div>
+		<!-- end resign -->
+
+		<div class="sign-article">
+
+			<link rel="import" href="../../widget/component/protocol/e-signature/e-signature.tpl?__inline">
+
+			<link rel="import" href="../../widget/component/protocol/subscribe/subscribe.tpl?__inline">
+
+            <link rel="import" href="../../widget/component/protocol/newPartner/newPartner.tpl?__inline">
+
+            <link rel="import" href="../../widget/component/protocol/new-join/new-join.tpl?__inline">
+            <!--<link rel="import" href="../../widget/component/protocol/join/join.tpl?__inline">-->
+
+            <link rel="import" href="../../widget/component/protocol/risk/risk.tpl?__inline">
+
+            <link rel="import" href="../../widget/component/protocol/investor/investor.tpl?__inline">
+
+		</div>
+
+		<div class="sign-notice">
+			<i class="ae-icon ae-icon-attention"></i>风险提示：请您务必确认完整阅读投资协议,股权投资属于高风险投资,请谨慎决策。
+		</div>
+
+		<div class="sign-check">
+			<input type="checkbox" class="item-check" id="apply-protocol" />本人同意《数字证书服务须知》，授权平台在本人电子签署的项目合同中使用我的签名，并自愿签署以下协议《预约意向书》《合伙协议》《入伙协议》《投资风险申明书》《投资人声明》
+		</div>
+
+		<div class="sign-confirm">
+			<a href="javascript:;" id="btnConfirm" class="cmn-btn-gold-w12">确认</a>
+		</div>
+	</div>
+
+	<div class="signaqrCode"></div>
+
+    <div class="mask"></div>
+
+    <div class="wgt-dialog-protocol">
+        <div class="protocol-title">
+            <span class="title">提示</span>
+            <span class="close"><i class="ae-icon ae-icon-close"></i></span>
+        </div>
+
+        <div class="protocol-content">
+            <p class="para">请您使用手机扫一扫下方二维码，完成身份证上传及签字。</p>
+			<!--
+			<p class="qrcode" id="qrcode"></p>
+			-->
+        </div>
+    </div>
+	<input type="hidden" id="resignFlag" value="1" />
+
+	<!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script src="../../static/common/lib/qrcode/qrcode.js"></script>
+	<script type="text/javascript" src="../../static/sign/sign-base.js"></script>
+    <script type="text/javascript" src="../../static/sign/resign.js"></script>
+</body>
+</html>

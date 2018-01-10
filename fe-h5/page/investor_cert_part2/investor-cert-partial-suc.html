@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/investor_cert/investor.less"></head>
+<body >
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<div  id="submitstatus" style="display: none;">
+        <div class="feedback-content-success"><i class="ae-mobile-ex ae-mobile-clock icon-item"></i>
+            <p class="feedback-title-ex">认证信息提交成功！请耐心等待审核。</p>
+            <p class="feedback-reason">现在您可以</p>
+        </div>
+
+        <div class="feedback-button">
+            <a href="/page/home/home.html"><span class="nkey-operation-button-long">去看看项目</span></a>
+        </div>
+    </div>
+
+	<div id="sucstatus" style="display: none;">
+		<div class="feedback-content-confirm"> <i class="ae-mobile-ex ae-mobile-right icon-item"></i>
+			<p class="feedback-title-ex">恭喜您通过审核！成为合格投资人！</p>
+			<p class="feedback-reason">您的领投人认证未通过</p>
+			<p class="feedback-reason-2">
+				如有需要请联系客服<strong>400-818-0060</strong>
+			</p>
+		</div>
+		<div class="feedback-button">
+			<a href="/page/home/home.html"><span class="nkey-operation-button-long">去看看项目</span></a>
+		</div>
+	</div>
+	<div id="sucstatus2" style="display: none;">
+        <div class="feedback-content-confirm"> <i class="ae-mobile-ex ae-mobile-right icon-item"></i>
+            <p class="feedback-title-ex">恭喜您通过审核！成为合格投资人！</p>
+            <p class="feedback-reason">现在您可以</p>
+        </div>
+        <div class="feedback-button">
+            <a href="/page/home/home.html"><span class="nkey-operation-button-long">去看看项目</span></a>
+        </div>
+    </div>
+    <div id="sucstatus1" style="display: none;">
+        <div class="feedback-content-confirm"> <i class="ae-mobile-ex ae-mobile-right icon-item"></i>
+            <p class="feedback-title-ex">
+                恭喜您通过审核！成为合格投资人！
+                <br/>
+                并具有领投人资格！
+            </p>
+            <p class="feedback-reason">现在您可以</p>
+        </div>
+        <div class="feedback-button">
+            <a href="/page/home/home.html"><span class="nkey-operation-button-long">去看看项目</span></a>
+        </div>
+    </div>
+
+    <div id="failstatus" style="display: none;">
+        <div class="feedback-content-failed"> <i class="ae-mobile-ex ae-mobile-attention2 icon-item"></i>
+            <p class="feedback-title-ex">很遗憾！您的认证未通过</p>
+            <p class="feedback-reason">原因：<span id="reject-reason"></span></p>
+            <p class="feedback-reason-2">
+                若对审核结果有疑问请联系客服电话 <strong>400-818-0060</strong>
+            </p>
+        </div>
+        <div class="feedback-button">
+            <a id="toInvestor" href="javascript:void(0);"><span class="key-operation-button-normal">重新认证</span></a>
+        </div>
+    </div>
+
+	<div class="sl_sjhm ">
+		<div class="details-form clearfloat">
+			<div class="input-groups-border-none1 clearfloat">
+				<label>真实姓名</label>
+				<span class="weui_label_ex7" id="real-name"></span>
+			</div>
+		</div>
+		<div class="details-form clearfloat">
+			<div class="input-groups-border-none1 clearfloat">
+				<label>手机号码</label>
+				<span class="weui_label_ex7" id="mobile"></span>
+			</div>
+		</div>
+		<div class="details-form clearfloat">
+            <div class="input-groups-border-none1 clearfloat">
+                <label>认证类型</label>
+                <span class="weui_label_ex7" id="type"></span>
+            </div>
+        </div>
+		<div class="details-form clearfloat netAssets">
+			<div class="input-groups-border-none1 clearfloat">
+				<label>投资条件</label>
+				<span class="weui_label_ex7" id="netAssets"></span>
+			</div>
+		</div>
+		<div class="details-form clearfloat realname">
+            <div class="input-groups-border-none1 clearfloat">
+                <label>机构名称</label>
+                <span class="weui_label_ex7" id="realname"></span>
+            </div>
+        </div>
+		<div class="details-form clearfloat orgcode">
+            <div class="input-groups-border-none1 clearfloat">
+                <label>组织机构代码</label>
+                <span class="weui_label_ex7" id="orgcode"></span>
+            </div>
+        </div>
+		<div class="details-form clearfloat">
+			<div class="input-groups-border-none1 clearfloat">
+				<label>可投资产</label>
+				<span class="weui_label_ex7" id="position"></span>
+			</div>
+		</div>
+		<div class="details-form clearfloat">
+			<div class="input-groups-border-none1 clearfloat">
+				<label>所在行业</label>
+				<span class="weui_label_ex7" id="industry"></span>
+			</div>
+		</div>
+		<div class="details-form clearfloat">
+			<div class="input-groups-border-none1 clearfloat">
+				<label  class="long-label">偏好投资领域</label>
+				<span class="weui_label_ex7 short-span" id="hopeindustry"></span>
+			</div>
+		</div>
+		<div class="details-form clearfloat checkPhoto">
+			<div class="input-groups-border-none1 clearfloat long-label">
+				<label class="long-label">资产证明/名片</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="clearfloat img-cover checkPhoto">
+		<img class= "img-btm-position" src="" alt="" id="idImgPath" style="display:none">
+		<img class= "img-btm-position" src="" alt="" id="assetProofImgPath" style="display:none">
+		<img class= "img-btm-position" src="" alt="" id="imgPath" style="display:none">
+	</div>
+	
+	<script type="text/javascript" src="../../static/investor_cert/list-investor.js"></script>
+</body>
+</html>

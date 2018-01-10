@@ -1,0 +1,153 @@
+@import '../../../static/common/style/common';
+
+.reserch-banner {
+  width: 1180px;
+  margin: 40px auto 0;
+  height: 250px;
+}
+/*天使人.有话说-轮播 start*/
+.reserch-banner-left {
+  width: 800px;
+  height: 250px;
+  float: left;
+  position: relative;
+
+  .owl-carousel .item {
+    display: block;
+  }
+  .owl-carousel img {
+    display: block;
+    width: 100%;
+  }
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    position: absolute;
+    display: block;
+    margin-top: -35px;
+    right: -10px;
+  }
+  .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: right;
+    padding-right: 30px;
+  }
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: @cmn-color-ae-white;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 4px;
+    height: 4px;
+    border-radius: 0px;
+    margin-right: 1px;
+  }
+  .item {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 125px;
+      width: 800px;
+      height: 125px;
+      z-index: 2;
+      background: -ms-linear-gradient(bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .0)); /* IE 10 */
+      background: -moz-linear-gradient(bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .0)); /*火狐*/
+      background: -webkit-gradient(linear, 100% 0% 0%, 0%, from(rgba(0, 0, 0, .7)), to(rgba(0, 0, 0, .0))); /*谷歌*/
+      background: -webkit-gradient(linear, 100% 0% 0%, 0%, from(rgba(0, 0, 0, .7)), to(rgba(0, 0, 0, .0))); /* Safari 4-5, Chrome 1-9*/
+      background: -webkit-linear-gradient(bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .0)); /*Safari5.1 Chrome 10+*/
+      background: -o-linear-gradient(bottom, rgba(0, 0, 0, .7), rgba(0, 0, 0, .0)); /*Opera 11.10+*/
+    }
+    .title {
+       position: absolute;
+       left: 15px;
+       top: 15px;
+       font-size: 14px;
+       color: @cmn-color-ae-white;
+      padding: 0px 6px;
+       background: rgba(63,63,63,.73);
+     }
+    .label {
+      position: absolute;
+      z-index: 2;
+      bottom: 16px;
+      left: 30px;
+      font-size: 24px;
+      font-weight: bold;
+      display: block;
+      width: 620px;
+      white-space:nowrap;
+      overflow:hidden;
+      text-overflow:ellipsis;
+      color: @cmn-color-ae-white;
+      .ad-label-txt {
+
+      }
+
+    }
+  }
+}
+/*天使人.有话说-轮播 start*/
+
+/*路演中.项目 start*/
+.reserch-banner-right {
+  width: 320px;
+  height: 250px;
+  float: right;
+  position: relative;
+  .owl-carousel .item {
+    display: block;
+  }
+  .owl-carousel img {
+    display: block;
+    width: 100%;
+  }
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    position: absolute;
+    display: block;
+    top: 10px;
+    right: -10px;
+  }
+  .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: right;
+    padding-right: 30px;
+  }
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: @cmn-color-ae-white;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 4px;
+    height: 4px;
+    margin-right: 1px;
+    border-radius: 0px;
+  }
+  .ad-item {
+    .ad-title {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      font-size: 14px;
+      padding:0 6px;
+      color: @cmn-color-ae-white;
+      background: rgba(63,63,63,.73);
+    }
+    .ad-label {
+      position: absolute;
+      bottom: 0px;
+      //left: 20px;
+      padding-left: 20px;
+      width: 300px;
+      height: 44px;
+      line-height: 44px;
+      font-size: 16px;
+      color: @cmn-color-ae-white;
+      background: rgba(0,0,0,.5);
+      .ad-label-txt {
+        z-index: 2;
+        display: block;
+        width: 270px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+    }
+  }
+}
+/*路演中.项目 end*/

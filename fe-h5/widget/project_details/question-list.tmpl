@@ -1,0 +1,17 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var qa = data[i];%>
+	<div class="weui_cell input-first-col">
+		<div class="weui_cell_hd cell-key">
+			<span class='faq-logo'>Q</span>
+		</div>
+		<div class="weui_cell_bd weui_cell_primary">
+			<div class="question">
+			    <%=qa.problem%>
+            </div>
+            <div class="answer">
+            	<%=qa.answer%>
+            </div>
+		</div>
+	</div>
+<% } %>
+

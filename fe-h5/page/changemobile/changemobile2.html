@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/changemobile/changemobile.less">
+</head>
+<body class="gray_bg">
+    <link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+    <div class="weui_cells weui_cells_form change-mobile-container">
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label change-mobile-label">真实姓名</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input change-mobile-input" type="text"   maxlength="50"  placeholder="请输入您的姓名" name="realName" value="" ></div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label change-mobile-label">证件号码</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input change-mobile-input" type="text"  maxlength="20" name="idCardNo" value=""  placeholder="请输入实名认证的证件号"></div>
+        </div>
+    </div>
+
+    <div class="change-mobile-next-button">
+        <span class="next-button-normal">  
+            <a id="nextBtn"  class="ae-mobile ae-mobile-arrow-right"></a>
+        </span>
+    </div>
+    
+    <script type="text/javascript" src="../../static/common/lib/base64.js"></script>
+    <script type="text/javascript" src="../../static/changemobile/changemobile-two.js"></script>
+</body>
+</html>

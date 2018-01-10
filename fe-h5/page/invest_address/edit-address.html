@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/invest_address/address.less">
+
+    <!--
+        @require ../../static/common/lib/city.js
+        @require ../../static/common/lib/base.js
+        @require ../../static/common/lib/base64.js
+
+    -->
+</head>
+<body class="gray_bg clear_body">
+
+  	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+    <form action="" method="post" class = "weui_cells weui_cells_form edit-form" id="formAdr" enctype="multipart/form-data">
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label1">收件人</label>
+            </div>
+
+            <input type="hidden"  id="token" name="token" value=""/>
+			<input type="hidden"  id="clientType" name="clientType" value="wap"/>
+			<input type="hidden" id="provinceCode" name="provinceCode" value="">
+			<input type="hidden" id="cityCode" name="cityCode" value="">
+			<input type="hidden" id="districtCode" name="districtCode" value="">
+			<input type="hidden" id="adrId" name="id" value="">
+			<input type="hidden" id="defaultFlag" value=""/>
+
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" id="consignee" name="consignee" maxlength="5" onKeyUp="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\.]/g,'')"onfocus="focusAll('consigneeC');" value=""/>
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label1">联系电话</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" id="mobile" name="mobile" maxlength="11" value="" onkeyup="this.value=this.value.replace(/[^\d]/g,'');" onafterpaste="this.value=this.value.replace(/[^\d]/g,'')" onfocus="focusAll('mobileC');"/>
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label1">邮政编码</label>
+            </div>
+
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" id="zipcode" name="zipcode" maxlength="10" onkeyup="this.value=this.value.replace(/[^\d]/g,'');" onafterpaste="this.value=this.value.replace(/[^\d]/g,'') " onfocus="focusAll('zipcodeC');" value=""/></div>
+        </div>
+
+        <div class="weui_cell" id="city">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label1">所在地</label>
+            </div>
+			<div class="city">
+				<select name="province" id="city1"></select>
+			</div>
+			<span class="tiny-vertical-line">|</span>
+			<div class="city ">
+				<select name="city" id="city2"></select>
+			</div>
+			<span class="tiny-vertical-line">|</span>
+			<div class="city ">
+				<select name="district" id="city3"></select>
+			</div>
+		</div>
+
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label1">详细地址</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="text" name="address" id="address" maxlength="40"  onfocus="focusAll('addressC');">
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div id="i-check-btn" class="i-check-unchecked"></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <span class="weui_label1_ex6"    value="0" >设为默认地址</span>
+                <input type="hidden"  id="agreement" name="isDefault" value="0"/>
+            </div>
+        </div>
+    </form>
+
+    <div class="edit-address-feedback-button">
+        <a href="javascript:;" class="key-operation-button-normal">保存</a>
+    </div>
+
+    <script type="text/javascript" src="../../static/invest_address/edit-address.js"></script>
+</body>
+</html>

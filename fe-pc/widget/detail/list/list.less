@@ -1,0 +1,100 @@
+@import "../../../static/common/style/common";
+
+.pay-list {
+	display: none;
+	position: relative;
+
+	.no-data {
+		overflow: hidden;
+		padding: 80px 0;
+	}
+
+	.no-data-notice {
+		border: 1px solid @cmn-color-ae-gray6;
+		width: 60px;
+		height: 60px;
+		margin: 0 auto;
+		line-height: 60px;
+		border-radius: 50%;
+		text-align: center;
+
+		i {
+			font-size: 30px;
+			display: inline-block;
+			color: @cmn-color-ae-gray5;
+		}
+	}
+
+	.no-data-txt {
+		font-size: 14px;
+		padding-top: 30px;
+		text-align: center;
+		color: @cmn-color-ae-gray2;
+	}
+
+	.investor {
+		width: 100%;
+		padding-bottom: 80px;
+
+		//border-right: 1px solid #f3f5f8;
+		border-bottom: 1px solid #f3f5f8;
+
+		td {
+			border-left: 1px solid #f3f5f8;
+			//border-top: 1px solid #f3f5f8;
+			border-bottom: 1px solid #f3f5f8;
+			width: 22%;
+		}
+		.border-right{
+			border-right: 1px solid #f3f5f8;
+		}
+		.text-r{
+			text-align: right;
+			padding-right: 40px;
+
+		}
+		.font-gray{
+			color: #3F3F3F;
+			padding-left: 40px;
+		}
+
+		.inv-list {
+			//text-align: center;
+			height: 48px;
+			font-size: 14px;
+			color: @cmn-color-ae-gray2;
+		}
+		tr:nth-child(odd){
+			background: #fff;
+
+		}
+		tr:nth-child(even){
+			background: #F8F9FA;
+		}
+	}
+
+	.investor-desc {
+		display: none;
+		position: absolute;
+		width: 100%;
+		height: 600px;
+		left: 0;
+		top: 0;
+		background: url('./resource/images/investor-mask.png') repeat-y;
+	}
+
+	.investor-txt {
+		margin-top: 100px;
+		font-size: 14px;
+		text-align: center;
+		color: @cmn-color-ae-gray2;
+	}
+
+	.investor-btn {
+		display: block;
+		width: 130px;
+		margin: 0 auto;
+		margin-top: 30px;
+
+	}
+}

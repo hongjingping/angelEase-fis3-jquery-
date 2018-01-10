@@ -1,0 +1,10 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var pay = data[i];%>
+
+		<tr class="inv-list">
+			<td><%=pay.realName%></td>
+			<td><%=pay.mobile%></td>
+			<td class="gray"><%=pay.price%>元</td>
+		</tr>
+<% } %>
+

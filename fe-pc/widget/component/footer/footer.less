@@ -1,0 +1,217 @@
+@import '../../../static/common/style/common';
+
+.footer-wrapper {
+	background: #373737;
+	padding: 48px 0 26px;
+}
+
+.footer-main {
+	width: 1180px;
+	margin: 0 auto;
+}
+
+// 常见问题
+.common-problem {
+	float: left;
+}
+
+.common-problem-title {
+	margin-bottom: 8px;
+	color: @cmn-color-ae-gray2;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.common-problem-items {
+	padding: 38px 0;
+    border-top: 1px solid #4d4d4d;
+}
+
+.common-problem-item {
+	float: left;
+	position: relative;
+	color: @cmn-color-ae-gray3;
+	width: 91px;
+	height: 65px;
+
+	&+ .common-problem-item {
+		margin-left: 25px;
+	}
+
+	.problem-img {
+		width: 42px;
+		height: 30px;
+		margin: 0 auto 16px;
+		background-image: url('./resource/images/footer_sprite.png');
+	}
+
+	.problem-text {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+	}
+
+	&.first {
+
+		.problem-img {
+			background-position: left 0 top -6px;
+		}
+
+		&:hover {
+			color: @cmn-color-ae-dark-gold;
+
+			.problem-img {
+				background-position: left 0 top 362px;
+			}
+		}
+	}
+
+	&.second {
+
+		.problem-img {
+			width: 38px;
+			height: 32px;
+			background-position: left -3px top -60px;
+		}
+
+		&:hover {
+			color: @cmn-color-ae-dark-gold;
+
+			.problem-img {
+				background-position: left -3px top 308px;
+			}
+		}
+	}
+
+	&.third {
+
+		.problem-img {
+			width: 31px;
+			height: 31px;
+			background-position: left -5px top -114px;
+		}
+
+		&:hover {
+			color: @cmn-color-ae-dark-gold;
+
+			.problem-img {
+				background-position: left -5px top 254px;
+			}
+		}
+	}
+
+	&.fourth {
+
+		.problem-img {
+			width: 33px;
+			height: 36px;
+			background-position: -4px -166px;
+		}
+
+		&:hover {
+			color: @cmn-color-ae-dark-gold;
+
+			.problem-img {
+				background-position: -4px 202px;
+			}
+		}
+	}
+
+	&.fifth {
+
+		.problem-img {
+			width: 40px;
+			height: 29px;
+			background-position: -1px -223px;
+		}
+
+		&:hover {
+			color: @cmn-color-ae-dark-gold;
+
+			.problem-img {
+				background-position: -1px 145px;
+			}
+		}
+	}
+
+	&.sixth {
+
+		.problem-img {
+			width: 43px;
+			height: 32px;
+			background-position: -3px 91px;
+		}
+
+		&:hover {
+			color: @cmn-color-ae-dark-gold;
+
+			.problem-img {
+				background-position: -3px 37px;
+			}
+		}
+	}
+}
+
+.wechat-code-wrapper {
+	float: left;
+	margin-left: 140px;
+	color: @cmn-color-ae-gray2;
+
+	.wechat-title {
+		margin-bottom: 25px;
+		font-size: 14px;
+		font-weight: bold;
+	}
+}
+
+.contact-us-wrapper {
+	float: left;
+	margin-left: 70px;
+	color: @cmn-color-ae-gray3;
+
+	.contact-us-title {
+		margin-bottom: 15px;
+		font-size: 14px;
+		font-weight: bold;
+		color: @cmn-color-ae-gray2;
+	}
+
+	.contact-email {
+		margin-bottom: 5px;
+		font-size: 14px;
+		color: @cmn-color-ae-dark-gold;
+	}
+
+	.contact-mobile {
+		margin-top: 6px;
+		color: #fff;
+		font-size: 14px;
+	}
+}
+
+.footer-reminder {
+	width: 1180px;
+	margin: 0 auto;
+	padding: 5px 0 5px 20px;
+	background: #3d3d3d;
+	border: 1px solid #474747;
+	box-sizing: border-box;
+
+	.gold-text {
+		float: left;
+		color: @cmn-color-ae-dark-gold;
+	}
+
+	.normal-text {
+		float: left;
+		width: 1090px;
+		color: @cmn-color-ae-gray2;
+	}
+}
+
+.copyright {
+	margin-top: 16px;
+	color: @cmn-color-ae-gray2;
+	text-align: center;
+}

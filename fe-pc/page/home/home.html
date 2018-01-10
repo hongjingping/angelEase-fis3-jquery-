@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/common/style/owlCarousel/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="../../static/common/style/owlCarousel/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="../../static/home/home.less">
+
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/template/template.js
+        @require ../../static/common/lib/template/handlebars.js
+        @require ../../static/common/lib/owlCarousel/owl.carousel.min.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/base64.js
+        @require ../../static/common/lib/apopup.js
+    -->
+
+    <!--[if IE]>
+
+       <style type="text/css">
+       .main-line {
+           background:transparent;
+           filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B3FFFFFF,endColorstr=#B3FFFFFF);
+           zoom: 1;
+        }
+        </style>
+
+    <![endif]-->
+</head>
+<body>
+    <!-- 公告 -->
+<div class="home-announcement" >
+    <div class="announcement-content cmn-clearfix">
+        <div class="icon-announcement"></div>
+        <div class="owl-carousel owl-theme announcement-text-wrapper" id="announcement-carousel"></div>
+        <i class="ae-icon ae-icon-close icon-close"></i>
+    </div>
+</div>
+
+<script id="announcement-template" type="text/x-handlebars-template">
+    {{#each data}}
+        <div class="text announcement-text">{{notice}}</div>
+    {{/each}}
+</script>
+
+    <link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline" hitIndex="1">
+    <!-- <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" hitIndex="1"> -->
+    <!-- <link rel="import" href="../../widget/component/header/cmn-header-simple/simple.tpl?__inline"> -->
+    <link rel="import" href="../../widget/home/slider/slider.tpl?__inline">
+
+    <link rel="import" href="../../widget/home/quicklogin/login.tpl?__inline">
+
+    <link rel="import" href="../../widget/home/fundsteps/fundsteps.tpl?__inline">
+    <link rel="import" href="../../widget/home/admask/admask.tpl?__inline">
+
+    <link rel="import" href="../../widget/home/hotraise/hotraise.tpl?__inline">
+
+    <link rel="import" href="../../widget/home/recommand/recommand.tpl?__inline">
+
+    <link rel="import" href="../../widget/home/articles/articles.tpl?__inline">
+    <link rel="import" href="../../widget/home/whychoose/whychoose.tpl?__inline">
+    <link rel="import" href="../../widget/home/partner/partner.tpl?__inline">
+
+
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline" hitIndex="1">
+
+    <!-- 公告 -->
+    <div class="yixincaifu-popup" style="display:none;">
+      <img src="../../static/home/resource/images/yixincaifu.jpeg">
+      <button type="button" class="p-close">开始股权投资</button>
+    </div>
+    <script type="text/javascript" src="../../static/home/home.js"></script>
+</body>
+</html>

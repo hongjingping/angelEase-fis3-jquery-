@@ -1,0 +1,27 @@
+ <% for (var i = 0; i < data.length; i++) {%>
+ <% var item = data[i];%>
+ <div class="article-list-content content-info-border cmn-clearfix" id="article-list-content">
+        <div class="list-content-left">
+            <a class="focus-img-href"  href="../focus_detail/focus_detail.html?id=<%=item.id%>" target="_blank">
+            <img class="list-content-img" src='<%=item.focusImgURL %>' width='220' height='140'>
+            </a>
+        </div>
+        <div class="list-content-right">
+            <div class="list-content-title">
+                <a class="content-title-href" href="../focus_detail/focus_detail.html?id=<%=item.id%>" target="_blank"><%=item.focusTitle %></a>
+                </div>
+            <div class="list-content-info">
+                <%=item.focusImport %>
+            </div>
+            <div class="list-content-footer">
+                <span class="footer-name">文</span>
+                |
+                <span class="author-name"><%=item.authorName %></span>
+                <span class="time"><%=item.createTimeStr %></span>
+            </div>
+            <% if (item.focusSource != ''){%>
+            <div class="list-content-form">来源：<%=item.focusSource %></div>
+            <%}%>
+        </div>
+    </div>
+<%}%>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/invest_upload_pay_voucher/upload.less"></head>
+<body class="gray_bg">
+	<!-- header -->
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+	<!-- tittle -->
+	<div class="step-bar-wrapper white_bg">
+		<ul class="step-bar clearfloat">
+			<li>
+				<span class="dot"></span>
+				<a href="#">填写订单</a>
+			</li>
+			<li class="go">
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+				</span>
+				<span class="dot"></span>
+				<a href="#">签约</a>
+			</li>
+			<li class="go">
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+				</span>
+				<span class="dot"></span>
+				<a href="#">支付</a>
+			</li>
+		</ul>
+	</div>
+	
+	<div class="gray_col">上传打款凭证</div>
+
+	<div class="panel-border white_bg upload-panel">
+		<div class="alert-panel">
+			<i class="ae-mobile ae-mobile-about"></i>
+			请按照如下示例上传您的打款凭证
+		</div>
+		
+		<div class="voucher-example">
+			<img src="/static/invest_upload_pay_voucher/resource/images/upload-demo.png" style="height:100%;width:100%;">
+		</div>
+
+		<div class="upload-area white_bg">
+			<div class="upload-left">
+				<div class="upload-left-pic">
+					<img src="" alt="" id="frontImg">
+				    <input type="file" id="uploadFrontImg" class="fileupload">
+					<div class="pic-mark"><p>+</p></div>
+				</div>
+			</div>
+			<div class="clear-both"></div>
+		</div>
+	</div>
+	<div class="submit-btn-wrapper" id="upload">
+		<span class="key-operation-button-normal">提交</span>
+	</div>
+
+	<script type="text/javascript" src="../../static/invest_upload_pay_voucher/upload.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<% for (var i = 0; i < data.length; i++) {%>
+     <%var totalItem = data[i];%>
+        <div class="info-msg clearfloat">
+        <div class="info-msg-left">
+         <a class="img-href" href="/page/detail/detail.html?proId=<%=totalItem.id%>">
+            <img src="<%=totalItem.proImgSmall%>" class="msg"/>
+         </a>
+        </div>
+        <a class="info-href " href="/page/detail/detail.html?proId=<%=totalItem.id%>">
+        <div class="info-msg-right">
+            <div class="info-title"><%=totalItem.proName%></div>
+
+             <!-- 募集中 -->
+             <%if (totalItem.proStatus == '4') {%>
+                 <div class="info-label orange"><%=totalItem.statusName%></div>
+             <%}%>
+             <!-- 路演中 -->
+             <%if (totalItem.proStatus == '3') {%>
+                <div class="info-label gold1"><%=totalItem.statusName%></div>
+             <%}%>
+             <!-- 预热中 -->
+             <%if (totalItem.proStatus == '2') {%>
+                 <div class="info-label green2"><%=totalItem.statusName%></div>
+             <%}%>
+             <!-- 募集成功 -->
+             <%if (totalItem.proStatus == '5') {%>
+                 <div class="info-label green"><%=totalItem.statusName%></div>
+             <%}%>
+             <!-- 募集失败 -->
+             <%if (totalItem.proStatus == '6') {%>
+                <div class="info-label gray3"><%=totalItem.statusName%></div>
+             <%}%>
+             <!-- 融资成功 -->
+             <%if (totalItem.proStatus == '7') {%>
+                <div class="info-label green"><%=totalItem.statusName%></div>
+             <%}%>
+             <!-- 融资失败 -->
+             <%if (totalItem.proStatus == '8') {%>
+                <div class="info-label gray3"><%=totalItem.statusName%></div>
+             <%}%>
+
+            <!--   预热中和募集失败项目进度隐藏  -->
+            <div class="ui-progress">
+                <div class="progress-wrap">
+                    <div class="scene">
+                    <%if (totalItem.proStatus == '2' || totalItem.proStatus == '3' || totalItem.proStatus == '6' || totalItem.proStatus == '8' ) {%>
+                        <span class="step" style="width:0"></span>
+                    <%}else{%>
+                    <%if (totalItem.proRaiseSpeed >= 100) {%>
+                        <span class="step" style="width:100%"></span>
+                    <%}else{%>
+                        <span class="step" style="width:<%=totalItem.proRaiseSpeed%>"></span>
+                        <%}%>
+                    <%}%>
+
+                    </div>
+                </div>
+                <%if ( totalItem.proStatus == '2' || totalItem.proStatus == '3' || totalItem.proStatus == '6' || totalItem.proStatus == '8') {%>
+                    <div class="percentage ratio-gray">0%</div>
+                <%}else{%>
+                    <%if (totalItem.proRaiseSpeed > '0%') {%>
+                        <div class="percentage ratio-gold2"><%=totalItem.proRaiseSpeed%></div>
+                    <%}else{%>
+                        <div class="percentage ratio-gray"><%=totalItem.proRaiseSpeed%></div>
+                    <%}%>
+                <%}%>
+                <!--<span class="percentage">85%</span>-->
+            </div>
+                <%if ( totalItem.proStatus == '2' || totalItem.proStatus == '3' ) {%>
+                    <div class="range-txt">已有--人参与</div>
+                <%}else{%>
+                    <div class="range-txt">已有<%=totalItem.prePayNum%>人参与</div>
+                <%}%>
+            <div class="info-exl">
+                <div class="exl-top">
+                    <div class="exl-width ">募集金额(万)</div>
+                    <div class="exl-width ">已募金额(万)</div>
+                    <div class="exl-width3 ">剩余天数</div>
+                </div>
+                <div class="exl-bottom">
+                    <!-- 募集金额 -->
+                    <div class="exl-width2 exl-font exl-col "><%=totalItem.proFinancieAmount%></div>
+                    <!-- 已募金额  预热中项目不显示 -->
+                    <%if ( totalItem.proStatus == '2' || totalItem.proStatus == '3' ) {%>
+                       <div class="exl-width2 exl-margin font-gray exl-font ">--</div>
+                    <%}else{%>
+                    <!-- 详情页面数据为0或者没有内容的时候颜色为gray2 -->
+                    <% if (totalItem.payAmount == 0 || totalItem.payAmount == ''){%>
+                       <div class="exl-width2 exl-margin font-gray exl-font "><%=totalItem.payAmount%></div>
+                    <% }else{ %>
+                       <div class="exl-width2 exl-margin exl-font exl-col"><%=totalItem.payAmount%></div>
+                       <%}%>
+                    <%}%>
+                    <!--  <div class="exl-width2 exl-margin"><%=totalItem.payAmount%></div> -->
+                    <!--剩余天数  预热中不显示-->
+                    <%if (totalItem.proStatus == '2' || totalItem.proStatus == '3' ) {%>
+                      <div class="exl-width3 font-gray exl-font ">--</div>
+                    <%}else{%>
+                      <!-- 详情页面数据为0或者没有内容的时候颜色为gray3 -->
+                    <%if (totalItem.remainDays == '0' || totalItem.remainDays == '') {%>
+                      <div class="exl-width3 font-gray exl-font "><%=totalItem.remainDays%></div>
+                    <%} else {%>
+                      <div class="exl-width3 exl-font exl-col"><%=totalItem.remainDays%></div>
+                      <% } %>
+                    <% } %>
+                    <!-- <div class="exl-width2 "><%=totalItem.remainDays%></div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        </a>
+       </div>
+
+    <div class="info-img2"></div>
+<%}%>

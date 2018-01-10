@@ -1,0 +1,8 @@
+<% for (var i = 0; i < data.list.length; i++) {%>
+    <%var limitItem = data.list[i];%>
+    <div class="limit-item clearfloat">
+        <div class="bankname"><%=limitItem.bankName%></div>
+        <div class="single-limit"><%=limitItem.singleQuota%></div>
+        <div class="daily-limit"><%=limitItem.dailyQuota%></div>
+    </div>
+<%}%>

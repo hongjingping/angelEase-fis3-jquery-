@@ -1,0 +1,139 @@
+@smartAlert-inner-padding:         15px;
+@smartAlert-title-padding:         15px;
+@zindex-smartAlert:                1050;
+@smartAlert-dialog-margin:         10px;
+@zindex-smartAlert-bg:             1040;
+@smartAlert-backdrop-bg:           #000;
+@smartAlert-backdrop-opacity:        .5;
+@border-color:                     #eee;
+
+// Remove body's scroll
+.smartAlert-open {
+    overflow: hidden;
+}
+
+// Container that the smartAlert scrolls within
+.smartAlert {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: @zindex-smartAlert;
+    display: none;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.5);
+    outline: 0;
+
+  // animate it to slide down
+  // &.fade .smartAlert-dialog {
+  //   transition: transform .2s ease-out;
+  //   transform: translate(0, -75%);
+  // }
+  // &.in .smartAlert-dialog {
+  //   transform: translate(0, 0);
+  // }
+}
+
+.smartAlert-open .smartAlert {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.smartAlert-dialog {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 250px;
+    height: 220px;
+    margin: auto;
+}
+
+.smartAlert-content {
+    background-color: #fff;
+    border: 1px solid @border-color;
+    outline: 0;
+}
+
+.smartAlert-header {
+    padding: @smartAlert-title-padding;
+    border-bottom: 1px solid @border-color;
+
+    .close {
+        float: right;
+        cursor: pointer;
+        color: #e1c078;
+    }
+
+    .smartAlert-title {
+        float: left;
+        margin: 0;
+        line-height: 1.5;
+        color: #9b9b9b;
+        font-size: 16px;
+        }
+}
+
+.smartAlert-body {
+    position: relative;
+    padding: 10px 0;
+    // padding: @smartAlert-inner-padding;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+
+    .icon-wrapper {
+      margin-bottom: 10px;
+      text-align: center;
+
+      .notice-attention {
+          color: #e1c078;
+          font-size: 22px;
+          // margin-right: 10px;
+          // float: left;
+      }
+    }
+
+
+    .content-txt {
+      // float: left;
+      // width: 430px;
+      line-height: 25px;
+      color: #9b9b9b;
+      text-align: center;
+    }
+}
+
+// Footer (for actions)
+.smartAlert-footer {
+    padding: 5px 0;
+    // padding: @smartAlert-inner-padding;
+    text-align: center;
+
+    button {
+        -webkit-appearance: none;
+        border-radius: 0;
+        border: none;
+        background: none;
+    }
+
+    .save {
+        color: #e1c078;
+        font-size: .8em;
+        outline: none;
+        padding: 10px 10%;
+    }
+
+    .cancel {
+        line-height: 40px;
+        margin-left: 10px;
+    }
+
+    .dail-telephone {
+        display: inline-block;
+        line-height: 30px;
+        padding: 0 20px;
+        color: #e1c078 !important;
+    }
+}

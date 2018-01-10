@@ -1,0 +1,244 @@
+
+.cmn-user-menu-bar {
+	width: 270px;
+	height: 650px;
+	background-color: #3F3F3F;
+
+	.menu-bar-head {
+		height: 100px;
+		cursor: pointer;
+		overflow: hidden;
+		padding-top: 50px;
+		position: relative;
+
+		.bar-head-img , .bar-head-mask {
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			left: 85px;
+		}
+		.head-mask {
+			opacity: 0;
+			position: absolute;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			left: 85px;
+			background: rgba(0,0,0,0.6);
+			line-height: 100px;
+			text-align: center;
+			z-index: 2;
+			.icon-success {
+				color: #FFFFFF;
+			}
+		}
+	}
+
+
+	.menu-bar-name {
+		color: #FFFFFF;
+		font-size: 16px;
+		text-align: center;
+		margin: 20px 0 30px;
+	}
+
+	.menu-bar-ants {
+		border-bottom: 1px solid #383838;
+	}
+
+	.bar-ants-wrap {
+		width: 240px;
+		color: #9B9B9B;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		padding-bottom: 20px;
+
+		.menu-bar-ant {
+			float: left;
+			width: 60px;
+			height: 73px;
+			margin-left: 40px;
+			cursor: pointer;
+
+			dt {
+				width: 48px;
+				height: 48px;
+				margin: 0 auto;
+				cursor: pointer;
+				line-height: 48px;
+				border-radius: 50%;
+				position: relative;
+			}
+
+			dd {
+				margin-top: 10px;
+			}
+
+			&:hover {
+				dd {
+					color: #e1c078;
+				}
+			}
+		}
+
+		.bar-ant-icon {
+			color: #E1C078;
+			font-size: 20px;
+		}
+
+		.ant-cert {
+			color: #383838;
+		}
+
+		.bar-ant-dot {
+			position: absolute;
+			font-size: 18px;
+			width: 18px;
+			height: 18px;
+			color: #E7678E;
+			right: -4px;
+			top: -14px;
+		}
+
+		.bar-ant-cert {
+			position: relative;
+			background-color: #E1C078;
+		}
+
+		.bar-ant-fund {
+			background-color: #383838;
+		}
+
+		.bar-ant-finance {
+			background-color: #383838;
+		}
+	}
+
+	.menu-bar-lists {
+		width: 270px;
+		color: #9B9B9B;
+		font-size: 14px;
+		margin-top: 15px;
+
+		.menu-bar-safe {
+			height: 50px;
+			line-height: 50px;
+			position: relative;
+
+			a {
+				margin-left: 30px;
+			}
+
+			i {
+				font-size: 16px;
+				margin-right: 20px;
+				display: inline-block;
+			}
+		}
+
+		.menu-bar-item {
+			height: 50px;
+			line-height: 50px;
+			cursor: pointer;
+			position: relative;
+
+			a {
+				margin-left: 30px;
+			}
+
+			i {
+				font-size: 16px;
+				margin-right: 20px;
+				display: inline-block;
+			}
+
+			.bar-item-line {
+				top: 0;
+				left: 0;
+				width: 4px;
+				height: 50px;
+				position: absolute;
+				//display: inline-block;
+				background-color: #E1C078;
+				display: none;
+			}
+
+			.bar-second-item {
+				margin-left: 70px;
+			}
+
+			&:hover {
+				a {
+					i {
+						color: #E1C078;
+					}
+				}
+
+				span {
+					color: #E1C078;
+				}
+
+				.bar-item-num {
+					color: #383838;
+				}
+			}
+		}
+
+		.bar-item-message {
+			position: relative;
+
+			.bar-item-num {
+				display: inline-block;
+			    position: absolute;
+			    top: 0;
+			    color: #383838;
+			    right: -110px;
+			    height: 16px;
+			    line-height: 18px;
+			    font-size: 13px;
+			    background: #E1C078;
+			    border-radius: 31px;
+			    text-align: center;
+			    padding: 0 5px;
+			}
+		}
+	}
+}
+.my-fund-item {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: -1px;
+		width: 270px;
+		height: 1px;
+		background-color: #373737;
+	}
+}
+.my-attention-item {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		width: 270px;
+		height: 1px;
+		background-color: #373737;
+	}
+}
+.my-bank-item {
+	position: relative;
+	&:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -1px;
+		width: 270px;
+		height: 1px;
+		background-color: #373737;
+	}
+}

@@ -1,0 +1,209 @@
+@import '../common/style/variables';
+
+.header-tabs {
+    background: @WHITE;
+
+    .tabs-list {
+        height: 2.6em;
+
+        li {
+            a {
+                width: 4em;
+                margin: 0 auto;
+                height: 2.6em;
+                line-height: 2.6em;
+            }
+        }
+    }
+}
+
+.invest-list {
+    margin-top: 10px;
+
+    .space {
+        margin-right: 1em;
+    }
+
+    .cell-space {
+        padding: 15px 20px;
+    }
+
+	.left-round-pic {
+	    width: 44px;
+	    height: 44px;
+	    background: @GRAY6;
+	    .border_radius(50%);
+	    margin: 10px;
+
+      img {
+        width: 44px;
+        height: 44px;
+        .border_radius(50%);
+      }
+	}
+
+    .more-info-array-wrapper {
+        width: 22px;
+        i {
+            font-size: 19px;
+            color: @GRAY4;
+        }
+
+    }
+
+    .invest-title-wrapper {
+        width: calc(~"100% - 70px");
+
+        .invest-title {
+            font-size: @Font6;
+            color:@GRAY1;
+        }
+
+        .invest-status {
+            font-size: @Font9;
+            width: auto;
+            display: inline-block;
+            padding: 0 4px;
+
+            &.text-orange {
+                border: 1px solid #ffd7b9;
+                color: #FF9544;
+            }
+            &.text-success {
+                border: 1px solid #cbe9ac;
+                color: #9BD560;
+            }
+
+            &.text-gray {
+                color: #9b9b9b;
+                border: 1px solid #EBEEF1;
+            }
+        }
+    }
+
+    .empty-wrapper {
+        width: 75px;
+    }
+
+    .invest-amount-wrapper {
+        width: calc(~"100% - 130px");
+        font-size: @Font7;
+        color: @GRAY2;
+    }
+    .invest-amount-style {
+        width: calc(~"100% - 160px");
+        font-size: 13px;
+        color: @GRAY2;
+
+        em {
+            color: @GRAY1;
+            font-size: 16px;
+            font-style: normal;
+        }
+
+        span {
+            font-size: 14px;
+        }
+    }
+    .to-do {
+        font-size: @Font6;
+        color: @GOLD2;
+        text-align: right;
+    }
+}
+
+.investment-img-container {
+    text-align: center;
+    margin-top: 45%;
+
+    .investment-icon-empty {
+        font-size: 60px;
+        color: @GRAY3;
+    }
+
+    .investment-text {
+        color: @GRAY3;
+        font-size: 16px;
+        font-weight: bold;
+    }
+}
+
+.detail-investment-contailer {
+    padding: 27px 20px 0px 20px;
+    .title{
+        font-weight: bold;
+        font-size: 16px;
+        color: #3F3F3F;
+        letter-spacing: 0px;
+    }
+    .subtitle{
+        margin: 2px 20px 0px 0px;
+        font-size: 12px;
+        color: #9B9B9B;
+        letter-spacing: 0px;
+        line-height: 21px;
+    }
+
+    .context{
+        margin: 23px 0px 0px 0px;
+        font-size: 14px;
+        color: #3F3F3F;
+        letter-spacing: 0px;
+        line-height: 21px;
+    }
+}
+
+
+.dialog-pass {
+    position: absolute;
+    z-index: 20000;
+    top: 35%;
+    left: 10%;
+    width: 80%;
+    text-align: center;
+
+    .dialog-close {
+        color: @WHITE;
+        font-size: 38px;
+    }
+
+    .dialog-content {
+        -moz-border-radius: 5px;      /* Gecko browsers */
+        -webkit-border-radius: 5px;   /* Webkit browsers */
+        border-radius:5px;            /* W3C syntax */
+        background: @WHITE;
+        font-size: @Font6;
+        color: @GRAY2;
+        text-align: center;
+        padding: 9px;
+
+        i {
+            font-size: 30px;
+            color: @RED;
+        }
+        .dialog-content-text {
+            width: 90%;
+            height: 50px;
+            text-align: left;
+            font-size: 14px;
+            font-family: @FontFamily;
+            color:@GRAY1;
+            margin-left: 20px;
+        }
+    }
+
+    .i-know {
+        padding: 9Px;
+        border-top: 1px solid @GRAY4;
+        font-size: @Font4;
+        font-family: @FontFamily;
+        color: @GOLD2;
+    }
+
+}
+
+// note the naming
+.Underline {
+    color: #e1b555;
+    border-bottom: 3px solid #e1c078;
+}

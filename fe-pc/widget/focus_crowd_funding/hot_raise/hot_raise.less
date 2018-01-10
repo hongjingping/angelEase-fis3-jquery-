@@ -1,0 +1,70 @@
+@import '../../../static/common/style/common';
+
+
+/*热募中.项目 start*/
+.reserch-banner-right {
+  width: 320px;
+  height: 250px;
+  margin-top: 64px;
+  float: right;
+  position: relative;
+  .owl-carousel .item {
+    display: block;
+  }
+  .owl-carousel img {
+    display: block;
+    width: 100%;
+  }
+  .owl-theme .owl-nav.disabled + .owl-dots {
+    position: absolute;
+    display: block;
+    margin-right: 3px;
+    top: 10px;
+    right: -10px;
+  }
+  .owl-theme .owl-dots, .owl-theme .owl-nav {
+    text-align: right;
+    padding-right: 30px;
+  }
+  .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: @cmn-color-ae-white;
+  }
+  .owl-theme .owl-dots .owl-dot span {
+    width: 4px;
+    height: 4px;
+    margin-right: 1px;
+    border-radius: 0px;
+  }
+  .ad-item {
+    .ad-title {
+      position: absolute;
+      left: 15px;
+      top: 15px;
+      font-size: 14px;
+      padding: 0px 6px;
+      color: @cmn-color-ae-white;
+      background: rgba(63,63,63,.73);
+    }
+    .ad-label {
+      position: absolute;
+      width: 300px;
+      height: 44px;
+      padding-left: 20px;
+      bottom: 0px;
+      //left: 20px;
+      font-size: 16px;
+      line-height: 44px;
+      background: rgba(0,0,0,.5);
+      color: @cmn-color-ae-white;
+      .ad-label-txt {
+        z-index: 2;
+        display: block;
+        width: 280px;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+    }
+  }
+}
+/*热募中.项目 end*/

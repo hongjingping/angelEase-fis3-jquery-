@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/login/login.less">
+
+	<!--
+		@require ../../static/common/lib/base64.js
+	-->
+</head>
+<body >
+	<input type="hidden" id="count" value="0">
+
+	<div class="login-logo">
+		<span class="radius-close" onclick="window.location.href='/page/home/home.html'">
+			<i class="ae-mobile ae-mobile-close Font5" ></i>
+		</span>
+
+		<span class="user-btns">
+			<a href="javascript:;" class="user-login active">登录</a>
+			<a href="javascript:window.location.href='register.html';" class="user-register">注册</a>
+		</span>
+	</div>
+
+	<div class="weui_cells weui_cells_form login-form">
+		<div class="weui_cell input-first-col border-half-bottom">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label"> <i class="ae-mobile ae-mobile-mobile icon-item"></i>
+				</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input highlight-input tel-num" type="tel" placeholder="请输入您的手机号"
+				 		 id="userphone"  autocomplete="off" maxlength=11 >
+				<!--删除按钮-->
+				<div class="delete close-username" id="close-username">
+					<i class="ae-mobile ae-mobile-close"></i>
+				</div>
+			</div>
+		</div>
+
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label"> <i class="ae-mobile ae-mobile-lock icon-item"></i>
+				</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input highlight-input" type="password" placeholder="请输入您的密码" maxlength="18"
+					 id="userpwd"  value="" autocomplete="off">
+
+				<!--删除按钮-->
+					<div class="delete  close-pwd" id="close-pwd">
+						<i class="ae-mobile ae-mobile-close"></i>
+					</div>
+
+			</div>
+		</div>
+
+		<div class="weui_cell border-half-top" style="display: none" id = "pic_code_div">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">
+					<i class="ae-mobile ae-mobile-safe icon-item"></i>
+				</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input highlight-input" type="text" placeholder="请输入右图验证码"
+					 id='loginCode' value="" maxlength="4">
+			</div>
+			<!--删除按钮-->
+			<div class="delete close-img" id="closeImg">
+				<i class="ae-mobile ae-mobile-close"></i>
+			</div>
+			<div class="weui_cell_bd snd-msg-button1">
+				<img id="picImg" class="img"/>
+			</div>
+		</div>
+	</div>
+	
+	<div class="reminder">宜信财富官网客户可直接通过手机号登录</div>
+
+	<!-- age check msg -->
+    <div id="age-model" style="display: none;">
+        <div class="gray-mask-age"></div>
+        <div class="dialog-pass-age">
+            <div class="dialog-content-age">
+                <div class="dialog-content-icon">
+                    <i class="ae-mobile ae-mobile-attention"></i>
+                </div>
+                <div class="suc-text"></div>
+                <div class="confirm-wrapper" id="age-iknow">
+                    <span class="confirm-yes">知道了</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	<a class="login-btn">
+		<i class="ae-mobile ae-mobile-arrow-right" id="loginBtn"></i>
+	</a>
+
+	<a href="/page/find_password/find-password-one.html" class="login-forgot">忘记密码</a>
+
+
+	<script type="text/javascript" src="../../static/login/login.js"></script>
+</body>
+</html>

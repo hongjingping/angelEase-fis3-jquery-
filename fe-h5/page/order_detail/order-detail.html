@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/order_detail/order-detail.less">
+</head>
+<body>
+    <link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<div class="sl_sjhm sl_sjhm2">
+		<ul>
+			<li class="sl_szmm margin-top-15 clearfloat">
+				<span id="proName"></span>
+				<em id="orderStatusClass" class="label-status"></em>
+			</li>
+		</ul>
+	</div>
+
+	<div class="sl_sjhm ">
+		<ul>
+			<li class="h1">
+				<span >订单信息</span>
+			</li>
+			<li class="info_list margin-top-10 clearfloat">
+				<span>订单号</span>
+				<em id="orderNo"></em>
+			</li>
+			<li class="info_list clearfloat">
+				<span>支付类别</span>
+				<em >投资款</em>
+			</li>
+			<li class="info_list clearfloat">
+				<span>投资金额</span>
+				<em id="investPrice"></em>
+			</li>
+			<li class="info_list clearfloat">
+				<span>姓名</span>
+				<em id="consignee"></em>
+			</li>
+			<li class="info_list clearfloat">
+				<span>地址</span>
+				<em id="address"></em>
+			</li>
+			<li class="info_list clearfloat">
+				<span>联系方式</span>
+				<em id="mobile"></em>
+			</li>
+			<li class="info_list clearfloat">
+				<span>邮政编码</span>
+				<em id="zipCode"></em>
+			</li>
+		</ul>
+	</div>
+
+	<div class="invest_info">
+		<ul>
+			<li  class="h2" >
+				<span class="font-gray2">投资信息</span>
+			</li>
+			<li class="invest_info_detil">
+				<span id="investInfo"></span>
+			</li>
+		</ul>
+	</div>
+
+	<div class="bottom-bar clearfloat">
+		<span>应付金额<em id="price"></em>元</span>
+	</div>
+
+	<script type="text/javascript" src="../../static/order_detail/order-detail.js"></script>
+</body>
+</html>

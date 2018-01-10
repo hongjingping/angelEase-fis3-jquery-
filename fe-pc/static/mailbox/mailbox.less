@@ -1,0 +1,338 @@
+/* inmail commmon layout */
+.user-inmail-list {
+    padding-top: 20px;
+    background: #F8F9FA;
+
+    .inmail-list-wrap {
+        overflow: hidden;
+
+        .inmail-menu {
+            float: left;
+            width: 270px;
+            margin-bottom: 80px;
+        }
+
+        .inmail-main {
+            float: left;
+            width: 900px;
+            overflow: hidden;
+            margin: 0 0 90px 10px;
+        }
+    }
+}
+
+/* common simple banner */
+.simple-banner {
+    position: relative;
+    width: 900px;
+    height: 50px;
+    background-color: #E1C078;
+    color: #fff;
+    overflow: hidden;
+
+    .icon-inmail {
+        position: absolute;
+        top: -12px;
+        right: 78px;
+        font-size: 65px;
+        color: #E5CA8D;
+    }
+
+    .simple-title {
+        position: absolute;
+        right: 20px;
+        font-size: 20px;
+        text-align: right;
+        margin-right: 20px;
+        line-height: 50px;
+    }
+}
+
+.content-tab-list {
+    width: 898px;
+    height: 599px;
+    background: #FFFFFF;
+    border: 1px solid #EBEEF1;
+
+    .list-no-data {
+        text-align: center;
+        padding-bottom: 120px;
+
+        .no-data-icon {
+            width: 64px;
+            height: 64px;
+            line-height: 64px;
+            border-radius: 50%;
+            margin: 70px auto 0;
+            border: 1px solid #F8F9FA;
+
+            i {
+                color: #EBEEF1;
+                font-size: 32px;
+            }
+        }
+
+        .no-data-txt {
+            color: #9B9B9B;
+            margin: 30px 0;
+            font-size: 14px;
+        }
+    }
+}
+
+.inmail-list-wrapper {
+    min-height: 590px;
+    margin-top: 10px;
+    padding: 0 0 16px 0;
+    border: 1px solid #EBEEF1;
+    box-sizing: border-box;
+
+    .title-content {
+        color: #9B9B9B;
+        cursor: pointer;
+    }
+
+    .font-gray {
+        color: #9B9B9B;
+    }
+
+    .cmn-table > tbody {
+        > tr {
+            &:hover td:first-child {
+                color: #DDBE7A;
+            }
+        }
+    }
+
+    .mailbox-table-title {
+        padding-left: 20px;
+    }
+
+
+
+
+/* pagination ui */
+// .pagination-wrapper {
+//     text-align: right;
+
+//     .pagination {
+//         display: inline-block;
+//         padding-left: 0;
+//         font-size: 14px;
+//         margin-right: 15px;
+
+//         > li {
+//             display: inline;
+//             > a {
+//                 position: relative;
+//                 float: left;
+//                 padding: 6px 12px;
+//                 line-height: 1.5;
+//                 text-decoration: none;
+//                 background-color: #eee;
+//                 color: #9B9B9B;
+
+//                 .ae-icon {
+//                     font-size: 12px;
+//                 }
+//             }
+//         }
+
+//         > li:first-child a {
+//             margin-right: 10px;
+//         }
+
+//         > li:last-child a {
+//             margin-left: 10px;
+//         }
+
+//         > li > a {
+//             &:hover,
+//             &:focus {
+//                 color: #DDBE7A;
+//             }
+//         }
+
+//             > .active {
+//                 > a,
+//                 > a:hover,
+//                 > a:focus {
+//                     color: #fff;
+//                     cursor: default;
+//                     background-color: #DDBE7A;
+//                 }
+//             }
+
+//             > .disabled {
+//                 > a,
+//                 > a:hover,
+//                 > a:focus {
+//                     color: #777;
+//                     cursor: not-allowed;
+//                 }
+//             }
+//         }
+//     }
+// }
+
+.pagination-wrapper {
+    text-align: right;
+    padding: 10px 0;
+    background-color: #fff;
+
+    .pagination {
+        display: inline-block;
+        padding-left: 0;
+        font-size: 14px;
+        margin-right: 15px;
+
+        .btn-jump {
+            width: 60px;
+            height: 35px;
+            line-height: 35px;
+            color: #9B9B9B;
+            border: 1px solid #ccc;
+            background-color: #eee;
+
+            &:hover {
+               color: #E1C078;
+            }
+        }
+
+        .pagination-txt {
+            float: left;
+            margin: 0 5px;
+            line-height: 35px;
+        }
+
+        .pagination-input {
+            float: left;
+            width: 30px;
+            height: 30px;
+            line-height: 35px\9;
+            text-align: center;
+            border: 1px solid #ccc;
+            color: #9b9b9b;
+        }
+
+        > li {
+            display: inline;
+            > a {
+                position: relative;
+                float: left;
+                padding: 6px 12px;
+                line-height: 1.5;
+                text-decoration: none;
+                background-color: #eee;
+                color: #9B9B9B;
+
+                .ae-icon {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        > li:first-child a {
+            margin-right: 10px;
+        }
+
+        > li:last-child a {
+            margin-left: 10px;
+        }
+
+        > li > a {
+            &:hover,
+            &:focus {
+                color: #DDBE7A;
+            }
+        }
+
+            > .active {
+                > a,
+                > a:hover,
+                > a:focus {
+                    color: #fff;
+                    cursor: default;
+                    background-color: #DDBE7A;
+                }
+            }
+
+            > .disabled {
+                > a,
+                > a:hover,
+                > a:focus {
+                    color: #777;
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+}
+
+
+/* page inmail detail */
+.inmail-detail-wrapper {
+    min-height: 650px;
+    background-color: #fff;
+    padding: 20px 30px 440px 30px;
+    border: 1px solid #EBEEF1;
+    box-sizing: border-box;
+
+    .top-nav {
+        font-size: 14px;
+
+        .tip,
+        .goback {
+            float: left;
+            line-height: 1;
+        }
+
+        .goback {
+            padding: 0 10px;
+            border-left: 1px solid #ccc;
+            color: #9B9B9B;
+            cursor: pointer;
+
+            &:hover {
+                color: #E1B555;
+            }
+        }
+
+        .tip {
+            margin-right: 10px;
+        }
+    }
+
+    .title {
+        font-size: 20px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        color: #3f3f3f;
+    }
+
+    .inmail-from {
+        margin-bottom: 25px;
+        color: #9B9B9B;
+
+        .time {
+            margin-left: 15px;
+        }
+    }
+
+    .msg-content {
+        font-size: 14px;
+        color: #3f3f3f;
+    }
+}
+
+.message-item {
+    background: #383838;
+
+    i {
+        color: #E1C078;
+    }
+
+    span {
+        color: #E1C078;
+    }
+}

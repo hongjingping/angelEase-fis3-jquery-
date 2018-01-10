@@ -1,0 +1,43 @@
+<% if(data.length > 4) {%>
+    <% for (var i = 0; i < 4; i++) {%>
+        <% var fundItem = data[i]; %>
+        <% if(i === 0) {%>
+            <div class="funding-spot-item-special cmn-clearfix">
+                <a href="/page/focus_detail/focus_detail.html?id=<%= fundItem.id %>" target="_blank">
+                    <img class="item-img" src="<%=fundItem.focusImgUrl%>" alt="" width="172" height="110">
+                </a>
+                <div class="item-main">
+                    <a class="title" href="/page/focus_detail/focus_detail.html?id=<%= fundItem.id %>" target="_blank"><%= fundItem.focusTitle %></a>
+                    <div class="intro"><%= fundItem.focusImport.length > 80 ? fundItem.focusImport.substring(0, 80) + '...' : fundItem.focusImport %></div>
+                </div>
+            </div>
+        <% }else{ %>
+            <div class="funding-spot-item cmn-clearfix">
+                <a class="title" href="/page/focus_detail/focus_detail.html?id=<%= fundItem.id %>" target="_blank"><%= fundItem.focusTitle %></a>
+                <div class="date"><%= fundItem.createTimeStr %></div>
+            </div>
+        <% } %>
+    <% } %>
+
+<% } else {%>
+    <% for (var i = 0; i < data.length; i++) {%>
+        <% var fundItem = data[i]; %>
+        <% if(i === 0) {%>
+            <div class="funding-spot-item-special cmn-clearfix">
+                <a href="/page/focus_detail/focus_detail.html?id=<%= fundItem.id %>" target="_blank">
+                    <img class="item-img" src="<%=fundItem.focusImgUrl%>" alt="" width="172" height="110">
+                </a>
+                <div class="item-main">
+                    <a class="title" href="/page/focus_detail/focus_detail.html?id=<%= fundItem.id %>" target="_blank"><%= fundItem.focusTitle %></a>
+                    <div class="intro"><%= fundItem.focusImport.length > 80 ? fundItem.focusImport.substring(0, 80) + '...' : fundItem.focusImport %></div>
+                </div>
+            </div>
+        <% }else{ %>
+            <div class="funding-spot-item cmn-clearfix">
+                <a class="title" href="/page/focus_detail/focus_detail.html?id=<%= fundItem.id %>" target="_blank"><%= fundItem.focusTitle %></a>
+                <div class="date"><%= fundItem.createTimeStr %></div>
+            </div>
+        <% } %>
+    <% } %>
+<% } %>
+

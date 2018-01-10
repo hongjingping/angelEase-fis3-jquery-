@@ -1,0 +1,371 @@
+@import "../common/style/variables";
+
+.finance-container {
+    width: 100%;
+    overflow: auto;
+    padding-bottom: 6em;
+    background: #FBFBFB;
+
+    .logo {
+        background: url('./resource/images/fin-logo.png') no-repeat;
+        background-size: 100%;
+        min-height: 145px;
+        color: #DCB254;
+        text-align: center;
+
+        .main {
+            font-size: 14px;
+            padding-top: 45px;
+        }
+
+        .sub {
+            font-size: 18px;
+        }
+    }
+
+    .bus-title {
+        height: 50px;
+        width: 100%;
+        color: #C9AE74;
+        line-height: 50px;
+
+        h2 {
+            font-size: 16px;
+            margin-left: 17px;
+            font-weight: normal;
+        }
+    }
+
+    .identity {
+        width: 100%;
+        min-height: 80px;
+        color: #4A4A4A;
+        font-size: 14px;
+        background: #FFF;
+        padding-top: 20px;
+
+        .identity-wrap {
+            overflow: auto;
+            margin-left: 17px; 
+            margin-bottom: 20px;
+
+            p {
+                margin-bottom: 20px;
+            }
+        }
+
+        .radio-cols {
+            display: flex;
+            align-items: center;
+
+            span {
+                display: block;
+                float: left;
+            }
+
+            .radio-txt {
+                margin: 0 10px 0 5px;
+            }
+        }
+    }
+
+    .form-detail {
+        margin-top: 10px;
+        min-height: 153px;
+        background: #FFF;
+    }
+
+    .form-wrap {
+        margin-left: 17px;
+
+        li {
+            height: 50px;
+            font-size: 14px;
+            list-style: none;
+            line-height: 50px;
+            position: relative;
+
+            span {
+                width: 22%;
+                color: #9B9B9B;
+                display: inline-block;
+            }
+
+            select,
+            input {
+                width: 72%;
+                border: none;
+                outline: none;
+                font-size: 14px;
+                color: #000;
+                background: none;
+
+                appearance: none;
+                -moz-appearance:none;
+                -webkit-appearance:none;
+            }
+
+            em,
+            i {
+                position: absolute;
+                color: #C9C9C9;
+                right: 20px;
+                top: 0;
+                font-style: normal;
+            }
+        }
+    }
+
+    .fund-detail {
+        margin-top: 10px;
+        min-height: 100px;
+        background: #FFF;
+    }
+
+    .plan-detail {
+        margin-top: 10px;
+        background: #FFF;
+        min-height: 176px;
+
+        .plan {
+            span {
+                width: 80%;
+            }
+        }
+
+        .limit {
+            i {
+                left: 0;
+                top: -15px;
+                color: #E1C078;
+            }
+
+            p {
+                line-height: 20px;
+                font-size: 13px;
+                color: #9B9B9B;
+                width: 84%;
+                margin: 20px 0 0 30px;
+            }
+        }
+    }
+
+    .upload-article {
+        min-height: 172px;
+        background: #FFF;
+        padding-top: 12px;
+
+        p {
+            font-size: 14px;
+            color: #E1B555;
+            margin: 0 0 12px 17px;
+        }
+
+        .upload-cols {
+            padding: 17px 0 17px 17px;
+            overflow: auto;
+        }
+
+        .single-file {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            float: left;
+            line-height: 96px;
+            border-radius: 5px;
+            text-align: center;
+            margin: 0 10px 10px 0;
+            border: 2px dotted #E0E0E0;
+
+            .unique-file {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0;
+                z-index: 100;
+            }
+
+            i {
+                z-index: 99;
+                color: #E0E0E0;
+                font-size: 30px;
+            }
+
+            .loading-img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 96px;
+                height: 96px;
+                border: none;
+                z-index: 9998;
+                display: none;                
+            }
+        }
+
+        .uploader-files {
+            li {
+                list-style: none;
+            }
+
+            .uploader-file {
+                float: left;
+                width: 100px;
+                height: 100px;
+                margin: 0 10px 10px 0;
+                background: no-repeat center center;
+                background-size: cover;
+            }
+        }
+    }
+
+    .final-commit {
+        width: 125px;
+        height: 40px;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 16px;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+        border-radius: 20px;
+        background: #E1C078;
+    }
+}
+
+.uploader-gallery {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99999;
+    display: none;
+    background: #4A4A4A;
+
+    .gallery-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 60px;
+        left: 0;
+        background: center center no-repeat;
+        background-size: contain;
+    }
+
+    .operation {
+        position: fixed;
+        bottom: 0;
+        height: 50px;
+        width: 100%;
+        line-height: 50px;
+        background: #000;
+        text-align: center;
+
+        i {
+            color: #FFF;
+        }
+    }
+}
+
+.gray-mask-suc {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+.dialog-pass-suc {
+    position: fixed;
+    z-index: 20000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    width: 80%;
+
+    .dialog-close {
+        color: @WHITE;
+        text-align: center;
+        margin-top: 20px;
+
+        i {
+            font-size: 20px;
+        }
+    }
+
+    .dialog-content-suc {
+        -moz-border-radius: 5px;      
+        -webkit-border-radius: 5px;   
+        border-radius:5px;            
+        background: @WHITE;
+        font-size: @Font6;
+        color: @GRAY1;
+        padding-top: 5px;
+
+        .dialog-content-icon {
+            text-align: center;
+            color: #9BD560;
+
+            i {
+                font-size: 30px;
+            }
+        }
+
+        .suc-text {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+            text-align: left;
+
+            p {
+                width: 86%;
+
+                span {
+                    color: #F5A623;
+                }
+            }
+        }
+
+        .confirm-wrapper {
+            border-top: 1px solid #eee;
+            line-height: 2.8rem;
+            font-size: 16px;
+            text-align: center;
+            color: @GOLD1;
+        }
+  }
+}
+
+.example {
+    background: none;
+
+    .bd-img {
+        display: flex;
+        margin-top: -5em;
+        justify-content: center;
+
+        img {
+            width: 90%;
+            height: 100%;
+        }
+    }
+}
+
+.navbar-wrap {
+    .cmn-finance {
+        i,span {
+            color: #E1B555;
+        }
+    }
+}

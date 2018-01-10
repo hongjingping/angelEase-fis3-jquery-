@@ -1,0 +1,59 @@
+<% for (var i = 0; i < data.payBindBankCardList.length; i++) {%>
+    <%var bankItem = data.payBindBankCardList[i];%>
+    <div class="bank-item-wrapper">
+        <div class="last-order">
+        <% if(bankItem.lastPayDate != ''){%>
+            <span>上笔订单时间：</span>
+            <span><%=bankItem.lastPayDate%></span>
+        <%}%>
+        </div>
+        <div class="bank-item" id="<%=bankItem.id%>">
+            <div class="bank-type-wrapper cmn-clearfix">
+                <div class="bank-logo-wrapper">
+                    <img src="<%=bankItem.logourl%>" alt="" class="bank-logo" width="106px" height="30px">
+                </div>
+                <div class="bank-type"><%=bankItem.bankTypeName%></div>
+            </div>
+            <div class="bank-limit-wrapper cmn-clearfix">
+                <div class="single-limit-wrapper">
+                    <span>单笔限额</span>
+                    <span class="single-limit-value"><%=bankItem.singleQuota%></span>
+                </div>
+                <div class="daily-limit-wrapper">
+                    <span>每日限额</span>
+                    <span class="daily-limit-value"><%=bankItem.dailyQuota%></span>
+                </div>
+            </div>
+            <div class="bank-number-wrapper">
+                <span><%=bankItem.bankCardNo.slice(0, 4)%></span>
+                <span>****</span>
+                <span>****</span>
+                <span class="bank-tail-number"><%=bankItem.bankCardNo.slice(-4)%></span>
+            </div>
+            <div class="bank-user-wrapper">
+                <span class="wrap-key">持卡人姓名</span>
+                <span class="wrap-value"><%=data.cardholder.length > 2 ? ('*' + data.cardholder.slice(-2)) : ('*' + data.cardholder.slice(-1))%></span>
+            </div>
+            <div class="phone-number-wrapper cmn-clearfix">
+                <span class="wrap-key">银行预留手机</span>
+                <span class="wrap-value"><%= (bankItem.mobile.slice(0, 3) + '****' + bankItem.mobile.slice(-4)) %></span>
+                <span class="unbind">解绑</span>
+            </div>
+        </div>
+    </div>
+
+<%}%>
+<%if(data.payBindBankCardList.length < 5){%>
+<div class="bank-item-wrapper">
+    <div class="last-order">
+    </div>
+    <div class="bank-item bank-item-add">
+        <a class="add-bank-wrapper" href="/page/add-bank-card/stepone.html">
+            <div class="add-bank-icon">
+                <i class="ae-icon ae-icon-plus"></i>
+            </div>
+            <div class="add-bank-text">添加银行卡</div>
+        </a>
+    </div>
+</div>
+<%}%>

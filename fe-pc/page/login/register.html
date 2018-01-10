@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/login/login.less">
+
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/base64.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/login/sms.js
+    -->
+</head>
+<body>
+
+    <div class="login">
+        <div class="nav cmn-clearfix">
+            <div class="layout nav-container">
+                <a href="/page/home/home">
+                    <div class="logo"></div>
+                </a>
+                <div class="phone">服务电话  400-818-0060</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="layout login-box">
+                <div class="login-win" id="register-win">
+                    <div class="win-header cmn-clearfix">
+                        <div class="login-label">
+                            <i class="label-txt">注册</i>
+                        </div>
+
+                        <p class="login-txt">已有帐号?
+                            <a href="./login.html" class="reg-txt">立即登录</a>
+                        </p>
+                    </div>
+                    <div class="reminder">宜信财富官网客户可直接通过手机号登录</div>
+                    <div class="form-box">
+                        <div>
+                            <div class="error-txt" id="error" style="visibility:hidden;"></div>
+                        </div>
+
+                        <div class="label">
+                            <input type="text" class="phone-txt" placeholder="请输入您的手机号" id="userphone" value=""  maxlength="11">
+                            <i class="ae-icon ae-icon-phone phone-icon"></i>
+                            <div class="delete close-username" id="close-username" style="display: none;">
+                    					<i class="ae-icon ae-icon-close"></i>
+                    				</div>
+                        </div>
+                        <div class="label">
+                            <input type="password" class="phone-txt" placeholder="请输入您的密码" maxlength="18" id="userpwd" value="" onblur="checkUserpwd();" autocomplete="off">
+                            <i class="ae-icon ae-icon-password phone-icon"></i>
+                            <div class="delete close-pwd" id="close-pwd" style="display: none;">
+                    					<i class="ae-icon ae-icon-close"></i>
+                    				</div>
+                        </div>
+
+                        <div class="label">
+                            <input type="text" class="img-code-txt" placeholder="请输入右图验证码" id="picCode"  onblur="checkMobileCode();"
+                            onkeyup="checkMobileCode();" value="" maxlength="4">
+                            <i class="ae-icon ae-icon-right-code phone-icon"></i>
+                            <div class="img-code">
+                                <b class="testZy"><img id="picImg"/></b>
+                            </div>
+                        </div>
+
+                        <div class="label mobileCode" style="display:none;">
+                            <input type="text" class="phone-code-txt" placeholder="请输入手机验证码" id="regCode"  value="" maxlength="6" >
+                            <i class="ae-icon ae-icon-right-code phone-icon"></i>
+                            <a class="phone-code" id="sendCode">获取验证码</a>
+                            <a class="phone-code" id="showCount" style="display: none"></a>
+                        </div>
+
+                        <div class="protocol">
+                            <label><input type="checkbox" value="" name="agreement" id="apply-protocol" class="sprites" />
+                            <span class="agreement">本人承诺已完全了解并同意</span></label>
+                            <span class="protocol-name">
+                                <a href="../protocol/register.html" target="_blank">《用户注册服务协议》</a>
+                            </span>
+                        </div>
+
+                        <div class="register-btn">
+                            <button class="btn" id="btnReg">免费注册</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/login/login-register.js"></script>
+    <script type="text/javascript" src="../../static/login/register.js"></script>
+    <script type="text/javascript" src="../../static/common/lib/jquery/checkbox.js"></script>
+</body>
+</html>

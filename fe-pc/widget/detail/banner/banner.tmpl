@@ -1,0 +1,30 @@
+<% if (data.attentionFlag === 1) { %>
+    <div class="follow-thumbs-up cmn-clearfix">
+         <i class="ae-icon ae-icon-star2 follow"></i>
+         <i class="ae-icon ae-icon-follow follow"></i>
+    </div>
+<% } else { %>
+    <div class="follow-thumbs-up active cmn-clearfix">
+         <i class="ae-icon ae-icon-star2 follow"></i>
+         <i class="ae-icon ae-icon-follow follow"></i>
+    </div>
+<% } %>
+
+<% if(data.praiseFlag === 1) { %>
+    <div class="follow-thumbs-up cmn-clearfix">
+        <i class="ae-icon ae-icon-un-thumbsup thumbsup"></i>
+         <i class="ae-icon ae-icon-thumbsup thumbsup"></i>
+    </div>
+<% } else { %>
+    <div class="follow-thumbs-up active cmn-clearfix">
+        <i class="ae-icon ae-icon-un-thumbsup thumbsup"></i>
+         <i class="ae-icon ae-icon-thumbsup thumbsup"></i>
+    </div>
+<% } %>
+<div class="thumbsup-num">
+    <% if(data.praiseCount > 99) { %>
+        (<span id="thumb-num">99+</span>)
+    <% } else {%>
+        (<span id="thumb-num"><%= data.praiseCount %></span>)
+    <% } %>
+</div>

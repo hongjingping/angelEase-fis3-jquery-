@@ -1,0 +1,163 @@
+@import '../common/style/variables';
+
+.full-border {
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        top: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+}
+
+.weui_cell {
+    .reminder-icon {
+        float: left;
+        line-height: 22px;
+        margin-right: 12px;
+
+        i {
+            font-size: 18px;
+            color: #FF6393;
+        }
+    }
+
+    .reminder-text {
+        float: left;
+        font-size: 13px;
+        line-height: 22px;
+    }
+}
+
+.step-bar-wrapper{
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+
+    &:after {
+        content: '';
+        width: 100%;
+        height: 1px;
+        left: 0;
+        bottom: 0;
+        background: #DFDFDF;
+        position: absolute;
+        -webkit-transform: scaleY(0.5);
+                transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+                transform-origin: 0 0;
+    }
+}
+
+.alert-bar {
+    position: relative;
+
+    .weui_cell {
+        align-items: inherit;
+        color: @GRAY2;
+        font-size: @Font5;
+    }
+    .mark-label {
+        width: 30px;
+        color: @RED;
+        font-size: @Font3;
+        margin-left: -4px;
+
+        i {
+            font-size: 18px;
+        }
+    }
+
+    .sign-notice {
+        font-size: 13px;
+    }
+}
+
+.read-contract-col {
+	text-align: right;
+	padding: 10px;
+	border-top: 1px solid @GRAY6;
+
+    span {
+    	color:@GOLD2;
+    	font-size: @Font6;
+    }
+
+    i {
+    	color: @GRAY4;
+    }
+}
+
+.orange-font {
+    color: @ORANGE;
+    font-family: @FontFamily;
+    font-size: @Font5;
+}
+
+/* reasonable ? */
+.float {
+    float:left;
+}
+
+.background-color {
+    background-color: #fff7f9;
+    display: none;
+}
+
+.font {
+    font-size:13px;
+    font-family: @FontFamily;
+}
+
+.red {
+    color:#E7678E;
+}
+
+.alert-wrapper {
+    padding: 10px;
+
+    .alert-left {
+        width: 10%;
+        float: left;
+        text-align: right;
+        color: @GOLD1;
+        font-size: @Font5;
+    }
+
+    .alert-right {
+        width: 87%;
+        float: right;
+        color: @GRAY3;
+        font-size: @Font6;
+    }
+}
+
+.clear-both {
+    clear: both;
+}
+
+.gray_col {
+    height: 15px;
+}

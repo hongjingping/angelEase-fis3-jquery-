@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" href="../../static/mailbox/mailbox.less">
+
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/template/template.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+    <script src="../../static/mailbox/message_detail.js"></script>
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline">
+
+    <div class="user-inmail-list">
+        <div class="layout inmail-list-wrap">
+            <div class="inmail-menu">
+                <link rel="import" href="../../widget/component/usercenter/menu/menu.tpl?__inline">
+            </div>
+            <link rel="import" href="../../widget/mailbox/detail/detail.tpl?__inline">
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+    
+</body>
+</html>

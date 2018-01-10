@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+	<link rel="stylesheet" type="text/css" href="../../static/findpass/findpass.less">
+	<!--
+	    @require ../../static/common/lib/jquery/jquery.js
+	    @require ../../static/common/lib/storage.js
+	    @require ../../static/common/base/base.js
+	    @require ../../static/common/lib/base64.js
+	    @require ../../static/login/sms.js
+	-->
+</head>
+<body>
+
+	<link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="找回密码">
+
+	<div class="find-pass layout find-pass-first" id="first">
+		<div class="find-pass-header first-header"></div>
+
+		<div class="find-pass-content">
+			<p class="form-line error-margin" id="error0" style="display:none">
+				<span class="val-item error-notice">
+					<i class="ae-icon ae-icon-attention error-icon"></i><em id="error1"></em>
+				</span>
+			</p>
+            <p class="form-line error-margin" id="success" style="display:none">
+                <span class="val-item success-notice">
+                    <i class="ae-icon ae-icon-success success-icon"></i><em id="successMsg"></em>
+                </span>
+            </p>
+			<p class="form-line cmn-clearfix">
+				<span class="txt-item">手机号码</span>
+				<span class="val-item">
+					<input type="text" name="for_login_userphone" id="for_login_userphone" onblur="validatemobile(this.value)" class="cmn-input" onkeyup="this.value=this.value.replace(/[^\d]/g,''); "  maxlength="11" placeholder="请输入手机号码">
+				</span>
+			</p>
+            <div class="form-line cmn-clearfix">
+                    <span class="txt-item">图形验证码</span>
+                    <span class="val-item">
+                        <input type="text" placeholder="请输入验证码" id="picCode" name="picCode" class="cmn-input validate-input" value="" maxlength="4" onkeyup="checkPic2()"  onchange="checkPic2()" />
+                        <b class="testZy" style="margin:0;"><img  id="imgId1" src="" class="img-code"/></b>
+                    </span>
+            </div>
+			<p class="form-line mobileCode" style="display:none;">
+				<span class="txt-item">验证码</span>
+				<span class="val-item">
+					<input type="text" name="for_login_code" id="for_login_code" class="cmn-input validate-input" maxlength="6" placeholder="请输入短信验证码"><a href="javascript:;" class="cmn-btn-white-w12 validate-code" id="sendCode3">获取验证码</a>
+				</span>
+			</p>
+
+			<p class="form-line">
+				<span class="val-item">
+					<a href="javascript:;" class="cmn-btn-gold-w12" id="nextBtn0">下一步</a>
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/findpass/findpass.js"></script>
+
+</body>
+</html>

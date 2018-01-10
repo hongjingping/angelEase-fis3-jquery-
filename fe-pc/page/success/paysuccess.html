@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/success/success.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline">
+
+    <div class="basic-success pay-success layout" id="first">
+        <div class="success-header pay-success-header"></div>
+        <div class="success-content pay-success-content" style="display:none;" id="fastPay">
+            <div class="reminder">
+                <div style="display:none;" id="fast-ok">
+                    <i class="ae-icon ae-icon-success icon-paysuccess"></i>
+                    <p class="content">恭喜您，支付成功！</p>
+                    <p >现在您可以</p>
+
+                    <div class="cmn-btn-gold-w12 btn-upload-proof my-invest">我的投资</div>
+                    <div class="cmn-btn-gold-w12 btn-upload-proof project-list">去看看项目</div>
+                    <div class="hedge">根据权威机构调查，每个投资者应选择参与不同项目来分散风险，小额分散、持续投资，从而提高获利的可能性。</div>
+                </div>
+                <div id="fast-no">
+                    <p class="pay-loading"></p>
+                    <p class="pay-txt">支付结果确认中，请稍后。</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="success-content pay-success-content" style="display:none;" id="onlinePay">
+            <div class="reminder">
+                <div style="display:none;" id="online-ok">
+                    <i class="ae-icon ae-icon-success icon-paysuccess"></i>
+                    <p class="content">支付成功！请您上传支付凭证</p>
+                </div>
+                <div id="online-no">
+                    <p class="pay-loading"></p>
+                    <p class="pay-txt">支付结果确认中，请稍后。</p>
+                </div>
+            </div>
+
+            <div class="hint">
+                <i class="ae-icon ae-icon-attention icon-attention"></i>
+                <span>忘记截图？请您按照如下指引操作</span>
+            </div>
+
+            <div class="img-reminder-wrapper"></div>
+
+            <div class="img-voucher-wrapper">
+                <img src="" alt="" class="img-voucher" id="uploadImg">
+                <input type="file" class="upload-file">
+                <i class="ae-icon ae-icon-plus upload-file-icon"></i>
+            </div>
+            <div class="cmn-btn-gold-w12 btn-upload-proof" id="upload">上传打款凭证</div>
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/success/success.js"></script>
+
+</body>
+</html>

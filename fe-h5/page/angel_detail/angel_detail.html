@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--  公共头引入  -->
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" href="../../static/angel_detail/angel_detail.less">
+</head>
+<body>
+  <nav class="top-nav">
+    <a href="javascript:void(0);" class="back-nav"><i class="ae-mobile ae-mobile-arrow-left"></i><span class="nav-text">天使学堂</span></a>
+    <a href="javascript:void(0);" class="share-icon"><i class="ae-mobile ae-mobile-shared"></i></a>
+  </nav>
+  <div class="main">
+  </div>
+  <div class="relative">
+  </div>
+  <div class="weixin-share">
+    <div class="share-img" style="display:none;">
+      <img src="./../static/angel_detail/resource/shareinwechat@3x.png" alt="">
+    </div>
+  </div>
+  <div class="browser-share">
+    <div class="share-popup" style="display:none">
+      <div class="popup-bd">
+        <h6>截屏分享给微信好友</h6>
+        <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="">
+      </div>
+      <div class="popup-close">
+        <i class="ae-mobile ae-mobile-close p-close"></i>
+      </div>
+    </div>
+  </div>
+  <script id="main-template" type="text/x-handlebars-template">
+    <div class="title">
+      {{focusTitle}}
+    </div>
+    <div class="meta">
+      <ul>
+        <li class="angel">
+          {{focusCategoryStr}}
+        </li>
+        <li>
+          文｜{{authorName}}
+          <span class="split"></span>
+          {{createTime}}
+        </li>
+      </ul>
+    </div>
+    <div class="sub-title">
+      {{focusImport}}
+    </div>
+    {{#if focusVideo}}
+    <div class="video-mod">
+      <video controls poster="{{videoImg}}">
+        <source src="{{focusVideo}}" type="video/mp4">
+      </video>
+    </div>
+    {{/if}}
+    <div class="content">
+      {{{focusContent}}}
+    </div>
+  </script>
+  <script id="relative-template" type="text/x-handlebars-template">
+    <h3>
+      <span>相关文章</span>
+    </h3>
+    <ul>
+      {{#each data}}
+      <li>
+        <div class="relative-item">
+          <div class="item-img">
+            <img src="{{focusImgStr}}" alt="">
+          </div>
+          <div class="item-desc">
+            <div class="item-title">
+              <a href="./angel_detail.html?id={{id}}">{{focusTitle}}</a>
+            </div>
+            <div class="item-meta">
+              <div class="left-meta">
+                文 | {{authorName}}
+              </div>
+              <div class="right-meta color{{focusCategory}}">
+                {{focusCategoryStr}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+  </script>
+  <script type="text/javascript" src="../../static/common/lib/handlebars.js"></script>
+  <script type="text/javascript" src="../../static/common/lib/apopup.js"></script>
+  <script type="text/javascript" src="../../static/angel_detail/angel_detail.js"></script>
+  <link rel="import" href="../../widget/component/toTop/toTop.tpl?__inline">
+</body>
+</html>

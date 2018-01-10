@@ -1,0 +1,25 @@
+{
+	"code": "0000",
+	"desc": null,
+	"data": [
+		{
+			"price": "500万",
+			"realName": "张**"
+		},
+		{
+			"price": "600万",
+			"realName": "李**"
+		},
+		{
+			"price": "700万",
+			"realName": "张**"
+		},
+		{
+			"price": "800万",
+			"realName": "刘**"
+		},{
+			"price": "900万",
+			"realName": "王**"
+		}
+	]
+}

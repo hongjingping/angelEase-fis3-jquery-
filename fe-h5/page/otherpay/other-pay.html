@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--  公共头引入  -->
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/otherpay/other-pay.less">
+</head>
+<body  class="gray_bg">
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<a href="/page/home/home.html" class="to-home">
+		<i class="ae-mobile ae-mobile-home"></i>
+	</a>
+
+	<div class="other-pay-container">
+	    <div class="pay-title">线下打款账号</div>
+
+	    <div class="white_bg alert-wrapper">
+	        <div class="alert-left">
+	            <i class="ae-mobile ae-mobile-attention2"></i>
+	        </div>
+	        <div class="alert-right">请您打款时仔细核对账号，并保留打款凭证</div>
+	    </div>
+
+	    <div class="weui_cells weui_cells_form detail-items">
+	        <div class="weui_cell">
+	            <div class="weui_cell_hd cell-key">
+	                <label class="weui_label change-mobile-label">账户名</label>
+	            </div>
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <input class="weui_input change-mobile-input" type="tel" readonly="readonly" id="fund-company"></div>
+	        </div>
+	        <div class="weui_cell">
+	            <div class="weui_cell_hd cell-key">
+	                <label class="weui_label change-mobile-label">开户行</label>
+	            </div>
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <input class="weui_input change-mobile-input" type="tel" readonly="readonly" id="fund-bank"></div>
+	        </div>
+	        <div class="weui_cell">
+	            <div class="weui_cell_hd cell-key">
+	                <label class="weui_label change-mobile-label">银行账号</label>
+	            </div>
+	            <div class="weui_cell_bd weui_cell_primary">
+	                <input class="weui_input change-mobile-input" type="tel" readonly="readonly" id="fund-account"></div>
+	        </div>
+	    </div>
+
+		<div class="notice-wrap">
+	    <div class="notice-title">温馨提示</div>
+			<p class="notice-txt">尊敬的客户您好，线下支付订单状态更新按以下时间完成，请知悉：</p>
+
+			<table class="notice-table">
+				<tr>
+					<td rowspan="2" class="workday">工作日</td>
+					<td>每日16:00前完成支付</td>
+					<td>订单状态将于当日更新</td>
+				</tr>
+
+				<tr>
+					<td>每日16:00后完成支付</td>
+					<td>订单状态将于次日更新（遇节假日顺延）</td>
+				</tr>
+
+
+				<tr>
+					<td class="workday">非工作日</td>
+					<td colspan="2">订单状态将顺延至工作日更新</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../../static/otherpay/other-pay.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--  公共头引入  -->
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <!-- 自定义文件引入 -->
+    <link rel="stylesheet" type="text/css" href="../../static/personal_center/personal-center.less">
+</head>
+<body class="content">
+	<link rel="import" href="../../widget/component/navbar/navbar.tpl?__inline">
+
+	<div class="portrait">
+		<div class="safe-center" onclick="javascript:window.location.href='/page/personal/securityCenter.html';">
+			<i class="ae-mobile ae-mobile-settings"></i>
+		</div>
+		<img src="../../static/personal_center/resource/images/default-avatar.png" id="avatar-img" onclick="javascript:window.location.href='/page/user_info/user_info.html'">
+		<img src="../../static/personal_center/resource/images/default-avatar.png" id="avatar-img2" onclick="javascript:window.location.href='/page/user_info/user_info.html'">
+		<div class="phone-num username"></div>
+		<div class="card-cert-new " id="investor" onclick="javascript:window.location.href='/page/investor_cert_part1/investor-cert-form.html';">
+			<p class="card-cert-style "></p>
+		</div>
+	</div>
+
+	<div class="not-certified-container">
+		<div class="not-certified-icon icon-hide">未认证</div>
+		<ul class="clearfloat">
+			<a class="card-cert card-cert-href" id="myInvest">
+				<i class="ae-mobile ae-mobile-invest"></i>
+				<div>我的投资</div>
+			</a>
+			<!--我的融资-->
+			<a class="card-cert card-cert-href" onclick="javascript:window.location.href='/page/myfinancing/myfinancing.html';" >
+				<i class="ae-mobile ae-mobile-finance"></i>
+				<div>我的融资</div>
+			</a>
+			<!--我的关注-->
+			<a class="card-cert card-cert-href" onclick="javascript:window.location.href='/page/attention/my_attention.html';">
+				<i class="ae-mobile ae-mobile-follow"></i>
+				<div>我的关注</div>
+			</a>
+		</ul>
+	</div>
+
+	<ul class="myInfo-container">
+		<li class="my-message" id="mymessage" onclick="javascript:window.location.href='/page/message/my-message.html';">
+			<i class="ae-mobile ae-mobile-news front-icon front-icon-left"></i><p class="front-icon-txt">我的消息</p>
+			<div class="my-message-count">
+				<span id="unreadConut" style="display: none;"></span>
+			</div>
+			<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+		</li>
+		<li class="card-li card-li-info card-li-new" id="certification">
+			<i class="ae-mobile ae-mobile-bankcard front-icon"></i><p class="front-icon-txt">银行卡</p>
+			<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+		</li>
+		 <p class="divided-hr "></p>
+		<li onclick="javascript:window.location.href='/page/user_info/user_info.html'">
+			<i class="ae-mobile ae-mobile-personal front-icon"></i><p class="front-icon-txt">个人信息</p>
+			<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+		</li>
+		<li onclick="javascript:window.location.href='/page/other/help-center.html';">
+			<i class="ae-mobile ae-mobile-question front-icon"></i><p class="front-icon-txt">帮助中心</p>
+			<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+		</li>
+	</ul>
+
+	<ul class="myInfo-container myInfo-container-new ">
+		<li onclick="javascript:window.location.href='/page/protocol/risk.html';">
+			<i class="ae-mobile ae-mobile-explain front-icon"></i><p class="front-icon-txt">风险揭示</p>
+			<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+		</li>
+		<li class="one-px-line" onclick="javascript:window.location.href='/page/aboutus/aboutus.html';">
+			<i class="ae-mobile ae-mobile-aboutus front-icon"></i><p class="front-icon-txt">关于我们</p>
+			<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+		</li>
+	</ul>
+
+	<div id="investorDiv" style="display:none">
+		<div class="gray-mask"></div>
+		<div class="dialog-pass">
+		    <div class="dialog-content">
+		        <div class="dialog-content-icon">
+		        	<i class="ae-mobile ae-mobile-attention2"></i>
+		        </div>
+		        <div class="dialog-content-text">合格投资人才可以投资AngelEase项目</div>
+		        <div class="i-know font-size-14" id="toInvestor">去进行投资人认证</div>
+		    </div>
+		    <div class="dialog-close"> <i class="ae-mobile ae-mobile-close"></i>
+		    </div>
+		</div>
+	</div>
+
+	<div id="certDiv" style="display:none">
+	    <div class="gray-mask"></div>
+	    <div class="dialog-pass">
+	        <div class="dialog-content">
+	            <div class="dialog-content-icon">
+	            	<i class="ae-mobile ae-mobile-attention2"></i>
+	            </div>
+	            <div class="dialog-content-text">合格投资人才可以投资AngelEase项目</div>
+	            <div class="i-know font-size-14" id="toCert">去进行实名认证</div>
+	        </div>
+	        <div class="dialog-close"> <i class="ae-mobile ae-mobile-close"></i>
+	        </div>
+	    </div>
+	</div>
+
+	<div id="ifGATdiv" style="display:none">
+	    <div class="gray-mask"></div>
+	    <div class="dialog-pass">
+	        <div class="dialog-content">
+	            <div class="dialog-content-icon">
+	            	<i class="ae-mobile ae-mobile-attention2"></i>
+	            </div>
+	            <div class="dialog-content-text text-align-left">感谢关注Angelease，您的实名非中国大陆信息，敬请期待！</div>
+	            <div class="i-know" id="closeGAT">我知道了</div>
+	        </div>
+	        <div class="dialog-close"> <i class="ae-mobile ae-mobile-close"></i>
+	        </div>
+	    </div>
+	</div>
+
+	<script type="text/javascript" src="../../static/personal_center/personal-center.js"></script>
+</body>
+</html>

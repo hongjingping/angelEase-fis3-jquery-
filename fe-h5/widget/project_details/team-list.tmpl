@@ -1,0 +1,19 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var team = data[i];%>
+	<div class="group-list">
+    	<div class="member-info">
+        	<%if (team.imgPath != '' && team.imgPath != null) {%>
+				<img src="<%=team.imgPath%>">
+			<%}else{%>
+				<img src="../../static/project_details/resource/images/avatar.jpg" >
+			<%}%>
+        	<div class="member-name"><%=team.name%></div>
+        	<div class="member-job-title"><%=team.position%></div>
+        	<div class="memer-desc">
+                 <%=team.presentation%>
+        	</div>
+        </div>
+    </div>
+
+<% } %>
+

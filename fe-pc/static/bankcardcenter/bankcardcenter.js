@@ -1,0 +1,5 @@
+(function () {
+
+    $('.bankcard-line').show();
+
+})();

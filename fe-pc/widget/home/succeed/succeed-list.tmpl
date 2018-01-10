@@ -1,0 +1,43 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var li = data[i];%>
+	<!-- <a href="../detail/detail.html?proId=<%=li.id%>" target="_blank"> -->
+	<li>
+		<a class="pic" href="../detail/detail.html?proId=<%=li.id%>" target="_blank">
+			<img src="<%=li.proImgSmallUrl%>"/>
+
+			<div class="content-mask">
+				<h2 class="mask-title"><%=li.proName%></h2>
+				<div class="number-card">
+					<div class="card-wrap">
+						<div class="number-progress">
+						<div class="cover" style="width: <%=li.proRaiseSpeed%>%"></div>
+						<%if (li.proRaiseSpeed >= 100) {%>
+							<div class="cover" style="width: 100%"></div>
+						<%}else{%>
+							<div class="cover" style="width: <%=li.proRaiseSpeed%>%"></div>
+						<%}%>
+						</div>
+					</div>
+
+					<div class="statistic-card"><%=li.proRaiseSpeed%>%</div>
+				</div>
+
+				<div class="number-block">
+					<div class="block-item">
+						<p class="item-txt">融资目标（万）</p>
+						<p class="item-num"><%=li.proFinancieAmount%></p>
+						<div class="item-dot"></div>
+					</div>
+
+					<div class="block-item">
+						<p class="item-txt">参与人数</p>
+						<p class="item-num"><%=li.prePayNum%></p>
+						<i class="item-dot"></i>
+					</div>
+				</div>
+			</div>
+		</a>
+	</li>
+	<!-- </a> -->
+<% } %>
+

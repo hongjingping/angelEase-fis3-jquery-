@@ -1,0 +1,283 @@
+.project {
+	overflow: hidden;
+
+	.project-container {
+		position: relative;
+		color: #9B9B9B;
+		font-size: 14px;
+		text-align: right;
+		overflow: hidden;
+	}
+
+	.project-menu {
+		width: 150px;
+		float: left;
+		margin-top: 55px;
+
+		li {
+			cursor: pointer;
+			height: 30px;
+			margin: 10px 0;
+			padding-right: 20px;
+			line-height: 30px;
+
+			&:hover {
+				color: #E1C078;
+				border-right: 4px solid #E1C078;
+			}
+			//.current {
+			//	color: #E1C078;
+			//	border-right: 4px solid #E1C078;
+			//}
+		}
+		.current {
+			color: #E1C078;
+			border-right: 4px solid #E1C078;
+		}
+	}
+
+	.project-content {
+		overflow: hidden;
+		float: right;
+		width: 959px;
+		//color: #4A4A4A;
+		text-align: left;
+		padding: 60px 0 80px 70px;
+		border-left: 1px solid #F3F5F8;
+	}
+
+	.pro-desc-article {
+		text-indent: 2em;
+		line-height: 20px;
+		margin: 30px 0 50px;
+	}
+
+	.pro-person-content {
+		overflow: hidden;
+
+		.person-content-header {
+			float: left;
+			width: 150px;
+			overflow: hidden;
+
+			img {
+				width: 150px;
+				height: 150px;
+				border-radius: 50%;
+			}
+		}
+
+		.person-content-article {
+			float: left;
+			width: 740px;
+			overflow: hidden;
+			padding-left: 60px;
+
+			.content-article-header {
+				font-size: 20px;
+			}
+
+			.content-article-txt {
+				margin: 30px 0;
+			}
+
+			.content-article-cmd {
+				color: #E1B555;
+
+				.article-cmd-header {
+					float: left;
+					width: 90px;
+					font-size: 18px;
+					overflow: hidden;
+				}
+
+				.article-cmd-txt {
+					float: left;
+					width: 650px;
+					overflow: hidden;
+				}
+			}
+		}
+	}
+
+	.pro-fund-content {
+		margin-bottom: 30px;
+
+		.content-item {
+			height: 25px;
+			line-height: 25px;
+		}
+	}
+
+	.content-pro-stage {
+		//overflow: hidden;
+
+		.pro-stage-item {
+			width: 960px;
+			overflow: hidden;
+			margin-bottom: 20px;
+			background: #3F3F3F;
+
+			.stage-item-icon {
+				float: left;
+				width: 199px;
+				height: 190px;
+				text-align: center;
+				line-height: 190px;
+				border-right: 1px solid #383838;
+
+				img {
+					width: 66px;
+					height: 60px;
+				}
+
+				i {
+					color: #E1C078;
+					font-size: 60px;
+				}
+			}
+
+			.stage-item-txt {
+				float: left;
+				width: 440px;
+				height: 130px;
+				overflow: hidden;
+				padding: 60px 35px 0;
+			}
+
+			.stage-item-content {
+				float: left;
+				height: 190px;
+				width: 249px;
+				text-align: center;
+				border-left: 1px solid #383838;
+
+				.invest-num {
+					font-size: 14px;
+					color: #ffffff;
+					margin-top: 30px;
+				}
+
+				.invest-fund {
+					height: 50px;
+					line-height: 50px;
+					font-size: 26px;
+					color: #E1B555;
+
+					.yuan {
+						font-size: 14px;
+						color: #fff;
+					}
+				}
+
+
+				.customed-btn {
+					margin-top: 75px;
+
+					&.un-use {
+						display: inline-block;
+						width: 120px;
+						height: 40px;
+						font-size: 16px;
+						margin-top: 75px;
+						line-height: 40px;
+	    				color: #9B9B9B;
+					}
+
+					&.status7 {
+						margin-top: 75px;
+					}
+				}
+
+				.uncustomed-btn {
+					display: inline-block;
+					width: 120px;
+					height: 40px;
+					font-size: 16px;
+					line-height: 40px;
+    				color: #9B9B9B;
+				}
+
+				.invest-btn {
+					display: inline-block;
+					width: 120px;
+					height: 40px;
+					color: #3F3F3F;
+					font-size: 16px;
+					margin-top: 10px;
+					line-height: 40px;
+					background: #E0C178;
+
+					&.customed-btn {
+						margin-top: 75px;
+					}
+
+					&.status7 {
+						background: #3F3F3F;
+	    				color: #9B9B9B;
+	    				//cursor: default;
+	    				&:hover {
+							cursor: default;
+							background-color: #3F3F3F;
+						}
+					}
+
+					&.status3 {
+						background: #383838;
+	    				color: #9B9B9B;
+	    				&:hover {
+							cursor: default;
+							background-color: #383838;
+						}
+					}
+
+					&:hover {
+
+						background-color: #E1B555;
+
+					}
+				}
+			}
+		}
+	}
+
+	// common notice
+	.notice-content-wrap {
+		width: 960px;
+		height: 200px;
+		position: relative;
+		background: url('./resource/images/head-blur.jpg') no-repeat;
+
+		p {
+			padding: 35px 0;
+			text-align: center;
+		}
+
+		a {
+			display: block;
+			position: absolute;
+			left: 50%;
+			width: 140px;
+			margin-left: -70px;
+		}
+	}
+
+	.fund-blur {
+		background: url('./resource/images/fund-blur.jpg') no-repeat;
+	}
+
+	.stage-blur {
+		float: left;
+		width: 510px;
+		height: 190px;
+		overflow: hidden;
+		background: url('./resource/images/stage-blur.jpg') no-repeat center center;
+	}
+}
+
+.fixed-menu {
+	position: fixed;
+	top: 0;
+}
+
+

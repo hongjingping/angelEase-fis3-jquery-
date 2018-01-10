@@ -1,0 +1,124 @@
+@import '../common/style/variables.less';
+
+#page-about-us {
+	font-size: 14px;
+
+	.about-us-wrapper {
+		width: 1180px;
+		margin: 20px auto 80px;
+	}
+
+	.banner-img-wrapper {
+		position: relative;
+
+		.about-text {
+		    position: absolute;
+		    bottom: 20px;
+		    right: 37px;
+		    font-size: 36px;
+		    color: #fff;
+
+		}
+	}
+
+	.pull-left {
+		float: left;
+
+		&.pull-left-small {
+			margin-right: 10px;
+		}
+
+		&.pull-left-80 {
+			width: 80px;
+			// margin-right: 30px;
+		}
+
+		&.pull-left-30 {
+			width: 30px;
+			margin-right: 5px;
+		}
+	}
+
+	.pull-right {
+		float: left;
+
+		&.pull-right-orange {
+			color: @cmn-color-ae-orange;
+		}
+
+		&.pull-right-900 {
+			width: 900px;
+		}
+	}
+
+	.font-gray {
+		color: @cmn-color-ae-gray2;
+	}
+
+	.about-us {
+		.aboutus-title {
+			margin: 35px 0 25px;
+			font-size: 24px;
+			color: @cmn-color-ae-gray3;
+			font-weight: bold;
+		}
+
+		.aboutus-sub-title {
+			margin: 25px 0 5px 0;
+			font-size: 16px;
+			color: @cmn-color-ae-gray1;
+		}
+
+		.qr-code {
+			position: relative;
+			height: 130px;
+			margin: 20px 0;
+
+			.img-wrapper {
+				position: absolute;
+				top: 0;
+				padding: 10px;
+
+				&.qr-xiaomishu {
+					left: 0;
+				}
+
+				&.qr-gongzhonghao {
+					left: 140px;
+				}
+			}
+
+			.qr-txt {
+				position: absolute;
+				top: 140px;
+				color: @cmn-color-ae-gray2;
+
+				&.txt-xiaomishu {
+					left: 13px;
+				}
+
+				&.txt-gongzhonghao {
+					left: 182px;
+				}
+
+			}
+		}
+
+		.contact-detail {
+			margin: 40px 0 10px 0;
+			line-height: 2;
+		}
+
+		.contact li {
+			margin: 5px 0;
+		}
+
+		.bp-email {
+			color: @cmn-color-ae-gold;
+
+			&:hover {
+				color: @cmn-color-ae-dark-gold;
+			}
+		}
+	}
+}

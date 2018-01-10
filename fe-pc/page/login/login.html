@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+	<link rel="stylesheet" type="text/css" href="../../static/login/login.less">
+
+	<!--
+	    @require ../../static/common/lib/jquery/jquery.js
+	    @require ../../static/common/lib/base64.js
+	    @require ../../static/common/lib/storage.js
+	    @require ../../static/common/base/base.js
+	-->
+</head>
+<body>
+
+	<div class="login">
+		<div class="nav cmn-clearfix">
+			<div class="layout nav-container">
+				<a href="/page/home/home">
+					<div class="logo"></div>
+				</a>
+				<div class="phone">服务电话  400-818-0060</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="layout login-box">
+				<div class="login-win">
+					<div class="win-header cmn-clearfix">
+						<div class="login-label">
+							<i class="label-txt">登录</i>
+						</div>
+
+						<p class="login-txt">还没有帐号?
+							<a href="register.html" class="reg-txt">立即注册</a>
+						</p>
+					</div>
+					<div class="reminder">宜信财富官网客户可直接通过手机号登录</div>
+					<div class="form-box">
+						<div class="error-txt" id="error"></div>
+
+						<input type="hidden" id="count" value="0">
+
+						<div class="label">
+							<input type="text" placeholder="请输入您的手机号"  class="phone-txt"  id="userphone"  onblur="checkMobileNum(this.value)" autocomplete="off" maxlength="11" >
+							<i class="ae-icon ae-icon-phone phone-icon"></i>
+              <div class="delete close-username" id="close-username" style="display: none;">
+                <i class="ae-icon ae-icon-close"></i>
+              </div>
+						</div>
+
+						<div class="label">
+							<input type="password" placeholder="请输入您的密码" maxlength="18" class="phone-txt" id="userpwd"  value="" onblur="checkpwd(this.value)" autocomplete="off">
+							<i class="ae-icon ae-icon-password phone-icon"></i>
+              <div class="delete close-pwd" id="close-pwd" style="display: none;">
+                <i class="ae-icon ae-icon-close"></i>
+              </div>
+						</div>
+
+						<div class="label captcha" style="display: none">
+							<input type="text" placeholder="请输入验证码" class="img-code-txt" id='loginCode' value="" maxlength="4">
+							<i class="ae-icon ae-icon-right-code phone-icon"></i>
+							<div class="img-code" >
+								<b class="testZy" style="margin:0;"><img id="picImg"/></b>
+							</div>
+						</div>
+
+						<div class="login-btn">
+							<button class="btn" id="loginBtn">立即登录</button>
+							<span class="forget" style="cursor: pointer;" onclick="location.href='/page/findpass/first.html'">忘记密码</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+    <script src="../../static/login/login-register.js"></script>
+    <script src="../../static/login/login.js"></script>
+</body>
+</html>

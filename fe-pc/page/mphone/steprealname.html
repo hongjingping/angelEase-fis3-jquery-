@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/mphone/mphone.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="修改手机号">
+
+    <div class="modify-phone layout modify-phone-first" id="second">
+        <div class="modify-phone-header first-header"></div>
+        <div class="modify-phone-content">
+            <div class="form-control cmn-clearfix">
+                <div class="form-key"></div>
+                <div class="pull-right error-notice" style="display:none;">
+                    <i class="ae-icon ae-icon-attention error-icon"></i><em id="error-txt-third"></em>
+                </div>
+            </div>
+            <div class="form-control cmn-clearfix">
+                <div class="form-key"></div>
+                <div class="pull-right success-notice"  style="display:none;">
+                    <i class="ae-icon ae-icon-success success-icon"></i><em id="success-txt-third"></em>
+                </div>
+            </div>
+            <div class="form-control cmn-clearfix">
+                <div class="form-key">真实姓名</div>
+                <input type="text" class="form-value cmn-input" maxlength="50" name="realName" value="" onKeyUp="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\.]/g,'')" placeholder="请输入真实姓名">
+            </div>
+            <div class="form-control cmn-clearfix">
+                <div class="form-key">证件号码</div>
+                <input type="text" class="form-value cmn-input" maxlength="20" name="idCardNo" value="" onKeyUp="value=value.replace(/[^\a-\z\A-\Z0-9\.]/g,'')" placeholder="请输入您的证件号码">
+            </div>
+            <div class="form-control cmn-clearfix">
+               <div class="pull-right btn-next cmn-btn-gold-w12">
+                   <a id="nextBtn">下一步</a>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+    <script src="../../static/common/lib/base64.js"></script>
+    <script src="../../static/login/sms.js"></script>
+    <script type="text/javascript" src="../../static/mphone/steprealname.js"></script>
+
+</body>
+</html>

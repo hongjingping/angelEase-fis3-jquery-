@@ -1,0 +1,30 @@
+<%var payBindBank = data.payBindBankCard;%>
+<div class="card-detail-wrapper <%=payBindBank.bankColorClass%>">
+    <div class="bank-type-wrapper clearfloat">
+        <span class="bank-logo-wrapper clearfloat">
+            <img src="<%=payBindBank.logourl%>" alt="" class="bank-logo" width="24px" height="24px" />
+        </span>
+        <span class="bank-name"><%=payBindBank.bankName%></span>
+        <span class="bank-type line-left"><%=payBindBank.bankTypeName%></span>
+    </div>
+    <div class="bank-number-wrapper">
+        <span><%=payBindBank.bankCardNo.slice(0, 4)%></span>
+        <span>****</span>
+        <span>****</span>
+        <span><%=payBindBank.bankCardNo.slice(-4)%></span>
+    </div>
+    <div class="phone-number-wrapper line-top">
+        <span class="phone-key">预留手机</span>
+        <span class="phone-value"><%=payBindBank.mobile.slice(0, 3) + '****' + payBindBank.mobile.slice(-4)%></span>
+    </div>
+</div>
+<div class="card-limit-wrapper line-bottom">
+    <div class="limit-item clearfloat">
+        <div class="limit-key">单笔限额</div>
+        <div class="limit-value"><%=payBindBank.singleQuota%></div>
+    </div>
+    <div class="limit-item clearfloat line-top">
+        <div class="limit-key">每日限额</div>
+        <div class="limit-value"><%=payBindBank.dailyQuota%></div>
+    </div>
+</div>

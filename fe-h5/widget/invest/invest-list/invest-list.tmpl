@@ -1,0 +1,79 @@
+<% for (var i = 0; i < data.retMaps.length; i++) {%>
+    <%var order = data.retMaps[i];%>
+   <div class="weui_cells weui_cells_form invest-list">
+        <a href="../../page/order_detail/order-detail.html?orderId=<%=order.orderId%>&showCode=<%=order.showCode%>&proId=<%=order.proId%>&projectStatus=<%=order.projectStatus%>">
+            <div class="weui_cell">
+                <div class="weui_cell_hd space">
+                    <div class="left-round-pic">
+                        <img  src="<%=order.imgUrl%>" />
+                    </div>
+                </div>
+                <div class="weui_cell_bd invest-title-wrapper">
+                    <div class="invest-title"><%=order.proName%></div>
+                    <%if (order.showCode == '001' ||  order.showCode == '006' || order.showCode == '007' || order.showCode == '008' ) {%>
+                        <div class="invest-status text-orange"><%=getOrderStatusByName(order.showCode)%></div>
+                    <%}else if (order.showCode == '009' ) {%>
+                        <div class="invest-status text-success"><%=getOrderStatusByName(order.showCode)%></div>
+                    <%} else {%>
+                        <div class="invest-status text-gray"><%=getOrderStatusByName(order.showCode)%></div>
+                    <%}%>
+                </div>
+                <div class="weui_cell_bd more-info-array-wrapper">
+                    <i class="ae-mobile ae-mobile-arrow-right"></i>
+                </div>
+            </div>
+        </a>
+
+        <div class="weui_cell cell-space">
+            <div class="weui_cell_hd cell-key empty-wrapper">
+            </div>
+            <div class="weui_cell_bd invest-amount-style">
+                订单金额<em><%=formatMoney(order.preAmount)%></em><span>元</span>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary to-do">
+                <!-- 待支付 -->
+                <%if (order.showCode == '001') {%>
+                    <a class="weui_cell_bd weui_cell_primary to-do" href="javascript:;" onclick="getEncodeSign(<%=order.orderId%>, <%=order.proId%>)" >去支付</a>
+                <%}%>
+                <!-- 待确认投资结果（已支付，待审核） -->
+                <%if (order.showCode == '004') {%>
+
+                <%}%>
+                <!-- 待确认投资结果（已支付，审核通过） -->
+                <%if (order.showCode == '005') {%>
+
+                <%}%>
+                <!-- 待签约 -->
+                <%if (order.showCode == '006') {%>
+                    <a onclick="toSignOrResign(<%=order.orderId%>,<%=order.proId%>,<%=order.proinveseId%>,<%=order.payBindBankCardId%>)" class="weui_cell_bd weui_cell_primary to-do" >去签约</a>
+                <%}%>
+                <!-- 待重签 -->
+                <%if (order.showCode == '007') {%>
+                    <a onclick="toSignOrResign(<%=order.orderId%>,<%=order.proId%>,<%=order.proinveseId%>,<%=order.payBindBankCardId%>)" class="weui_cell_bd weui_cell_primary to-do">去重签</a>
+                <%}%>
+                <!-- 待上传打款凭证（已支付，待上传打款凭证） -->
+                <%if (order.showCode == '008') {%>
+                    <a class="weui_cell_bd weui_cell_primary to-do" href="../../page/invest_upload_pay_voucher/upload.html?orderId=<%=order.orderId%>">去上传</a>
+                <%}%>
+                <!-- 投资成功 -->
+                <%if (order.showCode == '009') {%>
+
+                <%}%>
+                <!-- 投资失败，待退款（全额） -->
+                <%if (order.showCode == '010') {%>
+
+                <%}%>
+                <!-- 投资失败，已退款（全额） -->
+                <%if (order.showCode == '012') {%>
+
+                <%}%>
+                <!-- 已取消，超时未支付已取消  -->
+                <%if (order.showCode == '013') {%>
+                    <%if (order.projectStatus == '2' || order.projectStatus == '3' || order.projectStatus == '4') {%>
+                        <a class="weui_cell_bd weui_cell_primary to-do" href="../../page/detail/detail.html?proId=<%=order.proId%>">重新下单</a>
+                    <%}%>
+                <%}%>
+            </div>
+        </div>
+    </div>
+<% } %>

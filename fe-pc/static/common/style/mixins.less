@@ -1,0 +1,82 @@
+/**
+ * Copyright (c) 2016 CreditEase, All rights reseved.
+ * @fileoverview 公共基础-样式重置
+ * @author WangHongjun | hongjunwang1@creditease.cn
+ * @version 1.0 | 2016-7-6 | WangHongjun    // Initial version. 
+ *
+ * @description 
+ *   1) 本文(仅用于)定义公共 LESS mixins，使用 "cmn-" 前缀；
+ *      名称以 '_' 开头的为私有 mixin(用于辅助构建其他 mixin)，不应(SHOULD NOT)被外部使用。
+ *   2) 禁止(MUST NOT)在本文中书写任何业务模块独立相关的 LESS mixin；
+ *      禁止(MUST NOT)在其他业务模块中使用保留前缀 "cmn-" 来定义样式。
+ *   3) 本文内容不需要(SHALL NOT)显式地被其他 less 文件通过 @import 的方式引入，编译过程会完成这一操作。
+ */
+
+// base common mixins.
+.cmn-clearfix() {
+    *zoom   : 1;
+    &:after {
+        content     : '\0020';
+        display     : block;
+        height      : 0;
+        font-size   : 0;
+        clear       : both;
+        overflow    : hidden;
+        visibility  : hidden;
+    }
+}
+
+.cmn-inline-block() {
+    display         : -moz-inline-box;
+    -moz-box-orient : vertical;
+    display         : inline-block;
+    *zoom           : 1;
+    *display        : inline;
+}
+
+.cmn-ellipsis() {
+    overflow      : hidden;
+    text-overflow : ellipsis;
+    white-space   : nowrap;
+    word-wrap     : normal;
+}
+
+.cmn-text-wrap() {
+    word-wrap   : break-word;
+    word-break  : break-all;
+}
+
+.cmn-opacity(@opacity: 0) {
+    filter  : ~'alpha(opacity='@opacity*100~')';
+    opacity : @opacity;
+}
+
+.cmn-min-height(@height: 0) {
+    min-height : @height;
+    height     : auto !important;
+    height     : @height;
+}
+
+.cmn-min-width(@width: 0) {
+    min-width : @width;
+    width     : auto !important;
+    width     : @width;
+}
+
+.cmn-linear-gradient(@gradient){
+    background : -webkit-linear-gradient(@gradient);
+    background : -moz-linear-gradient(@gradient);
+    background : -ms-linear-gradient(@gradient);
+}
+
+.cmn-radial-gradient(@gradient){
+    background : -webkit-radial-gradient(@gradient);
+    background : -moz-radial-gradient(@gradient);
+    background : -ms-radial-gradient(@gradient);
+}
+
+.cmn-user-select(@selectable: none){
+    -moz-user-select    : @selectable;
+    -webkit-user-select : @selectable;
+    -ms-user-select     : @selectable;
+}

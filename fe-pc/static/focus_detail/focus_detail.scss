@@ -1,0 +1,201 @@
+@import "../../static/common/style/functions.scss";
+
+.container{
+  @include clearfix();
+  width: 1180px;
+  margin: 40px auto 180px;
+  font-size: 15px;
+}
+.main{
+  float:left;
+  width: 800px;
+  .title{
+    font-size: 22px;
+    font-weight: bold;
+    color: #3F3F3F;
+  }
+  .meta{
+    margin-top: 20px;
+    font-size: 10px;
+    @include clearfix();
+    li{
+      font-size: 14px;
+      color: #9B9B9B;
+      float: left;
+      margin-right: 20px;
+      &:last-child{
+        color: #3f3f3f;
+        float: right;
+        font-size: 15px;
+        margin-right: 6px;
+        span{
+          vertical-align: middle;
+          display: inline-block;
+        }
+        .share-icon{
+          vertical-align: middle;
+          display: inline-block;
+          margin-right: 6px;
+          width:14px;
+          height:16px;
+          background: url('./resource/share_icon.png') no-repeat 0 0/100% 100%;
+        }
+      }
+    }
+  }
+  .sub-title{
+    margin-top: 20px;
+    background-color: #F9FAFB;
+    padding: 20px;
+    color: #9B9B9B;
+  }
+  .video-mod{
+    margin: 20px 0;
+    video{
+      width: 100%;
+    }
+  }
+  .content{
+    margin-top: 20px;
+    line-height: 30px;
+    color: #3F3F3F;
+    width: 100%;
+    img{
+      max-width: 100%;
+    }
+  }
+}
+.sidebar{
+  float:left;
+  width: 320px;
+  margin-left: 60px;
+  .banner{
+    position: relative;
+    width: 320px;
+    height: 250px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    img{
+      width: 320px;
+      height: 250px;
+    }
+    .banner-list{
+      li{
+        height: 250px;
+      }
+    }
+    .banner-text{
+      position: absolute;
+      bottom: 0;
+      left:0;
+      background-color: rgba(0,0,0,.5);
+      height: 42px;
+      line-height: 42px;
+      color: #fff;
+      width: 100%;
+      z-index: 999;
+      span{
+        font-size: 15px;
+        margin-left: 20px;
+      }
+    }
+    .banner-labels{
+      li{
+        position: absolute;
+        top:15px;
+        left:15px;
+        z-index: 999;
+        height: 20px;
+        line-height: 20px;
+        background-color: rgba(63,63,63,.7);
+        font-size: 14px;
+        color: #fff;
+        span{
+          padding: 0 6px;
+        }
+      }
+    }
+    .dots,.owl-dots{
+      position: absolute;
+      right: 20px;
+      top: 10px;
+      z-index: 9999;
+      li,.owl-dot{
+        display: inline-block;
+        background-color: rgba(255,255,255,.14);
+        width: 4px;
+        height: 4px;
+        margin-left: 8px;
+        &.active{
+          background-color: rgb(255,255,255);
+        }
+      }
+    }
+  }
+  .ad{
+    width: 320px;
+    img{
+      width: 100%;
+    }
+    margin-bottom: 32px;
+  }
+  .hot-list{
+    h3{
+      position: relative;
+      line-height: 40px;
+      height: 40px;
+      border-bottom: 1px solid #F5F5F6;
+      span{
+        position: absolute;
+        left:0;
+        top:0;
+        line-height: 40px;
+        height: 40px;
+        border-bottom: 1px solid #E1C078;
+      }
+    }
+    ul > li{
+      font-size: 14px;
+      line-height: 24px;
+      padding-left: 12px;
+      margin-top: 10px;
+      background: url('./resource/triangle.png') no-repeat  0px 9px;
+      background-size: 3px 6px;
+      &:first-child{
+        margin-top: 15px;
+      }
+      a{
+        color: #3f3f3f;
+        &:hover{
+          color: #E2B655;
+        }
+      }
+    }
+  }
+}
+.share-popup{
+  width: 180px;
+  position: relative;
+  @include box-shadow(0 5px 10px rgba(0,0,0,.3));
+  border-top: 1px solid #E1C078;
+  background-color: #fff;
+  text-align: center;
+  .triangle{
+    position: absolute;
+    left:50%;
+    @include calc('left','50% - 4px');
+    top:-4px;
+    height:0px;
+    width:0px;
+    border-bottom:4px solid #E1C078;
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+  }
+  h6{
+    margin-top: 15px;
+    color: #3F3F3F;
+  }
+  img{
+    width: 96%;
+  }
+}

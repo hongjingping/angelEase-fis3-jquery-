@@ -1,0 +1,287 @@
+@import '../common/style/variables';
+
+@m-index: 9999;
+
+.detail-header {
+	i {
+		font-size: 20px;
+		color: #E1C078;
+		transition: opacity 1s, transform 1s;
+	}
+
+	.share-icon {
+		i {
+			position: absolute;
+			right: 6em;
+		}
+	}
+
+	.star-icon {
+		i {
+			position: absolute;
+			right: 4em;
+		}
+
+		.i-star {
+			opacity: 1;
+			z-index: 10;
+		}
+
+		.i-unstar {
+			opacity: 0;
+			z-index: 1;
+		}
+	}
+
+	.zan-icon {
+		i {
+			position: absolute;
+			right: 2em;
+		}
+
+		.i-zan {
+			opacity: 1;
+			z-index: 10;
+		}
+
+		.i-unzan {
+			opacity: 0;
+			z-index: 1;
+		}
+
+		em {
+			position: absolute;
+			right: 1em;
+			font-size: 14px;
+			color: #E1C078;
+			font-style: normal;
+		}
+	}
+}
+
+.share-img{
+	img{
+		width: 181px;
+		height: 87px;
+	}
+}
+.share-popup{
+	width: 80%;
+
+	.popup-bd{
+		padding: 24px 24px 12px;
+		background-color: #fff;
+		text-align: center;
+		h6{
+			font-size: 14px;
+			color: #4A4A4A;
+		}
+		img{
+			width: 90%;
+			margin: 0 auto;
+		}
+	}
+	.popup-close{
+		margin-top: 20px;
+		text-align: center;
+		color: #fff;
+		font-size: 20px;
+		font-weight: bold;
+		cursor: pointer;
+	}
+}
+
+.ae-dialog {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: @m-index;
+	background: rgba(74, 74, 74, .75);
+
+	.dialog-container {
+		width: 18em;
+		text-align: center;
+		border-radius: 5px;
+		margin: 6em auto 0;
+		background-color: #FFF;
+
+		.dialog-content {
+			padding: 1em;
+
+			.content-txt {
+				margin: 1em;
+				color: #3F3F3F;
+				font-size: 14px;
+			}
+
+			.content-icon {
+				color: #FF6493;
+				font-size: 30px;
+			}
+
+			.precode {
+				-webkit-appearance: none;
+				width: 11em;
+				height: 2em;
+				font-size: 18px;
+				margin: 0 1em;
+				text-align: center;
+				border: 1px solid #D2D2D3;
+				background-color: #EBEEF1;
+			}
+		}
+
+		.dialog-footer {
+			.commit-code {
+				display: inline-block;
+				border-top: 1px solid #C9C9C9;
+				color: #E1B555;
+				border: none;
+				width: 100%;
+				height: 2.6em;
+				line-height: 2.6em;
+				background-color: #F8F8F8;
+				border-radius: 5px;
+				font-size: 16px;
+			}
+		}
+	}
+
+	.dialog-close {
+		margin-top: 2em;
+		text-align: center;
+
+		i {
+			color: #FFF;
+			font-size: 16px;
+		}
+	}
+}
+
+#icon-consult {
+	margin: 0 0 2px 2px;
+}
+
+.buy-content-left-preheat {
+	span {
+		left: 30%;
+	}
+}
+
+.btn-consult {
+	.consult-text {
+		top: 30px;
+	}
+}
+
+.gray-mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: @GRAY2;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    text-align: center;
+    color: blue;
+    font-weight: bold;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dialog-pass {
+	position: fixed;
+	z-index: 20000;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 10%;
+	width: 80%;
+	text-align: center;
+
+	.dialog-close {
+		color: @WHITE;
+		font-size: 38px;
+	}
+
+  	.dialog-content {
+	    -moz-border-radius: 5px;      /* Gecko browsers */
+	    -webkit-border-radius: 5px;   /* Webkit browsers */
+	    border-radius:5px;            /* W3C syntax */
+	    background: @WHITE;
+	    font-size: @Font6;
+	    color: @GRAY2;
+	    text-align: center;
+	    padding: 35px;
+
+	    i {
+			font-size: 30px;
+			color: @RED;
+	    }
+
+		.dialog-content-text {
+			width: 90%;
+			height: 50px;
+			text-align: left;
+			font-size: 14px;
+			font-family: @FontFamily;
+			color:@GRAY1;
+			margin-left: 20px;
+		}
+  }
+
+	.i-know {
+		padding: 9Px;
+		border-top: 1px solid @GRAY4;
+		font-size: @Font4;
+		font-family: @FontFamily;
+		color: @GOLD2;
+	}
+}
+
+.qrcode-text {
+	margin-bottom: 20px;
+	color: #4a4a4a;
+	font-size: 14px;
+	line-height: 1.5;
+	text-align: left;
+
+	.text-orange {
+		color: #ff9544;
+	}
+}
+
+// 标签长度设置
+.icon-width {
+	width: 19%;
+}
+
+.label-width {
+	width: 61%;
+}
+//1109-jingpinghong
+.luyan {
+	width: 76%;
+	margin-left: 24%;
+	height: 50px;
+	line-height: 50px;
+	display: none;
+	.ly {
+		width: 100%;
+		.buy-content-right-new {
+			background: #E1B555;
+			overflow: hidden;
+			color: #fff;
+		}
+		.lybm {
+			width: 25%;
+			background-color: #E1C078;
+			color: #FFFFFF;
+			float: right;
+		}
+	}
+}

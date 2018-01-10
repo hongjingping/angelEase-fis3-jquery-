@@ -1,0 +1,62 @@
+@import '../common/style/variables';
+
+.home-container {
+    overflow: hidden;
+    margin-bottom: 50px;
+    background: #F3F5F8; 
+}
+
+.navbar-wrap {
+    color: #9B9B9B;
+
+    .cmn-invest {
+        i,span {
+            color: #E1B555;
+        }
+    }
+}
+
+.navbar-wrap {
+    .cmn-invest {
+        i,span {
+            color: #E1B555;
+        }
+    }
+}
+
+.notice-wrp {
+    position: fixed;
+    left: 0;
+    bottom: 50px;
+}
+//遮罩层 0124
+body {
+    position: relative;
+    .contentBox {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 22000;
+        .content {
+            width: 100%;
+            height: 100%;
+        }
+        .delBtn {
+            position: absolute;
+            width: 150px;
+            height: 50px;
+            left: 50%;
+            margin-left: -75px;
+            bottom: 5%;
+            background: @GOLD1;
+            border-radius: 25px;
+            line-height: 50px;
+            text-align: center;
+            color: @WHITE;
+            font-size: 22px;
+        }
+    }
+}
+

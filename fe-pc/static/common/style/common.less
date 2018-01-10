@@ -1,0 +1,43 @@
+ /**
+  * Copyright (c) 2016 Creditease, All rights reseved.
+  * @fileoverview 公共基础-样式重置
+  * @author WangHongjun | hongjunwang1@creditease.cn
+  * @version 1.0 | 2016-7-6 | WangHongjun    // Initial version.
+  *
+  * @description
+  *     1) 本文件定义公共less变量，使用'cmn-'前缀
+  *     2) 严禁(must not)在本文中出现业务模块独立相关的LESS变量
+  *     3) 严禁(must not)在项目模块中使用'cmn-'前缀定义样式
+  */
+@import "./reset";
+@import "./mixins";
+@import "./variables";
+@import "./iconfont";
+@import "./button/button";
+@import "./form/form";
+@import "./table/table";
+@import "./smart_alert/index";
+@import "./error_notice/error_notice";
+
+/*********************************************************************************************/
+// common classes.
+.cmn-clearfix {
+    .cmn-clearfix;
+}
+
+.cmn-inline-block {
+    .cmn-inline-block;
+}
+
+.cmn-ellipsis {
+    .cmn-ellipsis;
+}
+
+.cmn-text-wrap {
+    .cmn-text-wrap;
+}
+
+.layout {
+    margin: 0 auto;
+    width: @cmn-width-large-page;
+}

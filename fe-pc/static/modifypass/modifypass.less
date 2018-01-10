@@ -1,0 +1,164 @@
+@import '../../static/common/style/common';
+
+.modify-pass {
+	overflow: hidden;
+
+	.modify-pass-header {
+		height: 36px;
+		margin: 30px 0 40px;
+	}
+
+	.modify-pass-content {
+		width: 500px;
+		overflow: hidden;
+		margin: 0 auto 260px;
+		font-size: 14px;
+
+		.form-control + .form-control {
+			margin-bottom: 20px;
+		}
+
+		.form-control {
+
+			.pull-left {
+				float: left;
+			}
+
+			.btn-next {
+				margin-left: 110px;
+
+				a {
+					color: #fff;
+				}
+			}
+
+			.btn-prev {
+				line-height: 40px;
+				margin-left: 20px;
+
+				a {
+					color: #e1c078;
+					font-size: 16px;
+				}
+			}
+
+			.form-key {
+				float: left;
+				width: 80px;
+				margin-right: 30px;
+				line-height: 40px;
+				text-align: right;
+			}
+
+			.form-value {
+				float: left;
+				width: 340px;
+				height: 40px;
+				/* CSS Hack only for IE */
+				line-height: 40px\9;
+				box-sizing: border-box;
+
+				&.form-value-oneline {
+					width: 220px;
+				}
+
+				&.from-value-text {
+					line-height: 40px;
+				}
+
+			}
+
+			.img-code {
+				width: 120px;
+				height: 40px;
+				float: left;
+				line-height: 40px;
+				cursor: pointer;
+				border: 1px solid #E1C078;
+				box-sizing: border-box;
+			}
+
+			.error-notice {
+				width: 340px;
+				line-height: 36px;
+				background: #FFEEEE;
+				margin-left: 110px;
+
+				.error-icon {
+					color: #FF6493;
+					margin: 0 10px;
+				}
+			}
+
+			.success-notice {
+				width: 340px;
+				line-height: 36px;
+				background: #F8F9FA;
+				margin-left: 110px;
+
+				.success-icon {
+					color: #9BD560;
+					margin: 0 10px;
+				}
+			}
+		}
+	}
+}
+
+.modify-pass-first {
+	.first-header {
+		background: url('./resource/images/img-changepw1.png') no-repeat center;
+	}
+}
+
+.modify-pass-second {
+
+	.second-header {
+		background: url('./resource/images/img-changepw2.png') no-repeat center;
+	}
+
+	#find-pass-cat {
+		color: #E1C078;
+		background: none;
+	}
+}
+
+.modify-pass-last {
+	.last-header {
+		background: url('./resource/images/img-changepw3.png') no-repeat center;
+	}
+
+	.modify-last-content {
+		width: 798px;
+		height: 248px;
+		text-align: center;
+		background: #F8F9FA;
+		margin: 50px auto 205px;
+		border: 1px solid #EBEEF1;
+
+		.modify-last-icon {
+			margin: 40px 0 25px;
+
+			.suc-icon {
+				font-size: 30px;
+				color: #9BD560;
+			}
+		}
+
+		.modify-last-txt {
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
+
+		.modify-last-next {
+			color: #FFF;
+			width: 120px;
+			height: 38px;
+			font-size: 16px;
+			line-height: 38px;
+			text-align: center;
+			background: #E1C078;
+			display: inline-block;
+		}
+	}
+}

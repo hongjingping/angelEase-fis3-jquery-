@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--  公共头引入  -->
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    
+    <link rel="stylesheet" type="text/css" href="../../static/finance/finance.less">
+    <!--
+        @require ../static/common/lib/validator.min.js
+    -->
+</head>
+<body class="main-layout">
+	
+    <div class="finance-container">
+        <div class="logo">
+            <p class="main">AngelEase宜天使致力于</p>
+            <p class="sub">为初创企业提供专业的全方位服务</p>
+        </div>
+
+        <div class="bus-title">
+            <h2>提交项目计划书</h2>
+        </div>
+
+        <div class="full-border identity">
+            <div class="identity-wrap">
+                <p>您的身份</p>
+                <div class="radio-cols">
+                    <span class="radio-col i-radio-checked" data-fund="1"></span><span class="radio-txt">我是创始人</span>
+                    <span class="radio-col i-radio-unchecked" data-fund="2"></span><span class="radio-txt">我愿领投本项目</span>
+                    <span class="radio-col i-radio-unchecked" data-fund="3"></span><span class="radio-txt">其它</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="full-border form-detail">
+            <ul class="form-wrap">
+                <li class="base-border">
+                    <span>项目名称</span>
+                    <input type="text" placeholder="录入项目名称" name="project-name" id="projectName" maxlength="32">
+                </li>
+                <li>
+                    <span>创始人姓名</span>
+                    <input type="text" placeholder="录入创始人姓名" name="project-founder" id="projectFounder" maxlength="8">
+                </li>
+                <li class="upper-border">
+                    <span>创始人电话</span>
+                    <input type="number" oninput="if(value.length>11) value=value.slice(0, 11)" placeholder="录入创始人电话" name="founder-phone" id="founderPhone">
+                </li>
+            </ul>
+        </div>
+
+        <div class="full-border fund-detail">
+            <ul class="form-wrap">
+                <li class="base-border">
+                    <span>融资轮次</span>
+                    <select name="finance-round" class="select-with-arrow" id="financeRound">
+                        <option value="1">Pre-A</option>
+                        <option value="2">A</option>
+                        <option value="3">A+</option>
+                        <option value="4">其它</option>
+                    </select>
+                    <i class="ae-mobile ae-mobile-arrow-right"></i>
+                </li>
+                <li class="base-border" id="lastInvest">
+                    <span>上轮注资</span>
+                    <input type="number" placeholder="填入上轮注资金额" oninput="if(value.length > 8) value=value.slice(0, 8)" id="lastInvestAmount">
+                    <em>万元</em>
+                </li>
+                <li>
+                    <span>融资金额</span>
+                    <input type="number" placeholder="填入您期望融资金额" oninput="if(value.length > 8) value=value.slice(0, 8)" id="financeAmount">
+                    <em>万元</em>
+                </li>
+            </ul>
+        </div>
+
+        <div class="full-border plan-detail">
+            <ul class="form-wrap">
+                <li class="plan base-border">
+                    <span>查看商业计划书范例</span>
+                    <i class="ae-mobile ae-mobile-arrow-right"></i>
+                </li>
+                <li class="limit">
+                    <i class="ae-mobile ae-mobile-about2 limit-icon"></i>
+                    <p>完整商业计划书应当包括项目简介、市场情况、团队介绍、财务情况、未来发展、融资需求等。手机端仅支持单个小于2M的JPG&PNG文件，本平台主营股权融资业务。(上传图片最多6张)</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="base-border upload-article">
+            <p>上传商业计划书</p>
+            <div class="upload-cols">
+                <ul class="uploader-files" id="uploaderFiles"></ul>
+                
+                <form method="post" name="bus-form" class="myform-cols">
+                    <div class="single-file">
+                        <input type="file" name="file" class="unique-file" id="uploaderInput" accept="image/png,image/jpg,image/jpeg" multiple />
+                        <i class="ae-mobile ae-mobile-plus"></i>
+                        <img src="../../static/finance/resource/images/loading.gif" class="loading-img">
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <button class="final-commit">提交项目</button>
+    </div>
+
+    <!-- uplodader gallery -->
+    <div class="uploader-gallery" id="gallery">
+        <span class="gallery-img" id="galleryImg"></span>
+        <div class="operation">
+            <i class="ae-mobile ae-mobile-delete" id="galleryDel"></i>
+        </div>
+    </div>
+
+    <!-- success msg -->
+    <div id="suc-model" style="display: none;">
+        <div class="gray-mask-suc"></div>
+        <div class="dialog-pass-suc">
+            <div class="dialog-content-suc">
+                <div class="dialog-content-icon">
+                    <i class="ae-mobile ae-mobile-right"></i>
+                </div>
+                <div class="suc-text">
+                    <p>AngelEase平台工作人员将于三个工作日内审核并反馈结果至<span>个人中心-我的项目</span>，请您耐心等待。</p> 
+                </div>
+                <div class="confirm-wrapper">
+                    <span class="confirm-yes">知道了</span>
+                </div>
+            </div>
+            <div class="dialog-close">
+                <i class="ae-mobile ae-mobile-close"></i>
+            </div>
+        </div>
+    </div>
+
+    <link rel="import" href="../../widget/component/navbar/navbar.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/finance/finance.js"></script>
+</body>
+</html>

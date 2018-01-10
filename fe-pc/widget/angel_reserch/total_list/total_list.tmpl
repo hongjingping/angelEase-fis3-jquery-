@@ -1,0 +1,35 @@
+<% for (var i = 0; i < data.length; i++) {%>
+<% var item = data[i];%>
+<div id='<%=item.current %>' class="total-list">
+    <div class="total-list-content   cmn-clearfix">
+        <div class="list-content-img">
+            <a class="focus-img-href"  href="../angel_detail/angel_detail.html?id=<%=item.id%>" target="_blank">
+            <img class="focus-img" src='<%=item.focusImgURL %>' width='220' height='140'>
+            </a>
+        </div>
+        <div class="list-content-info">
+            <h2 class="content-title">
+                <a class='title-href' href="../angel_detail/angel_detail.html?id=<%=item.id%>" target="_blank">
+                <%=item.focusTitle %>
+                </a>
+            </h2>
+            <p class="content-info-tips"><%=item.focusImport %></p>
+            <p class="info-tips-type">
+                <span >文</span>
+                |
+                <span class="auth"><%=item.authorName %></span>
+                <span class="time"><%=item.createTimeStr %></span>
+            </p>
+            <%if(item.focusCategory == 1){%>
+            <p class="label reserch"><%=item.focusCategoryStr%></p>
+            <%} else if(item.focusCategory == 2){%>
+            <p class="label angel-speak"><%=item.focusCategoryStr%></p>
+            <%} else if (item.focusCategory == 3){%>
+            <p class="label entrepreneur"><%=item.focusCategoryStr%></p>
+            <%} else if (item.focusCategoryStr != ''){%>
+             <p class="label labelCol"><%=item.focusCategoryStr%></p>
+            <%}%>
+        </div>
+    </div>
+</div>
+<%}%>

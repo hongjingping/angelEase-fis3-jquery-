@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/login/login.less">
+
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+    -->
+</head>
+<body>
+
+    <div class="login">
+        <div class="nav cmn-clearfix">
+            <div class="layout nav-container">
+                <div class="logo"></div>
+                <div class="phone">服务电话  400-818-0060</div>
+            </div>  
+        </div>
+
+        <div class="content">
+            <div class="layout login-box">
+                <div class="login-win" id="register-win">
+                    <div class="win-header cmn-clearfix">
+                        <div class="login-label">
+                            <i class="label-txt">注册</i>
+                        </div>
+                    </div>
+
+                    <div class="suc-remind">
+                        <i class="ae-icon ae-icon-success suc-notice"></i>
+                        <span class="remind-title">恭喜您成为AngelEase用户！</span>
+                        <span class="remind-auth">马上认证合格投资人即可参与投资！</span>
+                    </div>
+
+                    <div class="suc-btn">
+                        <button class="auth-btn" onclick="location.href='/page/realname/auth.html'">先实名认证</button>
+                        <button class="index-btn" onclick="location.href='../home/home.html'">返回首页</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/login/login.js"></script>
+</body>
+</html>

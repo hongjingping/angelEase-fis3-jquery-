@@ -1,0 +1,252 @@
+@import "../../static/common/style/variables.less";
+
+/* basic commmon layout */
+.user-basic-list {
+    padding-top: 20px;
+    background: #F8F9FA;
+
+    .basic-list-wrap {
+        overflow: hidden;
+
+        .basic-menu {
+            float: left;
+            width: 270px;
+            margin-bottom: 80px;
+        }
+
+        .basic-main {
+            float: left;
+            width: 900px;
+            margin: 0 0 90px 10px;
+            padding: 0 0 105px 0;
+            background-color: #fff;
+            border: 1px solid #EBEEF1;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+    }
+}
+
+/* common simple banner */
+.simple-banner {
+    position: relative;
+    width: 900px;
+    height: 50px;
+    background-color: #E1C078;
+    color: #fff;
+    overflow: hidden;
+
+    .icon-basic {
+        position: absolute;
+        top: -35px;
+        right: 85px;
+        font-size: 65px;
+        color: #E5CA8D;
+    }
+
+    .simple-title {
+        position: absolute;
+        right: 20px;
+        font-size: 20px;
+        text-align: right;
+        line-height: 50px;
+    }
+}
+
+.basic-list-wrapper {
+    width: 600px;
+    margin: 80px auto 80px;
+    font-size: 14px;
+
+
+    .pull-left {
+        float: left;
+    }
+
+    .edit-input {
+        display: none;
+    }
+
+    &.edit-select {
+        display: none;
+    }
+
+    .operate {
+        margin-left: 5px;
+        color: #d9b466;
+        line-height: 40px;
+        cursor: pointer;
+
+        &.save {
+            line-height: 38px;
+            padding: 0 20px;
+            border: 1px solid #f3e6c9;
+        }
+
+        &.cancel {
+            margin-left: 20px;
+        }
+    }
+
+    .error-notice {
+        width: 340px;
+        line-height: 36px;
+        background: #FFEEEE;
+
+        .error-icon {
+            color: #FF6493;
+            margin: 0 14px;
+        }
+    }
+
+    .form-control {
+        display: block;
+        width: 340px;
+        height: 40px;
+        margin-right: 10px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.4;
+        color: #555;
+        border-radius: 0 !important;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+
+        &.small {
+            width: 160px;
+            margin-right: 20px;
+        }
+
+        &.many-lines {
+        }
+
+        &:focus {
+            border-color: #d9b466;
+            outline: 0;
+        }
+
+
+    }
+
+    .form-group {
+        //margin-top: 10px;
+
+        .info-key,
+        .info-value {
+            float: left;
+            line-height: 30px;
+        }
+
+        .info-key {
+            width: 80px;
+            line-height: 40px;
+            text-align: right;
+            margin-right: 35px;
+        }
+
+        .info-value {
+            .edit {
+                color: #9B9B9B;
+
+                &:hover {
+                    color: #E1C078;
+                }
+            }
+
+            .txt-value {
+                line-height: 40px;
+            }
+        }
+
+        select {
+            -webkit-appearance: none;
+            -webkit-border-radius: 0px;
+        }
+
+        &.user-avatar-wrapper {
+            margin-bottom: 10px;
+
+            .avatar-key {
+                float: left;
+                width: 80px;
+                line-height: 100px;
+                text-align: right;
+                margin-right: 35px;
+            }
+
+            .avatar-wrapper {
+                cursor: pointer;
+                position: relative;
+
+                .avatar-mask {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100px;
+                    height: 100px;
+                    background-image: url("./resource/images/avatar-mask-gray.png");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    background-position: center;
+                    // border-radius: 50%;
+                    opacity: 0; /* Standards Compliant Browsers */
+                    filter: alpha(opacity=0); /* IE 7 and Earlier */
+                    /* Next 2 lines IE8 */
+                    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+                    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+                    // background-color: #000;
+                }
+
+                &:hover {
+                    .avatar-mask {
+                        opacity: 0.5; /* Standards Compliant Browsers */
+                        filter: alpha(opacity=50); /* IE 7 and Earlier */
+                        /* Next 2 lines IE8 */
+                        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+                        filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+                    }
+
+                }
+
+                .user-avatar {
+                    width: 100px;
+                    height: 100px;
+                    border-radius: 50%;
+                    background-color:#eee;
+                }
+
+                .upload-file {
+                    position: absolute;
+                    font-size: 100px;
+                    right: 0;
+                    top: 0;
+                    opacity: 0;
+                    width: 100px;
+                    height: 100px;
+                    filter: alpha(opacity=0);
+                    cursor: pointer;
+                    z-index: 100;
+                    overflow: hidden;
+                }
+
+                .upload-file-icon {
+                    position: absolute;
+                    top: 40px;
+                    left: 45px;
+                }
+            }
+        }
+    }
+}
+.changePassWord {
+    display: block;
+    padding-left: 135px;
+    width: 90px;
+    color: @cmn-color-ae-gray2;
+    &:hover {
+        color:@cmn-color-ae-dark-gold;
+    }
+}

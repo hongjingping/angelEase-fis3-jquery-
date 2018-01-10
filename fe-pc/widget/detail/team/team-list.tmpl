@@ -1,0 +1,23 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var team = data[i];%>
+
+	<div class="team-card cmn-clearfix">
+		<div class="card-head">
+			<%if (team.imgPath != '' && team.imgPath != null) {%>
+				<img src="<%=team.imgPath%>" class="portrait">
+			<%}%>
+			<%if (team.imgPath == '' || team.imgPath == null) {%>
+				<img src="../../static/detail/resource/images/avatar.jpg" class="portrait">
+			<%}%>
+				
+		</div>
+
+		<div class="card-des">
+			<h1 class="card-title"><%=team.name%></h1>
+			<h2 class="card-sub"><%=team.position%></h2>
+			<p class="des-txt"><%=team.presentation%></p>
+		</div>
+	</div>
+
+<% } %>
+

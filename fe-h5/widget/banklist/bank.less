@@ -1,0 +1,56 @@
+.bank-item {
+    overflow: hidden;
+    padding: 15px 10px;
+    position: relative;
+    &:after {
+     position: absolute;
+     left: 0;
+     bottom: 0;
+     content: '';
+     width: 100%;
+     height: 1px;
+     -webkit-transform: scaleY(0.5);
+     transform: scaleY(0.5);
+     -webkit-transform-origin: 0 0;
+     transform-origin: 0 0;
+     background: #dfdfdf;
+   }
+    .logo {
+        float: left;
+        width: 14%;
+        text-align: center;
+
+        img {
+            width: 28px;
+        }
+    }
+
+    .list {
+        float: right;
+        width: 86%;
+        font-size: 14px;
+
+
+        .bank-title {
+            color: #4A4A4A;
+        }
+
+        .bank-num {
+            color: #9B9B9B;
+        }
+
+        .quota {
+            color: #9B9B9B;
+            font-size: 12px;
+        }
+    }
+
+    .tick-icon {
+        position: absolute;
+        display: none;
+        top: 20px;
+        right: 20px;
+        color: #9BD560;
+        font-size: 18px;
+    }
+}

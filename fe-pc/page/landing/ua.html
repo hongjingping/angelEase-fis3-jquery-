@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+	<script type="text/javascript" src="../../static/common/lib/ua.js"></script>
+	<script type="text/javascript">
+		(function () {
+			if (device.android()) {
+				window.location.href = 'https://angelease-resource.yixin.com/appclient/android/Angelease_android_v100.apk';
+			}
+
+			if (device.ios()) {
+				alert('IOS版本敬请期待.');
+				window.location.href = 'https://www.angelease.cn';
+			}
+		})();
+	</script>
+</head>
+</html>

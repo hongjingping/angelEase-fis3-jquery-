@@ -1,0 +1,42 @@
+.cmn-header {
+    width: 100%;
+    height: 44px;
+    line-height: 44px;
+    color: #4a4a4a;
+    position: relative;
+    text-align: center;
+}
+
+.cmn-header:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background: #DFDFDF;
+    position: absolute;
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+            transform-origin: 0 0;
+}
+
+.cmn-header a {
+    display: block;
+}
+
+.cmn-header i {
+    margin-left: 20px;
+}
+
+.cmn-header .cmn-arrow-back {
+    position: absolute;
+    font-size: 16px;
+    top: 0;
+    left: 0;
+}
+
+.cmn-header .cmn-header-title {
+    line-height: 44px;
+    font-size: 17px;
+}

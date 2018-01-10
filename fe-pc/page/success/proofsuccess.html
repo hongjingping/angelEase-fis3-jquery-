@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/success/success.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline">
+
+    <div class="basic-success proof-success layout" id="first">
+        <div class="success-header proof-success-header"></div>
+        <div class="success-content proof-success-content">
+            <div class="reminder">
+                <i class="ae-icon ae-icon-success icon-paysuccess"></i>
+                <p class="content">恭喜您，打款凭证提交成功！</p>
+                <p class="detail">
+                    <span>您的资料将于</span>
+                    <span class="detail-strong">2个工作日内</span>
+                    <span>审核完成并通知您审核结果。相关协议会寄送到您的下单地址，如需修改请拨打400-818-0060联系我们。</span>
+                </p>
+            </div>
+            <div class="qrcode-wrapper">
+                <p class="qr-tip">扫二维码关注AngelEase，随时随地股权投资</p>
+                <div class="img-qrcode-wrapper">
+                    <img src="../static/success/resource/images/img-qrcode.png" class="img-qrcode">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript">
+        $(function () {
+            $('#cmn-header').text('投资项目');
+        });
+    </script>
+
+</body>
+</html>

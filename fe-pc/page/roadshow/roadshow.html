@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+
+	<link rel="stylesheet" type="text/css" href="../../static/roadshow/roadshow.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+    -->
+
+</head>
+<body>
+	<link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline">
+
+	<div class="show-nav">
+		<div class="nav-wrap" id="acimg"></div>
+	</div>
+
+	<div class="show-content">
+		<div class="content-block">
+			<div class="block-nav">
+				<div class="nav-left"></div>
+				<div class="nav-txt" id="project-name"></div>
+				<div class="nav-right"></div>
+			</div>
+
+			<ul class="block-host">
+				<li class="host-item">
+					<span class="item-title">主办方</span>
+					<span class="item-val" id="sponsor"></span>
+				</li>
+
+				<li class="host-item">
+					<span class="item-title">路演时间</span>
+					<span class="item-val" id="time"></span>
+				</li>
+
+				<li class="host-item">
+					<span class="item-title">报名人数</span>
+					<span class="item-val" id="register-num">  </span>
+				</li>
+
+				<li class="host-item">
+					<span class="item-title">路演地点</span>
+					<span class="item-val" id="address">  </span>
+				</li>
+			</ul>
+
+			<div class="block-article" id="acinfo">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="show-qrcode">
+		<p class="qrcode-txt">微信扫一扫立即报名路演</p>
+		<div id="qrcode-div"></div>
+	</div>
+	<link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+    <script type="text/javascript" src="../../static/common/lib/qrcode/qrcode.js"></script>
+    <script type="text/javascript" src="../../static/roadshow/roadshowdev.js"></script>
+    <script type="text/javascript">
+    	$(function () {
+    		$('#cmn-header').text('活动详情');
+    	});
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/modify_card/card.less">
+</head>
+<body class="gray_bg clear_body">
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<div class="weui_cells weui_cells_form login-form">
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">真实姓名</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input" type="tel" placeholder="**毛"></div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">证件号码</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input" type="tel" placeholder="320********6738"></div>
+		</div>
+	</div>
+
+	<div class="gray_col"></div>
+
+	<div class="weui_cells weui_cells_form login-form">
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">选择银行</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<span class="weui_label">工商银行</span>
+			</div>
+			<div class="right_arrow">></div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">银行卡号</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input" type="tel" placeholder="3200 3548 6729 3390"></div>
+		</div>
+	</div>
+
+	<div class="submit-btn-wrapper">
+		<span class="key-operation-button-normal">提交</span>
+	</div>
+
+	<div class="toast" id="toastBox">
+		<div><i class="ae-mobile ae-mobile-right modify-suc"></i></div>
+		<div class="modify-suc-text">更换银行卡成功</div>
+	</div>
+	
+	<script type="text/javascript" src="../../static/modify_card/card-toast.js"></script>
+</body>
+</html>

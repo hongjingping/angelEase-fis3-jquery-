@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+    <link rel="stylesheet" href="../../static/angel_detail/angel_detail.scss">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/template/template.js
+        @require ../../static/common/lib/owlCarousel/owl.carousel.min.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/template/handlebars.js
+        @require ../../static/common/lib/apopup.js
+    -->
+  </head>
+  <body>
+      <link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline" hitIndex="3">
+      <div class="angel-detail container">
+        <div class="main">
+        </div>
+        <div class="sidebar">
+          <div class="author">
+          </div>
+          <div class="relative">
+          </div>
+        </div>
+      </div>
+      <script id="main-template" type="text/x-handlebars-template">
+          <div class="title">
+            {{focusTitle}}
+          </div>
+          <div class="meta">
+            <ul>
+              <li class="angel">
+                {{focusCategoryStr}}
+              </li>
+              <li>
+                文｜{{authorName}}
+              </li>
+              <li>
+                {{createTime}}
+              </li>
+              <li>
+                <a href="javascript:void(0);" class="share-btn">
+                  <i class="share-icon"></i>
+                  <span>分享</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="sub-title">
+            {{focusImport}}
+          </div>
+          {{#if focusVideo}}
+          <div class="video-mod">
+            <video controls poster="{{videoImg}}">
+              <source src="{{focusVideo}}" type="video/mp4">
+            </video>
+          </div>
+          {{/if}}
+          <div class="content">
+            {{{focusContent}}}
+          </div>
+          <div class="share-popup" style="display:none">
+            <!--<i class="triangle"></i>-->
+            <h6>微信扫一扫分享给朋友</h6>
+            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D" alt="">
+          </div>
+      </script>
+      <script id="author-template" type="text/x-handlebars-template">
+          <div class="author-avatar">
+            <img src="{{authorImgStr}}">
+          </div>
+          <div class="author-content">
+            <div class="author-name">
+              {{authorName}}
+            </div>
+            <div class="author-desc">
+              {{authorHonor}}
+            </div>
+            <div class="author-detail">
+              {{authorInfo}}
+            </div>
+          </div>
+      </script>
+      <script id="relative-template" type="text/x-handlebars-template">
+          <h3>
+            <span>相关文章</span>
+          </h3>
+          <ul>
+            {{#each data}}
+            <li>
+              <a href="./angel_detail.html?id={{id}}">{{focusTitle}}</a>
+            </li>
+            {{/each}}
+          </ul>
+      </script>
+      <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+      <script type="text/javascript" src="../../static/angel_detail/angel_detail.js"></script>
+  </body>
+</html>

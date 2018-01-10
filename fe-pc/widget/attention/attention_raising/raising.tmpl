@@ -1,0 +1,67 @@
+<% for (var i = 0; i < data.length; i++) {%>
+     <%var totalItem = data[i];%>
+     <div class="total-list  cmn-clearfix">
+        <div class="list-left  cmn-clearfix">
+           <a class="img-href" href="/page/detail/detail.html?proId=<%=totalItem.id%>" target="_blank" >
+            <img src="<%=totalItem.proPcImgSmall%>" class="left-img">
+            </a>
+            <div class="left-txt  cmn-clearfix">
+                <span class="left-title"><%=totalItem.proName%></span>
+                <span class="left-info">已有<%=totalItem.prePayNum%>人参与</span>
+            </div>
+        </div>
+        <div class="list-right">
+            <div class="progress-wrapper cmn-clearfix">
+                <div class="base-line">
+                    <%if (totalItem.proRaiseSpeed >= 100) {%>
+                        <div class="cover" style="width:100%"></div>
+                    <%}else{%>
+                        <div class="cover" style="width:<%=totalItem.proRaiseSpeed%>"></div>
+                    <%}%>
+
+                </div>
+
+                    <%if (totalItem.proRaiseSpeed > '0%') {%>
+                        <div class="ratio"><%=totalItem.proRaiseSpeed%></div>
+                    <%}else{%>
+                        <div class="ratio ratio-gray"><%=totalItem.proRaiseSpeed%></div>
+                    <%}%>
+
+                </div>
+                <div class="raise-numbers-wrapper cmn-clearfix">
+                    <div class="raise-numbers">
+                        <div class="number-key">募集金额（万）</div>
+                        <div class="number-value"><%=totalItem.proFinancieAmount%></div>
+                    </div>
+                    <div class="raise-numbers raise-numbers2">
+                        <div class="number-key">已募金额（万）</div>
+
+                        <!-- 详情页面数据为0或者没有内容的时候颜色为gray2 -->
+                        <% if (totalItem.payAmount == 0 || totalItem.payAmount == ''){%>
+                            <div class="number-value font-gray"><%=totalItem.payAmount%></div>
+                        <% }else{ %>
+                            <div class="number-value"><%=totalItem.payAmount%></div>
+                            <%}%>
+
+
+                    </div>
+                    <div class="raise-numbers raise-numbers2">
+                    <div class="number-key">剩余天数</div>
+
+                    <!-- 详情页面数据为0或者没有内容的时候颜色为gray3 -->
+                    <%if (totalItem.remainDays == '0' || totalItem.remainDays == '') {%>
+                        <div class="number-value font-gray"><%=totalItem.remainDays%></div>
+                    <%} else {%>
+                        <div class="number-value"><%=totalItem.remainDays%></div>
+                        <% } %>
+                    <div class="small-square"></div>
+                    </div>
+                </div>
+        </div>
+            <!-- 募集中 -->
+            <%if (totalItem.proStatus == '4') {%>
+                <div class="label orange"><%=totalItem.statusName%></div>
+            <%}%>
+     </div>
+<%}%>
+

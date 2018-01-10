@@ -1,0 +1,212 @@
+@import "../common/style/common";
+
+/******************************** tab style *****************************************/
+.active-tab-border-top {
+	border-top: 3px solid @cmn-color-ae-gold;
+	a {
+		color: #fff;
+	}
+}
+/******************************** end tab style **************************************/
+
+.detail-content {
+	width: 100%;
+	overflow: hidden;
+
+	.content-container {
+		color: @cmn-color-ae-gray;
+	}
+}
+
+.consult-secretary-wrapper {
+
+	&:hover {
+
+		.icon-consult-wrapper {
+			border-top: 1px solid @cmn-color-ae-gold;
+
+			.icon-consult {
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				opacity: 0;
+			}
+
+			.consult-text {
+				opacity: 1;
+			}
+		}
+
+		.qrcode-secretary-wrapper {
+			opacity: 1;
+			z-index: 2;
+		}
+	}
+}
+
+.icon-consult-wrapper {
+	position: fixed;
+	bottom: 287px;
+	right: 20px;
+	width: 45px;
+	height: 45px;
+	background-color: @cmn-color-ae-gray1;
+	border: 1px solid @cmn-color-ae-gray1;
+	cursor: pointer;
+
+
+	.icon-consult {
+		opacity: 1;
+		position: absolute;
+		top: 13px;
+		left: 14px;
+		-webkit-transition: all .5s ease-in-out;
+	    -o-transition: all .5s ease-in-out;
+	    -moz-transition: all .5s ease-in-out;
+	    transition: all .5s ease-in-out;
+	}
+
+	.consult-text {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		opacity: 0;
+		position: absolute;
+		top: 14px;
+		left: 10px;
+		font-size: 13px;
+		color: @cmn-color-ae-gold;
+		-webkit-transition: all .5s ease-in-out;
+	    -o-transition: all .5s ease-in-out;
+	    -moz-transition: all .5s ease-in-out;
+	    transition: all .5s ease-in-out;
+	}
+}
+
+.qrcode-secretary-wrapper {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity: 0;
+	z-index: -1;
+	position: fixed;
+	bottom: 92px;
+	right: 68px;
+	width: 200px;
+	height: 241px;
+	background-color: @cmn-color-ae-gray1;
+	border-top: 1px solid @cmn-color-ae-gold;
+	color: #fff;
+	-webkit-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+
+	.qrcode-text {
+		margin: 10px;
+	}
+
+	.qrcode-img {
+		margin-left: 13px;
+	}
+
+}
+
+.share-wrapper {
+
+	&:hover {
+		border-top: 1px solid @cmn-color-ae-gold;
+
+		.share-qrcode-wrapper {
+			opacity: 1;
+			z-index: 2;
+		}
+
+		.ae-icon-share-new {
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			opacity: 0;
+		}
+
+		.share-text {
+			opacity: 1;
+		}
+	}
+
+
+	.icon-share-wrapper {
+		position: fixed;
+		bottom: 239px;
+		right: 20px;
+		width: 45px;
+		height: 45px;
+		background-color: @cmn-color-ae-gray1;
+		border: 1px solid @cmn-color-ae-gray1;
+		cursor: pointer;
+
+		&:hover {
+			border-top: 1px solid @cmn-color-ae-gold;
+
+			.ae-icon-share-new {
+				-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+				opacity: 0;
+			}
+
+			.share-text {
+				opacity: 1;
+			}
+		}
+
+		.ae-icon-share-new {
+			opacity: 1;
+			position: absolute;
+			top: 9px;
+			left: 11px;
+			font-size: 20px;
+			color: @cmn-color-ae-gold;
+			-webkit-transition: all .5s ease-in-out;
+		    -o-transition: all .5s ease-in-out;
+		    -moz-transition: all .5s ease-in-out;
+		    transition: all .5s ease-in-out;
+			z-index: 2;
+		}
+
+		.share-text {
+			-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+			opacity: 0;
+			position: absolute;
+			top: 15px;
+			left: 9px;
+			font-size: 13px;
+			color: @cmn-color-ae-gold;
+			-webkit-transition: all .5s ease-in-out;
+		    -o-transition: all .5s ease-in-out;
+		    -moz-transition: all .5s ease-in-out;
+		    transition: all .5s ease-in-out;
+			z-index: -1;
+		}
+	}
+
+	.share-qrcode-wrapper {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		opacity: 0;
+		position: fixed;
+		bottom: 44px;
+		right: 68px;
+		width: 200px;
+		height: 241px;
+		background-color: @cmn-color-ae-gray1;
+		border-top: 1px solid @cmn-color-ae-gold;
+		color: #fff;
+		-webkit-transition: all .5s ease-in-out;
+	    -o-transition: all .5s ease-in-out;
+	    -moz-transition: all .5s ease-in-out;
+	    transition: all .5s ease-in-out;
+		z-index: -1;
+
+		.share-content {
+			text-align: center;
+			margin: 18px 0;
+			font-size: 14px;
+		}
+
+		.share-img {
+			width: 176px;
+			height: 173px;
+			margin-left: 12px;
+		}
+	}
+}

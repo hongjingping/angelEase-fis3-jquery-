@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/invest_order_confirm/order_confirm.less">
+</head>
+<body class="gray_bg yahei">
+
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<!-- tittle -->
+	<div class="step-bar-wrapper white_bg">
+		<ul class="step-bar clearfloat">
+			<li>
+				<span class="dot"></span>
+				<a  href="#">填写订单</a>
+			</li>
+			<li class="not-go">
+				<span class="arrows">
+					<i class="ae-mobile ae-mobile-step"></i></span>
+				<span class="dot"></span>
+				<a href="#">签约</a>
+			</li>
+			<li class="not-go">
+				<span class="arrows">
+					<i class="ae-mobile ae-mobile-step"></i></span>
+				<span class="dot"></span>
+				<a href="#">支付</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="notice full-border">
+		<div class="notice-icon">
+			<i class="ae-mobile ae-mobile-attention2"></i>
+		</div>
+		<div class="notice-txt">风险提示: 股权投资属于高风险投资，请谨慎决策！</div>
+	</div>
+
+	<div class="gray_col gray_bg">支付明细</div>
+
+	<div class="white_bg full-border full-padding">
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">支付类别</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">投资款</div>
+		</div>
+		<div class="weui_cell weui_cell_padding">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">投资项目</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary" id="proName2"></div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">投资金额</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary" id="proInveseAmount"></div>
+		</div>
+	</div>
+
+	<div class="gray_col gray_bg">支付卡信息</div>
+
+	<div class="white_bg full-border card-holder full-padding">
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">持卡人</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary" id="card-owner"></div>
+		</div>
+		<div class="weui_cell weui_cell_padding">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">银行卡号</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary" id="card-serial"></div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label">预留手机</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary" id="reserve-phone"></div>
+		</div>
+	</div>
+
+	<div class="bottom-bar ">
+		<span class="go-to-sign-amount">
+			应付金额 <em id="proInveseAmountSpan"></em>元
+		</span>
+		<a class="go-to-sign-btn" id="toSign">去签约</a>
+	</div>
+
+	<script type="text/javascript" src="../../static/invest_order_confirm/order_confirm.js"></script>
+</body>
+</html>

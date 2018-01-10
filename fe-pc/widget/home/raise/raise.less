@@ -1,0 +1,193 @@
+@import '../../../static/common/style/common';
+
+.project {
+	padding-bottom: 50px;
+	background: @cmn-color-ae-gray6;
+
+	.title {
+		font-size: 20px;
+		text-align: center;
+		padding: 24px 0 14px;
+		color: @cmn-color-ae-gray1;
+	}
+
+	.line {
+		width: 38px;
+		height: 4px;
+		margin: 0 auto 50px;
+		background: @cmn-color-ae-dark-gold;
+	}
+
+	.chunk {
+		background: #fff;
+		margin-bottom: 50px;
+		border: 1px solid #EBEEF1;
+
+		.chunk-img {
+			position: relative;
+			width: 380px;
+			height: 230px;
+			float: left;
+
+			img {
+				height: 230px;
+				width: 380px;
+			}
+
+			.label {
+				position: absolute;
+				top: 32px;
+				right: -30px;
+				width: 60px;
+				height: 26px;
+				background: url('./resource/images/label.png') no-repeat;
+			}
+
+			.label-success {
+				position: absolute;
+				top: 32px;
+				right: -30px;
+				width: 72px;
+				height: 26px;
+				background: url('./resource/images/project-success.png') no-repeat;
+			}
+		}
+
+		.chunk-txt {
+			float: left;
+			width: 378px;
+			height: 230px;
+			padding-left: 52px;
+
+			.txt-title {
+				font-size: 20px;
+				font-weight: bold;
+				margin-top: 32px;
+				color: @cmn-color-ae-gray1;
+			}
+
+			.txt-label {
+				color: @cmn-color-ae-gray2;
+			}
+
+			.progress {
+				margin-top: 30px;
+				padding-bottom: 10px;
+				position: relative;
+
+				.baseline {
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 5px;
+					width: 280px;
+					background: #EBEEF1;
+					border-radius: 5px;
+				}
+
+				.cover {
+					position: absolute;
+					left: 0;
+					top: 0;
+					height: 5px;
+					background: #e1c078;
+					border-radius: 5px;
+				}
+
+				.ratio {
+					position: absolute;
+					top: -8px;
+					right: 55px;
+					color: @cmn-color-ae-gold;
+				}
+			}
+
+
+			.blocks {
+				padding-top: 20px;
+				.list {
+					float: left;
+					width: 100px;
+					height: 60px;
+					margin-right: 12px;
+					// padding: 5px;
+					position: relative;
+					border: 1px solid #EBEEF1;
+					box-sizing: border-box;
+
+					h2 {
+						color: #ADADAD;
+						font-size: 12px;
+						line-height: 26px;
+						text-align: center;
+						font-weight: normal;
+					}
+
+					p {
+						font-size: 24px;
+						text-align: center;
+						line-height: 32px;
+					}
+
+					.dot {
+						position: absolute;
+						right: 0;
+						bottom: 0;
+						width: 4px;
+						height: 4px;
+						background-color: @cmn-color-ae-gold;
+					}
+				}
+			}
+		}
+
+		.chunk-des {
+			float: left;
+			width: 367px;
+			height: 230px;
+			border-left: 1px solid @cmn-color-ae-gray5;
+
+			.des-title {
+				font-size: 18px;
+				margin-top: 36px;
+				padding-left: 50px;
+				color: @cmn-color-ae-gray2;
+				border-left: 5px solid @cmn-color-ae-gold;
+			}
+
+			.des-txt {
+				font-size: 13px;
+				margin-top: 20px;
+				line-height: 20px;
+				padding:  0 40px 0 50px;
+				color: @cmn-color-ae-gray2;
+
+				&.ellipsis-4 {
+					display: -webkit-box;
+					-webkit-line-clamp: 4;
+					-webkit-box-orient: vertical;
+					overflow: hidden;
+				}
+			}
+
+			.fund {
+				padding-right: 40px;
+
+				a {
+					float: right;
+					margin-top: 14px;
+				}
+			}
+		}
+
+	}
+
+	.load-more {
+		display: none;
+		cursor: pointer;
+		font-size: 16px;
+		text-align: center;
+		margin-bottom: -15px;
+		color: @cmn-color-ae-gray2;
+	}
+}

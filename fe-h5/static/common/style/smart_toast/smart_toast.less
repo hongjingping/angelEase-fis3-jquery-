@@ -1,0 +1,65 @@
+@zindex-smartToast:                1060;
+@border-color:                     #eee;
+@background-color:                 rgba(0,0,0,0.4);
+
+// Remove body's scroll
+.smartToast-open {
+    overflow: hidden;
+}
+
+// Container that the smartToast scrolls within
+.smartToast {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: @zindex-smartToast;
+    display: none;
+    overflow: hidden;
+    font-size: 12px;
+
+    @media (min-width: 321px) {
+        font-size: 16px;
+    }
+
+
+    .ae-mobile {
+        font-size: 20px;
+    }
+
+    &.success .ae-mobile {
+        color: #9BD560;
+    }
+    &.warn .ae-mobile {
+        color: #FF6493;
+    }
+    &.fail .ae-mobile {
+        color: #FF9544;
+    }
+}
+
+.smartToast-open .smartToast {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.smartToast-dialog {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.smartToast-content {
+    width: 50%;
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    background-color: @background-color;
+    border: 1px solid @border-color;
+    outline: 0;
+    border-radius: 3px;
+}

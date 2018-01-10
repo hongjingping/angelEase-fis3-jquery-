@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" href="../../static/bankcard/bankcard.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/base64.js
+	    @require ../../static/common/lib/send_sms.js
+    -->
+</head>
+<body onload="init();">
+
+	<input type="hidden"  name="userName" value=""/>
+    <input type="hidden"  name="for_login_userphone" id="for_login_userphone" value="">
+    <input type="hidden"  name="realName" value=""/>
+    <input type="hidden"  name="idCardNo" value="" />
+    <input type="hidden"  name="idcardtype" value="1" />
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline">
+
+    <div class="bankcard-container">
+        <div class="logo ident-logo" id="title1"></div>
+        <div class="logo next-logo"  id="title2" style="display: none;"></div>
+
+        <div class="form-group">
+            <div class="pull-right down-margin error-notice error0" style="display: none;">
+                <i class="ae-icon ae-icon-attention"></i>
+                <span class="error1"></span>
+            </div>
+             <div class="pull-right down-margin success-notice success0" style="display: none;">
+                <i class="ae-icon ae-icon-success"></i>
+                <span class="success1">发送成功</span>
+            </div>
+
+			<div id="yzm" >
+	            <div class="line-item down-margin">
+	                <span class="item-key">手机号码</span>
+	                <span class="item-val" id="phone"></span>
+	            </div>
+
+	            <div class="line-item down-margin">
+	                <span class="item-key">验证码</span>
+	                <span class="item-val">
+	                    <input type="text" class="cmn-input val-code" maxlength="6" name="code" id="code" placeholder="请输入验证码"><a href="javascript:send();" id="sendCode"  class="cmn-btn-white-w12">获取验证码</a>
+	                </span>
+	            </div>
+
+	            <div class="pull-right">
+	                <a href="javascript:;" class="cmn-btn-gold-w12 bankcard-btn-next" id="nextBtn0">下一步</a>
+	            </div>
+            </div>
+
+            <div id="yhk" style="display: none;">
+            	<div class="line-item down-margin">
+	                <span class="item-key">真实姓名</span>
+	                <span class="item-val" id="realName1"></span>
+	            </div>
+
+	            <div class="line-item down-margin">
+	                <span class="item-key">证件类型</span>
+	                <span class="item-val">身份证</span>
+	            </div>
+
+	            <div class="line-item down-margin">
+	                <span class="item-key">证件号码</span>
+	                <span class="item-val" id="idcardno"></span>
+	            </div>
+
+	            <div class="line-item down-margin">
+	                <span class="item-key">开户银行</span>
+	                <span class="item-val">
+	                    <select  id="cardType" name="cardType" class="cmn-input bank-type">
+	                        <option value="0102">工商银行</option>
+							<option value="0308">招商银行</option>
+							<option value="0105">建设银行</option>
+							<option value="0103">农业银行</option>
+							<!--<option value="0104">中国银行</option>-->
+							<option value="0303">光大银行</option>
+							<option value="0100">中国邮政储蓄银行</option>
+	                    </select>
+	                </span>
+	            </div>
+
+	            <div class="line-item down-margin">
+	                <span class="item-key">银行卡号</span>
+	                <span class="item-val">
+	                    <input type="text" id="cardNo" name="cardNo" class="cmn-input" placeholder="请填写可支付的银行卡号">
+	                </span>
+	            </div>
+
+	            <div class="pull-right">
+	                <a href="javascript:;" id="nextBtn4" class="cmn-btn-gold-w12">提交</a>
+	            </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/bankcard/bankcard.js"></script>
+</body>
+</html>

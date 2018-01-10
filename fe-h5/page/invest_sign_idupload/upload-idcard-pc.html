@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/invest_sign_idupload/upload.less">
+</head>
+
+<body class="gray_bg">
+
+	<!-- header -->
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+	
+	<!-- tittle -->
+	<div class="step-bar-wrapper white_bg">
+		<ul class="step-bar clearfloat">
+			<li>
+				<span class="dot"></span>
+				<a href="#">上传证件</a>
+			</li>
+			<li class="not-go">
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i></span>
+				<span class="dot"></span>
+				<a href="#">阅读协议</a>
+			</li>
+			<li class="not-go">
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i></span>
+				<span class="dot"></span>
+				<a href="#">签字确认</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="content-wrapper  padding_8 background-color">
+		<div class="weui_cell float">
+			<i class="ae-mobile ae-mobile-attention2 red"></i>
+		</div>
+		<div class="weui_cell">
+			<p class="font alert-right ">
+				请您重新提交以下信息后再次签约
+				<br/>
+				<span class="font orange-font alert-right">
+					1身份证（正面）号码不清楚 &nbsp;&nbsp;2身份证（背面）非身份证  &nbsp;3签字字迹不清  &nbsp;4绑定银行卡与支付卡不同</span>
+			</p>
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	
+	<div class="gray_col"></div>
+	
+	<div class="white_bg alert-wrapper" >
+		<div class="alert-left">
+			<i class="ae-mobile ae-mobile-about"></i>
+		</div>
+		<div class="alert-right">
+		    AngelEase不会在任何场合泄露您的个人信息
+		</div>
+		<div style="clear: both;"></div>
+	</div>
+	
+	<div class="gray_col"></div>
+
+	<div class="upload-area white_bg">
+		
+		<div class="upload-left">
+			<form action='' method='post' name='myform'>
+				<div class="upload-left-pic">
+					<div class="pic-mark"><p>+</p></div>
+					<img src="../../static/invest_sign_idupload/resource/images/IDcard1@3x.png" id='cardImgFrontId' alt=''/>
+				</div>
+				<input type='file' class="fileupload" />
+			</form>
+            <span class="upload-txt">证件正面照<span>
+		</div>
+		<div class="upload-right">
+			<form action='' method='post' name='myform'>
+				<div class="upload-right-pic">
+					<div class="pic-mark">+</div>
+					<img src="../../static/invest_sign_idupload/resource/images/IDcard2@3x.png" alt='' id='cardImgBackId' />
+					<input type='file' class="fileupload" />	
+				</div>
+			<form>
+            <span class="upload-txt">证件反面照</span>
+		</div>
+		<div class="clear-both"></div>
+	</div>
+
+    <div class="btn-wrapper">
+    	<a id="nextButtom" class="next-btn-gray">
+			<i  class="ae-mobile ae-mobile-arrow-right"></i>
+		</a>
+    </div>
+		
+	<script type="text/javascript" src="../../static/invest_sign_idupload/upload-idcard-pc.js"></script>
+</body>	
+</html>

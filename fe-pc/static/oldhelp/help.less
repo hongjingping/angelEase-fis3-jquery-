@@ -1,0 +1,322 @@
+@import '../common/style/variables.less';
+
+.help-txt {
+	color: #3F3F3F;
+}
+
+.help-center {
+	overflow: hidden;
+
+	.help-center-container {
+		color: @cmn-color-ae-gray2;
+		font-size: 14px;
+		text-align: right;
+		overflow: hidden;
+	}
+
+	.center-menu {
+		width: 180px;
+		float: left;
+		padding-top: 35px;
+
+		&.fixed-menu {
+			position: fixed;
+			top: 0;
+		}
+
+		li {
+			color: #3F3F3F;
+			cursor: pointer;
+			height: 30px;
+			margin: 15px 0;
+			padding-right: 20px;
+			line-height: 30px;
+			border-right: 4px solid transparent;
+
+			&.menu-border,
+			&:hover {
+				color: @cmn-color-ae-gold;
+				border-color: @cmn-color-ae-gold;
+			}
+		}
+	}
+	.center-content {
+		overflow: hidden;
+		float: right;
+		width: 959px;
+		text-align: left;
+		min-height: 500px;
+		color: @cmn-color-ae-gray;
+		padding: 30px 0 80px 30px;
+		border-left: 1px solid @cmn-color-ae-gray6;
+
+		.help-about,
+		.help-default,
+		.help-mode,
+		.help-statement,
+		.help-risk,
+		.help-guide {
+			display: none;
+			width: 960px;
+
+			&.active {
+				display: block;
+			}
+		}
+
+		/* 两栏向左浮动左边 */
+		.pull-left {
+			float: left;
+
+			&.pull-left-small {
+				margin-right: 10px;
+			}
+
+			&.pull-left-80 {
+				width: 80px;
+				// margin-right: 30px;
+			}
+
+			&.pull-left-30 {
+				width: 30px;
+				margin-right: 5px;
+			}
+		}
+
+		/* 两栏向左浮动右边 */
+		.pull-right {
+			float: left;
+
+			&.pull-right-orange {
+				color: @cmn-color-ae-orange;
+			}
+
+			&.pull-right-900 {
+				width: 900px;
+			}
+		}
+
+		.font-gray {
+			color: @cmn-color-ae-gray2;
+		}
+
+		/* 一级标题 */
+		.help-title {
+			margin: 35px 0 25px;
+			font-size: 24px;
+			color: @cmn-color-ae-gray3;
+		}
+
+		/* 二级标题 */
+		.help-sub-title {
+			margin: 25px 0 5px 0;
+			font-size: 16px;
+			color: @cmn-color-ae-gray1;
+		}
+	}
+
+		/* 针对左侧导航某一栏的二级Tab切换 */
+		.sub-nav {
+			margin: 45px 0 25px 0;
+
+			li{
+				cursor: pointer;
+				float: left;
+				margin-right: 20px;
+				line-height: 24px;
+				font-size: 24px;
+				color: @cmn-color-ae-gray3;
+			    font-weight: bold;
+				color: @cmn-color-ae-gray3;
+
+				&.active-sub-nav {
+					color: @cmn-color-ae-dark-gold;
+				}
+
+				&:hover {
+					color: @cmn-color-ae-dark-gold;
+				}
+			}
+		}
+
+		.sub-nav li + li {
+			padding-left: 20px;
+			border-left: 1px solid @cmn-color-ae-gray4;
+		}
+
+		.sub-nav-content {
+
+			.help-default-what,
+			.help-default-case,
+			.help-default-risk,
+			.help-default-why,
+			.help-default-how,
+			.help-statement-rule,
+			.help-statement-statements {
+				display: none;
+
+				&.active {
+					display: block;
+				}
+			}
+
+			.help-default-case {
+				.case-company {
+					margin: 20px 0;
+				}
+			}
+
+			.help-default-why {
+				.para-large {
+					margin-top: 45px;
+				}
+
+				.detail {
+					margin: 30px 0 0 0;
+					line-height: 25px;
+				}
+			}
+
+			.help-default-how {
+				padding-top: 25px;
+				line-height: 25px;
+			}
+		}
+
+	/* 针对左侧导航的一级Tab切换 */
+	.help-about {
+
+		.bp-email {
+			color: @cmn-color-ae-gold;
+
+			&:hover {
+				color: @cmn-color-ae-dark-gold;
+			}
+		}
+
+		.qr-code {
+			position: relative;
+			height: 130px;
+			margin: 20px 0;
+
+			.img-wrapper {
+				position: absolute;
+				top: 0;
+				// width: 80px;
+				// height: 80px;
+				padding: 10px;
+				// border: 1px solid #eee;
+
+				&.qr-xiaomishu {
+					left: 0;
+				}
+
+				&.qr-gongzhonghao {
+					left: 140px;
+				}
+			}
+
+			.qr-txt {
+				position: absolute;
+				top: 135px;
+				color: @cmn-color-ae-gray2;
+
+				&.txt-xiaomishu {
+					left: 13px;
+				}
+
+				&.txt-gongzhonghao {
+					left: 152px;
+				}
+
+			}
+		}
+
+		.contact-detail {
+			margin: 40px 0 10px 0;
+			line-height: 2;
+		}
+
+		.contact li {
+			margin: 5px 0;
+		}
+	}
+
+	.help-mode {
+		p {
+			margin-bottom: 10px;
+		}
+	}
+
+	.help-statement {
+		p + p {
+			margin-top: 10px;
+		}
+	}
+
+	.help-risk {
+		.main-title {
+			margin-top: 40px;
+		}
+
+		p + p {
+			margin-top: 10px;
+		}
+	}
+
+	.help-guide {
+		p {
+			margin-bottom: 10px;
+		}
+
+		.time-line {
+			position: relative;
+			margin-bottom: 50px;
+		}
+
+		.time-line-img {
+			margin-left: 50px;
+		}
+
+		.timeline-content {
+			position: absolute;
+			top: 25px;
+
+			&.timeline-1 {
+				left: 0;
+			}
+
+			&.timeline-2 {
+				left: 125px;
+			}
+
+			&.timeline-3 {
+				left: 200px;
+			}
+
+			&.timeline-4 {
+				left: 295px;
+			}
+
+			&.timeline-5 {
+				left: 400px;
+			}
+
+			&.timeline-6 {
+				left: 495px;
+			}
+
+			&.timeline-7 {
+				left: 575px;
+			}
+
+			&.timeline-8 {
+				left: 685px;
+			}
+		}
+
+		ul {
+			margin-top: 20px;
+		}
+	}
+}

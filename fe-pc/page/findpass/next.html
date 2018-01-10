@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+	<link rel="stylesheet" type="text/css" href="../../static/findpass/findpass.less">
+	<!--
+	    @require ../../static/common/lib/jquery/jquery.js
+	    @require ../../static/common/lib/storage.js
+	    @require ../../static/common/base/base.js
+	    @require ../../static/common/lib/base64.js
+        @require ../../static/login/sms.js
+	-->
+</head>
+<body>
+
+	<link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="找回密码">
+
+	<div class="find-pass layout find-pass-second" id="second">
+		<div class="find-pass-header second-header"></div>
+
+		<div class="find-pass-content">
+			<p class="form-line error-margin" id="error0" style="display: none;">
+				<span class="val-item error-notice">
+					<i class="ae-icon ae-icon-attention error-icon"></i><em id="error1"></em>
+				</span>
+			</p>
+			 <p class="form-line error-margin" id="" style="display:none">
+                <span class="val-item success-notice">
+                    <i class="ae-icon ae-icon-success success-icon"></i><em id=""></em>
+                </span>
+            </p>
+
+			<p class="form-line">
+				<span class="txt-item">账号</span>
+				<span class="val-item">
+					<input type="hidden" name="for_login_userphone" id="for_login_userphone" class="phone-code-txt-two" disabled>
+					<input type="text" placeholder="" id="mobile" maxlength="11" name="mobile" class="cmn-input" value="" disabled/>
+				</span>
+			</p>
+
+			<p class="form-line">
+				<span class="txt-item">新密码</span>
+				<span class="val-item">
+					<input type="password" name="for_login_pwd" placeholder="请输入6-18位数字字母组合的新密码" maxlength="18" id="for_login_pwd" class="cmn-input" onblur="validatepass(this.value)">
+				</span>
+			</p>
+
+			<p class="form-line">
+				<span class="val-item">
+					<a href="javascript:;" class="cmn-btn-gold-w12" id="nextBtn2">下一步</a>
+<!-- 					<a href="./first" class="cmn-btn-gold-w12 prev-step" id="find-pass-cat">上一步</a> -->
+				</span>
+			</p>
+		</div>
+	</div>
+
+	<!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/findpass/findpass.js"></script>
+    <script type="text/javascript" src="../../static/findpass/checkCode.js"></script>
+</body>
+</html>

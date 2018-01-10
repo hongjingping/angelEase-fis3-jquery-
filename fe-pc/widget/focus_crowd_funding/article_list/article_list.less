@@ -1,0 +1,113 @@
+@import '../../../static/common/style/common';
+.article-list {
+  float: left;
+  width: 800px;
+  position: relative;
+  padding-bottom: 75px;
+  .article-list-title {
+    font-weight: bold;
+    width: 776px;
+    margin-top: 18px;
+    padding: 8px 0  13px 18px;
+    font-size: 22px;
+    color: @cmn-color-ae-gray1;
+    float: left;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 12px;
+      width: 6px;
+      height: 21px;
+      background-color: @cmn-color-ae-gold;
+    }
+  }
+  .article-list-content {
+    width: 800px;
+    float: left;
+    padding-bottom: 20px;
+    .list-content-left {
+      float: left;
+      .focus-img-href {
+        display: block;
+        width: 220px;
+        height: 140px;
+        background: @cmn-color-ae-pink4;
+        margin-right: 36px;
+      }
+      .list-content-img {
+      }
+    }
+    .list-content-right {
+      margin-left: 256px;
+      height: 140px;
+      position: relative;
+      }
+      .content-title-href {
+        display: block;
+        color: @cmn-color-ae-gray1;
+        &:hover {
+          color: @cmn-color-ae-dark-gold;
+        }
+      }
+      .list-content-title {
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 28px;
+        color: @cmn-color-ae-gray1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      .list-content-info {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 21px;
+        color: @cmn-color-ae-gray2;
+        margin-bottom: 23px;
+      }
+      .list-content-footer {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        font-size: 13px;
+        color: @cmn-color-ae-gray2;
+        .author-name {
+          margin-right: 20px;
+        }
+      }
+      .list-content-form {
+        position: absolute;
+        font-size: 14px;
+        color: @cmn-color-ae-gray2;
+        right: 0;
+        bottom: 0px;
+      }
+    }
+  .content-info-border + .content-info-border {
+    padding-top: 16px;
+    border-top: 1px solid #f5f5f6;
+  }
+}
+.list-more {
+  width: 800px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-top: 11px;
+  background: #f9fafb;
+  font-size: 16px;
+  float: left;
+  cursor: pointer;
+  .more-href {
+    display: block;
+    color: @cmn-color-ae-gray3;
+    &:hover {
+      background: #f4f5f6;
+      color: @cmn-color-ae-gray2;
+    }
+  }
+}

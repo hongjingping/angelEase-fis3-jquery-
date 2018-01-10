@@ -1,0 +1,265 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/common/style/common.less">
+    <link rel="stylesheet" type="text/css" href="../../static/investor_cert/investor_bk.less">
+    <link rel="stylesheet" type="text/css" href="../../static/investor_cert/investor.less">
+</head>
+<body class="gray_bg clear_body">
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+	<div class="weui_cells weui_cells_form login-form">
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label_ex8">真实姓名</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input_ex" type="tel" placeholder=""  id="real-name" readonly="readonly">
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label_ex8">手机号码</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input_ex" type="tel" placeholder="" id="mobile" readonly="readonly"></div>
+		</div>
+	</div>
+	<div class="gray_col_line"></div>
+	<div class="weui_cells weui_cells_form login-form">
+        <div class="form-control clearfloat">
+            <span class="form-txt">认证类型</span>
+            <div class="select-wrapper">
+                <!-- <span class="weui_label_ex1" id="cert_type">个人</span> -->
+                <select id="ts" onchange="certChange()" data-role="none"  size="1" name="type" class="select-with-arrow">
+<!--                     <option value="2" disabled >请选择</option> -->
+                    <option value="0" selected>个人</option>
+                    <option value="1">机构</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-control clearfloat" id="netassets">
+            <span class="form-txt">投资条件</span>
+            <div class="select-wrapper">
+                <select name="netAssets" id="netAssets" class="select-with-arrow">
+                    <option value="">请选择投资条件</option>
+                    <option value="1">我的金融资产不低于100万元</option>
+                    <option value="2">我的家庭收入不低于60万元</option>
+                    <option value="3">我的个人年收入不低于30万元</option>
+                    <option value="4">我不符合上述任一条件</option>
+                </select>
+            </div>
+        </div>
+         <div class="weui_cell" id="realnamediv" style="display:none">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label_ext">机构名称</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input_ex" type="text" placeholder="请填写机构名称" id="realname" name="realname"></div>
+        </div>
+        <div class="weui_cell" id="orgCodediv" style="display:none">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label_ex3">机构组织代码</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input_ex" type="text" placeholder="请填写组织机构代码" id="orgCode" name="orgCode"></div>
+        </div>
+        <div class="form-control form-special clearfloat">
+            <span class="form-txt form-txt-special">可投资产</span>
+            <div class="select-wrapper select-two-line">
+                <select name="position" id="position" class="select-with-arrow">
+                </select>
+            <span id="canmsg" class="special-option" style="display:none"></span>
+            <span class="special-option" id="msg">
+                <span class="color-darkgray">您在Angelease的</span>
+                <span class ="font-orange">可投资产为</span>
+                <span class="font-orange can" id="can"></span>
+                <span class ="font-orange">万</span>
+            </span>
+            </div>
+        </div>
+        <div class="form-control clearfloat">
+            <span class="form-txt">所在行业</span>
+            <div class="select-wrapper">
+                <select name="industry" id="industry" class="select-with-arrow">
+                </select>
+            </div>
+        </div>
+
+
+		<!-- <div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label_ext">认证类型</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary select-cover">
+				<span class="weui_label_ex1" id="cert_type">个人</span>
+				<select id="ts" onchange="certChange()" data-role="none" class="select-certpeople"  size="1" name="type">
+			    	<option value="0">个人</option>
+			    	<option value="1">机构</option>
+				</select>
+			</div>
+		</div> -->
+		<!-- <div class="weui_cell" id="netassets">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label_ext">投资条件</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<select name="netAssets" class="weui_label_ex2" id="netAssets">
+                        <option value="">请选择投资条件</option>
+                        <option value="1">我的金融资产不低于100万元</option>
+                        <option value="2">我的家庭收入不低于60万元</option>
+                        <option value="3">我的个人年收入不低于30万元</option>
+                        <option value="4">我不符合上述任一条件</option>
+                </select>
+			</div>
+			<label for="netAssets" class="right_arrow">></label>
+		</div> -->
+
+		<!-- <div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label_ext">可投资产</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+                <select name="position" id="position" class="weui_label_ex2"></select>
+                <span id="canmsg" class="weui_label_sp2" style="display:none"></span><span id="msg" class="weui_label_sp2">您在Angelease的<span class ="font-orange">可投资产为</span><span class="font-orange can" id="can"></span><span class ="font-orange">万</span></span>
+			</div>
+			<label for="position" class="right_arrow new-position">></label>
+		</div> -->
+		<!-- <div class="weui_cell">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label_ext">所在行业</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+                <select name="industry" id="industry" class="weui_label_ex2">
+                </select>
+			</div>
+			<label for="industry" class="right_arrow">></label>
+		</div> -->
+		<div class="weui_cell investment-fields-wrapper">
+			<div class="weui_cell_hd cell-key">
+				<label class="weui_label_ex3">偏好投资领域</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+<!-- 				<span class="weui_label_ex2">请选择偏好的投资领域</span> -->
+                <p class="investment-fields-list"  id="hopeindustry">
+                </p>
+			</div>
+			<!-- <div class="right_arrow">></div> -->
+		</div>
+	</div>
+<!-- 	<div class="gray_col_line"></div> -->
+	<div class="weui_cells weui_cells_form login-form" id="imagediv" style="display:none">
+	    <div class="weui_cell">
+	        <div class="weui_cell_hd cell-key">
+	            <label class="weui_label_ext3">资产证明/名片</label>
+	        </div>
+	        <div class="about-icon"> <i class="ae-mobile-a1 ae-mobile-about2 icon-item"></i>
+	        </div>
+	        <div class="weui_cell_bd weui_cell_primary">
+	            <span class="weui_label_ext3" id="reminder" ">我该上传什么?</span>
+	        </div>
+	    </div>
+	    <div id="upload_pictures" class="weui_cell">
+	        <div class="upload_picture pic1">
+	            <input type='file' id='uploadBackImg1' class="fileupload" />
+	            <img id='backImg1' class= "img-btm-position-3" src="../../static/investor_cert/resource/images/id_neg.png">
+	        </div>
+	        <div class="upload_picture pic2">
+	            <input type='file' id='uploadBackImg' class="fileupload" />
+	            <img id='backImg2' class= "img-btm-position-3" src="../../static/investor_cert/resource/images/id_neg.png">
+	        </div>
+	        <div class="upload_picture pic3">
+	            <input type='file' id='uploadBackImg' class="fileupload" />
+	            <img id='backImg3' class= "img-btm-position-3" src="../../static/investor_cert/resource/images/id_neg.png">
+	        </div>
+	    </div>
+	    <div class="weui_cell">
+	        <div > <i class="ae-mobile-a1 ae-mobile-about2 icon-item"></i>
+	        </div>
+	        <div class="weui_cell_bd weui_cell_primary">
+            <span class="weui_label_sp1">支持小于2MB格式为JPG、JPEG、PNG的图片；至多上传三张图。</span>
+        </div>
+	    </div>
+    </div>
+	<div class="gray_col_line"></div>
+	<div class="weui_cells weui_cells_form login-form">
+		<div class="weui_cell">
+			<div id="i-check-btn1" class="i-check-unchecked">
+			     <input type="hidden" id="agreement" value="0">
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<span class="weui_label_ext6">
+					本人承诺以上所有信息属实，已阅读并同意签署
+					<a href="javascript:window.location.href='/page/protocol/investor.html'"><span class ="font-gold1">《投资人声明》</span></a>
+<!-- 					及<a href="/page/investor/investrulep-protocol.html" target="_black"><span class ="font-gold1">《相关协议》</span></a> -->
+					，如有虚假信息，愿承担相应后果和法律责任。
+				</span>
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div id="i-check-btn2" class="i-check-unchecked">
+			     <input type="hidden" value="0" name="isInves" id="isinves">
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<span class="weui_label_ex6">申请成为<a href="javascript:window.location.href='/page/other/help-center.html'"><span class ="font-gold1">领投人</span></a></span>
+			</div>
+		</div>
+	</div>
+	<div class="toast" id="toastBox">
+        <div>
+            <i class="ae-mobile ae-mobile-attention"></i>
+        </div>
+        <div class="modify-suc-text"></div>
+    </div>
+
+	<div class="feedback-button">
+		<span class="key-operation-button-normal-ex" id="investorbtn">提交</span>
+	</div>
+	<div class="gray-mask"></div>
+	<div class="dialog-pass" id="dialogcontent">
+        <div class="dialog-content">
+            <div> <i class="ae-mobile ae-mobile-attention2"></i>
+            </div>
+            <div class="dialog-content-text">
+				股权投资属于高收益高风险的投资类型，投资者应有充分的资金实力及意愿承担风险，请理性判断、谨慎决策。成功投资者依靠小额、分散投资来降低风险，请您确认您满足以下条件后继续申请
+				<br/>
+                1、充分了解并能承受股权投资的高风险；
+                <br/>
+                2、资产满足AngelEase《投资人规则》的要求
+				<br/>
+                3、用于股权投资的资金不超过家庭年收入的10%
+				<br/>
+                4、您预期的投资期限应在1-3年甚至更长
+				<br/>
+                <br/>
+                *温馨提示：依【有限合伙管理办法】规定，年龄限制为18-69周岁(含69岁)，投资人不可为现役军人或公务员；外籍与港澳台身份可投股权类以外所有项目
+            </div>
+            <div class="i-know" onclick="closedia()">知道了</div>
+        </div>
+        <!-- <div class="dialog-close"> <i class="ae-mobile-c1 ae-mobile-close"></i>
+        </div> -->
+    </div>
+    <div class="gray-mask"></div>
+	<div class="dialog-pass" style="display:none" id="dialogimg">
+	    <div class="dialog-content">
+	        <div>
+	            <i class="ae-mobile-a1 ae-mobile-about2 icon-item" style="color:#e1c078"></i>
+	        </div>
+	        <div class="dialog-content-text">
+	            您可以上传您的资产证明文件或工作名
+	            片，有助于顺利通过认证；（其中资产
+	            证明文件包含银行流水、股票、债券、
+	            基金股份、资产管理计划、银行理财产
+	            品、信托计划、保险产品、期货权益等
+	            的认购合约。）
+	        </div>
+		    <div class="dialog-close">
+		        <i class="ae-mobile-c1 ae-mobile-close" style="color:#ffffff" onclick="closeimg()"></i>
+		    </div>
+	    </div>
+	</div>
+</body>
+    <script type="text/javascript" src="../../static/common/lib/uploadfile.js"></script>
+	<script type="text/javascript" src="../../static/investor_cert/toInvestor.js"></script>
+	<script type="text/javascript" src="../../static/common/lib/smart_alert.js"></script>
+</html>

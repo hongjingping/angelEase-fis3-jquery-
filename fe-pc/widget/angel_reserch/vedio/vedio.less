@@ -1,0 +1,75 @@
+@import '../../../static/common/style/common';
+.vedio {
+  float: right;
+  width: 320px;
+  .vedio-title {
+    width: 320px;
+    font-weight: bold;
+    margin-top: 35px;
+    padding:0 0 8px 0px;
+    font-size: 16px;
+    color: @cmn-color-ae-gray1;
+    float: right;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      z-index: 3;
+      width: 64px;
+      height: 1px;
+      background-color: @cmn-color-ae-gold;
+    }
+  }
+  .vedio-list-content {
+    float: right;
+    padding:20px 0 16px 0;
+    width: 320px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 320px;
+      height: 1px;
+      background-color: #f5f5f6;
+    }
+    .list-content-img {
+      width: 320px;
+      //height: 120px;
+      background: @cmn-color-ae-pink4;
+      .content-img-href {
+        display: block;
+        width: 320px;
+        //height: 120px;
+        &:before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          margin-left: -24px;
+          margin-top: -35px;
+          width: 48px;
+          height: 48px;
+          background: url('./resource/bofang.png') no-repeat;
+          -webkit-background-size: 100%;
+          background-size: 100%;
+          z-index: 33;
+        }
+      }
+    }
+    .list-content-info {
+      margin-top: 7px;
+      font-size: 14px;
+      .content-info-href {
+        display: block;
+        color: @cmn-color-ae-gray1;
+        &:hover {
+          color: #E2B657;
+        }
+      }
+    }
+  }
+}

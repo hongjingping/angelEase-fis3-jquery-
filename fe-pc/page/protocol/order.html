@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/protocol/protocol.less">
+
+	<!--
+	    @require ../../static/common/lib/jquery/jquery.js
+	    @require ../../static/common/lib/storage.js
+	    @require ../../static/common/base/base.js
+	-->
+</head>
+<body>
+	<!-- 预约意向书 -->
+	<link rel="import" href="../../widget/component/header/cmn-header-simple/simple.tpl?__inline">
+
+	<div class="article-container layout">
+		
+		<link rel="import" href="../../widget/component/protocol/subscribe/subscribe.tpl?__inline">
+		
+	</div>
+	
+	<!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+    <script type="text/javascript">
+    	$(function () {
+    		$('#cmn-header').text('预约意向书');
+    	});
+    </script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var raise = data[i];%>
+
+	<div class="chunk cmn-clearfix">
+		<div class="chunk-img">
+			<a href="../detail/detail.html?proId=<%=raise.id%>" target="_blank">
+				<img src="<%=raise.proImgSmallUrl%>">
+
+				<% if (raise.proStatus == 5) { %>
+					<span class="label label-success"></span>
+				<% } else { %>
+					<span class="label"></span>
+				<% } %>
+			</a>
+		</div>
+
+		<div class="chunk-txt">
+			<a href="../detail/detail.html?proId=<%=raise.id%>" target="_blank">
+				<h1 class="txt-title"><%=raise.proName%></h1>
+			</a>
+			<div class="txt-label">
+				<i class="ae-icon ae-icon-address"></i><%=raise.lablesName%>
+			</div>
+
+			<div class="progress">
+				<div class="baseline">
+					<%if (raise.proRaiseSpeed >= 100) {%>
+						<span class="cover" style="width:100%"></span>
+					<%}else{%>
+						<span class="cover" style="width:<%=raise.proRaiseSpeed%>%"></span>
+					<%}%>
+				</div>
+				<span class="ratio"><%=raise.proRaiseSpeed%>%</span>
+			</div>
+
+			<div class="blocks cmn-clearfix">
+				<div class="list">
+					<h2>融资目标（万）</h2>
+					<p><%=raise.proFinancieAmount%></p>
+					<i class="dot"></i>
+				</div>
+				<div class="list">
+					<h2>参与人数</h2>
+					<p><%=raise.prePayNum%></p>
+					<i class="dot"></i>
+				</div>
+				<div class="list">
+					<h2>剩余天数</h2>
+					<p><%=raise.remainDays%></p>
+					<i class="dot"></i>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="chunk-des">
+			<h2 class="des-title">项目简介</h2>
+			<p class="des-txt ellipsis-4"><%=raise.proIntroduce.length >80 ? raise.proIntroduce.substring(0,80) + '...' : raise.proIntroduce%></p>
+
+			<div class="fund">
+				<a href="../detail/detail.html?proId=<%=raise.id%>" target="_blank" class="cmn-btn-gold-w12">立即投资</a>
+			</div>
+		</div>
+	</div>
+
+<% } %>

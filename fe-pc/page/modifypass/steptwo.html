@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/modifypass/modifypass.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/base64.js
+        @require ../../static/common/lib/jquery/checkbox.js
+    -->
+</head>
+<body>
+
+    <link rel="import" href="../../widget/component/header/cmn-header/header.tpl?__inline" processName="修改密码">
+
+    <div class="modify-pass layout modify-pass-second" id="first">
+        <div class="modify-pass-header second-header"></div>
+        <div class="modify-pass-content">
+            <div class="form-control cmn-clearfix" id="error0" style="display:none">
+                <div class="form-key"></div>
+                <div class="pull-right error-notice">
+                    <i class="ae-icon ae-icon-attention error-icon"></i><em id="error1"></em>
+                </div>
+            </div>
+            <div class="form-control cmn-clearfix">
+                <div class="form-key"></div>
+                <div class="pull-right success-notice"  style="display:none;">
+                    <i class="ae-icon ae-icon-success success-icon"></i><em id=""></em>
+                </div>
+            </div>
+            <!--<div class="form-control cmn-clearfix">-->
+                <!--<div class="form-key">原密码</div>-->
+                <!--<input type="password" class="form-value cmn-input" maxlength="18" name="oldPwd" onblur="validatepass(this.value)" placeholder="请输入原密码">-->
+            <!--</div>-->
+            <div class="form-control cmn-clearfix">
+                <div class="form-key">新密码</div>
+                <input type="password" class="form-value cmn-input" maxlength="18" name="newPwd" onblur="validatepass(this.value)" placeholder="请输入新密码">
+            </div>
+            <div class="form-control cmn-clearfix">
+                <div class="form-key">确认新密码</div>
+                <input type="password" class="form-value cmn-input" maxlength="18" name="newPwd2" onblur="checkpass()" placeholder="请再次输入新密码">
+            </div>
+            <div class="form-control cmn-clearfix">
+               <div class="pull-left btn-next cmn-btn-gold-w12">
+                   <a href="javascript:;" class=""  id="nextBtn5">下一步</a>
+               </div>
+               <!-- <div class="pull-left btn-prev">
+                   <a href="./stepone" class="">上一步</a>
+               </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- common footer -->
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+
+    <script type="text/javascript" src="../../static/modifypass/modifypasstwo.js"></script>
+
+</body>
+</html>

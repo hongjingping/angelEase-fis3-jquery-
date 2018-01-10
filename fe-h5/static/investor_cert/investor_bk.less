@@ -1,0 +1,643 @@
+@import '../common/style/variables';
+
+
+
+.val-code {
+	width: 5em;
+	color: @GOLD1;
+	font-size: @Font5;
+	font-family: @FontFamily;
+}
+
+.snd-msg-button {
+	width: 5em;
+	color: @GOLD1;
+	height: 100%;
+	font-size: @Font5;
+	background: @GRAY4;
+	margin-left: 5px;
+}
+
+.next-step-btn {
+	text-align: center;
+	margin-top: 60px;
+
+}
+
+
+.trans-alert {
+	
+	position: fixed;
+    top: 50%;
+  
+    left: 25%;
+    z-index: 998;
+    background-color: rgba(0,0,0,.3);
+    color: #ffffff; width: 50%; height: 150px; 
+    text-align: center; 
+
+    -moz-border-radius: 15px;      /* Gecko browsers */
+    -webkit-border-radius: 15px;   /* Webkit browsers */
+    border-radius:15px;            /* W3C syntax */
+}
+
+.modify-suc {
+	font-size: 28px;
+	color: @GREEN;
+	margin-top: 30px;
+	display: block;
+}
+
+.modify-suc-text {
+	margin-top: 10px;
+	font-family: @FontFamily;
+
+}
+.weui_cells {
+    margin-top: 0;
+    background-color: #fff;
+    line-height: 1.41176471;
+    font-size: 17px;
+    overflow: hidden;
+    position: relative;
+}
+
+    .divided {
+       padding: 0;
+        margin: 0;
+        font-size: 20px;
+        height: 20px;
+        line-height: 20px;
+        color: @GRAY4;
+ }
+ 
+.weui_label {
+    display: block;
+    width: 105px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: @GRAY2;
+    font-size: 15px;
+}
+    
+ .gray_bg { 
+ 	background: @GRAY6; 
+ }
+ 
+.black_bg { 
+ 	background: @GRAY1; 
+ }
+ 
+ .clear_body { 
+ 	margin: 0; 
+ 	padding: 0px;
+ }
+ 
+ .gray_col {
+ 	height: 1.5rem;
+ 	 line-height: 1.5rem; 
+ 	 padding-left: 1rem; 
+ }
+ 
+.gray_col_line {
+ 	height: 14px;
+ }
+ 
+ .right_arrow  { 
+	color:@GRAY3; 
+	float: right;
+	font-family:serif;
+	margin-right: 0.5rem;
+	}
+	
+.nkey-operation-button-normal-1 {
+    margin-top: 23px;
+    margin-left: 36px;
+    color: @GOLD1;
+    border: 0.5px solid @GOLD2;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: @WHITE 0%;
+    font-size: 14px;
+    font-family: @FontFamily;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 22.5px;
+    -moz-border-radius: 22.5px;
+    border-radius: 40px;
+}
+
+.nkey-operation-button-normal-2 {
+    margin-top: 23px;
+    margin-left: 32px;
+    color: @GOLD1;
+    border: 0.5px solid @GOLD2;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    background-color: @WHITE 0%;
+    font-size: 14px;
+    font-family: @FontFamily;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 22.5px;
+    -moz-border-radius: 22.5px;
+    border-radius: 40px;
+}
+
+.nkey-operation-button-long {
+    color: @GOLD2;
+    border: 0.5px solid @GOLD2;
+    width: 125px;
+    height: 40px;
+    line-height: 40px;
+    background-color: @WHITE 0%;
+    font-size: 16px;
+    font-family: @FontFamily;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 22.5px;
+    -moz-border-radius: 22.5px;
+    border-radius: 22.5px;
+    margin-top: 27px;
+}
+
+.key-operation-button-click-1 {
+    margin-top: 20px;
+    margin-left: 36px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: @FontFamily;
+    color: @WHITE;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 22.5px;
+    -moz-border-radius: 22.5px;
+    border-radius: 40px;
+    background-color: @GOLD1;
+}
+
+.key-operation-button-click-2 {
+    margin-top: 20px;
+    margin-left: 32px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    font-family: @FontFamily;
+    color: @WHITE;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 22.5px;
+    -moz-border-radius: 22.5px;
+    border-radius: 40px;
+    background-color: @GOLD1;
+}
+
+.feedback-button {
+    text-align: center;
+    margin-top: 15px;
+}
+
+
+
+.weui_label_ex1 {
+    display: block;
+    width: 100px;
+    height:20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: @BLACK;
+    font-size: 14px;
+    margin-left: 29px;
+}
+
+.ae-mobile-ex1 {
+    font-family: "ae-mobile-iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    float:right;
+    margin-right: 0.5rem;
+    color:@GREEN;
+}
+
+.weui_label_ex2 {
+    display: block;
+    width: 210px;
+    height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: @GRAY2;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.weui_label_ex3 {
+    display: block;
+    width: 84px;
+    height:20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: @GRAY2;
+    font-size: 14px;
+}
+
+.weui_label_ex5 {
+    display: block;
+    width: 35px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: #9b9b9b;
+    font-size: 15px;
+}
+
+.weui_label_ex6 {
+    display: block;
+    width: 301px;
+    height:20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: #9b9b9b;
+    font-size: 13px;
+    margin-left:14px;
+}
+
+.weui_label_ext6 {
+    display: block;
+    width: 301px;
+    height:60px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: #9b9b9b;
+    font-size: 13px;
+    margin-left:14px;
+}
+
+.ae-mobile-ex2 {
+    font-family: "ae-mobile-iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color:@GREEN;
+}
+
+.font-gold1 {
+	color: @GOLD1;
+}
+
+.font-orange {
+	color: @ORANGE;
+}
+
+.font-red {
+	color: @RED;
+}
+
+.sl_sjhm{
+	background: #fff; 
+	border-top: 1px solid #ebebee;  
+	width:100%;
+}
+
+.input-groups-border-none label {
+    color: @GRAY2;
+    font-size: 13px;
+    display: inline-block;
+    margin: 0 10px 0 20px;
+    width: 90px;
+}
+
+.input-groups-border-none span {
+    color: @GRAY1;
+    font-size: 13px;
+    display: inline-block;
+}
+
+.weui_label_ex7 {
+    width: 250px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+}
+
+.input-groups-border-none-ex1 label {
+    color: @GRAY2;
+    font-size: 13px;
+    display: inline-block;
+    margin: 0 10px 0 20px;
+    width: 90px;
+}
+
+.img-show {
+    text-align: center;
+}
+
+.feedback-title {
+    color: @GRAY1;
+    font-size: 15px;
+    font-family: @FontFamily;
+}
+
+.feedback-reason {
+    color: @GRAY2;
+    font-size: 12px;
+    font-family: @FontFamily;
+}
+
+.feedback-reason-2 {
+    color: @GRAY2;
+    font-size: 12px;
+    font-family: @FontFamily;
+    margin-top:11px;
+}
+
+.img-btm-position-1 {
+	width: 106px;
+	height: 80px;
+    margin-top: 3px;
+    margin-left: 21px;
+}
+
+.img-btm-position-2 {
+	width: 106px;
+	height: 80px;
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
+.img-btm-left {
+	width: 18px;
+	height: 18px;
+}
+
+.img-middle {
+	width: 377px;
+	height: 265px;
+	margin-top: 106px;
+}
+
+.ae-mobile-ex {
+    font-family: "ae-mobile-iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    margin-top: 38px;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.feedback-title-ex {
+    color: #3f3f3f;
+    font-size: 15px;
+    font-family: "Microsoft Yahei";
+    margin-top: 16px;
+}
+
+.sl_sjhm {
+    background: #fff;
+    border-top: 1px solid #ebebee;
+    width: 100%;
+    margin-top: 30px;
+    height: 220px;
+}
+
+.key-operation-button-normal {
+    width: 125px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    color: #FFFFFF;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 22.5px;
+    -moz-border-radius: 22.5px;
+    border-radius: 22.5px;
+    background-color: @GOLD1;
+    margin-top: 24px;
+}
+
+.key-operation-button-normal-ex {
+    width: 117px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    font-family: "Microsoft Yahei";
+    color: #FFFFFF;
+    text-align: center;
+    display: inline-block;
+    -webkit-border-radius: 22.5px;
+    -moz-border-radius: 22.5px;
+    border-radius: 22.5px;
+    background-color: @GOLD1;
+    margin-top: 24px;
+}
+
+.sl_sjhm_ex {
+    background: #fff;
+    border-top: 1px solid #ebebee;
+    width: 100%;
+    height: 200px;
+}
+
+.weui_label_ex8 {
+    display: block;
+    width: 56px;
+    height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: @GRAY2;
+    font-size: 14px;
+}
+
+.weui_input_ex {
+    width: 126px;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: inherit;
+    height: 20px;
+    line-height: 20px;
+    margin-left: 29px;
+}
+
+.weui_label_ext {
+    display: block;
+    width: 56px;
+    height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: @GRAY2;
+    font-size: 14px;
+}
+
+.weui_label_ext2 {
+    display: block;
+    width: 220px;
+    height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: @GRAY2;
+    margin-left: 30px;
+    font-size: 14px;
+}
+
+.weui_label_ext3 {
+    display: block;
+    width: 220px;
+    height: 20px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: @GRAY2;
+    font-size: 14px;
+}
+
+.weui_label_sp1 {
+    display: block;
+    width: 301px;
+    height:42px;
+    word-wrap: break-word;
+    word-break: break-all;
+    font-family: @FontFamily;
+    color: #9b9b9b;
+    font-size: 13px;
+    margin-left:13px;
+}
+
+.ae-mobile-c {
+    font-family: "ae-mobile-iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: @WHITE;
+    margin-left:21px;
+}
+
+.ae-mobile-d {
+    font-family: "ae-mobile-iconfont" !important;
+    font-size: 14px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: @WHITE;
+    margin-left:306px;
+}
+
+.top-pic {
+	margin-top:16px;
+}
+
+.about-icon {
+	margin-right:13px;
+}
+
+.ae-mobile-a1 {
+    font-family: "ae-mobile-iconfont" !important;
+    font-size: 17px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: @GOLD1;
+}
+
+.ae-mobile-c1 {
+    font-family: "ae-mobile-iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+    color:@WHITE;
+}
+
+.dialog-pass {
+    position: absolute;
+	z-index: 20000;
+    top: 7%;
+    left: 10%;
+    
+    width: 80%;
+
+    text-align: center;
+
+    .dialog-close {
+        color: @WHITE;
+        font-size: 38px;
+    }
+
+    .dialog-content {
+        -moz-border-radius: 5px;      /* Gecko browsers */
+	    -webkit-border-radius: 5px;   /* Webkit browsers */
+	    border-radius:5px;            /* W3C syntax */ 
+	    background: @GRAY6;
+        font-size: @Font6;
+        color: @GRAY1;
+        text-align: center;
+        padding: 9px;
+        width:309;
+     
+
+        i {
+        font-size: 30px;
+        color: @RED;
+    	}
+    	.dialog-content-text {
+    		width: 76%;
+    		
+    	    text-align: left;
+    	    font-size: @Font6;
+    	    font-family: @FontFamily;
+    	    color:@GRAY1;
+    	    margin: auto;
+    	}
+    }
+
+    .i-know {
+        padding: 9Px;
+        border-top: 1px solid @GRAY4;
+        font-size: @Font4;
+        font-family: @FontFamily;
+        color: @GOLD2;
+        margin-top: 30px;
+    }
+
+}
+
+.gray-mask {
+    background-color:@GRAY2; 
+    z-index:1000; 
+    filter:alpha(opacity=70); 
+    opacity:0.7; 
+    position:absolute; 
+    text-align:center; 
+    color:blue; 
+    font:bold 1em "ËÎÌו",Arial,Times; 
+    height:25px; 
+    font-weight:bold; 
+    overflow:hidden; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+}   

@@ -1,0 +1,68 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var project = data[i];%>
+
+	<li>
+		<div class="going-card">
+			<a href="../detail/detail.html?proId=<%=project.id%>" target="_blank"><img src="<%=project.proImgSmallUrl%>" class="img-ongoing" ></a>
+			<% if (project.proStatus == '3'){%>
+				<div class="going-label"></div>
+			<% }else{ %>
+				<div class="preheat-label"></div>
+			<%}%>
+			<div class="going-block">
+				<h1 class="goging-block-title"><a href="../detail/detail.html?proId=<%=project.id%>" target="_blank" ><%=project.proName%></a></h1>
+
+				<div class="going-label-icon">
+					<i class="ae-icon ae-icon-tag"></i><span class="label-icon-txt"><%=project.lablesName%></span>
+					<!-- <i class="ae-icon ae-icon-location2"></i><span class="label-icon-txt">&nbsp;南京</span> -->
+				</div>
+
+				<div class="going-pro-box">
+					<div class="pro-box-wrap">
+						<div class="box-wrap-cover" style="width: 0%"></div>
+					</div>
+					<div class="pro-box-num">0%</div>
+				</div>
+
+				<div class="going-chunks">
+					<div class="chunks-item item-left-border">
+						<p class="chunks-item-title">融资目标（万）</p>
+						<!-- 详情页面数据为0或者没有内容的时候颜色为gray2 -->
+						<% if (project.proFinancieAmount == 0 || project.proFinancieAmount == ''){%>
+							<p class="chunks-item-num font-gray2"><%=project.proFinancieAmount%></p>
+						<% }else{ %>
+							<p class="chunks-item-num"><%=project.proFinancieAmount%></p>
+						<%}%>
+						<i class="chunks-item-dot"></i>
+					</div>
+
+					<div class="chunks-item">
+						<p class="chunks-item-title">参与人数</p>
+						<p class="chunks-item-num font-gray2">--</p>
+						<i class="chunks-item-dot"></i>
+					</div>
+
+					<div class="chunks-item">
+						<p class="chunks-item-title">剩余天数</p>
+						<p class="chunks-item-num font-gray2">--</p>
+						<!-- <% if (project.remainDays == 0 || project.remainDays == ''){%>
+						<p class="chunks-item-num font-gray2"><%=project.remainDays%></p>
+						<% }else{ %>
+						<p class="chunks-item-num"><%=project.remainDays%></p>
+						<%}%> -->
+						<i class="chunks-item-dot"></i>
+					</div>
+				</div>
+
+				<p class="going-phase">
+					<%=project.proIntroduce%>
+				</p>
+				<% if (project.proStatus == '3'){%>
+					<div class="going-btn">
+						<a href="javascript:;" pro-id="<%=project.id%>" target="_blank" class="enroll">路演报名</a>
+					</div>
+				<%}%>
+			</div>
+		</div>
+	</li>
+<% } %>

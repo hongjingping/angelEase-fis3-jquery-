@@ -1,0 +1,53 @@
+@import '../common/style/variables';
+
+.cmn-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  color: #4a4a4a;
+  text-align: center;
+  &:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0px;
+    background: #DFDFDF;
+    position: absolute;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+  }
+  .cmn-header-title {
+    //background: @WHITE;
+    line-height: 44px;
+    .header-title {
+      padding: 0 20px;
+      position: relative;
+      line-height: 47px;
+      &:before {
+        content: '';
+        position: absolute;
+        right: 3%;
+        top: 40%;
+        width: 0;
+        height: 0;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+        border-top: 4px solid @GOLD1;
+      }
+    }
+  }
+}
+
+.content-bg {
+  background: @GRAY6;
+  padding-bottom: 40px;
+}
+
+

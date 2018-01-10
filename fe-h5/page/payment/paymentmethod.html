@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--  公共头引入  -->
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/paymentmethod/paymentmethod.less">
+</head>
+<body  class="gray_bg">
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<div class="step-bar-wrapper white_bg">
+		<ul class="step-bar clearfloat">
+			<li>
+				<span class="dot"></span>
+				<a href="#">填写订单</a>
+			</li>
+			<li>
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+				</span>
+				<span class="dot"></span>
+				<a href="#">签约</a>
+			</li>
+			<li>
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+				</span>
+				<span class="dot"></span>
+				<a href="#">支付</a>
+			</li>
+		</ul>
+	</div>
+
+	<div class="order-container">
+		<div class="gray_col gray_bg">支付明细</div>
+
+		<div class="white_bg full-border">
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">投资项目</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary invest-project"></div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">投资金额</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary invest-fund"></div>
+			</div>
+		</div>
+
+		<div class="gray_col pay-title">
+			<span class="pay-card">支付银行卡</span>
+			<span class="side-icon other-pay">其他支付方式</span>
+		</div>
+
+		<div class="bank-item full-border" id="bank-detail">
+		    <div class="logo">
+		        <img class="bank-logo">
+		    </div>
+		    <div class="list">
+		        <div class="list-title">
+		            <span class="bank-title"></span>
+		            <span class="bank-num"></span>
+		        </div>
+		        <p class="quota"></p>
+		    </div>
+
+		    <i class="ae-mobile ae-mobile-arrow-right reach-detail"></i>
+		</div>
+
+		<div class="gray_col pay-title">
+			<span class="pay-card">
+				预留手机 <i class="onside-phone"></i>
+			</span>
+			<span class="side-icon">
+				<a href="javascript:void(0);" class="lose-code">收不到验证码?</a>
+			</span>
+		</div>
+		
+		<div class="val-code full-border">
+			<span class="val-txt">验证码</span>
+			<span class="val-phone">
+				<input type="tel" name="phone" placeholder="请输入手机验证码" maxlength="6" id="sms-val">
+			</span>
+			<span class="get-code" id="sms-code">获取验证码</span>
+		</div>
+
+		<a href="javascript:void(0);" class="pay-confirm">确认支付</a>
+	</div>
+
+	<div class="gray-mask notice-mask"></div>
+
+	<div class="dialog-notice phone-notice">
+        <div class="dialog-content">
+        	<div class="dialog-content-icon">
+        		<i class="ae-mobile ae-mobile-attention2"></i>
+            </div>
+
+            <div class="dialog-content-text">
+        		<p>1. 请确认当前使用的是否使用银行预留的手机号码</p>
+        		<p>2. 请检查短信是否被拦截</p>
+        		<p>3. 预留的手机号码已停用，请联系该银行客服修改</p>
+        		<p>  还有其他疑问，请联系400-818-0060</p>	
+        	</div>
+
+        	<div class="i-know notice-know">知道了</div>
+        </div>
+
+        <div class="dialog-close notice-close">
+            <i class="ae-mobile ae-mobile-close"></i>
+        </div>
+	</div>
+
+	<div class="dialog-notice change-bankcard">
+        <div class="dialog-content">
+        	<div class="dialog-content-icon">
+        		<i class="ae-mobile ae-mobile-attention2"></i>
+            </div>
+
+            <div class="dialog-content-text">
+        		<p>更换绑定的支付银行卡，需重新签订投资人协议</p>	
+        	</div>
+
+        	<div class="i-know change-know">
+				<span class="bank-confirm">确认</span>
+				<span class="bank-change">暂不更换</span>
+			</div>
+        </div>
+
+        <div class="dialog-close notice-close">
+            <i class="ae-mobile ae-mobile-close"></i>
+        </div>
+	</div>
+
+	<script type="text/javascript" src="../../static/paymentmethod/paymentmethod.js"></script>
+</body>
+</html>

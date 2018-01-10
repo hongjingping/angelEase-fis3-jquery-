@@ -1,0 +1,346 @@
+@import '../common/style/variables';
+
+.login-logo {
+	position: relative;
+	overflow: hidden;
+	//margin-top: .7em;
+	padding: 8px 1em;
+
+	&:after{
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    background: @GRAY4;
+	    width: 100%;
+	    height: 1px;
+	    -webkit-transform: scaleY(0.5);
+	            transform: scaleY(0.5);
+	    -webkit-transform-origin: 0 0;
+	            transform-origin: 0 0;
+	}
+
+	.logo {
+		float: left;
+		width: 50%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.user-btns {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		line-height: 40px;
+
+		a {
+			color: #9B9B9B;
+			display: inline-block;
+		}
+
+		.active {
+			color: #E1C078;
+			border-bottom: 2px solid #E1C078;
+		}
+
+		.user-register {
+			margin-left: 1em;
+		}
+	}
+}
+
+.reminder {
+	font-size: 12px;
+	color: @GRAY2;
+	margin-left: 30px;
+    margin-top: 10px;
+}
+
+.login-form:before {
+	border-top: none;
+}
+
+.login-form {
+
+    .weui_cell {
+        padding: 0;
+        height: 3em;
+        font-size: 14px;
+		position: relative;
+        .snd-msg-button {
+            padding: 10px;
+        }
+
+        .snd-msg-button1 {
+			height: 2.5em;
+			line-height: 2.5em;
+
+			img {
+				width: 100px;
+				height: 2.5em;
+			}
+        }
+
+        .input_single_line {
+        	padding: 10px;
+        }
+
+		.val-code {
+			width: 5em;
+			color: @GOLD1;
+			font-size: @Font5;
+            padding-right: 10px;
+            font-family: @FontFamily;
+		}
+
+		.sep-line {
+		    color: @GRAY5;
+		    display: inline-block;
+		    padding-left: 8px;
+		    padding-right: 8px;
+		}
+
+		.highlight-input {
+			padding-left: .6em;
+		}
+		//删除按钮的实现
+		.delete{
+			display: none;
+			width: 20px;
+			height: 20px;
+			text-align: center;
+			line-height: 20px;
+			border-radius: 50%;
+			background: @GRAY3;
+			color: #fff;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			margin-top: -10px;
+			cursor:pointer;
+			i{
+				font-size: 10px;
+			}
+		}
+		.close-img{
+			right: 110px;
+		}
+		.close-code {
+			right: 110px;
+		}
+		//IE11浏览器下不是所有的文本框都有黑色的叉叉吗，会跟这里的自定义清除按钮重叠， ::-ms-clear { display: none; }
+		.tel-num::-ms-clear {
+			display: none;
+		}
+		//使用的是 :valid 伪类。这是CSS3中新增伪类，IE10+以及其他现代浏览器支持，表示表单合法。
+		.tel-num:valid + .delete {
+			display: inline;
+		}
+
+    }
+
+
+	.cell-key {
+		width: 30px;
+		margin-left: 20px;
+	}
+
+	.icon-item {
+		color: @GRAY3;
+		font-size: 1.2em;
+		display: inline-block;
+		margin-left: 10px;
+		font-family: @FontFamily;
+	}
+
+	.icon-item-active {
+		color: @GOLD2;
+		font-size: 1.2em;
+		display: inline-block;
+		margin-left: 10px;
+		font-family: @FontFamily;
+	}
+
+	.val-code {
+		width: 5em;
+		color: @GOLD1;
+		font-size: @Font5;
+		font-family: @FontFamily;
+	}
+
+	.snd-msg-button {
+		width: 5em;
+		color: @GOLD1;
+		height: 100%;
+		font-size: @Font5;
+		background: @GRAY4;
+		font-family: @FontFamily;
+	}
+}
+
+.login-btn {
+	width: 3em;
+	height: 3em;
+	display: block;
+	margin: 0 auto;
+	line-height: 3em;
+	text-align: center;
+	background: #E1C078;
+	border-radius: 50%;
+	margin-top: 2em;
+
+
+	i {
+		font-size: 1.2em;
+		color: #fff;
+		font-family: @FontFamily;
+	}
+}
+
+.cancel-btn {
+	position: fixed;
+	left: 50%;
+	bottom: 20px;
+	transform: translateX(-50%);
+}
+
+.login-forgot {
+    width: auto;
+	display: block;
+    color: #A3A3A3;
+    margin: 0 auto;
+    margin-top: 6em;
+    overflow: hidden;
+    text-align: center;
+}
+
+/*   注册页面   */
+.i_agree {
+    color: @GRAY2;
+    font-size: @Font7;
+    margin-top: 2px;
+    margin-left: 10px;
+    font-family: @FontFamily;
+
+    a {
+        color: @GOLD1;
+    }
+}
+
+.modify-suc {
+	color: #FF6493;
+}
+
+/////////////////////////////////////////////
+.radius-close {
+	cursor: pointer;
+
+	i {
+		font-size: 18px;
+	}
+}
+
+.i-check-unchecked,
+.i-check-checked {
+	margin-left: 15px;
+}
+
+.weui_cell:before {
+	border: none;
+	left: 0;
+}
+
+.border-half-bottom {
+	&:after{
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    background: @GRAY4;
+	    width: 100%;
+	    height: 1px;
+	    -webkit-transform: scaleY(0.5);
+	            transform: scaleY(0.5);
+	    -webkit-transform-origin: 0 0;
+	            transform-origin: 0 0;
+	}
+}
+
+.border-half-top {
+	&:before{
+	    content: '';
+	    position: absolute;
+	    left: 0;
+	    bottom: 0;
+	    background: @GRAY4;
+	    width: 100%;
+	    height: 1px;
+	    -webkit-transform: scaleY(0.5);
+	            transform: scaleY(0.5);
+	    -webkit-transform-origin: 0 0;
+	            transform-origin: 0 0;
+	}
+}
+
+.gray-mask-age {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+.dialog-pass-age {
+    position: fixed;
+    z-index: 20000;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    width: 80%;
+
+    .dialog-content-age {
+        -moz-border-radius: 5px;      
+        -webkit-border-radius: 5px;   
+        border-radius:5px;            
+        background: @WHITE;
+        font-size: @Font6;
+        color: @GRAY1;
+        padding-top: 5px;
+
+        .dialog-content-icon {
+            text-align: center;
+            color: #FF6493;
+
+            i {
+                font-size: 30px;
+            }
+        }
+
+        .suc-text {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 20px;
+            text-align: left;
+            padding: 0 7% 2%;
+        }
+
+        .confirm-wrapper {
+            border-top: 1px solid #eee;
+            line-height: 2.8rem;
+            font-size: 16px;
+            text-align: center;
+            color: @GOLD1;
+        }
+    }
+}
+
+

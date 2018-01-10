@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/user_info/user-info.less">
+
+	<!--
+		@require ../../static/common/lib/base64.js
+	-->
+</head>
+<body class="gray_bg clear_body">
+	<!-- header -->
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<div class="user_info">
+		<ul>
+			<li class="user_info_avator headphoto">
+				<span class="info-key">头像</span>
+				<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+				<img class ="user_avator"  id="headphoto" src="../../static/user_info/resource/images/defaulthead@3x.png">
+				<input type='file' id="uploadHeadphoto" value='' class="fileupload"/>
+			</li>
+			<li class="user_info_li" onclick="window.location.href='/page/nickname/edit-nickname.html'">
+				<span class="info-key">昵称</span> <em id="nickname"></em>
+				<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+			</li>
+			<li class="user_info_li">
+				<span class="info-key">性别</span>
+				<em id="sex"></em>
+				<select id="myid" onchange="genderChange()">
+					<option value="0" selected>保密</option>
+		            <option value="1">男</option>
+		            <option value="2">女</option>
+				</select>
+				<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+			</li>
+			<li class="user_info_li clearfloat" onclick="window.location.href='/page/email/edit-email.html'">
+				<span class="info-key">邮箱</span>
+				<span id="email" class="info-value long-value"></span>
+				<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+			</li>
+		</ul>
+
+		<ul class="info-li-top info-li-bottom">
+			<li class="user_info_li_bottom" onclick="javascript:window.location.href='/page/invest_address/my-address.html'">
+				<div class="user_info_icon"> <i class="ae-mobile ae-mobile-location icon-item"></i>
+				</div>
+				<span class="icon-text">我的地址</span>
+				<i class="ae-mobile ae-mobile-arrow-right end-icon"></i>
+			</li>
+		</ul>
+
+		<ul class="info-li-top info-li-bottom">
+			<li class="user_info_li_bottom" id="certification">
+				<div class="user_info_icon"> <i class="ae-mobile ae-mobile-cert1 icon-item"></i>
+				</div>
+				<span class="icon-text">实名认证</span>
+				<div class="user_att_icon" id="realname_icon_id">
+					<i class="ae-mobile ae-mobile-attention icon-item"></i>
+				</div>
+			</li>
+			<li class="user_info_li_bottom" id="investor">
+				<div class="user_info_icon">
+					<i class="ae-mobile ae-mobile-cert2 icon-item"></i>
+				</div>
+				<span class="icon-text">投资人认证</span>
+				<div class="user_att_icon" id="investor_icon_id">
+					<i class="ae-mobile ae-mobile-attention icon-item"></i>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<ul>
+		<li class="user_info_li_bottom_ex user_info_logout_ex" id="logout-btn">
+			<a>退出登录</a>
+		</li>
+	</ul>
+
+	<div class="toast" id="toastBox">
+        <div>
+            <i class="ae-mobile ae-mobile-right modify-suc"></i>
+        </div>
+        <div class="modify-suc-text"></div>
+    </div>
+    <div id="logout-model" style="display:none">
+        <div class="gray-mask-logout"></div>
+        <div class="dialog-pass-logout">
+            <div class="dialog-content-logout">
+                <div class="dialog-content-icon">
+                    <i class="ae-mobile ae-mobile-about2"></i>
+                </div>
+                <div class="logout-text">确定退出吗？</div>
+                <div class="if-logout-wrapper">
+                    <span class="logout-yes">确认</span>
+                </div>
+            </div>
+            <div class="dialog-close">
+                <i class="ae-mobile ae-mobile-close"></i>
+            </div>
+        </div>
+    </div>
+
+	<!-- age check msg -->
+    <div id="age-model" style="display: none;">
+        <div class="gray-mask-age"></div>
+        <div class="dialog-pass-age">
+            <div class="dialog-content-age">
+                <div class="dialog-content-icon">
+                    <i class="ae-mobile ae-mobile-attention"></i>
+                </div>
+                <div class="suc-text"></div>
+                <div class="confirm-wrapper" id="age-iknow">
+                    <span class="confirm-yes">知道了</span>
+                </div>
+            </div>
+            <div class="dialog-close" id="age-close">
+                <i class="ae-mobile ae-mobile-close"></i>
+            </div>
+        </div>
+    </div>
+
+	<script type="text/javascript" src="../../static/user_info/user-info.js"></script>
+	<script type="text/javascript" src="../../static/common/lib/uploadfile.js"></script>
+</body>
+</html>

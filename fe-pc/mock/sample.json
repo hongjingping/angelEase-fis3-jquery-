@@ -1,0 +1,18 @@
+{
+    "payAmount": 0,
+    "proId": 361,
+    "preOrderAmount": 5000,
+    "proIndustry": 128,
+    "proName": "SOCO城市锂电跨骑车",
+    "pathSmall": "http://ixsh.yixin.com/static/201606/1467280738028.jpg",
+    "rate": "50%",
+    "days": 23,
+    "proFinancieAmount": 100,
+    "status": 4,
+    "pathBig": "http://ixsh.yixin.com/static/201606/1467278743935.jpg",
+    "proSlogan": "SOCO城市锂电跨骑车,让出行更性感。穿梭过许多风景，这一次终将成为风景。",
+    "lableList": [
+        "创新型","实用性","家用型"
+    ],
+    "preOrderNum": 3
+}

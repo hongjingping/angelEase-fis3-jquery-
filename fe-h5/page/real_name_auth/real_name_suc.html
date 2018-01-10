@@ -1,0 +1,140 @@
+﻿﻿<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<link rel="import" href="../../static/common/view/header-info.html?__inline">
+		<link rel="stylesheet" type="text/css" href="../../widget/component/header/header.css">
+		<link rel="stylesheet" type="text/css" href="../../static/real_name_auth/real_name_auth.less">
+	</head>
+	<body>
+		<div class="cmn-header white_bg">
+			<a href="/page/personal_center/personal-center.html">
+				<i class="ae-mobile ae-mobile-arrow-left-thin cmn-arrow-back " style="color:#4A4A4A;"></i>
+			</a>
+			<p class="cmn-header-title">实名认证</p>
+		</div>
+	    <br>
+
+	   	<!-- 身份证 -->
+	    <div class="sfz" style="display: none;">
+			<div class="feedback-content-confirm">
+				<i class="ae-mobile ae-mobile-right icon-item"></i>
+				<p class="feedback-title">恭喜您！实名认证成功！</p>
+				<p class="feedback-reason isinvest">现在您可以</p>
+			</div>
+			<div class="feedback-button">
+				<span class="nkey-operation-button-long isinvest" onclick="toInvestor();" id="age-check">合格投资人认证</span>
+			</div>
+		</div>
+
+		<!-- 港澳台 -->
+		<div class="gat_0" style="display: none;">
+			<div class="feedback-content-success">
+				<i class="ae-mobile ae-mobile-clock icon-item"></i>
+				<p class="feedback-title">认证信息提交成功！请耐心等待审核</p>
+				<p class="feedback-reason">审核将于3个工作日内完成，您可以先</p>
+			</div>
+			<div class="feedback-button isinvest">
+				<span class="nkey-operation-button-long" onclick="toInvestor();">合格投资人认证</span>
+			</div>
+		</div>
+
+		<div class="gat_1" style="display: none;">
+			<div class="feedback-content-confirm"> <i class="ae-mobile ae-mobile-right icon-item"></i>
+				<p class="feedback-title-suc">恭喜您！实名认证成功！</p>
+				<p class="feedback-reason isinvest">现在您可以</p>
+			</div>
+			<div class="feedback-button isinvest">
+				<span class="nkey-operation-button-long right-invest-btn" onclick="toInvestor();">合格投资人认证</span>
+			</div>
+		</div>
+
+	    <div class="gat_2" style="display: none;">
+			<div class="feedback-content-failed">
+				<i class="ae-mobile ae-mobile-attention2 icon-item"></i>
+				<p class="feedback-title">实名认证失败！</p>
+				<p class="feedback-reason reason">资料信息不全</p>
+				<p class="feedback-reason-2">
+					若对审核结果有疑问，请联系客服 <strong>400-818-0060</strong>
+				</p>
+			</div>
+			<div class="feedback-button">
+				<span class="nkey-operation-button-long" onclick="recheck();">重新认证</span>
+			</div>
+		</div>
+		<br/>
+
+		<div class="sl_sjhm ">
+			<br/>
+			<div class="details-form">
+				<div class="input-groups-border-none">
+					<label>真实姓名</label>
+					<span class="weui_label_ex8" id="realName1"></span>
+				</div>
+			</div>
+			<div class="details-form">
+				<div class="input-groups-border-none">
+					<label>证件类型</label>
+					<span class="weui_label_ex8" id="idcardtype"></span>
+				</div>
+			</div>
+			<div class="details-form">
+				<div class="input-groups-border-none">
+					<label>证件号码</label>
+					<span class="weui_label_ex8" id="idcardno"></span>
+				</div>
+			</div>
+			<div class="details-form gat" style="display: none;">
+				<div class="input-groups-border-none">
+					<label>银行卡照片</label>
+				</div>
+			</div>
+			<div class="gat" style="display: none;">
+				<img class="img-show-left-1" src="" id="pic1">
+				<img class="img-show-left-2" src="" id="pic2">
+			</div>
+
+			<div class="details-form gat" style="display: none;">
+				<div class="input-groups-border-none">
+					<label>开户银行</label>
+					<span class="weui_label_ex8" id="bankName"></span>
+				</div>
+			</div>
+
+			<div class="details-form gat" style="display: none;">
+				<div class="input-groups-border-none">
+					<label>银行卡号</label>
+					<span class="weui_label_ex8" id="bankNo"></span>
+				</div>
+			</div>
+			<div class="details-form gat" style="display: none;">
+				<div class="input-groups-border-none">
+					<label>银行卡照片</label>
+				</div>
+			</div>
+			<div class="gat" style="display: none;">
+				<img class="img-show-left-1" src="" id="pic3">
+			</div>
+		</div>
+
+		<!-- age check msg -->
+		<div id="age-model" style="display: none;">
+			<div class="gray-mask-age"></div>
+			<div class="dialog-pass-age">
+				<div class="dialog-content-age">
+					<div class="dialog-content-icon">
+						<i class="ae-mobile ae-mobile-attention"></i>
+					</div>
+					<div class="suc-text"></div>
+					<div class="confirm-wrapper" id="age-iknow">
+						<span class="confirm-yes">知道了</span>
+					</div>
+				</div>
+				<div class="dialog-close" id="age-close">
+					<i class="ae-mobile ae-mobile-close"></i>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../static/real_name_auth/real_name_suc.js"></script>
+	</body>
+</html>

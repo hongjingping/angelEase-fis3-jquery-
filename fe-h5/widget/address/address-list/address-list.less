@@ -1,0 +1,82 @@
+@import "static/common/style/variables";
+
+.toperation-btn-lis {
+	a {
+		color: #E1C078;
+	}
+}
+
+.gray-mask {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+	display: none;
+    background: rgba(0, 0, 0, .3);
+    text-align: center;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.dialog-delete {
+	position: fixed;
+	z-index: 20000;
+	top: 50%;
+	display: none;
+	transform: translateY(-50%);
+	left: 10%;
+	width: 80%;
+
+	.dialog-close {
+		color: @WHITE;
+		text-align: center;
+		margin-top: 20px;
+
+		i {
+			font-size: 20px;
+		}
+	}
+
+  	.dialog-content {
+	    -moz-border-radius: 5px;      /* Gecko browsers */
+	    -webkit-border-radius: 5px;   /* Webkit browsers */
+	    border-radius:5px;            /* W3C syntax */
+	    background: @WHITE;
+	    font-size: @Font6;
+	    color: @GRAY1;
+	    padding-top: 5px;
+
+	    .dialog-content-icon {
+	    	text-align: center;
+			color: @GOLD1;
+
+			i {
+				font-size: 30px;
+			}
+	    }
+
+	    .confirm-text {
+	    	padding-bottom: 20px;
+	    	text-align: center;
+	    }
+
+	    .to-confirm-wrapper {
+	    	border-top: 1px solid #eee;
+	    	line-height: 2.8rem;
+	    	font-size: 16px;
+	    	text-align: center;
+	    	color: @GOLD1;
+	    }
+  	}
+
+	.i-know {
+		padding: 9Px;
+		border-top: 1px solid @GRAY4;
+		font-size: @Font4;
+		font-family: @FontFamily;
+		color: @GOLD2;
+	}
+}

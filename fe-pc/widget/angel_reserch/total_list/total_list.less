@@ -1,0 +1,133 @@
+@import '../../../static/common/style/common';
+.list-left {
+  float: left;
+  width: 800px;
+  padding-bottom: 75px;
+}
+.total {
+  width: 776px;
+  font-weight: bold;
+  margin-top: 32px;
+  padding: 8px 0 13px 18px;
+  font-size: 22px;
+  color: @cmn-color-ae-gray1;
+  float: left;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 6px;
+    height: 21px;
+    background-color: @cmn-color-ae-gold;
+  }
+}
+.article-list-wrapper {
+  width: 800px;
+  float: left;
+}
+.total-list {
+  //margin-top: 10px;
+  width: 800px;
+  .total-list-content {
+    width: 800px;
+    height: 142px;
+    padding: 19px 0;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0px;
+      width: 800px;
+      height: 1px;
+      background-color: #f5f5f6;
+    }
+    .focus-img-href {
+      display: block;
+      float: left;
+      width: 220px;
+      height: 140px;
+      margin-right: 36px;
+      cursor: pointer;
+    }
+    .list-content-img {
+    }
+    .list-content-info {
+      margin-left: 256px;
+      padding-bottom: 20px;
+      margin-bottom: 16px;
+      height: 140px;
+      position: relative;
+      .content-title {
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        .title-href {
+          display: block;
+          color: @cmn-color-ae-gray1;
+          &:hover {
+            color: #E2B655;
+          }
+        }
+      }
+      .content-info-tips {
+        margin-top: 8px;
+        font-size: 14px;
+        color: @cmn-color-ae-gray2;
+      }
+      .info-tips-type {
+        position: absolute;
+        bottom: 19px;
+        font-size: 13px;
+        color: @cmn-color-ae-gray2;
+        .auth {
+          margin-right: 20px;
+        }
+      }
+      .label {
+        position: absolute;
+        bottom: 19px;
+        right: 0px;
+        font-size: 14px;
+      }
+      .angel-speak {
+        color: #E2B655;
+      }
+      .reserch {
+        color: @cmn-color-ae-orange2;
+      }
+      .entrepreneur {
+        color: @cmn-color-ae-orange;
+      }
+      .labelCol {
+        color: @cmn-color-ae-orange;
+      }
+    }
+  }
+}
+.list-more {
+  width: 800px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  margin-top: 11px;
+  background: #f9fafb;
+  font-size: 16px;
+  float: left;
+  cursor: pointer;
+  .more-href {
+    display: block;
+    color: @cmn-color-ae-gray3;
+    &:hover {
+      background: #f4f5f6;
+      color: @cmn-color-ae-gray2;
+    }
+  }
+}

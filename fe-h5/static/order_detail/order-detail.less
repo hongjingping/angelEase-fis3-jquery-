@@ -1,0 +1,250 @@
+@import "../common/style/variables";
+
+html {
+    font-size: 40px;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    text-shadow: none !important;
+    background-color: #fff;
+    font-size: 17px;
+}
+
+em {
+    font-style: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+.cmn-header {
+    border-bottom: 1px solid #e0e0e0;
+
+    &.header-border-orange {
+        border-bottom: 1px solid #ff9544;
+    }
+}
+
+.sl_szmm {
+    margin-top: 15px;
+}
+.sl_szmm span {
+    line-height: 20px;
+}
+
+.sl_sjhm {
+    background: #fff; /*border-top: 1px solid @GRAY5;*/
+    width: 100%;
+}
+.sl_sjhm ul li {
+    width: 100%;
+    line-height: 20px;
+    margin: 10px 0;
+}
+.sl_sjhm .h1 {
+    margin-top: 15px;
+    border-bottom: 1px solid @GRAY5;
+    height: 35px;
+    line-height: 35px;
+}
+
+.sl_sjhm {
+    .margin-top-10 {
+        margin-top: 10px;
+    }
+
+    .margin-top-15 {
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+}
+.sl_sjhm .h1 span {
+    font-size: 14px;
+};
+.sl_sjhm ul li span {
+    float: left;
+    font-size: 13px;
+    margin-left: 12.8px;
+    width: 18%;
+    display: inline-block;
+    color: #9b9b9b;
+}
+.sl_sjhm2 ul li span {
+    float: left;
+    font-size: 16px;
+    margin-left: 12.8px;
+    width: 65%;
+    display: inline-block;
+    color: #3f3f3f;
+}
+
+.sl_sjhm ul li input {
+    float: left;
+    font-size: 0.6rem;
+    width: 10rem;
+    color: #a9a9a9;
+    line-height: 2.1rem;
+    padding: 0;
+    outline: none;
+    text-shaadow: none;
+}
+.sl_sjhm ul li input.yz_code {
+    width: 5.5rem;
+}
+.sl_sjhm ul li em {
+    float: left;
+    display: inline-block;
+    font-style: normal;
+    width: 76%;
+    color: #3F3F3F;
+    line-height: 20px;
+    background: #fff;
+    font-size: 13px;
+}
+
+.sl_sjhm2 {
+    position: relative;
+
+    .status {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: auto;
+        color: @ORANGE;
+        padding: 0 3px;
+        font-size: 12px;
+        background: #fff;
+        margin-right: 20px;
+        text-align: center;
+        line-height: initial;
+        border: 1px solid @ORANGE ;
+    }
+
+    .label-status {
+        line-height: initial;
+        width: auto;
+        display: initial;
+        background: #fff;
+        font-size: 12px;
+        float: right;
+        text-align: center;
+        margin-right: 20px;
+        padding: 0 3px;
+    }
+
+    .status_gray {
+        color: @GRAY4;
+        border: 1px solid @GRAY4 ;
+    }
+
+    .status_green {
+        color: @GREEN;
+        border: 1px solid @GREEN ;
+    }
+}
+
+.invest_info {
+    background: #fff;
+    height: 1.2rem;
+    display: inline-block;
+    width: 100%;
+    color: #3F3F3F;
+
+    .font-gray2 {
+    	color: #9B9B9B;
+    }
+}
+.invest_info span {
+    margin-left: 12.8px;
+}
+.invest_info .h2 {
+    font-size: 14px;
+    margin-top: 10px;
+    border-bottom: 1px solid @GRAY5;
+    height: 35px;
+    line-height: 35px;
+    margin-left: none;
+}
+.invest_info_detil span {
+    font-size: 13px;
+    margin-top: 10px;
+    color: #3F3F3F;
+    width: 300px;
+    display: inline-block;
+}
+
+.order_agreement {
+    margin-left: 12.8px;
+    background: #fff;
+    height: 40px;
+    line-height: 40px;
+    display: inline-block;
+    width: 100%;
+    color: #c9c9c9;
+}
+.order_agreement .h1 {
+    font-size: 14px;
+    margin-top: 18px;
+    border-bottom: 1px solid @GRAY5;
+    height: 35px;
+    line-height: 35px;
+}
+.order_agreement em {
+    display: inline-block;
+    font-style: normal;
+}
+.order_agreement span {
+    color: #3F3F3F;
+    display: inline-block;
+    width: 300px;
+    font-size: 13px;
+}
+.order_agreement a {
+    background: #fff;
+    float: right;
+    margin-right: 30px;
+    color: @GOLD2;
+    font-size: 13px;
+}
+
+.bottom-bar {
+    position: fixed;
+    border-top: 1px solid @GRAY5;
+    padding-left: 12.8px;
+    background: #fff;
+    display: inline-block;
+    color: #c9c9c9;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    span {
+        width: 60%;
+        color: #9B9B9B;
+        font-size: 14px;
+        display: inline-block;
+        line-height: 1.1rem;
+    }
+
+    em {
+        padding: 0 5px;
+        color: @ORANGE;
+        font-size: .6rem;
+        font-style: normal;
+    }
+
+    a {
+        color: #fff;
+        float: right;
+        width: 108px;
+        font-size: 16px;
+        text-align: center;
+        background: #e1b555;
+        line-height: 1.2rem;
+        display: inline-block;
+    }
+}

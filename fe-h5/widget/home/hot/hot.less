@@ -1,0 +1,156 @@
+.hot-container {
+    width: 100%;
+    overflow: auto;
+
+    .hot-title {
+        height: 25px;
+        margin: 18px 0 -5px;
+
+        h2 {
+            height: 15px;
+            font-size: 14px;
+            color: #4A4A4A;
+            line-height: 15px;
+            margin-left: 15px;
+            padding-left: 10px;
+            border-left: 3px solid #E1C078;
+        }
+    }
+
+    .project-wrap {
+        width: 100%;
+        overflow: auto;
+
+        .project-list {
+            width: 100%;
+            overflow: auto;
+            margin-top: -8px;
+
+            li {
+                width: 100%;
+                overflow: auto;
+                margin-top: 15px;
+                background: #FFF; 
+                border-bottom: 1px solid #EBEEF1;
+            }
+        }
+    }
+
+    .banner {
+        position: relative;
+        width: 100%;
+        overflow: auto;
+
+        img {
+            width: 100%;
+            // min-height: 240px;
+        }
+
+        .status {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            font-size: 12px;
+            padding: 0 6px;
+            color: #FFF;
+        }
+    
+        .status-on {
+            background: #ff9544;
+        }
+
+        .status-other {
+            border: 1px solid rgba(255, 255, 255, .5);
+        }
+    }
+
+    .bar {
+        width: 100%;
+        height: 60px;
+        position: absolute;
+        bottom: 7px;
+        left: 0;
+        background: rgba(0, 0, 0, .5);
+
+        div {
+            width: 33%;
+            float: left;
+            height: 100%;
+            text-align: center;
+        }
+
+        p {
+            color: #FFF;
+        }
+
+        .num {
+            margin: 10px 0 -5px;
+            font-size: 16px;
+        }
+
+        .txt {
+            font-size: 11px;
+            color: rgba(255, 255, 255, .7);
+        }
+    }
+
+    .poster {
+        padding: 10px 20px 11px;
+
+        .caption {
+            font-size: 16px;
+            color: #3F3F3F;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: #9B9B9B;
+        }
+
+        .ui-progress {
+            height: 20px;
+            margin-top: 12px;
+            
+            .progress-wrap {
+                float: left;
+                width: 85%;
+                overflow: hidden;
+                padding-bottom: 6px;
+                position: relative;
+                
+                .scene {
+                    height: 2px;
+                    margin-top: 6px;
+                    background: #F8F9FA;
+
+                    .step {
+                        position: absolute;
+                        background: #E1C078;
+                        height: 2px;
+                        top: 6px;
+                        left: 0;
+                    }
+                }
+
+                .dot {
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    top: 4px;
+                    background: #E1C078;
+                    border-radius: 50%;
+                }
+            }
+
+            .percentage {
+                width: 15%;
+                float: left;
+                text-align: center;
+                font-size: 13px;
+                color: #E1B555;
+                margin-top: -3px;
+            }
+        }
+    }
+
+}

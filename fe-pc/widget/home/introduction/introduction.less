@@ -1,0 +1,75 @@
+@import "../../../static/common/style/common";
+
+.angelease {
+	width: 100%;
+	height: 400px;
+	padding-top: 100px;
+	background: #383838 url('./resource/images/bottom-bg.png') no-repeat center;
+
+	.angel-container {
+		width: 920px;
+		height: 170px;
+		margin: 0 auto;
+		padding-top: 45px;
+		background: url('./resource/images/ae-bg.png') no-repeat;
+		background-size: contain;
+
+		.angel-txt {
+			color: #fff;
+			width: 566px;
+			margin: 0 auto;
+			font-size: 14px;
+			text-indent: 2em;
+			line-height: 25px;
+		}
+	}
+
+	.angel-btn {
+		width: 920px;
+		height: 100px;
+		margin: 50px auto 0;
+
+
+		.btn-item {
+			position: relative;
+			width: 198px;
+			height: 58px;
+			font-size: 14px;
+			cursor: pointer;
+			text-align: center;
+			border: 1px solid #7c6c4d;
+			color: @cmn-color-ae-dark-gold;
+
+			p {
+				line-height: 25px;
+			}
+
+			&:hover {
+				border: 1px solid #7c6c4d;
+				background-color: #584e3f;
+			}
+		}
+
+		.what {
+			float: left;
+			padding-top: 10px;
+			margin-right: 20px;
+			margin-left: 250px;
+		}
+
+		.notice {
+			float: left;
+			height: 68px;
+			line-height: 68px;
+		}
+
+		.dot {
+			position: absolute;
+			width: 5px;
+			height: 5px;
+			top: 0;
+			left: 0;
+			background-color: @cmn-color-ae-gold;
+		}
+	}
+}

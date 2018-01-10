@@ -1,0 +1,359 @@
+@import "../common/style/common";
+
+.login {
+	width: 100%;
+	height: 735px;
+	overflow: hidden;
+	background: url('./resource/images/main-bg.jpg') no-repeat center center;
+	background-size: cover;
+
+	.nav {
+		height: 69px;
+		border-bottom: 1px solid rgba(255, 255, 255, .1);
+
+		.nav-container {
+			.logo {
+				width: 232px;
+				float: left;
+				height: 60px;
+				background: url('./resource/images/logo.png') no-repeat 0 10px;
+			}
+
+			.phone {
+				float: right;
+				margin-right: 80px;
+				line-height: 70px;
+				color: @cmn-color-ae-white;
+			}
+		}
+	}
+
+	.content {
+		width: 100%;
+		height: 900px;
+
+		.login-box {
+			position: relative;
+
+			.login-win {
+				position: absolute;
+				top: 75px;
+				right: 80px;
+				width: 520px;
+				height: 408px;
+				background: @cmn-color-ae-white;
+				border-top: 2px solid @cmn-color-ae-gold;
+
+				.win-header {
+					height: 50px;
+					width: 100%;
+
+					.login-label {
+						float: left;
+					}
+
+					.label-txt {
+						width: 84px;
+						height: 50px;
+						font-size: 20px;
+						line-height: 50px;
+						margin-left: 20px;
+						text-align: center;
+						display: inline-block;
+						color: @cmn-color-ae-white;;
+						background: @cmn-color-ae-gold;
+					}
+
+					.login-txt {
+						float: right;
+						font-size: 14px;
+						line-height: 50px;
+						padding-right: 30px;
+						color: @cmn-color-ae-gray2;
+					}
+
+					.reg-txt {
+						color: @cmn-color-ae-gold;
+					}
+				}
+
+				.form-box {
+					padding: 35px 90px 0;
+					height: 360px;
+					overflow: hidden;
+					position: relative;
+
+					i {
+						margin-right: 10px;
+						color: @cmn-color-ae-gray3;
+						z-index: 100;
+					}
+
+					.error-txt {
+						width: 325px;
+						height: 38px;
+						padding-left: 15px;
+						color: #FF6493;
+						font-size: 12px;
+						line-height: 36px;
+						display: block;
+						visibility: hidden;
+						background: @cmn-color-ae-pink;
+						z-index: 100;
+
+						.error-notice {
+							color: @cmn-color-ae-purple;
+						}
+
+						.success-notice {
+							color: #9BD560;
+						}
+					}
+
+					.login-btn {
+						margin-top: 20px;
+					}
+
+					.notice-txt {
+						position: absolute;
+						height: 40px;
+						line-height: 40px;
+						text-indent: 36px;
+						top: 0;
+						left: 0;
+						cursor: text;
+						color: @cmn-color-ae-gray3;
+					}
+
+					.label {
+						height: 40px;
+						margin-bottom: 15px;
+						position: relative;
+
+						/* remove chrome input background yellow */
+                        input:-webkit-autofill {
+                            -webkit-box-shadow: 0 0 0px 1000px #F8F9FA inset;
+                        }
+
+                        input:focus {
+                            border-color: #E1C078;
+                        }
+
+						input:focus + .ae-icon {
+							color: #E1C078;
+						}
+
+
+						.phone-txt {
+							position: absolute;
+							width: 303px;
+							height: 40px;
+							font-size: 14px;
+							/* CSS Hack only for IE */
+							line-height: 40px\9;
+							padding-left: 35px;
+							border: 1px solid #EBEEF1;
+							background: @cmn-color-ae-gray6;
+						}
+
+						.phone-icon {
+							display: inline-block;
+							position: absolute;
+							left: 10px;
+							top: 8px;
+						}
+
+						.phone-code-txt {
+							position: absolute;
+							width: 203px;
+							height: 40px;
+							font-size: 14px;
+							padding-left: 35px;
+							border: 1px solid #EBEEF1;
+							background: @cmn-color-ae-gray6;
+						}
+
+						.img-code-txt {
+							position: absolute;
+							width: 204px;
+							height: 40px;
+							font-size: 14px;
+							padding-left: 35px;
+							border: 1px solid #EBEEF1;
+							background: @cmn-color-ae-gray6;
+						}
+
+						.img-code {
+							display: inline-block;
+							float: right;
+							width: 100px;
+							height: 40px;
+							background-color: @cmn-color-ae-gray2;
+
+							img {
+								width: 100%;
+								height: 40px;
+								cursor: pointer;
+								border: 1px solid #EBEEF1;
+							}
+						}
+
+						.phone-code {
+							float: right;
+							width: 98px;
+							height: 40px;
+							cursor: pointer;
+							line-height: 40px;
+							text-align: center;
+							display: inline-block;
+							background-color: white;
+							color: @cmn-color-ae-gold;
+							border: 1px solid @cmn-color-ae-gold;
+						}
+					}
+
+					.protocol {
+						margin-bottom: 20px;
+
+						.protocol-name {
+							a {
+								color: @cmn-color-ae-gold;
+								font-size: 14px;
+								vertical-align: middle;
+							}
+						}
+
+						.agreement {
+							font-size: 14px;
+							vertical-align: middle;
+						}
+
+						#apply-protocol {
+							// width: 20px;
+						}
+					}
+
+					.btn {
+						width: 120px;
+						height: 40px;
+						font-size: 16px;
+						line-height: 40px;
+						text-align: center;
+						color: @cmn-color-ae-white;
+						background: @cmn-color-ae-gold;
+						border: none;
+						outline: none;
+
+						&:hover {
+							background: #e1b555;
+						}
+					}
+
+					.forget {
+						float: right;
+						font-size: 14px;
+						color: @cmn-color-ae-gray2;
+					}
+					.delete{
+						display: none;
+						width: 24px;
+						height: 24px;
+						text-align: center;
+						line-height: 24px;
+						border-radius: 50%;
+						position: absolute;
+						right: 10px;
+						top: 50%;
+						margin-top: -10px;
+						cursor:pointer;
+						i{
+							margin: 0 auto;
+							color: #9b9b9b;
+							font-size: 14px;
+						}
+					}
+				}
+			}
+
+			.suc-remind {
+				margin-top: 60px;
+				text-align: center;
+
+				.remind-title {
+					display: block;
+					font-size: 24px;
+					margin-top: 20px;
+					color: @cmn-color-ae-gray1;
+				}
+
+				.remind-auth {
+					display: block;
+					margin-top: 30px;
+					font-size: 14px;
+					color: @cmn-color-ae-gray2;
+				}
+
+				.suc-notice {
+					display: block;
+					font-size: 30px;
+					color: @cmn-color-ae-green;
+				}
+			}
+
+			.suc-btn {
+				margin-top: 48px;
+				text-align: center;
+
+				.auth-btn {
+					width: 120px;
+					height: 40px;
+					font-size: 20px;
+					line-height: 40px;
+					font-size: 14px;
+					text-align: center;
+					color: @cmn-color-ae-white;
+					background: @cmn-color-ae-gold;
+					border: none;
+					margin-right: 30px;
+				}
+
+				.index-btn {
+					width: 120px;
+					height: 40px;
+					font-size: 20px;
+					line-height: 40px;
+					font-size: 14px;
+					text-align: center;
+					color: @cmn-color-ae-gold;
+					background: @cmn-color-ae-white;
+					border: 1px solid @cmn-color-ae-gold;
+				}
+			}
+
+			#register-win {
+				height: 478px;
+			}
+		}
+	}
+
+	.reminder {
+		position: absolute;
+		top: 95px;
+		left: 90px;
+		font-size: 13px;
+		color: @cmn-color-ae-gray2;
+		z-index: 0;
+	}
+}
+
+.alert-notice-attention {
+	float: left;
+	margin-right: 10px;
+	color: #ff6493;
+}
+
+.content-txt-wrapper {
+	float: left;
+	width: 382px;
+	text-align: left;
+}

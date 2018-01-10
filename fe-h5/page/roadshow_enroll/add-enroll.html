@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/roadshow_enroll/roadshow-enroll.less">
+</head>
+<body class="gray_bg">
+	<link rel="import" href="../../widget/component/header/header_active.tpl?__inline">
+
+	<div class="img-size">
+		<img class="img-size" id="acimg" src="../../static/roadshow_enroll/resource/images/we_img.png">
+	</div>
+
+	<div class="add-enroll-container">
+		<div class="add-notice-ex">您还没有报名，完善报名信息后即可入场</div>
+		
+		<div class="weui_cells weui_cells_form add-enroll-form">
+			<input id="ac-openid" type="hidden">
+			<input id="ac-apactiveid" type="hidden">
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label"> <i class="ae-mobile ae-mobile-cert1 icon-item name-icon"></i>
+					</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input highlight-input cont-color" id="apName-s" maxlength="10" placeholder="请输入您的姓名">
+				</div>
+			</div>
+
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label"> <i class="ae-mobile ae-mobile-mobile icon-item"></i>
+					</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input highlight-input cont-color" type="tel" id="apMobile-s" placeholder="请输入您的手机号码" maxlength="11"></div>
+			</div>
+
+			<div class="weui_cell" id="label-code-img">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">
+						<i class="ae-mobile ae-mobile-safe icon-item"></i>
+					</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input highlight-input cont-color" id="ac-imgCode"  
+						 maxlength="4"  placeholder="请输入右图验证码" onkeyup="checkPicCode(this.value);"></div>
+				<div class="weui_cell_bd" style="padding-right: 10px;padding-top: 10px"><img height="30px" width="70px" id="ac-imgcode-src" ></div>
+			</div>
+
+			<div class="weui_cell" style="display:none" id="sms_code_div">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">
+						<i class="ae-mobile ae-mobile-safe icon-item"></i>
+					</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input highlight-input cont-color" id="ac-mobilecode"  placeholder="请输入手机验证码"></div>
+				<span class="sep-line">|</span>
+				<div class="weui_cell_bd val-code"  id="sendCode">发送验证码</div>
+			</div>	
+		</div>
+
+		<div class="weui_cells weui_cells_form add-enroll-form">
+			<div class="weui_cell" style="line-height:40px;">
+				<div class="weui_cell_hd cell-key">
+					<div id="i-check-btn" class="i-check-unchecked ae-mobile  icon-item"></div>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<label  class="weui_input highlight-input cont-color" style="font-size:13px;">本人承诺已了解并同意</label>
+					<label class="investor-protocol"><a href="../../page/protocol/investor.html">《投资人声明》</a></label>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br/>
+	
+	<div class="text-center">
+		<span class="key-operation-button-normal" id="ac-form-sub">提交</span>
+	</div>
+
+	<div class="toast" id="toastBox" style="display: none">
+		<div> 
+			<i class="ae-mobile ae-mobile-right modify-suc"></i>
+		</div>
+		<div class="modify-suc-text"></div>
+	</div>
+	
+	<script type="text/javascript" src="../../static/roadshow_enroll/roadshow-enroll.js"></script>
+    <script type="text/javascript" src="../../static/roadshow_enroll/message.js"></script>
+    <script type="text/javascript" src="../../static/roadshow_enroll/signregiste.js"></script>
+    <script type="text/javascript" src="../../static/roadshow_enroll/cheakform.js"></script>
+</body>
+</html>

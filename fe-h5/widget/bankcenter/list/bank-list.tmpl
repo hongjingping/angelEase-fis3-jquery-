@@ -1,0 +1,23 @@
+<% for (var i = 0; i < data.payBindBankCardList.length; i++) {%>
+    <%var bankItem = data.payBindBankCardList[i];%>
+    <a class="bank-item <%=bankItem.bankColorClass%>" href="/page/bankcenter/bank-detail.html?id=<%=bankItem.id%>">
+        <div class="bank-type-wrapper clearfloat">
+            <span class="bank-logo-wrapper clearfloat">
+                <img src="<%=bankItem.logourl%>" alt="" class="bank-logo" style="width:24px;height:24px">
+            </span>
+            <span class="bank-name"><%=bankItem.bankName%></span>
+
+            <span class="bank-type"><%=bankItem.bankTypeName%></span>
+        </div>
+        <div class="bank-number-wrapper">
+            <span><%=bankItem.bankCardNo.slice(0, 4)%></span>
+            <span>****</span>
+            <span>****</span>
+            <span><%=bankItem.bankCardNo.slice(-4)%></span>
+        </div>
+        <div class="phone-number-wrapper">
+            <span class="phone-key">预留手机</span>
+            <span class="phone-value"><%= (bankItem.mobile.slice(0, 3) + '****' + bankItem.mobile.slice(-4)) %></span>
+        </div>
+    </a>
+<%}%>

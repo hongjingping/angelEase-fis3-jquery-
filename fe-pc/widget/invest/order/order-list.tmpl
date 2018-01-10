@@ -1,0 +1,79 @@
+<div class="tab-list-header">
+	<span class="head-project">项目名称</span>
+	<span class="head-fund head-fund-title">订单金额(元)</span>
+	<span class="head-status head-status-title">订单状态</span>
+	<span class="head-do">操作</span>
+</div>
+
+<% for (var i = 0; i < data.retMaps.length; i++) {%>
+	<%var order = data.retMaps[i];%>
+	<div class="tab-list-item">
+		<span class="head-project  head-project-list">
+			<span><a href="../../page/detail/detail.html?proId=<%=order.proId%>"><%=order.proName.length > 16 ? order.proName.slice(0, 16) + '...' : order.proName%></a></span>
+		</span>
+		<span class="head-fund"><%=formatMoney(order.preAmount)%></span>
+		<%if (order.showCode == '001' ||  order.showCode == '006' || order.showCode == '007' || order.showCode == '008' ) {%>
+			<span class="head-status text-orange"><%=getOrderStatusByName(order.showCode)%></span>
+		<%}else if (order.showCode == '004' || order.showCode == '005' || order.showCode == '009' ) {%>
+			<span class="head-status text-success"><%=getOrderStatusByName(order.showCode)%></span>
+		<%} else {%>
+			<span class="head-status text-gray"><%=getOrderStatusByName(order.showCode)%></span>
+		<%}%>
+		<span class="head-do">
+		<!-- 待支付 -->
+		<%if (order.showCode == '001') {%>
+			<a href="#" onclick="getEncodeSign(<%=order.orderId%>)" class="cmn-btn-gold-w6 list-btn-sign">去支付</a>
+		<%}%>
+		<!-- 待确认投资结果（已支付，待审核） -->
+		<%if (order.showCode == '004') {%>
+
+		<%}%>
+		<!-- 待确认投资结果（已支付，审核通过） -->
+		<%if (order.showCode == '005') {%>
+
+		<%}%>
+		<!-- 待签约 -->
+		<%if (order.showCode == '006') {%>
+			<a href="../../page/sign/sign?orderId=<%=order.orderId%>&proId=<%=order.proId%>" class="cmn-btn-gold-w6 list-btn-sign">去签约</a>
+		<%}%>
+		<!-- 待重签 -->
+		<%if (order.showCode == '007') {%>
+			<a href="../../page/sign/resign?orderId=<%=order.orderId%>&proId=<%=order.proId%>" class="cmn-btn-gold-w6 list-btn-sign">去重签</a>
+		<%}%>
+		<!-- 待上传打款凭证（已支付，待上传打款凭证） -->
+		<%if (order.showCode == '008') {%>
+			<a href="../../page/success/paysuccess?orderId=<%=order.orderId%>" class="cmn-btn-gold-w6 list-btn-sign">去上传</a>
+		<%}%>
+		<!-- 投资成功 -->
+		<%if (order.showCode == '009') {%>
+
+		<%}%>
+		<!-- 投资失败，待退款（全额） -->
+		<%if (order.showCode == '010') {%>
+
+		<%}%>
+		<!-- 投资失败，已退款（全额） -->
+		<%if (order.showCode == '012') {%>
+
+		<%}%>
+		<!-- 已取消，超时未支付已取消  -->
+		<%if (order.showCode == '013') {%>
+			<%if (order.projectStatus == '2' || order.projectStatus == '3' || order.projectStatus == '4') {%>
+				<a href="../../page/detail/detail?proId=<%=order.proId%>" class="cmn-btn-gold-w6 list-btn-sign">重新下单</a>
+			<%}%>
+		<%}%>
+			<a class="list-item-detail" href="../../page/invest/detail.html?orderId=<%=order.orderId%>&showCode=<%=order.showCode%>&proId=<%=order.proId%>&projectStatus=<%=order.projectStatus%>">订单详情</a>
+		</span>
+	</div>
+<% } %>
+<!-- 分页 -->
+ <div class="pagination-wrapper">
+    <ul class="pagination">
+        <li><a href="#?pageNum=1" onclick="pagecontent(1)" style="border:1px solid #ccc;margin:1px"> 首 页 </a></li>
+        <li><a href="javascript:void(0);" onclick="prepage(this)" style="border:1px solid #ccc;margin:1px" id="beforepage"> 上一页 </a></li>
+        <li class="pagination-txt"><span id="currentPage" style="margin:2px;font-weight: bold;">0</span>/<span id="totalpage">0</span></li>
+        <li><a href="javascript:void(0);" onclick="sufpage(this)"  style="border:1px solid #ccc;margin:1px" id="nextpage"> 下一页 </a></li>
+        <li><a href="javascript:void(0);" onclick="lastpages()"  style="border:1px solid #ccc;margin:1px"> 尾 页 </a></li>
+        <li><span class="pagination-txt">跳转至</span class="pagination-txt"><input class="pagination-input" type="text" style="width:20px" id="jumppage" onkeyup="this.value=checkPage(this.value);"/><span class="pagination-txt">页</span><input class="btn-jump" type="button" value="确定" onclick="jumppage()"/>
+    </ul>
+</div>

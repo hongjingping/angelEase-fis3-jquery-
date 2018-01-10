@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--  公共头引入  -->
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/nickname/edit-nickname.less">
+</head>
+<body class="content">
+	<div class="weui_cell">
+		<span class="edit-nickname-label-left" onclick="javascript:history.go(-1);">取消</span>
+		<span class="edit-nickname-label-center">邮箱</span>
+		<span class="edit-nickname-label-right" onclick="save();">保存</span>
+	</div>
+
+	<div class="weui_cell">
+		<div class="weui_cell_bd weui_cell_primary"></div>
+	</div>
+
+	<div class="weui_cell bg1">
+		<div class="weui_cell_bd weui_cell_primary">
+			<input class="weui_input edit-nickname-input" type="text" placeholder="" id="myid" maxlength="30">
+		</div>
+
+		<span class="ae-mobile ae-mobile-delete-input edit-nickname-icon-right" 
+			onclick="javascirpt:document.getElementById('myid').value='';"></span>
+	</div>
+
+	<div class="weui_cell">
+		<div class="weui_cell_bd weui_cell_primary"></div>
+	</div>
+	
+	<div class="toast" id="toastBoxerror">
+	    <div> 
+	        <i class="ae-mobile ae-mobile-attention"></i>
+	    </div>
+	    <div class="modify-suc-text errormsg"></div>
+	</div>
+
+	<script type="text/javascript" src="../../static/email/edit-email.js"></script>
+</body>
+</html>

@@ -1,0 +1,716 @@
+.pay-container {
+	width: 800px;
+	margin: 0 auto;
+	font-size: 14px;
+	padding-bottom: 80px;
+
+	.pay-logo {
+		height: 36px;
+		margin: 40px 0;
+		background: url('./resource/images/img-order-step-three.png') no-repeat center;
+	}
+
+	.item-title {
+		height: 30px;
+		border-bottom: 2px solid #F3F5F8;
+
+		span {
+			color: #9B9B9B;
+            font-weight: bold;
+			font-size: 14px;
+			padding-bottom: 9px;
+			display: inline-block;
+			border-bottom: 2px solid #E1C078;
+		}
+	}
+    .sign-notice {
+    height: 36px;
+    margin: 20px 0;
+    font-size: 12px;
+    line-height: 36px;
+    background-color: #FFEEEE;
+
+    i {
+      color: #FF6493;
+      margin: 0 12px;
+      font-size: 16px;
+      display: inline-block;
+    }
+  }
+    .pay-tab {
+        position: relative;
+
+        .pay-header {
+            height: 40px;
+            border-bottom: 1px solid #F3F5F8;
+
+            .pay-method {
+                width: 60px;
+                font-size: 14px;
+                color: #9B9B9B;
+                height: 40px;
+                line-height: 40px;
+                border-bottom: 1px solid #E1C078;
+            }
+        }
+
+        .pay-tab-title {
+            position: absolute;
+            right: 0;
+            top: 0;
+
+            span {
+                display: inline-block;
+                width: 100px;
+                height: 40px;
+                color: #9B9B9B;
+                cursor: pointer;
+                line-height: 40px;
+                text-align: center;
+            }
+
+            .select {
+                color: #E1C078;
+                border: 1px solid #EBEEF1;
+                border-top: 2px solid #E1C078;
+                background: #FFF;
+                border-bottom: none;
+            }
+        }
+
+        .pay-content {
+            overflow: hidden;
+
+            .content-item {
+                display: none;
+
+                .bank-table {
+                    margin-top: 20px;
+
+                    img {
+                        height: 20px;
+                    }
+                }
+            }
+            .show {
+                display: block;
+            }
+
+            .selected-list {
+                tr {
+                    td:nth-child(3) {
+                        color: #262626;
+                    }
+
+                    td:nth-child(4) {
+                        color: #9B9B9B;
+                    }
+
+                    td:nth-child(5) {
+                        color: #9B9B9B;
+                    }
+                }
+            }
+        }
+
+        .cmn-table {
+            border-top: 1px solid #F3F5F8;
+            tr + tr {
+
+                td {
+                    border-top: 1px solid #F3F5F8;
+                }
+            }
+
+            tr {
+                td {
+                    .updateId {
+                        visibility: hidden;
+                        cursor: pointer;
+                        color: #e1c078;
+                    }
+                }
+                &.active {
+                    background-color: #f9f2e4;
+
+                    &:hover td {
+                        background-color: #f9f2e4;
+                    }
+
+                    td {
+                        border-color: #e1c078;
+
+                        .updateId {
+                            visibility: visible
+                        };
+
+                        &:first-child {
+                            border-left: 1px solid #e1c078;
+                        }
+
+                        &:last-child {
+                            border-right: 1px solid #e1c078;
+                        }
+
+                    }
+                }
+            }
+
+            tr:hover {
+                td {
+                    background-color: #F8F9FA;
+
+                    .updateId {
+                        visibility: visible;
+
+                    }
+                }
+            }
+        }
+
+    }
+
+	.bank-cols {
+		overflow: hidden;
+	}
+
+	.item-notice {
+		width: 800px;
+		height: 36px;
+		margin: 10px 0;
+		line-height: 36px;
+		background: #FFEEEE;
+
+		i {
+			color: #FF6493;
+			font-size: 16px;
+			margin: 0 10px;
+		}
+	}
+
+	.pay-detail {
+		overflow: hidden;
+		width: 798px;
+		margin: 25px 0 35px 0;
+		// border: 1px solid #EBEEF1;
+
+        table {
+            border-top-width: 1px;
+            tr td {
+                padding: 5px;
+                padding-left: 20px;
+                &:first-child {
+                    border-right: 1px solid #EBEEF1;
+                    background-color: #F8F9FA;
+                }
+            }
+        }
+
+        .pay-detail-item {
+            tr {
+                td:first-child {
+                    color: #9B9B9B;
+                }
+
+                td:nth-child(2) {
+                    color: #3F3F3F;
+                }
+            }
+        }
+
+		ul {
+			float: left;
+			padding: 15px 0;
+		}
+
+		li {
+			height: 30px;
+			line-height: 30px;
+		}
+
+		.pay-key {
+			width: 79px;
+			padding-left: 20px;
+			color: #9B9B9B;
+			background: #F8F9FA;
+			border-right: 1px solid #EBEEF1;
+		}
+
+		.pay-val {
+			width: 668px;
+			padding-left: 30px;
+		}
+	}
+
+	.pay-notice {
+		font-size: 12px;
+	}
+
+	.pay-bank {
+		width: 778px;
+		overflow: hidden;
+		padding-left: 20px;
+		border: 1px solid #EBEEF1;
+
+        .bank-list {
+            height: 160px;
+        }
+
+        .tips {
+            width: 100%;
+            color: #9B9B9B;
+            line-height: 30px;
+            padding-bottom: 20px;
+        }
+
+		li {
+			width: 192px;
+			height: 80px;
+			line-height: 80px;
+			float: left;
+			display: inline-block;
+
+            &.active > label, // IE8 don't support CSS Selector [:cheked]
+            input.radio-i:checked + label {
+                img {
+                    border: 2px solid #E1C078;
+                }
+            }
+
+            label {
+                display: inline-block;
+            }
+
+			img {
+				width: 155px;
+				height: 44px;
+				line-height: 44px;
+				margin-left: 12px;
+				text-align: center;
+				vertical-align: middle;
+				border: 1px solid #EBEEF1;
+
+                &.bank-active {
+                    border: 2px solid #E1C078;
+                }
+			}
+
+			&:hover {
+				cursor: pointer;
+
+				img {
+					border: 2px solid #E1C078;
+				}
+
+				input {
+					border-color: #E1C078;
+				}
+			}
+		}
+	}
+
+	.pay-bill {
+		height: 89px;
+		overflow: hidden;
+		margin-top: 20px;
+		position: relative;
+		background-color: #FFF9F5;
+		border-top: 1px solid #FF9544;
+
+		.pay-info {
+			float: left;
+			width: 275px;
+			color: #9B9B9B;
+			padding-left: 25px;
+
+			dt,
+			dd {
+				display: block;
+			}
+
+			.pay-txt {
+				height: 30px;
+				margin-top: 10px;
+				line-height: 30px;
+			}
+
+			.pay-num {
+				height: 40px;
+				color: #FF9544;
+				font-size: 28px;
+				line-height: 40px;
+
+				span {
+					color: #9B9B9B;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.goto-pay {
+			top: 25px;
+			right: 25px;
+			position: absolute;
+		}
+	}
+}
+.mask {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 0, 0);
+    opacity: 0.5;
+    z-index: 1000;
+    display: none;
+    filter: alpha(opacity=50);
+}
+
+.wgt-pay-confirm {
+    width: 540px;
+    height: 240px;
+    z-index: 1001;
+    background: #fff;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    .confirm-title {
+        width: 500px;
+        height: 50px;
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 50px;
+        border-bottom: 1px solid #EBEEF1;
+
+        .title {
+          color: #9b9b9b;
+        }
+
+        .close {
+            display: inline-block;
+            float: right;
+            color: #E1C078;
+            cursor: pointer;
+        }
+    }
+
+    .confirm-content {
+        text-align: center;
+
+        .para {
+            color: #3F3F3F;
+            font-size: 12px;
+            margin: 40px 0;
+        }
+
+        .some-btns {
+            a {
+                font-size: 14px;
+            }
+        }
+
+        .problem-btn {
+            margin-left: 20px;
+        }
+    }
+}
+
+.wgt-pay-account {
+    width: 540px;
+    height: 465px;
+    z-index: 1001;
+    background: #fff;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    .account-title {
+        width: 500px;
+        height: 50px;
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 50px;
+        border-bottom: 1px solid #EBEEF1;
+
+        .title {
+          color: #9b9b9b;
+        }
+
+        .close {
+            display: inline-block;
+            float: right;
+            color: #E1C078;
+            cursor: pointer;
+        }
+    }
+
+    .account-content {
+        // text-align: center;
+
+        .content-title {
+            width: 445px;
+            margin: 0 auto;
+            padding-left: 15px;
+            background: #FFEEEE;
+            height: 36px;
+            line-height: 36px;
+            margin-top: 30px;
+
+            i {
+                color: #ff6493;
+            }
+
+
+            .para {
+                font-size: 12px;
+                color: #3F3F3F;
+            }
+        }
+
+        .addr {
+            width: 458px;
+            height: 102px;
+            margin: 0 auto;
+            margin-top: 20px;
+            overflow: hidden;
+            border: 1px solid #EBEEF1;
+        }
+
+        .menu {
+            float: left;
+            width: 79px;
+            text-align: left;
+            padding-left: 20px;
+            background: #F8F9FA;
+            border-right: 1px solid #EBEEF1;
+        }
+
+        .txt {
+            float: left;
+            width: 338px;
+            padding-left: 20px;
+        }
+
+        .item {
+            height: 34px;
+            color: #9b9b9b;
+            line-height: 34px;
+        }
+
+        .block {
+            .item;
+            color: #3F3F3F;
+            text-align: left;
+        }
+    }
+
+    .notice-wrap {
+		padding: 20px 40px;
+		font-size: 12px;
+
+		.notice-title {
+			font-size: 13px;
+			color: #3f3f3f;
+			padding: 2px 0;
+		}
+
+		.notice-txt {
+			color: #9B9B9B;
+			margin-bottom: 5px;
+		}
+
+		.notice-table {
+			text-align: center;
+			border-collapse:collapse;
+			background: #FFF;
+
+			tr,
+			td {
+                text-align: left;
+				padding: 10px;
+				border: 1px solid #DDD;
+			}
+
+			.workday {
+				width: 18%;
+				font-size: 12px;
+                text-align: center;
+                background: #F8F9FA;
+                color: #9B9B9B;
+			}
+		}
+	}
+}
+
+.wgt-pay-validate {
+    width: 540px;
+    height: 320px;
+    z-index: 1001;
+    background: #fff;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    .para {
+        font-size: 12px;
+        color: #3F3F3F;
+    }
+
+    .validate-title {
+        width: 500px;
+        height: 50px;
+        padding: 0 20px;
+        font-size: 16px;
+        line-height: 50px;
+        border-bottom: 1px solid #EBEEF1;
+
+        .title {
+          color: #9b9b9b;
+        }
+
+        .close {
+            display: inline-block;
+            float: right;
+            color: #E1C078;
+            cursor: pointer;
+        }
+    }
+
+    .validate-content {
+        padding: 20px 40px 0;
+        font-size: 14px;
+
+        .content-title {
+            width: 460px;
+            height: 36px;
+            margin: 0 auto;
+            margin-top: 20px;
+            line-height: 36px;
+
+            &.error-notice {
+							margin-top: 0;
+                background-color:  #ffeeee;
+                i {
+                    color: #ff6493;
+                    margin: 0 10px;
+                    display: inline-block;
+                }
+
+            }
+
+            &.success-notice {
+                background-color: #F8F9FA;
+
+                i {
+                    color: #9BD560;
+                    margin: 0 10px;
+                    display: inline-block;
+                }
+
+            }
+
+        }
+
+        .phone {
+            margin: 20px 0;
+
+            .txt {
+                color: #9b9b9b;
+            }
+
+            .phone-num {
+                color: #3f3f3f;
+            }
+        }
+
+        .mobile {
+            height: 40px;
+
+            .code {
+                width: 238px;
+                height: 38px;
+                line-height: 38px;
+                padding-left: 20px;
+                background: #f8f9fa;
+                border: 1px solid #EBEEF1;
+                float:left;
+            }
+
+            .get-sms-code {
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                display: block;
+                float: left;
+                width: 120px;
+                cursor: pointer;
+                font-size: 14px;
+                color: #3F3F3F;
+                background: #EBEEF1;
+            }
+
+            /**
+            .count {
+                width: 120px;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                background: #EBEEF1;
+                display: inline-block;
+            }
+            **/
+        }
+
+        .validate-btn {
+            height: 40px;
+            width: 120px;
+            color: #FFFFFF;
+            margin-top: 20px;
+            line-height: 40px;
+            text-align: center;
+            background: #E1C078;
+            display: inline-block;
+        }
+    }
+
+    .pay-sms-tips {
+        float: right;
+        margin-right: 75px;
+        margin-top: 15px;
+        font-size: 14px;
+        color: #9b9b9b;
+        position: relative;
+
+        .no-mag-wrapper {
+            position: absolute;
+            left: 0;
+            top: 20px;
+
+            .noMsgTips {
+                width: 290px;
+                height: 100px;
+                display: none;
+                border: 4px solid rgba(201,201,201,.2);
+                font-size: 12px;
+                background: #FFF;
+                .noMsgTips-info {
+                    border-top: 1px solid #E1B555;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

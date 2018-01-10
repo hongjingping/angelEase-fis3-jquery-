@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/offlinepayment/offlinepayment.less">
+</head>
+<body  class="gray_bg" >
+    <link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+    <div class="white_bg" >
+        <div>
+            <ul class="step-bar clearfloat">
+                <li>
+                    <span class="dot"></span>
+                    <a href="#">填写订单</a>
+                </li>
+                <li>
+                    <span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+                    </span>
+                    <span class="dot"></span>
+                    <a href="#">签约</a>
+                </li>
+                <li>
+                    <span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+                    </span>
+                    <span class="dot"></span>
+                    <a href="#">支付</a>
+                </li>
+            </ul>
+        </div>
+        <div class="gray_col gray_bg interval-bar">打款账号</div>
+        <div class="white_bg alert-wrapper"  >
+            <div class="alert-left">
+                <i class="ae-mobile ae-mobile-attention2"></i>
+            </div>
+            <div class="alert-right">请您打款时仔细核对账号，并保留打款凭证</div>
+        </div>
+        <div class="weui_cells weui_cells_form change-mobile-container">
+            <div class="weui_cell">
+                <div class="weui_cell_hd cell-key">
+                    <label class="weui_label change-mobile-label">账户名</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input change-mobile-input" type="tel" readonly="readonly"  placeholder="请输入您绑定的账户名" value="北京云起未来投资管来" ></div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd cell-key">
+                    <label class="weui_label change-mobile-label">开户行</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input change-mobile-input" type="tel" readonly="readonly"  placeholder="请输入您开户行" value="招商银行西大望路支行"></div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_hd cell-key">
+                    <label class="weui_label change-mobile-label">银行账号</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input change-mobile-input" type="tel" readonly="readonly"  placeholder="请输入银行账号" value="6222 3847 1927 3345"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="../../static/offlinepayment/offlinepayment.js"></script>
+</body>
+</html>

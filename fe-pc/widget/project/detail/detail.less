@@ -1,0 +1,106 @@
+.project-payinfo {
+	width: 800px;
+	margin: 0 auto;
+	font-size: 14px;
+	padding-bottom: 120px;
+
+	.item-title {
+		height: 30px;
+		border-bottom: 2px solid #F3F5F8;
+
+		span {
+			color: #9B9B9B;
+			font-size: 14px;
+			padding-bottom: 9px;
+			display: inline-block;
+			border-bottom: 2px solid #E1C078;
+		}
+	}
+
+	.payinfo-box {
+		width: 798px;
+		margin: 20px 0;
+		overflow: hidden;
+		// border: 1px solid #EBEEF1;
+
+		table {
+            border-top-width: 1px;
+            tr td {
+                padding: 5px;
+                padding-left: 20px;
+                &:first-child {
+                    border-right: 1px solid #EBEEF1;
+                    background-color: #F8F9FA;
+                }
+            }
+        }
+
+		.info-item {
+			float: left;
+			padding: 12px 0;
+			line-height: 30px;
+		}
+
+		.info-key {
+			width: 77px;
+			color: #9B9B9B;
+			padding-left: 22px;
+			background-color: #F8F9FA;
+			border-right: 1px solid #EBEEF1;
+		}
+
+		.info-val {
+			width: 668px;
+			padding-left: 30px;
+		}
+	}
+
+	.payinfo-num {
+		height: 89px;
+		overflow: hidden;
+		background-color: #FFF9F5;
+		border-top: 1px solid #FF9544;
+
+		.pay-info {
+			float: left;
+			width: 275px;
+			color: #9B9B9B;
+			padding-left: 25px;
+
+			dt,
+			dd {
+				display: block;
+			}
+
+			.pay-txt {
+				height: 30px;
+				margin-top: 10px;
+				line-height: 30px;
+			}
+
+			.pay-num {
+				height: 40px;
+				color: #FF9544;
+				font-size: 28px;
+				line-height: 40px;
+
+				span {
+					color: #9B9B9B;
+					font-size: 14px;
+				}
+			}
+		}
+
+		.payinfo-btns {
+			width: 500px;
+			float: right;
+			line-height: 89px;
+			text-align: right;
+
+			.back-edit {
+				color: #E1B555;
+				padding: 12px 20px;
+			}
+		}
+	}
+}

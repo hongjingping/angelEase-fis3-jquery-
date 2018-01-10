@@ -1,0 +1,17 @@
+<% for (var i = 0; i < data.payBindBankCardList.length; i++) { %>
+    <% var item = data.payBindBankCardList[i]; %>
+        <div class="bank-item" bank-item-id="<%= item.id %>" bank-code="<%= item.bankCode %>">
+            <div class="logo">
+                <img src="<%= staticUrl + item.logo %>">
+            </div>
+            <div class="list">
+                <div class="list-title">
+                    <span class="bank-title"><%= item.bankName %></span>
+                    <span class="bank-num">(尾号<%= item.bankCardNo.slice(-4) %>)</span>
+                </div>
+                <p class="quota">单笔限额 <%= item.singleQuota %></p>
+            </div>
+
+            <i class="ae-mobile ae-mobile-tick tick-icon"></i>
+        </div>
+<% } %>

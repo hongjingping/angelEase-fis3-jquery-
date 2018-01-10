@@ -1,0 +1,33 @@
+@import '../common/style/variables';
+
+body {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.nobank-wrapper {
+	display: block;
+	position: relative;
+	margin: 5%;
+	height: 160px;
+	background: @GRAY6;
+	border: 1px dashed @GRAY4;
+	border-radius: 4px;
+
+	.add-bank-wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		color: @GOLD1;
+		font-size: 14px;
+
+		.add-bank-icon {
+			font-size: 14px;
+
+			.ae-mobile-plus {
+				font-size: 36px;
+			}
+		}
+	}
+}

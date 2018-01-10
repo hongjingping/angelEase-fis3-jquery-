@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/add-bank-card/add-bank-card.less">
+    <!--
+        @require ../../static/common/lib/base64.js
+    -->
+</head>
+<body class="gray_bg" style="position: relative;">
+    <!-- header -->
+    <link rel="import" href="../../widget/component/header/header.tpl?__inline">
+    
+    <!--手机短信验证码-->
+    <div class="phone-num" >
+        <div class="phone-num-text">
+            <p class="phone-num-tips">绑定银行卡需要短信确认</p>
+            <div class="phone-message">
+                <p class="phone-message-text">验证码已发送至:
+                    <input type="hidden" id="phonenumHidden">
+                    <span class="font-C" id="phonenum"></span>
+                    <a class="font-right" href="javascript:;" id="no-receive-phone">收不到验证码?</a>
+                </p>
+            </div>
+        </div>
+        <div class="message-num">
+            <div class="fl w-15"><span>验证码</span></div>
+            <div class="fl w-60"><input class="m-l" maxlength="6" id="phone-code" type="text" placeholder="请输入手机验证码"></div>
+            <div class="fr w-25">
+                |
+                <input class="timeout" type="button" id="settime-btn" value="重新获取">
+            </div>
+        </div>
+        <a class="confirm-btn" id="confirm-btn-two">
+            <i class="ae-mobile ae-mobile-arrow-right font-si"></i>
+        </a>
+    </div>
+
+    <!--收不到验证码的模态框-->
+    <div class="no-phone-num" id="no-phone-num">
+        <div class="no-phone-num-box">
+            <div class="phone-tips">
+                <div class="tips-content">
+                    <div class="tips-icon">
+                        <i class="ae-mobile ae-mobile-about2 font-cl"></i>
+                    </div>
+                    <div class="tips-text">
+                        <p><i class="tips-num">1</i> 请确认当前是否使用银行预留的手机号码</p>
+                        <p><i class="tips-num">2</i> 请检查短信是否被拦截</p>
+                        <p><i class="tips-num">3</i> 预留的手机号码已停用,请联系该银行客服修改</p>
+                        <p><i class="tips-num"></i> 还有其他疑问,请联系400-818-0060</p>
+                    </div>
+                </div>
+                <div class="tips-words" id="no-phone">
+                    <p>知道了</p>
+                </div>
+            </div>
+            <div class="del-tips" id="del-phone-num">
+                <i class="ae-mobile ae-mobile-close font-s"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--绑定成功-->
+    <div class="bind-success" id="bind-success">
+        <div class="bind-success-icon">
+            <i class="ae-mobile ae-mobile-right font-S"></i>
+        </div>
+        <div class="bind-success-text">
+            <p>绑定成功</p>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../static/add-bank-card/add-bank-card-two.js"></script>
+</body>
+</html>

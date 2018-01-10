@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/signature/signature.less">
+
+    <!--
+		@require ../../static/common/lib/WritingPad.js;
+		@require ../../static/common/lib/jq-signature.js;
+    -->
+</head>
+
+<body class="gray_bg">
+	<!-- header -->
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+	
+	<div class="step-bar-wrapper white_bg">
+		<ul class="step-bar clearfloat ">
+			<li>
+				<span class="dot"></span>
+				<a href="#">上传证件</a>
+			</li>
+			<li>
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+				</span>
+				<span class="dot"></span>
+				<a href="#">阅读协议</a>
+			</li>
+			<li>
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+				</span>
+				<span class="dot"></span>
+				<a href="#">签字确认</a>
+			</li>
+		</ul>
+	</div>
+
+    <div class="content-wrapper  background-color">
+		<div class="weui_cell float">
+	    	<i class="ae-mobile ae-mobile-attention2 red"></i>
+	    </div>
+	    <div class="weui_cell">
+	       <p class="font alert-right" >请您重新提交以下信息后再次签约<br/><span class="font orange-font alert-right">1身份证（正面）号码不清楚&nbsp;&nbsp;2身份证（背面）非身份证&nbsp;&nbsp;3 签字字迹不清&nbsp;&nbsp;4绑定银行卡与支付卡不同</span></p> 
+	    </div>
+
+	    <!-- what ? -->
+	    <div style="clear: both;"></div>
+	</div>
+	
+	<div class="gray_col"></div>
+	
+	<div class="white_bg content-wrapper" >
+		<div class="weui_cell float">
+			<i class="ae-mobile ae-mobile-attention2 yellow"></i>
+		</div>
+
+		<div class="weui_cell">
+		    <p class="font gray-font">本处签名将用于工商变更并出现在你的项目协议中，请使用正楷体清晰签署你的名字。</p>
+		</div>
+		<div class="" style="clear: both;"></div>
+	</div>
+	
+	<div class="gray_col"></div>
+
+	<div>
+		<div class="sign_area">
+			<div class="js-signature my-signature" id="mySignature">
+				<canvas></canvas>
+			</div>
+		    <div class="bottom_middle_pos" id="myEmpty">重置</div>
+		</div>
+	</div>
+
+    <div class="gray_col1"></div>
+
+	<div class="feedback-button">
+		<span class="key-operation-button-normal yahei">提交</span>
+	</div> 		
+
+	<script type="text/javascript" src="../../static/signature/signature.js"></script>
+</body>	
+</html>

@@ -1,0 +1,74 @@
+/* table style */
+.cmn-table {
+    font-size: 14px;
+    border-spacing: 0;
+    border-collapse: separate;
+    width: 100%;
+    max-width: 100%;
+    // margin-bottom: 20px;
+    border-top: 2px solid #EBEEF1;
+    border-bottom: 1px solid #EBEEF1;
+  /* Cells */
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+            text-align: left;
+            padding: 10px 10px 10px 20px;
+            line-height: 1.5;
+            vertical-align: center;
+            border-top: 1px solid transparent;
+            border-bottom: 1px solid transparent;
+            }
+        }
+    }
+  /* Bottom align for column headings */
+    > thead {
+        color: #9B9B9B;
+        background-color: #fff;
+        > tr > th {
+            font-weight: normal;
+            vertical-align: center;
+            // border-bottom: 1px solid #EBEEF1;
+        }
+    }
+    > tbody {
+        color: #3F3F3F;
+
+        > tr:first-child td {
+            border-top: 1px solid #EBEEF1;
+        }
+    }
+  /* Remove top border from thead by default */
+    > caption + thead,
+    > colgroup + thead,
+    > thead:first-child {
+        > tr:first-child {
+            > th,
+            > td {
+                border-top: 0;
+            }
+        }
+    }
+}
+
+/* Zebra-striping */
+/* Default zebra-stripe styles (alternating gray and transparent backgrounds) */
+.cmn-table-striped {
+    > tbody > tr:nth-of-type(even) {
+        background-color: #F8F9FA;
+    }
+
+    > tbody > tr:nth-of-type(odd) {
+        background-color: #fff;
+    }
+
+
+}
+
+.cmn-table-bordered {
+    border-left: 1px solid #EBEEF1;
+    border-right: 1px solid #EBEEF1;
+}

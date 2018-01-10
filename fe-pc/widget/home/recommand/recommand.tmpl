@@ -1,0 +1,78 @@
+<% data.forEach(function(item, i) { %>
+    <% var className %>
+    <% if (i % 4 === 0 || i % 4 === 3) { className='small' %>
+    <a class="recommand-item <%= className %>" href="/page/detail/detail.html?proId=<%=item.id%>" target="_blank">
+        <img class="item-img" src="<%=item.proPcTjImgSmall%>" alt="">
+    <% } %>
+    <% if (i % 4 === 1 || i % 4 === 2)  { className='large' %>
+    <a class="recommand-item <%= className %>" href="/page/detail/detail.html?proId=<%=item.id%>" target="_blank">
+        <img class="item-img" src="<%= item.proPcTjImgBig %>" alt="">
+    <% } %>
+        <div class="item-name"><%= item.proName %></div>
+        <%if (item.proStatus == '1') {%>
+            <div class="project-status gray"><%=item.statusName%></div>
+        <%}%>
+         <%if (item.proStatus == '2') {%>
+            <div class="project-status cyan"><%=item.statusName%></div>
+        <%}%>
+        <%if (item.proStatus == '3' || item.proStatus == '9') {%>
+            <div class="project-status glod"><%=item.statusName%></div>
+        <%}%>
+        <%if (item.proStatus == '4') {%>
+          
+           <div class="project-status orange"><%=item.statusName%></div>
+        <%}%>
+         <%if (item.proStatus == '5' || item.proStatus == '7') {%>
+            <div class="project-status green"><%=item.statusName%></div>
+        <%}%>
+         <%if (item.proStatus == '6' || item.proStatus == '8') {%>
+            <div class="project-status gray"><%=item.statusName%></div>
+        <%}%>
+        <div class="recommand-progress-wrapper cmn-clearfix">
+            <div class="base-line">
+                <!-- 预热中和路演中项目进度隐藏 -->
+                <%if (item.proStatus == '2' || item.proStatus == '3') {%>
+                <div class="cover" style="width:0"></div>
+                <%}else{%>
+                    <%if (item.proRaiseSpeed >= 100) {%>
+                    <div class="cover" style="width:100%"></div>
+                    <%}else{%>
+                    <div class="cover" style="width:<%=item.proRaiseSpeed %>%"></div>
+                    <%}%>
+                <%}%>
+            </div>
+            <%if (item.proStatus == '2' || item.proStatus == '3') {%>
+                <div class="ratio">0%</div>
+            <%}else{%>
+            <div class="ratio"><%= item.proRaiseSpeed %>%</div>
+            <%}%>
+        </div>
+        <div class="recommand-numbers-wrapper cmn-clearfix">
+            <div class="recommand-numbers first">
+                <div class="number-key">融资目标（万）</div>
+                <div class="number-value"><%=item.proFinancieAmount%></div>
+                <div class="small-square"></div>
+            </div>
+            <div class="recommand-numbers second">
+                <div class="number-key">参与人数</div>
+                <!-- 预热中和路演中项目参与人数不显示 -->
+                <%if (item.proStatus == '2' || item.proStatus == '3') {%>
+                <div class="number-value font-gray">--</div>
+                <%}else{%>
+                <div class="number-value font-gray"><%=item.prePayNum%></div>
+                <%}%>
+                <div class="small-square"></div>
+            </div>
+            <div class="recommand-numbers third">
+                <div class="number-key">剩余天数</div>
+                <!-- 预热中和路演中项目参与人数不显示 -->
+                <%if (item.proStatus == '2' || item.proStatus == '3') {%>
+                <div class="number-value font-gray">--</div>
+                <%}else{%>
+                <div class="number-value font-gray"><%=item.remainDays%></div>
+                <%}%>
+                <div class="small-square"></div>
+            </div>
+        </div>
+    </a>
+<% }) %>

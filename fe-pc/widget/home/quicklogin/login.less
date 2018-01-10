@@ -1,0 +1,308 @@
+@import "../../../static/common/style/common";
+
+.quick-login-wrapper {
+	position: relative;
+	top: -550px;
+	right: 0;
+	width: 1180px;
+	margin: 0 auto;
+}
+
+.login-wrapper {
+	position: absolute;
+	top: 160px;
+	right: 20px;
+	width: 340px;
+	height: 360px;
+	padding: 36px 40px;
+	background: rgba(255, 255, 255, .95);
+	box-sizing: border-box;
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.11);
+	z-index: 1;
+
+	&::before {
+    	content: '';
+    	display: block;
+    	position: absolute;
+    	top: 4px;
+    	left: 4px;
+    	width: 0;
+    	height: 0;
+    	border-width: 16px 16px 16px 0;
+    	border-style: solid;
+    	border-color: @cmn-color-ae-gold transparent transparent transparent;
+    }
+
+	.reminder {
+		position: absolute;
+		top: 72px;
+		left: 40px;
+		width: 260px;
+		padding-left: 15px;
+		font-size: 12px;
+		line-height: 36px;
+		background-color: #f3e6c9;
+		color: #262626;
+		// z-index: 0;
+		z-index: 0;
+		box-sizing: border-box;
+
+		i {
+			font-size: 14px;
+			color: @cmn-color-ae-gold;
+		}
+	}
+
+	.find-password {
+		position: absolute;
+		bottom: 30px;
+		right: 40px;
+		font-size: 14px;
+	}
+
+	.form-box {
+		position: relative;
+
+		i {
+			margin-right: 10px;
+			color: @cmn-color-ae-gray3;
+			z-index: 100;
+		}
+
+		.error-txt {
+			width: 260px;
+			height: 38px;
+			padding-left: 15px;
+			color: #FF6493;
+			font-size: 12px;
+			line-height: 36px;
+			display: block;
+			visibility: hidden;
+			background: @cmn-color-ae-pink;
+			box-sizing: border-box;
+			z-index: 100;
+
+			.error-notice {
+				color: @cmn-color-ae-purple;
+			}
+
+			.success-notice {
+				color: #9BD560;
+			}
+		}
+
+		.login-btn {
+			width: 100%;
+			cursor: pointer;
+		}
+
+
+		.notice-txt {
+			position: absolute;
+			height: 40px;
+			line-height: 40px;
+			text-indent: 36px;
+			top: 0;
+			left: 0;
+			cursor: text;
+			color: @cmn-color-ae-gray3;
+		}
+
+		.label {
+			height: 40px;
+			margin-bottom: 10px;
+			position: relative;
+
+			/* remove chrome input background yellow */
+            input:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0px 1000px #F8F9FA inset;
+            }
+
+            input:focus {
+                border-color: #E1C078;
+            }
+
+			input:focus + .ae-icon {
+				color: #E1C078;
+			}
+
+
+			.phone-input {
+				position: absolute;
+				width: 260px;
+				height: 40px;
+				font-size: 14px;
+				/* CSS Hack only for IE */
+				line-height: 40px\9;
+				padding-left: 35px;
+				border: 1px solid #EBEEF1;
+				background: @cmn-color-ae-gray6;
+				box-sizing: border-box;
+			}
+
+			.phone-icon {
+				display: inline-block;
+				position: absolute;
+				left: 10px;
+				top: 8px;
+			}
+
+			.img-code-input {
+				position: absolute;
+				width: 175px;
+				height: 40px;
+				font-size: 14px;
+				padding-left: 35px;
+				border: 1px solid #EBEEF1;
+				background: @cmn-color-ae-gray6;
+				box-sizing: border-box;
+			}
+
+			.img-code {
+				position: absolute;
+				right: 1px;
+				top: 0;
+				width: 85px;
+				height: 40px;
+				box-sizing: border-box;
+
+				img {
+					width: 100%;
+					height: 38px;
+					cursor: pointer;
+					border: 1px solid #EBEEF1;
+				}
+			}
+
+			.phone-code {
+				float: right;
+				width: 98px;
+				height: 40px;
+				cursor: pointer;
+				line-height: 40px;
+				text-align: center;
+				display: inline-block;
+				background-color: white;
+				color: @cmn-color-ae-gold;
+				border: 1px solid @cmn-color-ae-gold;
+			}
+		}
+		.delete{
+			display: none;
+			width: 24px;
+			height: 24px;
+			text-align: center;
+			line-height: 24px;
+			border-radius: 50%;
+			position: absolute;
+			right: 10px;
+			top: 50%;
+			margin-top: -12px;
+			cursor:pointer;
+			i{
+				margin: 0 auto;
+				color: #9b9b9b;
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+.logged-wrapper {
+	position: absolute;
+	top: 170px;
+	right: 20px;
+	width: 340px;
+	height: 200px;
+	padding: 36px 40px;
+	background: rgba(255, 255, 255, .95);
+	box-sizing: border-box;
+	box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.11);
+	z-index: 1;
+
+	&::before {
+    	content: '';
+    	display: block;
+    	position: absolute;
+    	top: 4px;
+    	left: 4px;
+    	width: 0;
+    	height: 0;
+    	border-width: 16px 16px 16px 0;
+    	border-style: solid;
+    	border-color: @cmn-color-ae-gold transparent transparent transparent;
+    }
+
+    .user-welcome {
+    	float: left;
+    	font-size: 16px;
+    	color: @cmn-color-ae-gray1;
+
+    }
+
+    .btn-financing {
+    	position: relative;
+    	float: right;
+    	font-size: 14px;
+    	color: @cmn-color-ae-dark-gold;
+    	cursor: pointer;
+
+    	i {
+		    position: absolute;
+    		top: -3px;
+		    left: -25px;
+		    font-size: 18px;
+    		color: @cmn-color-ae-dark-gold;
+    	}
+
+    	.want-financing {
+    		color: @cmn-color-ae-dark-gold;
+    		cursor: pointer;
+    	}
+    }
+
+    .font-gray {
+    	margin-top: 52px;
+    	margin-bottom: 10px;
+    	color: @cmn-color-ae-gray2;
+    	font-size: 13px;
+    }
+
+    .btn-my-fund {
+    	width: 100%;
+    	font-size: 16px;
+    }
+}
+
+.login-title-wrapper {
+	margin-bottom: 10px;
+
+	.title {
+		float: left;
+		font-size: 16px;
+		color: @cmn-color-ae-gray1;
+	}
+
+	.to-sign {
+		float: right;
+		font-size: 14px;
+		color: @cmn-color-ae-gray2;
+		padding-top: 2px;
+
+		.to-sign-btn {
+			color: @cmn-color-ae-dark-gold;
+		}
+	}
+}
+
+.alert-notice-attention {
+	float: left;
+	margin-right: 10px;
+	color: #ff6493;
+}
+
+.content-txt-wrapper {
+	float: left;
+	width: 382px;
+	text-align: left;
+}

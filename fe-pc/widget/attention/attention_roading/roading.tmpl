@@ -1,0 +1,51 @@
+<% for (var i = 0; i < data.length; i++) {%>
+     <%var totalItem = data[i];%>
+     <div class="total-list  cmn-clearfix">
+        <div class="list-left  cmn-clearfix">
+           <a class="img-href" href="/page/detail/detail.html?proId=<%=totalItem.id%>" target="_blank" >
+            <img src="<%=totalItem.proPcImgSmall%>" class="left-img">
+            </a>
+            <div class="left-txt  cmn-clearfix">
+                <span class="left-title"><%=totalItem.proName%></span>
+                <!-- 投资人数 -->
+                 <span class="left-info">已有<span class="font-gray">--</span>人参与</span>
+            </div>
+        </div>
+        <div class="list-right">
+            <div class="progress-wrapper cmn-clearfix">
+                <!-- 进度条 -->
+                <div class="base-line">
+                    <div class="cover" style="width:0"></div>
+                </div>
+                 <!-- 进度 -->
+                <div class="ratio ratio-gray">0%</div>
+
+                </div>
+                <div class="raise-numbers-wrapper cmn-clearfix">
+                    <div class="raise-numbers">
+                        <div class="number-key">募集金额（万）</div>
+                        <div class="number-value"><%=totalItem.proFinancieAmount%></div>
+                    </div>
+                    <div class="raise-numbers raise-numbers2">
+                        <div class="number-key">已募金额（万）</div>
+                        <!--参与人数不显示-->
+                        <div class="number-value font-gray">--</div>
+
+                    </div>
+                    <div class="raise-numbers raise-numbers2">
+                    <div class="number-key">剩余天数</div>
+                    <!--剩余天数不显示-->
+                    <div class="number-value font-gray">--</div>
+
+
+                    </div>
+                </div>
+        </div>
+            <!-- 路演中 -->
+            <%if (totalItem.proStatus == '3') {%>
+                <div class="label yellow"><%=totalItem.statusName%></div>
+                <a href="/page/detail/detail.html?proId=<%=totalItem.id%>" target="_blank" class="button">路演报名</a>
+            <%}%>
+     </div>
+<%}%>
+

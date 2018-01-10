@@ -1,0 +1,70 @@
+@import '../../../static/common/style/common';
+
+.partner-wrapper {
+	min-width: 1180px;
+	margin: 0 auto;
+	padding: 35px 0 60px 0;
+	background: #f8f7f8;
+
+	.partner {
+		width: 1180px;
+		margin: 0 auto;
+
+		.partner-title {
+			position: relative;
+			margin: 0 auto 25px;
+			font-size: 22px;
+			font-weight: bold;
+			color: @cmn-color-ae-gray1;
+			text-align: center;
+
+			&.institution {
+				width: 135px;
+			}
+
+			&.friends {
+				width: 90px;
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 14px;
+				left: -20px;
+				width: 4px;
+				height: 4px;
+				background: @cmn-color-ae-gold;
+			}
+
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 14px;
+				right: -20px;
+				width: 4px;
+				height: 4px;
+				background: @cmn-color-ae-gold;
+			}
+		}
+	}
+}
+
+.partner-institution {
+	margin-bottom: 40px;
+
+	img + img {
+		margin-left: 6px;
+	}
+}
+
+.partner-friends {
+	img + img {
+		margin-left: 22px;
+	}
+
+	.first {
+		margin-left: 85px;
+	}
+}

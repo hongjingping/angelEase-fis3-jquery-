@@ -1,0 +1,41 @@
+@import '../variables.less';
+
+/*   toast 样式   */
+.toast {
+    position: fixed;
+    top: 37%;
+    font-weight: 600;
+    display: none;
+    left: 30%;
+    z-index: 998;
+    background-color: rgba(0,0,0,.3);
+    color: #ffffff;
+    width: 40%;
+    height: 135px;
+    text-align: center;
+    -moz-border-radius: 3px;      /* Gecko browsers */
+    -webkit-border-radius: 3px;   /* Webkit browsers */
+    border-radius:3px;            /* W3C syntax */
+
+    .modify-suc-text {
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0px;
+        line-height: 24px;
+        // font-size: 20px;
+        // color: @GREEN;
+    }
+
+    .modify-attention {
+        font-size: 20px;
+        color: @RED;
+    }
+
+    .modify-suc-text {
+        font-family: @FontFamily;
+        font-size: 14px;
+        color: #FFFFFF;
+        letter-spacing: 0px;
+        line-height: 24px;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<!--  公共头引入  -->
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/paymentmethod/paymentmethod.less">
+</head>
+<body>
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+	<a href="/page/home/home.html" class="to-home">
+		<i class="ae-mobile ae-mobile-home"></i>
+	</a>
+
+	<div class="step-bar-wrapper white_bg underline">
+		<ul class="step-bar clearfloat">
+			<li>
+				<span class="dot"></span>
+				<a href="#">填写订单</a>
+			</li>
+			<li>
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+				</span>
+				<span class="dot"></span>
+				<a href="#">签约</a>
+			</li>
+			<li>
+				<span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+				</span>
+				<span class="dot"></span>
+				<a href="#">支付</a>
+			</li>
+		</ul>
+	</div>
+
+    <i class="ae-mobile ae-mobile-right pay-success"></i>
+
+    <p class="pay-txt">支付成功</p>
+
+    <a href="/page/personal_my_invest/my-invest.html" class="back-to-invest">返回我的投资</a>
+
+	<p class="hedge special">根据权威机构调查，每个投资者应选择参与不同项目来分散风险，小额分散、持续投资，从而提高获利的可能性。</p>
+
+    <script type="text/javascript">
+        $(function () {
+            $('.cmn-header-title').text('下单页');
+        });
+    </script>
+</body>
+</html>

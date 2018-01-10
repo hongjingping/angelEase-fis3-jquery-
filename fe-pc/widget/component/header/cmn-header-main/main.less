@@ -1,0 +1,261 @@
+@import '../../../../static/common/style/common';
+
+.cmn-header-wrapper {
+	border-top: 1px solid #f5f5f6;
+}
+
+.header-status-wrapper {
+	padding: 5px 0;
+	border-bottom: 1px solid #f5f5f6;
+}
+
+// 顶部状态栏
+.header-status {
+	width: 1180px;
+	margin: 0 auto;
+	color: @cmn-color-ae-gray2;
+
+	i {
+		color: @cmn-color-ae-gray2;
+		font-size: 13px;
+	}
+
+	.hover-gray {
+		cursor: pointer;
+
+		&:hover {
+			color: @cmn-color-ae-gray;
+		}
+	}
+}
+
+.creditease-link {
+	float: left;
+}
+
+.status-right-wrapper {
+	float: right;
+}
+
+.status-link-item {
+	float: left;
+	position: relative;
+	padding: 0 10px;
+	cursor: pointer;
+
+	&:hover {
+
+		.status-app-wrapper {
+			opacity: 1;
+			z-index: 101; // 覆盖导航条
+		}
+
+		.status-qrcode-wrapper {
+			opacity: 1;
+			z-index: 101; // 覆盖导航条
+		}
+
+
+	}
+
+	&+ .status-link-item {
+		border-left: 1px solid #f4f5f6;
+	}
+
+	.username {
+		&:hover {
+			color: @cmn-color-ae-dark-gold;
+		}
+	}
+
+	.log-out {
+		margin-left: 10px;
+	}
+
+	.status-qrcode-wrapper {
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		opacity: 0;
+		position: absolute;
+		top: 21px;
+		left: -26px;
+		padding: 7px;
+		background-color: #fff;
+		border-top: 1px solid @cmn-color-ae-gold;
+		// box-shadow: 0px 2px 4px 0px #eee;
+		transition: opacity .3s ease;
+		z-index: -1;
+
+		.icon-triangle-top {
+			position: absolute;
+			top: -6px;
+			left: 55px;
+			z-index: 100;
+		}
+
+		.android-wrapper {
+			float: left;
+		}
+
+		.ios-wrapper {
+			float: left;
+		}
+	}
+}
+
+.status-app-wrapper {
+	position: absolute;
+	top: 21px;
+	left: -22px;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	opacity: 0;
+	padding: 7px;
+	background-color: #fff;
+	border-top: 1px solid @cmn-color-ae-gold;
+	// box-shadow: 0px 2px 4px 0px #eee;
+	transition: opacity .3s ease;
+	z-index: -1;
+
+	.icon-triangle-top {
+		position: absolute;
+		top: -6px;
+		left: 55px;
+		z-index: 100;
+	}
+
+	.android-wrapper {
+		color: @cmn-color-ae-dark-gold;
+	}
+
+	.ios-wrapper {
+		float: left;
+		text-align: center;
+		color: @cmn-color-ae-dark-gold;
+	}
+}
+
+.app-link-wrapper,
+.wechat-link-wrapper {
+	:hover {
+		color: @cmn-color-ae-dark-gold;
+		i {
+			color: @cmn-color-ae-dark-gold;
+		}
+	}
+}
+
+// nav 导航
+.header-main-wrapper {
+	border-bottom: 2px solid #f5f5f6;
+
+	.header-main {
+		width: 1180px;
+		margin: 0 auto;
+
+		.back-home {
+			float: left;
+			cursor: pointer;
+		}
+
+		.angelease-logo {
+			margin-top: 6px;
+		}
+
+		.flow-name {
+			float: left;
+		    margin-left: 8px;
+		    margin-top: 48px;
+		    padding: 0 8px;
+		    line-height: 1;
+		    border-left: 1px solid #f4f5f6;
+		    color: @cmn-color-ae-gray2;
+		    font-size: 16px;
+		}
+
+		.main-right {
+			float: right;
+
+			.nav-item {
+				position: relative;
+				float: left;
+				width: 90px;
+				padding: 17px 0;
+				text-align: center;
+				font-size: 16px;
+				line-height: 36px;
+				border-top: 1px solid transparent;
+				border-left: 1px solid transparent;
+				border-right: 1px solid transparent;
+				border-bottom: 1px solid transparent;
+				color: @cmn-color-ae-gray;
+				box-sizing: border-box;
+
+				&+ .nav-item {
+					margin-left: 30px;
+				}
+
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					bottom: -3px;
+					left: -1px;
+					width: 90px;
+					height: 2px;
+					background-color: transparent;
+					transition: background 1s ease;
+					z-index: 100; // 为了盖住原有的border
+					transition: background-color 1s ease;
+				}
+
+				&:hover {
+					color: @cmn-color-ae-dark-gold;
+				}
+
+				&.active {
+					background-color: #f9fafb;
+					border-left: 1px solid #f5f5f6;
+					border-right: 1px solid #f5f5f6;
+
+					&::after {
+						background-color: @cmn-color-ae-gold;
+					}
+				}
+			}
+
+			.my-account {
+				float: left;
+			    padding: 0 21px;
+			    margin-top: 16px;
+			    margin-left: 20px;
+				background-color: #f9fafb;
+			    line-height: 36px;
+				color: @cmn-color-ae-dark-gold;
+				font-size: 14px;
+				border: 1px solid #f5f5f6;
+				box-sizing: border-box;
+
+			    &:hover {
+					background: @cmn-color-ae-gold;
+					color: #fff;
+					border: 1px solid transparent;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+.borderslide {
+	animation-duration: 1s;
+	animation-name: borderslide;
+}
+
+@keyframes borderslide {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}

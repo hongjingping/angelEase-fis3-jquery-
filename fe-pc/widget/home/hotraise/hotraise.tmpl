@@ -1,0 +1,135 @@
+<div class="hot-raise-title title-bold-22">热募中</div>
+<% for (var i = 0; i < data.length; i++) {%>
+    <%var raiseItem = data[i];%>
+    <div class="raise-items">
+        <div class="raise-item cmn-clearfix">
+            <div class="item-img-wrapper cmn-clearfix">
+                <a href="/page/detail/detail.html?proId=<%=raiseItem.id%>" target="_blank">
+                    <img src="<%=raiseItem.proImgSmallUrl%>" alt="" class="item-img" width="380px" height="230px">
+                </a>
+                <%if (raiseItem.proStatus == '2') {%>
+                    <div class="project-status cyan"><%=raiseItem.statusName%></div>
+                <%}%>
+                <%if (raiseItem.proStatus == '3' || raiseItem.proStatus == '9') {%>
+                    <div class="project-status glod"><%=raiseItem.statusName%></div>
+                <%}%>
+                <%if (raiseItem.proStatus == '4') {%>
+                    <div class="project-status orange"><%=raiseItem.statusName%></div>
+                <%}%>
+                 <%if (raiseItem.proStatus == '5' || raiseItem.proStatus == '7') {%>
+                    <div class="project-status green"><%=raiseItem.statusName%></div>
+                <%}%>
+                 <%if (raiseItem.proStatus == '6' || raiseItem.proStatus == '8') {%>
+                    <div class="project-status gray"><%=raiseItem.statusName%></div>
+                <%}%>
+                <!-- <img src="./resource/images/project-status-pre.png" class="project-status" width="60px" height="26px"> -->
+            </div>
+            <div class="hotraise-item-main">
+                <div class="item-main-title title-bold-22"><%=raiseItem.proName%></div>
+                <div class="labels-wrapper cmn-clearfix">
+                    <div class="labels">
+                        <% raiseItem.labels.forEach(function(label) { %>
+                            <span><%= label %></span>
+                        <% }) %>
+                    </div>
+                    <div class="pro-industry">
+                        <span><%=raiseItem.proIndustry%></span>
+                    </div>
+                </div>
+                <div class="progress-wrapper cmn-clearfix">
+                    <div class="base-line">
+                        <!-- 预热中和路演中项目进度隐藏 -->
+                        <%if (raiseItem.proStatus == '2' || raiseItem.proStatus == '3') {%>
+                            <div class="cover" style="width:0"></div>
+                        <%}else{%>
+                            <%if (raiseItem.proRaiseSpeed >= 100) {%>
+                                <div class="cover" style="width:100%"></div>
+                            <%}else{%>
+                                <div class="cover" style="width:<%=raiseItem.proRaiseSpeed%>%"></div>
+                            <%}%>
+                        <%}%>
+                    </div>
+                    <%if (raiseItem.proStatus == '2' || raiseItem.proStatus == '3') {%>
+                        <div class="ratio ratio-gray">0%</div>
+                    <%}else{%>
+                        <%if (raiseItem.proRaiseSpeed > 0) {%>
+                            <div class="ratio"><%=raiseItem.proRaiseSpeed%>%</div>
+                        <%}else{%>
+                            <div class="ratio ratio-gray"><%=raiseItem.proRaiseSpeed%>%</div>
+                        <%}%>
+                    <%}%>
+                </div>
+                <div class="raise-numbers-wrapper cmn-clearfix">
+                    <div class="raise-numbers">
+                        <div class="number-key">融资目标（万）</div>
+                        <div class="number-value"><%=raiseItem.proFinancieAmount%></div>
+                        <div class="small-square"></div>
+                    </div>
+                    <div class="raise-numbers">
+                        <div class="number-key">参与人数</div>
+                        <!-- 预热中和路演中项目参与人数不显示 -->
+                        <%if (raiseItem.proStatus == '2' || raiseItem.proStatus == '3') {%>
+                            <div class="number-value font-gray">--</div>
+                        <%}else{%>
+                            <!-- 详情页面数据为0或者没有内容的时候颜色为gray2 -->
+                            <% if (raiseItem.prePayNum == 0 || raiseItem.prePayNum == ''){%>
+                                <div class="number-value font-gray"><%=raiseItem.prePayNum%></div>
+                            <% }else{ %>
+                                <div class="number-value"><%=raiseItem.prePayNum%></div>
+                            <%}%>
+                        <%}%>
+                        <div class="small-square"></div>
+                    </div>
+                    <div class="raise-numbers">
+                        <div class="number-key">剩余天数</div>
+                        <!-- 预热中和路演中项目参与人数不显示 -->
+                        <%if (raiseItem.proStatus == '2' || raiseItem.proStatus == '3') {%>
+                            <div class="number-value font-gray">--</div>
+                        <%}else{%>
+                            <!-- 详情页面数据为0或者没有内容的时候颜色为gray2 -->
+                            <% if (raiseItem.remainDays == 0 || raiseItem.remainDays == ''){%>
+                                <div class="number-value font-gray"><%=raiseItem.remainDays%></div>
+                            <% }else{ %>
+                                <div class="number-value"><%=raiseItem.remainDays%></div>
+                            <%}%>
+                        <%}%>
+                        <div class="small-square"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-others">
+                <div class="project-hignlights active">
+                    <div class="title">项目亮点</div>
+                    <div class="detail"><%=raiseItem.proIntroduce.length >66 ? raiseItem.proIntroduce.substring(0,66) + '...' : raiseItem.proIntroduce%></div>
+                </div>
+                <div class="lead-info cmn-clearfix">
+                    <img class="lead-avatar" src="<%=raiseItem.proLeadCastUrl%>" width="72" height="72" alt="">
+                    <div class="lead-detail">
+                        <div class="lead-deail-key">领投人</div>
+                        <div class="lead-deail-value font-lineheight-30"><%=raiseItem.proLeadCast%></div>
+                    </div>
+                    <duv class="lead-detail">
+                        <div class="lead-deail-key">领投金额（万）</div>
+                        <div class="lead-deail-value font-20"><%=raiseItem.proLeadCastAmount%></div>
+                    </duv>
+                </div>
+                <!-- 预热中项目 -->
+                <%if (raiseItem.proStatus == '2') {%>
+                    <a class="cmn-btn-gold-w12 want-fund-btn" href="/page/detail/detail.html?proId=<%=raiseItem.id%>" target="_blank"><span class="btn-text">查看详情</span></a>
+                <%}%>
+                <!-- 募集中项目 -->
+                <%if (raiseItem.proStatus == '4') {%>
+                    <a class="cmn-btn-gold-w12 want-fund-btn" href="/page/detail/detail.html?proId=<%=raiseItem.id%>" target="_blank"><span class="btn-text">我要投资</span></a>
+                <%}%>
+                <!-- 路演中项目 -->
+                <%if (raiseItem.proStatus == '3') {%>
+                    <a class="cmn-btn-gold-w12 want-fund-btn" href="/page/detail/detail.html?proId=<%=raiseItem.id%>" target="_blank"><span class="btn-text">路演报名</span></a>
+                <%}%>
+                <!-- 如果募集中有活动的时候就变为路演中 -->
+                <%if (raiseItem.proStatus == '9') {%>
+                    <a class="cmn-btn-gold-w12 want-fund-btn" href="/page/detail/detail.html?proId=<%=raiseItem.id%>" target="_blank"><span class="btn-text">路演报名</span></a>
+                <%}%>
+            </div>
+        </div>
+    </div>
+<%}%>

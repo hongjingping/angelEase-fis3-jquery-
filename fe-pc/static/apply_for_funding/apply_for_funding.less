@@ -1,0 +1,715 @@
+@import "../common/style/variables";
+
+.apply-funding-wrapper {
+
+	.banner-wrapper {
+		background: #fff;
+	}
+
+	.banner {
+		max-width: 1920px;
+		min-width: 1180px;
+		margin: 0 auto;
+		height: 340px;
+		background-image: url('./resource/images/banner.jpg');
+		background-position: center;
+	}
+
+	.apply-part-wrapper {
+		// background: #f9f9f9;
+
+		&.apply-part-form {
+			display: none;
+			margin-bottom: 100px;
+		}
+
+		&.border-top {
+			border-top: 1px solid #d2d2d2;
+		}
+
+	}
+
+
+	.steps-wrapper {
+		position: relative;
+		max-width: 1680px;
+		min-width: 1180px;
+		margin: 0 auto;
+		padding-top: 40px;
+		height: 390px;
+		background-color: #fff;
+		background-image: url('./resource/images/step_background.png');
+		background-position: center bottom;
+		background-repeat: no-repeat;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 20px;
+			border-color: @cmn-color-ae-gold transparent transparent transparent ;
+		}
+
+		.triangle-wrapper {
+			content: '';
+			display: block;
+			position: absolute;
+			left: 50%;
+			top: 0;
+			transform: translateX(-50%);
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 18px;
+			border-color: #f9f9f9 transparent transparent transparent ;
+		}
+
+		.title-img {
+			display: block;
+			width: 262px;
+			height: 60px;
+			margin: 0 auto 50px;
+			background-image: url('./resource/images/title_img.png');
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	}
+
+	.steps {
+		width: 880px;
+		margin: 0 auto;
+
+		.step-img {
+			float: left;
+
+			&.first-img {
+				width: 53px;
+				height: 94px;
+				background-image: url('./resource/images/step_1.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+			&.second-img {
+				width: 59px;
+				height: 90px;
+				background-image: url('./resource/images/step_2.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+			&.third-img {
+				width: 55px;
+				height: 94px;
+				background-image: url('./resource/images/step_3.png');
+				background-size: contain;
+				background-repeat: no-repeat;
+			}
+
+
+		}
+
+		.step-text {
+			float: left;
+			margin-left: 10px;
+			margin-top: 10px;
+			font-size: 20px;
+			color: @cmn-color-ae-gray;
+
+			&.first {
+				width: 180px;
+			}
+
+			&.second {
+				width: 98px;
+				margin-top: 20px;
+			}
+
+			&.third {
+				width: 151px;
+			}
+		}
+
+		.step-text + .step-img {
+			margin-left: 122px;
+		}
+	}
+
+	.fund-btn {
+		width: 240px;
+		height: 60px;
+		margin: 50px auto 0;
+		background: @cmn-color-ae-gray;
+		color: @cmn-color-ae-gold;
+		font-size: 16px;
+		line-height: 60px;
+		text-align: center;
+		border: 1px solid @cmn-color-ae-gold;
+		cursor: pointer;
+
+		&:hover {
+			background: #737373;
+		}
+	}
+}
+
+// 申请表单
+.apply-funding {
+	width: 970px;
+	margin: 0 auto;
+	// -webkit-box-shadow: inset 0px 5px 2px 0px rgba(0,0,0,0.25);
+	// -moz-box-shadow: inset 0px 5px 2px 0px rgba(0,0,0,0.25);
+	// box-shadow: inset 0px 5px 2px 0px rgba(0,0,0,0.25);
+	// box-shadow: 0px 2px 6px 2px rgba(0,0,0,0.25);
+}
+
+.apply-funding-form {
+	float: left;
+	width: 500px;
+	margin-top: 60px;
+	margin-right: 80px;
+
+	.form-control {
+
+		&+.form-control {
+			margin-top: 20px;
+		}
+
+		&.special {
+			.form-key {
+				line-height: 1.5;
+			}
+
+			.form-value {
+				width: 310px;
+			}
+		}
+
+		.form-key {
+			float: left;
+			width: 100px;
+			font-size: 14px;
+			color: @cmn-color-ae-gray;
+			text-align: right;
+			line-height: 40px;
+		}
+
+		.form-value {
+			float: left;
+			margin-left: 20px;
+
+			.input-text {
+				width: 340px;
+				height: 40px;
+				padding-left: 15px;
+				background: #f9fafb;
+				border: 1px solid #eceff2;
+				box-sizing: border-box;
+				font-size: 14px;
+				outline: none;
+
+				&:focus {
+					border: 1px solid #E1C078;
+				}
+
+				&:hover {
+					border: 1px solid #E1C078;
+				}
+			}
+
+			.radio-item {
+				float: left;
+
+				&+.radio-item {
+					margin-left: 20px;
+				}
+
+				input[type="radio"] + label {
+					.ae-icon-checkbox-off {
+						display: block;
+					}
+
+					.ae-icon-checkbox-on {
+						display: none;
+					}
+
+					.ae-icon-radio-off {
+						display: block;
+					}
+
+					.ae-icon-radio-on {
+						display: none;
+					}
+				}
+
+				input[type="radio"]:checked + label {
+					.ae-icon-checkbox-off {
+						display: none;
+					}
+
+					.ae-icon-checkbox-on {
+						display: block;
+					}
+
+					.ae-icon-radio-off {
+						display: none;
+					}
+
+					.ae-icon-radio-on {
+						display: block;
+					}
+				}
+			}
+
+			.radio-label {
+				line-height: 40px;
+				cursor: pointer;
+
+				span {
+					margin-left: 10px;
+					font-size: 14px;
+					color: @cmn-color-ae-gray;
+				}
+
+				.ae-icon-checkbox-off {
+					float: left;
+					color: @cmn-color-ae-gray5;
+				}
+
+				.ae-icon-checkbox-on {
+					float: left;
+					display: none;
+					color: @cmn-color-ae-gold;
+				}
+
+				.ae-icon-radio-off {
+					float: left;
+					color: @cmn-color-ae-gray5;
+				}
+
+				.ae-icon-radio-on {
+					float: left;
+					display: none;
+					color: @cmn-color-ae-gold;
+				}
+			}
+
+			.gray-reminder {
+				margin-bottom: 8px;
+				color: @cmn-color-ae-gray2;
+				font-size: 13px;
+			}
+
+			.orange-reminder {
+				color: #f6a623;
+				font-size: 13px;
+			}
+
+			.bp-sample {
+				margin: 24px 0;
+
+				a {
+					color: #f6a623;
+					font-size: 14px;
+					font-weight: bold;
+					text-decoration: underline;
+				}
+			}
+
+			.upload-wrapper {
+				width: 400px;
+				margin-top: 26px;
+
+				.upload-item {
+					float: left;
+					margin: 15px;
+					width: 100px;
+					height: 100px;
+
+					&.upload-item-border {
+						border: 1px dashed #dfdfdf;
+					}
+
+					&:nth-of-type(3n+1) {
+						margin-left: 0;
+					}
+
+					.upload-label {
+						display: block;
+						position: relative;
+						width: 100%;
+						height: 100%;
+						background: #fff;
+						cursor: pointer;
+					}
+
+					.new-upload-btn {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						-webkit-transform:translate(-50%,-50%);
+				        -moz-transform:translate(-50%,-50%);
+				        -ms-transform:translate(-50%,-50%);
+				        -o-transform:translate(-50%,-50%);
+						transform: translate(-50%,-50%);
+						font-size: 45px;
+						color: #ececec;
+						line-height: 1;
+					}
+				}
+
+				// 上传进行中样式
+				.uploading-wrapper {
+					position: relative;
+					width: 100px;
+					height: 100px;
+					border: 1px dashed #dfdfdf;
+
+					.cancel-upload-wrapper {
+						position: absolute;
+						top: -15px;
+						right: -14px;
+						width: 25px;
+						height: 25px;
+						border: 1px solid #f0f0f0;
+						-webkit-border-radius: 50%;
+				        -moz-border-radius: 50%;
+				        border-radius: 50%;
+				        cursor: pointer;
+					}
+
+					.cancel-upload {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						-webkit-transform: translate(-50%,-50%);
+				        -moz-transform: translate(-50%,-50%);
+				        -ms-transform: translate(-50%,-50%);
+				        -o-transform: translate(-50%,-50%);
+			            transform: translate(-50%,-50%);
+						color: #dcb254;
+					}
+
+					.uploading-text {
+						position: absolute;
+						bottom: 11px;
+						left: 25px;
+						color: @cmn-color-ae-gray2;
+						font-size: 14px;
+						text-align: center;
+					}
+
+					.progress {
+						position: relative;
+						width: 80px;
+						height: 10px;
+						margin: 30px auto 0;
+						background-color: #ebeef1;
+
+						.cover {
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 0;
+							height: 10px;
+							background-color: @cmn-color-ae-gold;
+						}
+					}
+
+					.percent {
+						width: 30px;
+						margin: 5px auto 0;
+						color: @cmn-color-ae-gray2;
+					}
+				}
+
+				// 上传成功后样式
+				.upload-success-wrapper {
+					position: relative;
+
+					&:hover {
+						.hover-mask {
+							display: block;
+						}
+					}
+
+					.hover-mask {
+						display: none;
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100px;
+						height: 100px;
+						background: rgba(0,0,0,.5);
+					}
+
+					.edit-wrapper {
+						position:absolute;
+						top: 40px;
+						left: 22px;
+						color: #fff;
+
+						.preview {
+							margin-right: 7px;
+							cursor: pointer;
+
+						}
+
+						.delete {
+						    padding: 3px 0 3px 9px;
+						    border-left: 1px solid #fff;
+						    cursor: pointer;
+						}
+					}
+
+					.final-img {
+						width: 100px;
+						height: 100px;
+						border: 1px solid #dfdfdf;
+					}
+
+					// ppt,pdf
+					.ppt-pdf-wrapper {
+						position: relative;
+						width: 100px;
+						height: 100px;
+						background: #f7f7f7;
+						border: 1px solid #f7f7f7;
+
+						.ppt-icon {
+							position: absolute;
+							width: 52px;
+							height: 48px;
+							top: 50%;
+							left: 50%;
+							-webkit-transform: translate(-50%,-50%);
+					        -moz-transform: translate(-50%,-50%);
+					        -ms-transform: translate(-50%,-50%);
+					        -o-transform: translate(-50%,-50%);
+				            transform: translate(-50%,-50%);
+							background-image:url("./resource/images/ppt_icon.png");
+							background-size: contain;
+						}
+
+						.pdf-icon {
+							position: absolute;
+							width: 52px;
+							height: 48px;
+							top: 50%;
+							left: 50%;
+							-webkit-transform: translate(-50%,-50%);
+					        -moz-transform: translate(-50%,-50%);
+					        -ms-transform: translate(-50%,-50%);
+					        -o-transform: translate(-50%,-50%);
+				            transform: translate(-50%,-50%);
+							background-image:url("./resource/images/pdf_icon.png");
+							background-size: contain;
+						}
+
+						.delete-icon-wrapper {
+							position: absolute;
+							top: -15px;
+							right: -14px;
+							width: 25px;
+							height: 25px;
+							border: 1px solid #f0f0f0;
+							-webkit-border-radius: 50%;
+					        -moz-border-radius: 50%;
+					        border-radius: 50%;
+					        background: #fff;
+					        cursor: pointer;
+						}
+
+						.delete {
+							position: absolute;
+							top: 50%;
+							left: 50%;
+							-webkit-transform: translate(-50%,-50%);
+					        -moz-transform: translate(-50%,-50%);
+					        -ms-transform: translate(-50%,-50%);
+					        -o-transform: translate(-50%,-50%);
+				            transform: translate(-50%,-50%);
+							color: #dcb254;
+						}
+					}
+
+					.ppt-pdf-name {
+						width: 100px;
+					}
+				}
+
+				// 上传失败后样式
+				.upload-fail-wrapper {
+					position: relative;
+					width: 100px;
+					height: 100px;
+					border: 1px dashed #dfdfdf;
+
+					.fail-img {
+						position: absolute;
+						top: 50%;
+						left: 50%;
+						-webkit-transform: translate(-50%,-50%);
+				        -moz-transform: translate(-50%,-50%);
+				        -ms-transform: translate(-50%,-50%);
+				        -o-transform: translate(-50%,-50%);
+			            transform: translate(-50%,-50%);
+			            width: 38px;
+			            height: 34px;
+						background-image: url("./resource/images/fail_img.png");
+					}
+
+					.fail-tip {
+						position: absolute;
+						left: 0;
+						bottom: 3px;
+						width: 100%;
+						color: @cmn-color-ae-gray2;
+						text-align: center;
+					}
+				}
+			}
+
+			// 表单验证报错
+			.form-validate-notice {
+				display: none;
+				width: 340px;
+				margin-top: 20px;
+				padding: 8px 13px;
+				background: #ffefef;
+
+				.icon-error {
+					float: left;
+					color: #ff6464;
+					font-size: 14px;
+					margin-right: 12px;
+				}
+
+				.error-text {
+					color: @cmn-color-ae-gray1;
+					line-height: 20px;
+				}
+			}
+
+			// 提交按钮
+			.submit-btn {
+				width: 120px;
+				height: 40px;
+				margin-top: 30px;
+				line-height: 40px;
+				background: @cmn-color-ae-gold;
+				color: #fff;
+				font-size: 16px;
+				text-align: center;
+				border: 1px solid @cmn-color-ae-gold;
+				cursor: pointer;
+
+				&:hover {
+					background: #dcb254;
+				}
+			}
+		}
+
+		.form-text {
+			float: left;
+			margin-left: 10px;
+			line-height: 40px;
+			font-size: 14px;
+			color: @cmn-color-ae-gray;
+		}
+	}
+}
+
+.apply-funding-others {
+	float: left;
+	margin-top: 75px;
+	padding: 50px 0 50px 105px;
+	border-left: 1px solid #e0e0e0;
+
+	.email-img {
+		display: block;
+		width: 49px;
+		margin: 0 auto;
+	}
+
+	.gray-text {
+		font-size: 18px;
+		color: @cmn-color-ae-gray;
+		margin: 5px 0 12px 0;
+	}
+
+	.email-address {
+		font-size: 18px;
+
+		a {
+			color: #dcb254;
+			text-decoration: underline;
+		}
+	}
+
+	.app-qrcode-img {
+		display: block;
+		width: 160px;
+		margin: 15px auto;
+	}
+
+	.app-qrcode-text {
+		text-align: center;
+		color: @cmn-color-ae-gray;
+	}
+
+	.download-reminder {
+		font-size: 14px;
+		color: @cmn-color-ae-gray;
+		text-align: center;
+		margin-top: 25px;
+	}
+}
+
+.apply-font-white {
+    display: block;
+    width: 120px;
+    height: 40px;
+	color: #fff;
+	font-size: 14px;
+}
+
+#apply-for-funding {
+	.success-icon {
+		float: left;
+		margin-right: 12px;
+		color: @cmn-color-ae-green;
+	}
+
+	.fail-icon {
+		margin-right: 12px;
+		color: #ff6464;
+	}
+
+	.content-txt-wrapper {
+		float: left;
+		width: 382px;
+		text-align: left;
+
+		.font-gold {
+			color: @cmn-color-ae-dark-gold;
+		}
+	}
+}
+
+// 放大预览图
+.preview-popup {
+	text-align: center;
+
+	.preview-img {
+		display: inline-block;
+		max-width: 870px;
+		max-height: 600px;
+	}
+}

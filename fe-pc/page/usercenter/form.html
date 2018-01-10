@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<!-- status ok -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>融资人认证</title>
+    
+    <!-- common header -->
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+    
+    <link href="../../static/usercenter/financier.css" rel="stylesheet">
+    <link href="../../static/usercenter/common.css" rel="stylesheet">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/city.js
+        @require ../../static/usercenter/financier.js
+    -->
+  </head>
+
+<body>
+<div class="main-container clearfix">
+    <div class="pull-left sidebar-left">     
+    </div>
+    <div class="pull-right base-container financing">
+        <div class="gold-header">融资人认证</div>
+        <form action="" method="post" class="main-content" id="form_finacier" enctype="multipart/form-data">
+            <!--真实姓名-->
+            <div class="clearfix form-group">
+                <div class="pull-left label">真实姓名</div>
+                <div class="pull-left" id="real-name"></div>
+            </div>
+            <!--手机号码-->
+            <div class="clearfix form-group">
+                <div class="pull-left label">手机号码</div>
+                <div class="pull-left" id="mobile"></div>
+            </div>
+            <!--认证类型-->
+            <div class="clearfix form-group">
+                <div class="pull-left label">认证类型</div>
+                <div class="pull-left" id="cer-type">机构</div>
+            </div>
+            <div class="mute-alert alert">目前只支持公司、机构的融资人认证,若您为其他身份,请联系400-321-0394</div>
+            <!--机构名称-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>机构名称</div>
+                <input type="text"
+                       class="pull-left form-control"
+                       id="company"
+                       placeholder="填写公司、机构的全称"
+                       name="company"
+                       maxlength="30"
+                       onKeyUp="value=value.replace(/[^\a-\z\A-\Z0-9\u4E00-\u9FA5\.]/g,'')">
+            </div>
+            <!--公司电话-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>公司电话</div>
+                <input type="text"
+                       class="pull-left form-control"
+                       id="contact"
+                       placeholder="能联系到贵公司的手机或电话"
+                       name="contact"
+                       maxlength="30"
+                       onkeyup="this.value=this.value.replace(/[^\d]/g,''); ">
+            </div>
+            <!--公司邮箱-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>公司邮箱</div>
+                <input type="text"
+                       class="pull-left form-control"
+                       id="email"
+                       placeholder="能联系到贵公司的邮箱"
+                       name="email">
+            </div>
+            <!--所在地区-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>所在地区</div>
+                <select class="pull-left form-control small" name="province" id="city1">
+                </select>
+                <select class="pull-left form-control small" name="city" id="city2">
+                </select>
+                <select class="pull-left form-control small" name="district" id="city3">
+                </select>
+            </div>
+            <!--详细地址-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>详细地址</div>
+            <textarea rows="4"
+                      id="contactAddress"
+                      name="contactAddress"
+                      class="pull-left form-control"
+                      placeholder="填入您的公司详细地址">
+            </textarea>
+            </div>
+            <!--法人姓名-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>法人姓名</div>
+                <input type="text"
+                       class="pull-left form-control"
+                       id="realname"
+                       placeholder="请填写您公司的法人姓名"
+                       name="realname">
+            </div>
+            <!--法人证件类型-->
+            <div class="clearfix form-group">
+                <div class="pull-left label">法人证件类型</div>
+                <div class="pull-left" id="legalNumberType">身份证</div>
+            </div>
+            <!--法人证件号码-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>法人证件号码</div>
+                <input type="text"
+                       class="pull-left form-control"
+                       id="licenseNumber"
+                       placeholder="请填写法人证件号码"
+                       name="licenseNumber">
+            </div>
+            <!--营业执照注册号-->
+            <div class="clearfix form-group">
+                <label class="pull-left label"><span style="color: red;">* </span>营业执照注册号</label>
+                <input type="text"
+                       class="pull-left form-control"
+                       id="busLic"
+                       placeholder="请填写执照注册号码"
+                       name="busLic">
+            </div>
+            <!--营业执照扫描照-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>营业执照扫描照</div>
+                <div class="image-upload-comp pull-left file-uploader" data-id="certPhoto1"></div>
+            </div>
+            <div class="mute-alert alert">支持小于2MB格式为JPG、JPEG、PNG的图片</div>
+            <!--组织机构代码-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>组织机构代码</div>
+                <input type="text"
+                       class="pull-left form-control"
+                       id="orgCode"
+                       placeholder="请填写组织机构代码"
+                       name="orgCode">
+            </div>
+            <!--组织机构代码扫描件-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"><span style="color: red;">* </span>组织机构代码扫描照</div>
+                <div class="image-upload-comp pull-left file-uploader" data-id="certPhoto2"></div>
+            </div>
+            <div class="mute-alert alert">支持小于2MB格式为JPG、JPEG、PNG的图片</div>
+            <!--本人承诺及相关协议-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"></div>
+                <div class="pull-left clearfix" id="agreediv">
+                    <input class="pull-left form-checkbox" type="checkbox" id="agreement" value="0" placeholder="请阅读融资人声明及相关协议">
+                    <div class="pull-left form-checkbox-tip">本人承诺以上所有信息属实,已阅读并同意签署<a href="investrulep-protocol.html">《融资人声明》</a>,如有虚假信息,愿承担相应后果和法律责任。请您在投资之前认真阅读<a
+                            href="investrulep-protocol.html">《相关协议》</a>。
+                    </div>
+                </div>
+            </div>
+
+
+            <!--error-->
+            <div id="error" class="error-alert"></div>
+            <!--提交-->
+            <div class="clearfix form-group">
+                <div class="pull-left label"></div>
+                <div class="pull-left">
+                    <button class="btn gold" type="button" onclick="onSubmit()">提交</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</body>
+</html>

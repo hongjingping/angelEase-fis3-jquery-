@@ -1,0 +1,12 @@
+<% for (var i = 0; i < data.length; i++) {%>
+	<%var item = data[i];%>
+    <div class="swiper-slide">
+        <a href="<%=item.hyperlink%>">
+            <span class="status"><%=item.label%></span>
+            <div class="slogan">
+                <h2><%=item.title%></h2>
+            </div>
+            <img src="<%=item.imgPath%>">
+        </a>
+    </div>
+<% } %>

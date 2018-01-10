@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/offlinepayment/offlinepayment.less">
+</head>
+<body  class="gray_bg" >
+    <link rel="import" href="../../widget/component/header/header.tpl?__inline">
+    
+    <div class="white_bg" >
+        <ul class="step-bar clearfloat">
+            <li>
+                <span class="dot"></span>
+                <a href="#">填写订单</a>
+            </li>
+            <li>
+                <span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+                </span>
+                <span class="dot"></span>
+                <a href="#">签约</a>
+            </li>
+            <li>
+                <span class="arrows"> <i class="ae-mobile ae-mobile-step"></i>
+                </span>
+                <span class="dot"></span>
+                <a href="#">支付</a>
+            </li>
+        </ul>
+
+        
+        <div class="gray_col gray_bg"></div>
+        <div class="white_bg alert-wrapper"  >
+            <div class="alert-left">
+                <i class="ae-mobile ae-mobile-attention2"></i>
+            </div>
+            <div class="alert-right">请您确认开通并使用数字证书</div>
+            <div class="" style="clear: both;"></div>
+        </div>
+        
+        
+        <div class="weui_cells weui_cells_form change-mobile-container">
+            
+            <div class="weui_cell">
+                <div class="weui_cell_hd cell-key">
+                    <label class="weui_label change-mobile-label">手机号</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input change-mobile-input" type="tel"  readonly="readonly" placeholder="请输入您绑定的手机号码" id="phone">
+                </div>
+            </div>
+            
+            <div class="weui_cell" id="validDiv">
+                <div class="weui_cell_hd cell-key">
+                    <label class="weui_label change-mobile-label">验证码</label>
+                </div>
+                <div class="weui_cell_bd weui_cell_primary">
+                    <input class="weui_input change-mobile-input" maxlength="6" type="tel" placeholder="请输入手机验证码" value="" id="dxInput"></div>
+                <span class="tiny-vertical-line">|</span>
+                <div class="weui_cell_bd val-code" id="sendCode">发送验证码</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="change-mobile-next-button">
+        <span id="account" class="key-operation-button-normal">获取打款账号</span>
+    </div>
+
+    <script type="text/javascript" src="../../static/offlinepayment/offlinepayment.js"></script>
+</body>
+</html>

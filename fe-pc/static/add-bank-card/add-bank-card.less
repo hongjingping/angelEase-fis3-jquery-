@@ -1,0 +1,603 @@
+@import '../../static/common/style/common';
+.modify-pass {
+	overflow: hidden;
+	position: relative;
+	//持卡人姓名
+
+
+	.add-bank-form-wrapper {
+		position: relative;
+
+		.card-name-wrapper {
+			position: absolute;
+			left: 420px;
+			top: 8px;
+			width: 40px;
+			z-index: 2;
+
+			&:hover {
+				.cardName {
+					display: block;
+				}
+			}
+
+			.symbols-attention {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background: url('./resource/images/symbols-attention.png') no-repeat center;
+				-webkit-background-size: 100%;
+				background-size: 100%;
+				z-index: 999;
+			}
+
+			.cardName {
+				display: none;
+				position: absolute;
+				border: 4px solid rgba(201,201,201,.2);
+				left: 23px;
+				top: 0px;
+				z-index: 100;
+				overflow: hidden;
+				font-size: 12px;
+				background: #FFF;
+
+				.cardNameInfo {
+					border-top: 1px solid #E1B555;
+					width: 200px;
+					padding: 10px;
+				}
+			}
+		}
+
+		.support-bank-wrapper {
+			position: absolute;
+			left: 455px;
+			top: 60px;
+
+			&:hover {
+				.bank-list {
+					display: block;
+				}
+			}
+
+			.bank-list {
+				display: none;
+				position: absolute;
+				left: -107px;
+				top: 35px;
+				width: 350px;
+				height: 330px;
+				border: 4px solid rgba(201,201,201,.2);
+				z-index: 99;
+				overflow: hidden;
+
+				.bank-list-head {
+					border-top: 1px solid #E1B555;
+					padding: 10px 10px 0;
+				}
+				.bank-list-body {
+					height: 290px;
+					overflow: auto;
+					padding-left: 10px;
+					color: #3F3F3F;
+				}
+				.banklist {
+					width: 330px;
+					border-collapse: collapse;
+					border-spacing: 0;
+					&.top-border {
+						border-top: 0px;
+					}
+					th,
+					td {
+						&.bank-w {
+							width: 130px;
+							text-align: left;
+						  }
+						&.quota-w {
+							width: 100px;
+							text-align: right;
+						}
+						color: #404060;
+						padding: 10px;
+					}
+					th {
+						background-color: #fff;
+						font: normal 12px "Microsoft YaHei";
+						color: #9B9B9B;
+					}
+
+					td {
+						font-size: 12px;
+						color: #3F3F3F;
+					}
+
+
+					tbody tr {
+						background-color: #fff;
+					}
+
+					tbody tr:hover {
+						cursor: pointer;
+						background-color: #fafafa;
+					}
+					tr > td:nth-child(3) {
+						text-align:right;
+					}
+					tr > td:first-child {
+						text-align:left;
+						color: #3F3F3F;
+					}
+				}
+			}
+		}
+
+	}
+
+	.form-control-phone {
+		position: relative;
+
+		.phone-num-wrapper {
+			position: absolute;
+			left: 420px;
+			top: 11px;
+			width: 40px;
+
+			&:hover {
+				.bankCardNum {
+					display: block;
+				}
+			}
+
+			.symbols-attention {
+				display: inline-block;
+				width: 16px;
+				height: 16px;
+				background: url('./resource/images/symbols-attention.png') no-repeat center;
+				-webkit-background-size: 100%;
+				background-size: 100%;
+			}
+
+			.bankCardNum {
+				display: none;
+				position: absolute;
+				border: 4px solid rgba(201,201,201,.2);
+				left: 25px;
+				top: 0;
+				z-index: 100;
+				overflow: hidden;
+				font-size: 12px;
+				background: #fff;
+
+				.bankCardNumInfo {
+					border-top: 1px solid #E1B555;
+					padding: 20px;
+					width: 290px;
+					height: 125px;
+				}
+			}
+	    }
+	}
+
+
+	//银行预留手机号
+
+	//收不到短信验证码
+	//.noMsgTips {
+	//	display: none;
+	//	position: absolute;
+	//	width: 290px;
+	//	height: 120px;
+	//	border: 4px solid rgba(201,201,201,.2);
+	//	right: 200px;
+	//	top: 300px;
+	//	z-index: 100;
+	//	overflow: hidden;
+	//	font-size: 12px;
+	//	background: #FFF;
+	//	.noMsgTips-info {
+	//		border-top: 1px solid #E1B555;
+	//		padding: 10px;
+	//	}
+	//}
+	.modify-pass-header {
+		height: 36px;
+		margin: 30px 0 40px;
+	}
+
+	.modify-pass-content {
+		// width: 550px;
+		//overflow: hidden;
+		margin-left: 300px;
+		margin-top: 90px;
+		margin-bottom: 260px;
+		font-size: 14px;
+		position: relative;
+
+
+		.form-control {
+			margin-bottom: 20px;
+
+			&.margin-btoom-0 {
+				margin-bottom: 0;
+			}
+		}
+		.error-bottom {
+			margin-bottom: 0;
+		}
+		.form-control {
+
+			.pull-left {
+				float: left;
+			}
+
+			.btn-next {
+				margin-left: 110px;
+
+				a {
+					color: #fff;
+				}
+			}
+
+			.btn-prev {
+				line-height: 40px;
+				margin-left: 20px;
+
+				a {
+					color: #e1c078;
+					font-size: 16px;
+				}
+			}
+
+			.form-key {
+				float: left;
+				width: 80px;
+				margin-right: 30px;
+				line-height: 40px;
+				text-align: right;
+			}
+
+			.form-value {
+				float: left;
+				width: 340px;
+				height: 40px;
+				/* CSS Hack only for IE */
+				line-height: 40px\9;
+				box-sizing: border-box;
+				position: relative;
+
+				&.form-value-oneline {
+					width: 340px;
+				}
+				&.form-value-oneline2 {
+					width: 240px;
+				}
+				&.from-value-text {
+					line-height: 40px;
+				}
+				&.form-width {
+					width: 250px;
+				}
+
+
+			}
+			.timeout {
+				float: left;
+				width: 120px;
+				height: 40px;
+				font-size: 14px;
+				/* CSS Hack only for IE */
+				line-height: 40px\9;
+				box-sizing: border-box;
+				position: relative;
+				background: #FFF;
+				//border: none;
+				border: 1px solid rgba(255,180,0,.4);
+				color: #E1B555;
+			}
+			.timeout-num {
+				float: left;
+				width: 120px;
+				height: 40px;
+				font-size: 16px;
+				/* CSS Hack only for IE */
+				line-height: 40px\9;
+				box-sizing: border-box;
+				position: relative;
+				border: 0px;
+				background: #EBEEF1;
+				color: #3F3F3F;
+			}
+			.img-code {
+				width: 100px;
+				height: 40px;
+				float: left;
+				line-height: 40px;
+				cursor: pointer;
+				box-sizing: border-box;
+				.imgCode {
+					//border: none;
+				}
+			}
+
+			.error-notice {
+				width: 340px;
+				line-height: 24px;
+				background: #FFEEEE;
+				margin-left: 110px;
+				padding: 8px 0;
+				font-size: 12px;
+				z-index: 990;
+
+				.error-icon {
+					float: left;
+					color: #FF6493;
+					margin: 0 10px;
+				}
+
+				.error-text {
+					float: left;
+					width: 85%;
+				}
+			}
+
+			.success-notice {
+				width: 340px;
+				line-height: 36px;
+				background: #F8F9FA;
+				margin-left: 110px;
+
+				.success-icon {
+					color: #9BD560;
+					margin: 0 10px;
+				}
+			}
+		}
+
+		.tip {
+			margin-left: 110px;
+			font-size: 14px;
+			color: #C9C9C9;
+			span {
+				color: #000;
+			}
+		}
+		//.noMsg {
+		//	margin-left: 130px;
+        //
+		//}
+		.no-Msg:hover{
+			color: #E1C078;
+		}
+		.bigNum {
+			//visibility: hidden;
+			display: none;
+			padding: 10px;
+			margin-left: 110px;
+			margin-top: 0;
+			line-height: 20px;
+			height: 20px;
+			width: 318px;
+			font-size: 18px;
+			background: #F6EBD3;
+			font-weight: bold;
+			color: #E1C078;
+			border: 1px solid #E1C078;
+			border-top: 0px;
+
+		}
+	}
+	.tips-info {
+		overflow: visible;
+	}
+}
+
+.modify-pass-first {
+	.first-header {
+		background: url('./resource/images/addBankCard1.png') no-repeat center;
+	}
+}
+
+.modify-pass-second {
+
+	.second-header {
+		background: url('./resource/images/addBankCard2.png') no-repeat center;
+	}
+
+	#find-pass-cat {
+		color: #E1C078;
+		background: none;
+	}
+}
+
+.modify-pass-last {
+	.last-header {
+		background: url('./resource/images/addBankCard3.png') no-repeat center;
+	}
+
+	.modify-last-content {
+		width: 798px;
+		height: 248px;
+		text-align: center;
+		background: #F8F9FA;
+		margin: 50px auto 205px;
+		border: 1px solid #EBEEF1;
+
+		.modify-last-icon {
+			margin: 40px 0 25px;
+
+			.suc-icon {
+				font-size: 30px;
+				color: #9BD560;
+			}
+		}
+
+		.modify-last-txt {
+			font-size: 24px;
+			margin-bottom: 25px;
+		}
+
+		.modify-last-next {
+			color: #FFF;
+			width: 120px;
+			height: 38px;
+			font-size: 16px;
+			line-height: 38px;
+			text-align: center;
+			background: #E1C078;
+			display: inline-block;
+		}
+	}
+	.qrCode {
+		width: 155px;
+		height: 155px;
+		margin: 0 auto;
+		margin-top: 60px;
+		.qrImg {
+			width: 100px;
+			height: 100px;
+			margin: 0 auto 20px;
+		}
+	}
+}
+.support-bank {
+	display: inline-block;
+	width: 70px;
+	line-height: 40px;
+	height: 40px;
+	margin-left: 5px;
+	cursor: pointer;
+	color: #E1C078;
+}
+//银行卡号隐藏框
+.cmn-left {
+	margin-left: 110px;
+	// display: none;
+	//background-color: #F3E6C9;
+}
+//银行卡号框显示
+.cmn-left2 {
+	margin-left: 110px;
+	display: block;
+	background-color: #F3E6C9;
+}
+.protocal {
+	margin-left: 110px;
+	position: relative;
+	line-height: 54px;
+	font-size: 12px;
+	//勾选协议
+	.check-icon {
+		position: absolute;
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		top: 50%;
+		margin-top: -8px;
+		//background: red;
+		&.check-icon1 {
+			background: url('./resource/images/symbols-checkbox-normal.png') no-repeat center;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+		}
+		&.check-icon1:hover {
+			background: url('./resource/images/symbols-checkbox-hover.png') no-repeat center;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+		}
+		&.check-icon2 {
+			background: url('./resource/images/symbols-checkbox-on.png') no-repeat center;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+		}
+		//协议同意勾选上
+		&.check-icon2 {
+			background: url('./resource/images/symbols-checkbox-on.png') no-repeat center;
+			-webkit-background-size: 100%;
+			background-size: 100%;
+		}
+	}
+	.cmn-l {
+		margin-left: 20px;
+	}
+	.font-c {
+		color: #9b9b9b;
+	}
+}
+.cmn-mt {
+	margin-top: -20px;
+}
+.font-c {
+	color: #9B9B9B;
+}
+.check {
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+}
+.nextBtn {
+	display: inline-block;
+	width: 120px;
+	height: 40px;
+}
+.font-text {
+	text-align: center;
+	.loading-image {
+		display: inline-block;
+		width: 16px;
+		height: 16px;
+		background: url(./resource/images/loadingsmall.gif) no-repeat;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+		vertical-align: middle;
+	}
+	.loading-icon {
+		font-size: 16px;
+		color : #C9C9C9;
+		vertical-align: middle;
+	}
+}
+
+.cardType {
+	display: none;
+}
+
+
+h5 {
+	font-weight: normal;
+	margin-bottom: 10px;
+}
+.cmn-tip-top {
+	margin-top: 5px;
+}
+.comtent-stepTwo {
+	position: relative;
+	.no-mag-wrapper {
+		position: absolute;
+		left: 390px;
+		top: 100px;
+
+		&:hover {
+			.noMsgTips {
+				display: block;
+			}
+		}
+		.noMsg {
+			width: 100px;
+		}
+		.noMsgTips {
+			display: none;
+			border: 4px solid rgba(201,201,201,.2);
+			font-size: 12px;
+			background: #FFF;
+			.noMsgTips-info {
+				border-top: 1px solid #E1B555;
+				padding: 10px;
+			}
+		}
+	}
+}
+.protocal-col {
+	color: #E2B655;
+}

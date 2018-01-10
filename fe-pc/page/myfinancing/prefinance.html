@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="import" href="../../static/common/view/main.tpl?__inline">
+
+    <link rel="stylesheet" type="text/css" href="../../static/invest/invest.less">
+    <link rel="stylesheet" href="../../static/myfinancing/prefinance.less">
+    <!--
+        @require ../../static/common/lib/jquery/jquery.js
+        @require ../../static/common/lib/template/template.js
+        @require ../../static/common/lib/storage.js
+        @require ../../static/common/base/base.js
+        @require ../../static/common/lib/template/handlebars.js
+        @require ../../static/common/lib/apopup.js
+    -->
+  </head>
+  <body>
+    <link rel="import" href="../../widget/component/header/cmn-header-main/main.tpl?__inline" hitIndex="">
+
+    <div class="user-invest-list">
+      <div class="layout invest-list-wrap">
+        <div class="invest-menu">
+          <link rel="import" href="../../widget/component/usercenter/menu/menu.tpl?__inline">
+        </div>
+        <div class="invest-main prefinance-main">
+          <div class="prefinance-topbar">
+            <span>提交项目详情</span><a class="back-action" href="/page/myfinancing/myfinancing.html?tab=1">返回</a>
+          </div>
+          <div class="prefinance-bd">
+          </div>
+        </div>
+      </div>
+    </div>
+    <script id="prefinance-template" type="text/x-handlebars-template">
+      <div class="left-side">
+        <ul class="lbl-list">
+          <li>项目名称</li>
+          <li>创始人姓名</li>
+          <li>创始人电话</li>
+          <li>融资轮次</li>
+          {{#if lastInvestAmount}}
+          <li>上轮注资</li>
+          {{/if}}
+          <li>融资金额</li>
+          <li>您的身份</li>
+          <li>商业计划书</li>
+        </ul>
+      </div>
+      <div class="detail">
+        <ul class="val-list">
+          <li>{{projectName}}</li>
+          <li>{{financierName}}</li>
+          <li>{{financierMobile}}</li>
+          <li>{{financRound}}</li>
+          {{#if lastInvestAmount}}
+          <li>{{lastInvestAmount}}万元</li>
+          {{/if}}
+          <li>{{investAmount}}万元</li>
+          <li>{{financierType}}</li>
+          {{#if fileList.length}}
+          <li>{{fileList.[0].fileName}}</li>
+          {{/if}}
+        </ul>
+        <div class="preview-imgs">
+          {{#each imgList}}
+          <img src="{{this}}" alt="">
+          {{/each}}
+        </div>
+      </div>
+    </script>
+    <link rel="import" href="../../widget/component/footer/footer.tpl?__inline">
+    <script src="../../static/myfinancing/prefinance.js"></script>
+  </body>
+</html>

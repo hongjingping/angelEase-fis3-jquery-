@@ -1,0 +1,142 @@
+@smartAlert-inner-padding:         15px;
+@smartAlert-title-padding:         15px;
+@zindex-smartAlert:                1050;
+@smartAlert-dialog-margin:         10px;
+@zindex-smartAlert-bg:             1040;
+@smartAlert-backdrop-bg:           #000;
+@smartAlert-backdrop-opacity:        0.5;
+@border-color:                     #eee;
+
+
+.alert-notice-attention {
+    float: left;
+    margin-right: 10px;
+    color: #ff6493;
+}
+
+.content-txt-wrapper {
+    float: left;
+    width: 382px;
+    text-align: left;
+}
+
+@keyframes cmn-fadein {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// Remove body's scroll
+.smartAlert-open {
+    overflow: hidden;
+}
+
+// Container that the smartAlert scrolls within
+.smartAlert {
+    position: fixed;
+    z-index: @zindex-smartAlert;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    outline: 0;
+    background: #eee; /*不支持rgba的浏览器*/
+    background: rgba(0, 0, 0, 0.5);  /*支持rgba的浏览器*/
+    // animate it to slide down
+    &.fade .smartAlert-dialog {
+        -webkit-animation: cmn-fadein .3s ease-out;
+        -moz-animation: cmn-fadein .3s ease-out;
+        -o-animation: cmn-fadein .3s ease-out;
+        animation: cmn-fadein .3s ease-out;
+
+    }
+    &.in .smartAlert-dialog {
+        -webkit-animation: cmn-fadein .3s ease-out;
+        -moz-animation: cmn-fadein .3s ease-out;
+        -o-animation: cmn-fadein .3s ease-out;
+        animation: cmn-fadein .3s ease-out;
+    }
+}
+
+.smartAlert-open .smartAlert {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.smartAlert-dialog {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.smartAlert-content {
+    display: inline-block;
+    width: 500px;
+    text-align: start;
+    border: 1px solid @border-color;
+    outline: 0;
+    background-color: #fff;
+}
+
+.smartAlert-header {
+    padding: 12px;
+    border-bottom: 1px solid @border-color;
+    .close {
+        float: right;
+        cursor: pointer;
+        color: #e1c078;
+    }
+    .smartAlert-title {
+        font-size: 16px;
+        line-height: 1.5;
+        float: left;
+        margin: 0;
+        color: #9b9b9b;
+    }
+}
+
+.smartAlert-body {
+    font-size: 14px;
+    position: relative;
+    padding: 38px 40px;
+
+    .notice-attention {
+        margin-right: 10px;
+        color: #ff6493;
+    }
+    .content-txt {
+        line-height: 25px;
+    }
+}
+
+// Footer (for actions)
+.smartAlert-footer {
+    padding: 0 0 40px 0;
+    text-align: center;
+
+    .cancel + .save {
+        margin-left: 30px;
+    }
+
+    .save {
+        border: 1px solid #e1c078;
+        outline: none;
+        font-size: 16px;
+    }
+    .cancel {
+        line-height: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+.smartalert-content-wrapper {
+  margin: 0 auto;
+  text-align: center;
+}

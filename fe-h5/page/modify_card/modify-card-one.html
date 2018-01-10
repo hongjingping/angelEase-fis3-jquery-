@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../static/modify_card/card.less">
+
+	<!--
+		@require ../../static/common/lib/base64.js;
+		@require ../../static/common/lib/send_sms.js;
+	-->
+</head>
+<body class="gray_bg clear_body">
+	<link rel="import" href="../../widget/component/header/header.tpl?__inline">
+	
+	<input type="hidden"  name="userName" value=""/>
+    <input type="hidden"  name="for_login_userphone" id="for_login_userphone" value="">
+    <input type="hidden"  name="realName" value=""/>
+    <input type="hidden"  name="idCardNo" value="" />
+    <input type="hidden"  name="idcardtype" value="1" />
+	
+	<div id="yzm">
+		<div class="weui_cells weui_cells_form login-form">
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">当前手机</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary weui_input" id="phone">
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">手机验证码</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="text" placeholder="请输入手机验证码"
+						 name="code" id="code" >
+				</div>
+				<span class="tiny-vertical-line">|</span>
+				<div class="weui_cell_bd val-code" id="sendCode" onclick="send();" >发送验证码</div>
+			</div>
+		</div>
+		<br/>
+		<div class="img-show">
+			<img class="img-size" src="../../static/modify_card/resource/images/next@3x.png" id="nextBtn0">
+		</div>
+	</div>
+
+	<div id="yhk" style="display: none;">
+		<div class="weui_cells weui_cells_form login-form">
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">真实姓名</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary weui_input" id="realName1">
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">证件号码</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary weui_input weui_input" id="idcardno">
+				</div>
+			</div>
+		</div>
+		<div class="gray_col"></div>
+		<div class="weui_cells weui_cells_form login-form">
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">选择银行</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<select  id="cardType" name="cardType" class="cmn-input bank-type">
+                        <option value="0102">工商银行</option>
+						<option value="0308">招商银行</option>
+						<option value="0105">建设银行</option>
+						<option value="0103">农业银行</option>
+						<!--<option value="0104">中国银行</option>-->
+						<option value="0303">光大银行</option>
+						<option value="0100">中国邮政储蓄银行</option>
+                    </select>
+				</div>
+			</div>
+			<div class="weui_cell">
+				<div class="weui_cell_hd cell-key">
+					<label class="weui_label">银行卡号</label>
+				</div>
+				<div class="weui_cell_bd weui_cell_primary">
+					<input class="weui_input" type="tel"  id="cardNo" name="cardNo" 
+						placeholder="请输入银行卡号">
+				</div>
+			</div>
+		</div>
+		<div class="submit-btn-wrapper">
+			 <span class="key-operation-button-normal" id="nextBtn4">提交</span>
+		</div>
+	</div>
+
+	<div class="toast" id="toastBox">
+        <div> 
+            <i class="ae-mobile ae-mobile-right modify-suc"></i>
+        </div>
+        <div class="modify-suc-text">找回密码成功</div>
+    </div>	
+			
+	<script type="text/javascript" src="../../static/modify_card/card.js"></script>
+</body>
+</html>

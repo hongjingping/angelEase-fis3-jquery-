@@ -1,0 +1,33 @@
+
+.content {
+    margin: 40px 400px 30px 200px;
+}
+
+.content .line {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row;
+    flex-flow: row;
+    line-height: 3.5rem;
+    color: #404a58;
+    font-size: 22px;
+}
+
+.content .line .line-title {
+    -webkit-flex: 1.5;
+    flex: 1.5;
+    text-align: right;
+}
+
+.content .line .line-content {
+    -webkit-flex: 5.5;
+    flex: 5.5;
+    margin-left: 30px;
+}
+
+.location {
+    width: 27%;
+    float: left;
+    margin-right: 3%;
+    margin-left: 1%;
+}

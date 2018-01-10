@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="import" href="../../static/common/view/header-info.html?__inline">
+    <link rel="stylesheet" type="text/css" href="../../static/changemobile/changemobile.less">
+</head>
+<body class="gray_bg">
+    <link rel="import" href="../../widget/component/header/header.tpl?__inline">
+
+    <div class="weui_cells weui_cells_form change-mobile-container">
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label change-mobile-label">新手机号码</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input change-mobile-input" type="tel"  name="mobile" maxlength="11" value="" onblur="validatemobile3(this.value)"   placeholder="请输入您绑定的手机号码" >
+            </div>
+             <input type="hidden" id="oldMobile" name="oldMobile" value=""/>   
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label change-mobile-label">图形验证码</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input change-mobile-input" type="text" name="picCode" id="picCode" onblur="checkPic();" value="" maxlength="4"  placeholder="请输入您的密码"></div>
+                <img class="img-code" id="imgCode" src="" ></img>
+            <!-- <div class="weui_cell_bd snd-msg-button">&nbsp;</div> -->
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd cell-key">
+                <label class="weui_label change-mobile-label">手机验证码</label>
+            </div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input change-mobile-input" type="text"  name="code" value="" maxlength="6" placeholder="请输入手机验证码"></div>
+            <span class="tiny-vertical-line">|</span>
+            <div class="weui_cell_bd val-code" id="sendSmsCode">发送验证码</div>
+        </div>
+
+        <div class="white_bg alert-wrapper3" >
+            <div class="alert-left"><i class="ae-mobile ae-mobile-attention2"></i></div>
+            <div class="alert-right">请您使用更新后的手机号登录</div>
+        </div>
+    </div>
+
+    <div class="change-mobile-next-button">
+        <span class="key-operation-button-normal" id="nextBtn">提交</span>
+    </div>
+    
+    <script type="text/javascript" src="../../static/common/lib/base64.js"></script>
+    <script type="text/javascript" src="../../static/changemobile/changemobile-three.js"></script>
+</body>
+</html>

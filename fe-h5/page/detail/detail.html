@@ -1,0 +1,294 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<link rel="import" href="../../static/common/view/header-info.html?__inline">
+	<link rel="stylesheet" type="text/css" href="../../widget/component/header/header.css">
+	<link rel="stylesheet" href="../../widget/project_details/project-details.less">
+	<link rel="stylesheet" href="../../static/detail/detail.less">
+
+	<!--
+		@require ../../static/common/lib/qrcode.js
+		@require ../../static/common/lib/smart_alert.js
+		@require ../../static/common/lib/apopup.js
+	-->
+</head>
+<body>
+	<div class="cmn-header white_bg detail-header">
+		<a href="javascript:void(0);" class="detail-back">
+			<i class="ae-mobile ae-mobile-arrow-left cmn-arrow-back " style="color:#4A4A4A;"></i>
+		</a>
+		<!-- share -->
+		<span class="share-icon">
+			<i class="ae-mobile ae-mobile-shared i-share"></i>
+		</span>
+
+		<!-- -->
+		<span class="star-icon">
+			<i class="ae-mobile ae-mobile-follow i-star"></i>
+			<i class="ae-mobile ae-mobile-favorites i-unstar"></i>
+		</span>
+
+		<!-- zan -->
+		<span class="zan-icon">
+			<i class="ae-mobile ae-mobile-joy i-zan"></i>
+			<i class="ae-mobile ae-mobile-favorite i-unzan"></i>
+			<em id="zanCount"></em>
+		</span>
+	</div>
+
+	<div class="weixin-share">
+		<div class="share-img" style="display:none;">
+		<img src="../../static/detail/resource/images/shareinwechat@3x.png">
+		</div>
+	</div>
+
+	<div class="browser-share">
+		<div class="share-popup" style="display:none">
+			<div class="popup-bd">
+				<h6>截屏分享给微信好友</h6>
+				<img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs%3D">
+			</div>
+			<div class="popup-close">
+				<i class="ae-mobile ae-mobile-close p-close"></i>
+			</div>
+		</div>
+	</div>
+
+	<div class="pet-content">
+		<div class="video-div">
+			<img src=""/>
+			<span id="span-status"></span>
+		</div>
+
+		<div class="m20 title-div">
+			<input type="hidden" name="" id="proStatus" value="">
+			<h3></h3>
+			<div class="title-2"></div>
+			<div class="span-div">
+				<span id="lablesName"></span>
+				<span class="tag-wrapper">
+					<i class="ae-mobile ae-mobile-tag"></i>
+					<span class="glyphicon glyphicon-tags"></span>
+				</span>
+			</div>
+			<div class="loading">
+				<div class="progress"></div>
+				<div class="proNum"></div>
+			</div>
+			<ul class="keyValueList clearfloat">
+				<li>
+					<div class="num" id="proFinancieAmount"></div>
+					<div class="keyText" >融资目标(万)</div>
+				</li>
+				<li>
+					<div class="num" id="payAmount"></div>
+					<div class="keyText">剩余金额(万)</div>
+				</li>
+				<li>
+					<div class="num" id="prePayNum"></div>
+					<div class="keyText">参与人数</div>
+				</li>
+				<li>
+					<div class="num" id="remainDays"></div>
+					<div class="keyText">剩余天数</div>
+				</li>
+			</ul>
+		</div>
+
+		<div>
+			<div class="clearfix"></div>
+			<div class="weui_tab">
+				<ul id="myTab" class="tabs-list">
+					<li class="tab-active">
+						<a href="javascript:history.replaceState(null, null, '#home');" class="content-tab" id-ref="myTabContent1">项目亮点</a>
+					</li>
+					<li>
+						<a href="javascript:history.replaceState(null, null, '#team');" class="content-tab" id-ref="myTabContent2">精英团队</a>
+					</li>
+					<li>
+						<a href="javascript:history.replaceState(null, null, '#msg');" class="content-tab" id-ref="myTabContent3">融资信息</a>
+					</li>
+					<li>
+						<a href="javascript:history.replaceState(null, null, '#faq');" class="content-tab" id-ref="myTabContent4">FAQ</a>
+					</li>
+				</ul>
+			</div>
+
+			<link rel="import" href="../../widget/project_details/list.tpl?__inline">
+
+			<link rel="import" href="../../widget/project_details/team.tpl?__inline">
+
+			<div id="myTabContent3" class="tab-content m20">
+				<div id="financie-list">
+					<div id="no-login-list">
+						合格投资人用户才可以查看， 请先申请
+						<a href="javascript:;" title="" id="financie-info">
+							<span class="key-operation-button-normal">投资人认证</span>
+						</a>
+					</div>
+				</div>
+			</div>
+
+			<link rel="import" href="../../widget/project_details/question.tpl?__inline">
+
+			<!--<div class="scroll-button">
+				<img src="../../static/common/images/top@3x.png" />
+			</div>-->
+		  <link rel="import" href="../../widget/component/toTop/toTop.tpl?__inline">
+
+			<!-- 募集中 -->
+			<footer class="footer-details" id="footer-collect" style="display: none;">
+				<div class="buy-content clearfloat">
+					<a class="buy-content-left btn-consult" id="buy-content">
+						<img src="../../static/detail/resource/images/icon-consult.png" id="icon-consult" style="height:19px; width:19px;">
+						<span class="consult-text">咨询</span>
+					</a>
+					<div id="buy-order" class="buy-content-right-gold ">
+						<span class="bg">我要投资</span>
+					</div>
+					<!--1109-jingpinghong-->
+					<div class="luyan" id="luyan">
+						<div class="ly" >
+							<a class="lybm" id="road-ly">
+								<span>路演报名</span>
+							</a>
+							<div class="buy-content-right-new" id="buy-ordernew">
+								<span>我要投资</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- 预热 -->
+			<footer class="footer-details" id="footer-prheat" style="display: none;">
+				<div class="buy-content clearfloat">
+					<a class="buy-content-left-preheat btn-consult">
+						<i class="ae-mobile ae-mobile-consult" id="icon-consult"></i>
+						<span class="consult-text">咨询</span>
+					</a>
+					<div class="buy-content-left-preheat precodes clearfloat" id="precode-icon">
+						<i class="ae-mobile ae-mobile-ercode"></i>
+						<span class="preCode">预购码</span>
+					</div>
+					<div class="buy-content-right-preheat">
+						<span id="date-id"></span>
+					</div>
+				</div>
+			</footer>
+
+			<!-- 路演 -->
+			<footer class="footer-details" id="footer-roadshow" style="display: none;">
+				<div class="buy-content clearfloat">
+					<a class="buy-content-left icon-width btn-consult">
+						<img src="../../static/detail/resource/images/icon-consult.png" id="icon-consult" style="height:19px; width:19px;">
+						<span class="consult-text">咨询</span>
+					</a>
+
+					<a class="buy-content-left icon-width precodes" id="precode-roadshow">
+						<i class="ae-mobile ae-mobile-ercode"></i>
+						<span>预购码</span>
+					</a>
+					<div id="buy-order-roadshow" class="buy-content-right-gold label-width">
+						<div class="tic-toc" id="date-id-road"></div>
+						<a id="show-road">
+							<div class="signUp" id="roadShow">路演报名</div>
+						</a>
+					</div>
+				</div>
+			</footer>
+		</div>
+		<!-- 成功 -->
+		<footer class="footer-details" id="footer-success" style="display: none;">
+			<div class="buy-content clearfloat">
+				<a class="buy-content-left btn-consult">
+					<img src="../../static/detail/resource/images/icon-consult.png" id="icon-consult" style="height:19px; width:19px;">
+					<span class="consult-text">咨询</span>
+				</a>
+				<div class="buy-content-right-gray">
+					<span>已满标</span>
+				</div>
+			</div>
+		</footer>
+
+		<!-- 预购码弹窗 -->
+		<div class="ae-dialog" id="precode-dialog" style="display: none;">
+			<div class="dialog-container">
+				<div class="dialog-content">
+					<p class="content-txt">请输入您的预购码</p>
+					<input type="text" maxlength="6" id="precode-input" class="precode">
+				</div>
+				<div class="dialog-footer">
+					<a id="commit-code" class="commit-code">确定</a>
+				</div>
+			</div>
+
+			<div class="dialog-close">
+				<i class="ae-mobile ae-mobile-close code-close"></i>
+			</div>
+		</div>
+
+		<div id="qrcode-div" style="display:none">
+			<div class="gray-mask"></div>
+			<div class="dialog-pass">
+			    <div class="dialog-content">
+			        <div class="qrcode-text">
+			        	<span>使用微信长按识别下方二维码，或截图后使用微信识别，添加</span>
+			        	<span class="text-orange">AngelEase小秘书</span>
+			        	<span>为您服务</span>
+			        </div>
+			        <div>
+			        	<img src="../../static/detail/resource/images/qrcode-xiaomishu.png" alt="" style="width:200px;height:200px;" />
+			        </div>
+			    </div>
+			    <div class="dialog-close"> <i class="ae-mobile ae-mobile-close"></i>
+			    </div>
+			</div>
+		</div>
+
+		<!-- 预购码验证失败弹窗提示 -->
+		<div class="ae-dialog" id="alert-dialog" style="display: none;">
+			<div class="dialog-container">
+				<div class="dialog-content">
+					<i class="ae-mobile ae-mobile-attention2 content-icon"></i>
+					<p class="content-txt" id="content-txt"></p>
+				</div>
+				<div class="dialog-footer">
+					<a id="reset-code" class="commit-code">重新输入</a>
+				</div>
+			</div>
+
+			<div class="dialog-close">
+				<i class="ae-mobile ae-mobile-close code-close"></i>
+			</div>
+
+        <div class="gray-mask guide-to-share">
+        	<div class="guide-to-share-logo">
+        		<img src="../../widget/project_details/resource/images/shareinwechat@3x.png" />
+        	</div>
+        </div>
+
+        <div class="gray-mask code-to-share">
+            <div class="content-wrapper">
+            	<div class="code-wrapper">
+                    <div class="code-desc">数据分享给微信好友</div>
+                    <div class="code-img qrcode" id="qrcode"></div>
+            	</div>
+            </div>
+
+			<div class="close-btn code-close-btn">
+                <i class="ae-mobile ae-mobile-close"></i>
+            </div>
+        </div>
+
+        <div class="toast" id="toastBox" style="display:none;">
+			<div>
+				<i class="ae-mobile ae-mobile-right modify-suc"></i>
+			</div>
+			<div class="modify-suc-text"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="../../static/detail/detail.js"></script>
+	<script type="text/javascript" src="../../widget/project_details/project-details.js"></script>
+</body>
+</html>
